@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：Presentation Zen — Week 6</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Slide mockup styles — 模拟幻灯片 */
+.slide-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.slide{aspect-ratio:16/10;border:1px solid #d0d0d0;padding:14px;font-family:Georgia,serif;position:relative;background:#fff;overflow:hidden;display:flex;flex-direction:column;border-radius:2px}
+.slide.bad{background:#fdfafa}
+.slide.bad .stitle{font-size:0.7rem;font-weight:700;color:#1f1f1f;margin-bottom:4px;border-bottom:1px solid #888;padding-bottom:2px}
+.slide.bad ul{margin-left:14px;font-size:0.55rem;line-height:1.35;color:#3a3a3a;list-style:disc}
+.slide.bad ul li{padding:1px 0}
+.slide.bad .footer-bar{position:absolute;bottom:4px;right:6px;font-size:0.45rem;color:#888}
+.slide.good{background:#1f1f1f;color:#fafafa;justify-content:center;align-items:center;text-align:center;padding:22px}
+.slide.good .big{font-size:1.6rem;font-weight:800;letter-spacing:0.5px;line-height:1.15}
+.slide.good .cap{font-size:0.65rem;color:#a0a0a0;margin-top:8px;letter-spacing:1.5px;text-transform:uppercase}
+.slide-label{font-size:0.72rem;color:#8a8a8a;text-align:center;margin-top:6px;font-family:Georgia,serif;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ma 留白可视化 */
+.ma-box{background:#f8f6f1;padding:24px 18px;margin:18px 0;border-radius:2px}
+.ma-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ma-cell{background:#fff;aspect-ratio:1;border:1px solid #d8d0bc;position:relative;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;border-radius:2px}
+.ma-cell.cramped{background:#fff;color:#1f1f1f;font-size:0.65rem;padding:8px;line-height:1.35;text-align:left;align-items:flex-start;justify-content:flex-start;overflow:hidden}
+.ma-cell.cramped .label-tiny{font-size:0.55rem;color:#a04040;position:absolute;bottom:4px;right:6px;font-style:italic}
+.ma-cell.open{background:#fff;color:#1f1f1f}
+.ma-cell.open .center-word{font-size:1.5rem;font-weight:800;font-family:Georgia,serif}
+.ma-cell.open .label-tiny{font-size:0.55rem;color:#5a7a5a;position:absolute;bottom:4px;right:6px;font-style:italic}
+.ma-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+/* 10/20/30 规则可视化 */
+.rule-box{background:#1f1f1f;color:#fafafa;padding:28px 22px;margin:18px 0;border-radius:2px}
+.rule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+.rule-cell .big{font-size:3.2rem;font-weight:800;color:#d8c98a;line-height:1;font-family:Georgia,serif}
+.rule-cell .unit{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:#a0a0a0;margin-top:6px;font-family:Georgia,serif}
+.rule-cell .desc{font-size:0.85rem;color:#fafafa;margin-top:10px;line-height:1.55;font-family:Georgia,serif}
+.rule-box .src{font-size:0.78rem;color:#a0a0a0;text-align:center;margin-top:18px;font-family:Georgia,serif;font-style:italic;letter-spacing:1px}
+
+/* Visual storytelling 故事弧 */
+.story-arc{background:#f8f6f1;padding:24px 18px;margin:18px 0;border-radius:2px}
+.story-arc svg{display:block;margin:0 auto;width:100%;max-width:560px;height:auto}
+.story-arc .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+/* 字号阶梯 — 30pt rule 示意 */
+.font-stair{background:#f8f6f1;padding:24px 18px;margin:18px 0;border-radius:2px;font-family:Georgia,serif}
+.font-stair .row{display:flex;align-items:baseline;gap:14px;padding:8px 4px;border-bottom:1px dotted #d8d0bc}
+.font-stair .row:last-child{border-bottom:none}
+.font-stair .row .pt{flex-shrink:0;min-width:60px;font-size:0.78rem;color:#8a7a4a;font-weight:700;font-family:Georgia,serif}
+.font-stair .row .sample{color:#1f1f1f}
+.font-stair .row .verdict{flex-shrink:0;font-size:0.78rem;color:#5a5a5a;font-style:italic;margin-left:auto}
+.font-stair .pt-12{font-size:0.65rem}
+.font-stair .pt-18{font-size:0.95rem}
+.font-stair .pt-24{font-size:1.15rem;font-weight:600}
+.font-stair .pt-30{font-size:1.4rem;font-weight:700}
+.font-stair .pt-44{font-size:1.8rem;font-weight:800}
+.font-stair .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .slide-compare{grid-template-columns:1fr}
+  .rule-grid{grid-template-columns:1fr;gap:24px}
+  .ma-grid{grid-template-columns:1fr}
+  .slide.good .big{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 6 · 2026.05.23</div>
+  <h1>写作与表达：禅意演讲<span class="topic">Presentation Zen — Slides That Breathe</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">大多数幻灯片是文档的尸体——满屏 bullet、12 号字、Logo 角标、版面塞到呼吸不动。Garr Reynolds 在 2008 年的《Presentation Zen》里搬来了日本美学：simplicity、restraint、naturalness——少即是多。本周四个原则：留白 (Ma 间)、单页一念 (Slide Design)、图像叙事 (Visual Storytelling)、Kawasaki 的 10/20/30 规则。从今往后，你的幻灯片不再是讲稿的复印件，而是观众脑中那幅画的入口。</p>
+</header>
+
+<!-- ============ Principle 1: Ma / 留白 ============ -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>留白即设计 — 间 (Ma) 不是空，是力量</h2>
+  <div class="en-name">Empty Space / Negative Space as Design Element</div>
+  <span class="tag">幻灯片 · 视觉</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>一张能呼吸的幻灯片，比一张塞满信息的幻灯片更有说服力。日本人称之为「間 (ma)」——存在于两个事物之间的空，是节奏，是停顿，是让被强调的东西真正被看见的反衬。在演讲中，留白不是没设计完，而是设计本身。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "The Japanese aesthetic values 'ma'—the space between things. In presentation design, ma is the empty space on the slide that lets the core message breathe. Without ma, there is no emphasis, only noise."
+      <span class="source">Garr Reynolds, <em>Presentation Zen</em> (2008)</span>
+    </div>
+    <div class="quote">
+      "Simplicity is the ultimate sophistication."
+      <span class="source">Leonardo da Vinci (Reynolds 常引)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">示意图：拥挤 vs 留白</div>
+    <div class="ma-box">
+      <div class="ma-grid">
+        <div class="ma-cell cramped">
+          <div style="font-size:0.65rem;font-weight:700;border-bottom:1px solid #888;padding-bottom:2px;margin-bottom:4px;width:100%">Q3 增长策略：核心要点</div>
+          <div style="font-size:0.5rem;line-height:1.35">• 用户增长目标 35%（vs Q2 28%）<br>• 三大渠道：搜索/社媒/合作<br>• 重点城市：北/上/深/杭<br>• 预算：800 万 (+18% YoY)<br>• 转化率提升 4pp 至 12%<br>• 留存目标 D30 达 42%<br>• 团队：扩 6 人含 2 设计 1 增长<br>• 风险：监管/竞品/广告成本</div>
+          <div style="position:absolute;bottom:4px;right:6px;font-size:0.45rem;color:#a04040;font-style:italic">8 bullets · 满页</div>
+        </div>
+        <div class="ma-cell open">
+          <div style="font-size:1.5rem;font-weight:800;font-family:Georgia,serif">35%</div>
+          <div style="position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:0.6rem;color:#5a5a5a;letter-spacing:1.5px;text-transform:uppercase">Q3 用户增长目标</div>
+          <div style="position:absolute;bottom:4px;right:6px;font-size:0.5rem;color:#5a7a5a;font-style:italic">1 个数字 · 一念</div>
+        </div>
+      </div>
+      <div class="caption">左：文档式幻灯片。右：让数字成为主角，其余靠口头展开。</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>大脑的工作记忆只能同时处理 4±1 个项目（Cowan, 2001）。当一张幻灯片塞 8 条 bullet，观众一边读字一边听你讲，两个通道彼此抢资源——结果两边都没接收。留白释放认知带宽，让一张图、一个数字、一句话独占注意力。这就是为什么 Steve Jobs 一张幻灯片常只有一个词。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 / 不适用</div>
+    <ul>
+      <li><span style="color:#3a6a3a;font-weight:700">适用：</span>主旨演讲、产品 launch、TED-style 分享、向高管 pitch</li>
+      <li><span style="color:#3a6a3a;font-weight:700">适用：</span>需要被记住、被转述的核心数字/口号</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>会后阅读的 PDF 报告（应另写文档，称为 slidedoc）</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>训练手册、含详细步骤的操作指引</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>把演讲稿原文复制到幻灯片，自己照念</li>
+      <li>每张幻灯片都加公司 Logo、页脚、版权、页码，挤占视觉</li>
+      <li>用「6 个要点」结构填满方框，每点又拆 3 个子 bullet</li>
+      <li>恐惧空白，于是加装饰图、纹理底、彩色边框</li>
+      <li>把"留白"理解为字体小一点——其实是删一半内容</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Garr Reynolds.</span> <em>Presentation Zen: Simple Ideas on Presentation Design and Delivery</em>. New Riders, 2008. — 第三章 "Crafting the Story" 与第六章 "Simplicity"。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">English Insight</div>
+    <div class="eninsight">"If everything is bold, nothing is bold. White space gives emphasis its meaning." — Reynolds 用排版师的语言提醒：强调来自对比，对比来自留白。</div>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · Exercise</div>
+    <p>翻出你最近一份用过的幻灯片（任何一张满屏 bullet 的都行）。重新设计：删到只剩一个数字、一张图、或一句话，其余内容靠口头讲。计时 5 分钟用这张新幻灯片对镜子讲——你会发现你的口语反而更具体了。</p>
+  </div>
+</section>
+
+<!-- ============ Principle 2: Slide Design — 单页一念 ============ -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>单页一念 — One Idea per Slide</h2>
+  <div class="en-name">Slide Design: One Slide, One Thought</div>
+  <span class="tag">幻灯片 · 设计</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>每张幻灯片只承担一个想法。如果你必须在一页里塞两件事，那就拆成两页。幻灯片是免费的，观众的注意力不是。Nancy Duarte 称之为「3-second rule」：观众看一眼幻灯片，3 秒内若理解不了核心信息，这页就失败了。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "If your audience can't get the point of your slide in three seconds, you have too much on it."
+      <span class="source">Nancy Duarte, <em>Slide:ology</em> (2008)</span>
+    </div>
+    <div class="quote">
+      "A slide is not a document. Treat it as a billboard glimpsed at 60 mph."
+      <span class="source">Garr Reynolds, <em>Presentation Zen</em></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">改造示范：满屏 bullet → 单念幻灯片</div>
+    <div class="slide-compare">
+      <div>
+        <div class="slide bad">
+          <div style="font-size:0.7rem;font-weight:700;border-bottom:1px solid #888;padding-bottom:2px;margin-bottom:5px">为什么选择我们的方案</div>
+          <ul style="margin-left:14px;font-size:0.55rem;line-height:1.4;list-style:disc;color:#3a3a3a">
+            <li>响应速度比竞品快 3 倍 (200ms vs 600ms)</li>
+            <li>支持私有部署、合规无忧 (SOC2/ISO27001)</li>
+            <li>团队 8 年金融业务沉淀</li>
+            <li>头部客户 30+ 含国有四大行</li>
+            <li>7×24 中文工程师驻场</li>
+            <li>合同灵活，按月/按调用计费</li>
+          </ul>
+          <div style="position:absolute;bottom:4px;right:6px;font-size:0.45rem;color:#888">© BigCat Inc · Slide 12/47</div>
+        </div>
+        <div class="slide-label">Before · 6 bullets</div>
+      </div>
+      <div>
+        <div class="slide good">
+          <div class="big">3<span style="font-size:0.9rem">×</span> 更快</div>
+          <div class="cap">vs 行业平均</div>
+        </div>
+        <div class="slide-label">After · 1 念</div>
+      </div>
+    </div>
+    <p style="font-size:0.92rem;color:#5a5a5a;margin-top:8px;font-style:italic;text-align:center">原本 6 点拆成 6 张：「3× 更快」「私有部署」「八年沉淀」…… 每一念独占一帧。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>幻灯片软件继承自 1980 年代办公套件，它鼓励文档思维：标题 + 正文 + bullet。但演讲不是阅读——观众无法回滚，没有目录。每张幻灯片必须自成一个完整的微叙事单元：进入、强调、退出。一念一帧让你能控制节奏，也强迫你自己想清楚每一念到底是什么。如果一页讲不清，往往是你还没想清楚。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 / 不适用</div>
+    <ul>
+      <li><span style="color:#3a6a3a;font-weight:700">适用：</span>所有面向人讲的幻灯片，无一例外</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>会前/会后阅读材料——那应当是 memo 或 slidedoc，不是 slide</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>把"slide count = 信息量"当成偷懒指标，硬塞</li>
+      <li>害怕"幻灯片太多"，于是把 6 张塞成 1 张</li>
+      <li>标题 + 副标题 + 6 bullets + 一张配图——四个层级抢夺注意力</li>
+      <li>动画飞入飞出"分隔"念头，其实只是延迟拥挤</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Nancy Duarte.</span> <em>Slide:ology: The Art and Science of Creating Great Presentations</em>. O'Reilly, 2008. — 「3-second test」即出自此书第三章。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">English Insight</div>
+    <div class="eninsight">"Slides are free. Use more of them." — 这句话颠覆了"幻灯片数量恐惧症"：从 30 张拆到 60 张，每张更轻，演讲反而更稳。</div>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · Exercise</div>
+    <p>挑一张你正在用的"重型"幻灯片 (≥4 bullets)。把每个 bullet 拆成独立一张，每张只留一个关键词/数字/图像。重新过一遍流程——你会发现总体内容更精准，但讲述时长几乎没变。</p>
+  </div>
+</section>
+
+<!-- ============ Principle 3: Visual Storytelling ============ -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>图像叙事 — Visual Storytelling</h2>
+  <div class="en-name">Slides as Story, Not Slides as Summary</div>
+  <span class="tag">故事力 · 视觉</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>幻灯片序列本身就是故事弧。不是「目录 → 章 1 → 章 2 → 总结」的报告体，而是「现状 → 张力 → 转折 → 新世界」的叙事体。每张幻灯片不仅承担一念，更承担故事中的一个节拍 (beat)。图像是这个节拍的锚——观众也许记不住你说过的话，但能记住那张让他们倒吸冷气的图。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "We do not remember bullet points; we remember stories and images. The best presentations are constructed as a sequence of memorable visual moments anchored to a narrative."
+      <span class="source">Garr Reynolds, <em>Presentation Zen</em></span>
+    </div>
+    <div class="quote">
+      "Picture superiority effect: pictures are remembered better than words, by a factor of about 6 after 72 hours."
+      <span class="source">John Medina, <em>Brain Rules</em> (2008)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">示意图：演讲的故事弧 (Story Arc of a Talk)</div>
+    <div class="story-arc">
+      <svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#8a7a4a;stop-opacity:0.6"/>
+            <stop offset="50%" style="stop-color:#1f1f1f;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#5a7a5a;stop-opacity:0.7"/>
+          </linearGradient>
+        </defs>
+        <!-- 横轴 -->
+        <line x1="40" y1="200" x2="540" y2="200" stroke="#d0d0d0" stroke-width="1"/>
+        <!-- 故事曲线 -->
+        <path d="M 60 180 Q 140 175 200 140 T 320 50 Q 380 50 440 110 T 530 170" stroke="url(#arcGrad)" stroke-width="3" fill="none"/>
+        <!-- 节点 -->
+        <circle cx="60" cy="180" r="6" fill="#8a7a4a"/>
+        <circle cx="180" cy="135" r="6" fill="#1f1f1f"/>
+        <circle cx="320" cy="50" r="7" fill="#a04040"/>
+        <circle cx="440" cy="110" r="6" fill="#1f1f1f"/>
+        <circle cx="530" cy="170" r="6" fill="#5a7a5a"/>
+        <!-- 标签 -->
+        <text x="60" y="225" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">现状 Hook</text>
+        <text x="60" y="240" font-family="Georgia" font-size="9" fill="#8a8a8a" text-anchor="middle" font-style="italic">What is</text>
+        <text x="180" y="160" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">张力</text>
+        <text x="180" y="175" font-family="Georgia" font-size="9" fill="#8a8a8a" text-anchor="middle" font-style="italic">Tension</text>
+        <text x="320" y="35" font-family="Georgia" font-size="11" fill="#a04040" text-anchor="middle" font-weight="700">转折</text>
+        <text x="320" y="22" font-family="Georgia" font-size="9" fill="#a04040" text-anchor="middle" font-style="italic">Turning point</text>
+        <text x="440" y="135" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">证据</text>
+        <text x="440" y="150" font-family="Georgia" font-size="9" fill="#8a8a8a" text-anchor="middle" font-style="italic">Evidence</text>
+        <text x="530" y="195" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">召唤</text>
+        <text x="530" y="210" font-family="Georgia" font-size="9" fill="#8a8a8a" text-anchor="middle" font-style="italic">Call</text>
+        <!-- 上下标注 -->
+        <text x="20" y="50" font-family="Georgia" font-size="9" fill="#a0a0a0" text-anchor="start" font-style="italic">情感张力</text>
+        <text x="20" y="200" font-family="Georgia" font-size="9" fill="#a0a0a0" text-anchor="start" font-style="italic">时间</text>
+      </svg>
+      <div class="caption">五个节拍，每个节拍由 3-5 张图像幻灯片承担。整场演讲是一条上升-顶点-下沉的曲线，不是平铺直叙。</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>报告体演讲（"今天我讲三件事"）让观众的好奇心从第一秒就关闭——他们已经知道你要讲什么。叙事体（"我以为我们的留存稳定，直到上个月的数据出现了这个……"）打开张力，每张幻灯片成为悬念的延续。Reynolds 把它叫 <em>「the seductive power of unfinished business」</em>——未完成的事，观众会替你想完。<br><br>具体怎么做：每张幻灯片选一张能引发情绪反应的图（不是图库的人物笑脸合影），让图像承担叙事重量，文字只做点缀。Steve Jobs 2007 年发布 iPhone 时，那张「a phone... an iPod... an internet communicator...」三循环的幻灯片，是 visual storytelling 的教科书。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 / 不适用</div>
+    <ul>
+      <li><span style="color:#3a6a3a;font-weight:700">适用：</span>产品 launch、Pitch、Vision 演讲、变革沟通、Keynote</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>季度回顾汇报（应当用 dashboard + 6-pager 模式）</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>技术 deep-dive（需要图表 + 代码 + 步骤，叙事弧不是首要）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>用图库式微笑商务人物图——观众一眼识破，立刻流失信任</li>
+      <li>图被文字框边角占满，图像变成"配饰"</li>
+      <li>故事弧只在演讲口语里，幻灯片仍是 bullet——双轨脱节</li>
+      <li>第一张就讲结论（这是金字塔原理对了，但在演讲里损失了张力）</li>
+      <li>引用图但不署来源——可信度损耗</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Nancy Duarte.</span> <em>Resonate</em>. Wiley, 2010. — Sparkline 章节（Week 3 已细讲）。<br><span>Garr Reynolds.</span> <em>The Naked Presenter</em>. New Riders, 2011. — 论图像作为锚点。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">English Insight</div>
+    <div class="eninsight">"The best presentations are not about the slides. The slides serve the story, not the other way around." — Reynolds 的反向问句很有用：删掉幻灯片，你的演讲还成立吗？如果不成立，你写的是 PPT，不是演讲。</div>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · Exercise</div>
+    <p>给你下一个演讲画一条 sparkline (Week 3 工具)，标出 5 个节拍。每个节拍写一句话（不超过 12 字）+ 选一张图（可以是占位）。整场只剩 5 张图 + 5 句话——把这套草稿用 3 分钟讲给同事听，观察他/她在哪里"凑近"了。那就是你的转折点。</p>
+  </div>
+</section>
+
+<!-- ============ Principle 4: 10/20/30 Rule ============ -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Kawasaki 10/20/30 规则 — 让贪婪自我约束</h2>
+  <div class="en-name">The 10/20/30 Rule of PowerPoint</div>
+  <span class="tag">演讲 · 自律</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>风投人 Guy Kawasaki 看过几千场 pitch 后给出一个粗暴公式：<strong>10 张幻灯片、20 分钟、30 号字下限</strong>。10 限制了你贪心铺陈；20 限制了你 monologue 的时长；30 限制了你字号——字号一过 30，你就再也塞不下一段废话了。这是机械约束，但比任何"设计指南"都好用。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "A PowerPoint presentation should have ten slides, last no more than twenty minutes, and contain no font smaller than thirty points… The reason people use a small font is twofold: first, they don't know their material; second, they think that more text is more convincing. Total bozosity."
+      <span class="source">Guy Kawasaki, "The 10/20/30 Rule of PowerPoint" (2005)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">示意图：三个数字</div>
+    <div class="rule-box">
+      <div class="rule-grid">
+        <div class="rule-cell">
+          <div class="big">10</div>
+          <div class="unit">Slides</div>
+          <div class="desc">不超过十张幻灯片。逼你做选择。</div>
+        </div>
+        <div class="rule-cell">
+          <div class="big">20</div>
+          <div class="unit">Minutes</div>
+          <div class="desc">不超过二十分钟开讲。剩下时间留给 Q&amp;A 与互动。</div>
+        </div>
+        <div class="rule-cell">
+          <div class="big">30</div>
+          <div class="unit">Point Font</div>
+          <div class="desc">字号不低于 30pt。字大 = 内容少 = 演讲者懂他在讲什么。</div>
+        </div>
+      </div>
+      <div class="src">— Guy Kawasaki · investor at Garage Capital · 2005</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">字号阶梯：30pt 为什么是分水岭</div>
+    <div class="font-stair">
+      <div class="row">
+        <div class="pt">12 pt</div>
+        <div class="sample pt-12">这是 12pt 字号，文档常用，演讲时第三排就看不清了</div>
+        <div class="verdict">文档 OK · 演讲不行</div>
+      </div>
+      <div class="row">
+        <div class="pt">18 pt</div>
+        <div class="sample pt-18">18pt 仍能塞 6 bullets，懒人区</div>
+        <div class="verdict">懒人区</div>
+      </div>
+      <div class="row">
+        <div class="pt">24 pt</div>
+        <div class="sample pt-24">24pt 已经在边界，但仍能塞两段</div>
+        <div class="verdict">临界</div>
+      </div>
+      <div class="row">
+        <div class="pt">30 pt</div>
+        <div class="sample pt-30">30pt 一行只能写半句话</div>
+        <div class="verdict">合格</div>
+      </div>
+      <div class="row">
+        <div class="pt">44 pt</div>
+        <div class="sample pt-44">44pt 是关键字</div>
+        <div class="verdict">优秀</div>
+      </div>
+      <div class="caption">字号是物理屏障。30pt 强迫你删字。Kawasaki 说：每页字数应等于演讲者年龄一半（40 岁 → 每页 ≤20 字）。</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>这条规则的天才之处在于它不靠审美判断。审美主观，规则客观。10 张你必须挑出最重要的 10 件事；20 分钟你必须删掉至少一半内容；30pt 你必须放弃 bullet 思维。Kawasaki 在他十年风投经验中观察到：能在 10/20/30 内讲清楚的创业者，几乎都拿到了 term sheet；做不到的，大多在 demo day 之后失联。<br><br>对 BigCat 这样的资深技术人，这条规则的真正用法不是死守"刚好 10 张"，而是用它倒逼优先级。你的 30 张幻灯片如果不能压成 10 张，你就还没想清楚你要讲什么。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 / 不适用</div>
+    <ul>
+      <li><span style="color:#3a6a3a;font-weight:700">适用：</span>融资 pitch、产品发布、季度评审、董事会汇报</li>
+      <li><span style="color:#3a6a3a;font-weight:700">适用：</span>任何"对外"演讲：客户、媒体、社区</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>培训课程（需要 60 分钟以上的细节）</li>
+      <li><span style="color:#a04040;font-weight:700">不适用：</span>技术架构评审（图多于字，张数自然多）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>把"10 张"理解为"封面 + 致谢 + 8 张内容"——剩下 8 张又塞满</li>
+      <li>用动画拆张数：一张里 6 个 bullet 飞入飞出，号称"也算 6 张"</li>
+      <li>30pt 把行高调到 1.0 还是塞——字大但段密</li>
+      <li>把 Appendix 当外挂仓库塞 40 页，演讲时随时跳——观众感受到的还是"你没想清楚"</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Guy Kawasaki.</span> "The 10/20/30 Rule of PowerPoint" (blog post, 2005, 后收入 <em>The Art of the Start</em> 2.0).<br><span>Guy Kawasaki.</span> <em>The Art of the Start 2.0</em>. Portfolio, 2015. — 第 6 章「The Art of Pitching」。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">English Insight</div>
+    <div class="eninsight">"If you can't explain it on ten slides in twenty minutes with thirty-point text, you don't understand it well enough yet." — 这不是关于幻灯片，是关于思考的清晰度。</div>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · Exercise</div>
+    <p>选你近期的一份幻灯片（30 张以上更佳）。强制压缩到 10 张：每张 ≥30pt、整套 ≤20 分钟讲完。被你删掉的那 20 张，写一段话回答自己：「为什么我以为它重要？」这个回答比删幻灯片本身更值钱。</p>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.html">← 返回 Writing Weekly</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 6 · 2026</footer>
+
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+</body>
+</html>
