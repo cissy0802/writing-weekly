@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: The Pyramid Principle — Week 2</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+.pyramid-vis{font-family:Georgia,serif;background:#f8f6f1;padding:16px;margin:14px 0;text-align:center;font-size:0.92rem;line-height:1.8;color:#3a3a3a;border-radius:2px;white-space:pre;overflow-x:auto}
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 2 · 2026.05.21</div>
+  <h1>The Pyramid Principle<span class="topic">Writing &amp; Expression</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">A busy reader reads only the first paragraph. A busier one reads only the first sentence. Put the conclusion at the top, and let your thinking unfold downward like a pyramid. This is McKinsey's half-century writing secret, and the load-bearing structure of every memo that has ever moved a decision.</p>
+</header>
+
+<!-- Card 1: Answer first -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Answer First</h2>
+  <div class="en-name">Lead with the recommendation. Put the evidence behind it.</div>
+  <span class="tag">Pyramid · Core Structure</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>When a reader opens a memo, an email, or a report, the first question in their mind is <em>so what?</em> Put that answer up front. Then unfold the reasoning. Don't write a memo like a detective novel where the killer is named on the last page.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Readers can absorb your ideas with less effort if you give them the major idea before you give them the individual ideas being grouped… The reader will be looking for a structure linking the sentences together. To make sure he finds the one you intended, you must tell him in advance what it is."
+      <span class="source">— Barbara Minto, <em>The Pyramid Principle</em>, ch. 1</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Working memory is small (Miller's 7±2). When details come first, the reader has to hold them all in mind while guessing what they add up to — the cognitive load compounds. Answer-first writing hands the reader a map at the door, and every detail that follows hangs onto it. This is the same logic behind Amazon's six-page memo, McKinsey's SCR (Situation–Complication–Resolution), and the military's BLUF (Bottom Line Up Front).</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">After reviewing Q3 metrics, analyzing user feedback from 12 interviews, and benchmarking against three competitors, we have come to the conclusion that we should sunset the legacy API by year-end.</span>
+      <span class="after">Sunset the legacy API by year-end. Q3 metrics, twelve user interviews, and three competitor benchmarks all point the same direction.</span>
+    </div>
+    <div class="example">
+      <span class="before">After multiple rounds of discussion with each team, and taking into account both last year's output data and our strategic priorities, we would like to propose allocating more R&amp;D resources toward the Agent direction next year.</span>
+      <span class="after">Allocate 60% of next year's R&amp;D budget to Agent work. Three reasons converge: last year's output, our strategic priorities, and team preference.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Use in: decision memos, leadership updates, the summary section of a technical RFC, the body of an email.</li>
+      <li>Use whenever the reader is busier than the writer.</li>
+      <li>Do not apply to: suspense narratives, fiction, literary essays that need to build emotion slowly.</li>
+      <li>Soften when: the conclusion will trigger a strong emotional reaction — empathize first, then answer.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Opening with paragraphs of background, with the recommendation buried on page three.</li>
+      <li>Wasting the first sentence on "After careful analysis…" — that sentence is your most valuable real estate.</li>
+      <li>Hiding the ask in a closing "next steps" line.</li>
+      <li>Putting evidence first and treating the conclusion as an afterthought, so it lands weakly.</li>
+      <li>Padding before the conclusion because it feels "abrupt." Trust the reader to handle directness.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Barbara Minto</span>, <em>The Pyramid Principle: Logic in Writing and Thinking</em> (1978); <span>Amazon</span> S-Team Memo template (recommendation in Section 1).</p>
+  </div>
+
+  <div class="eninsight">
+    "The single most important sentence in any article is the first one." — William Zinsser. In a memo, that sentence carries the recommendation.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pull three work emails you sent in the past month. Copy the first sentence of each into one place. Read them as a set: from those three sentences alone, can a reader tell what you wanted, recommended, or decided? If not, rewrite each so the first sentence <em>is</em> the conclusion — twelve English words or fewer.</p>
+  </div>
+</section>
+
+<!-- Card 2: MECE -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>MECE</h2>
+  <div class="en-name">Mutually Exclusive, Collectively Exhaustive</div>
+  <span class="tag">Pyramid · Grouping Logic</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The sub-points supporting an argument (the next level of the pyramid) must do two things: not overlap with each other, and together cover the problem. Otherwise the reader feels either "something is missing" or "aren't those the same thing?" — and trust drops.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "The ideas at any level in the pyramid must always be mutually exclusive and collectively exhaustive. This is the single most important rule of analytic thinking that I learned at McKinsey."
+      <span class="source">— Barbara Minto, <em>The Pyramid Principle</em></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>MECE is not about looking tidy. It is a trust signal. When a reader sees "we'll look at this through three lenses — cost, benefit, risk," they can verify the coverage at a glance. But if you write "through finance, technology, and cost" — cost is a subset of finance — a quiet alarm goes off: maybe this writer hasn't thought it through. MECE is the visible trace of disciplined thinking.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Three causes of the outage: a code bug, weak monitoring, and tech debt. (The bug and the tech debt overlap, and process is missing.)</span>
+      <span class="after">Three categories of cause: code (bug + tech debt), process (no code review), monitoring (no alert thresholds).</span>
+    </div>
+    <div class="example">
+      <span class="before">Our users fall into three groups: enterprise, SMB, and developers. (Developers cuts across enterprise and SMB — not mutually exclusive.)</span>
+      <span class="after">Segmented by company size: Enterprise (&gt;1000 employees), Mid-market (100–1000), SMB (&lt;100). Persona is tracked separately as an attribute.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Use in: strategic analysis, root-cause diagnosis, options comparisons, user segmentation.</li>
+      <li>Use whenever the argument requires exhausting the possibility space.</li>
+      <li>Do not apply to: emotional narrative, personal essay (forced MECE feels mechanical).</li>
+      <li>Skip in: fast-moving conversations where chasing perfect MECE would slow the decision.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Mixing dimensions of cut (half by team, half by geography).</li>
+      <li>Listing five reasons, two of which are the same thing in different words.</li>
+      <li>Forgetting the "other / default" bucket — the categories don't actually cover everything.</li>
+      <li>Splitting too finely, so the sub-items blur together.</li>
+      <li>Closing with "and so on" — a tell that the writer didn't finish the thinking.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Barbara Minto</span>, <em>The Pyramid Principle</em>, ch. 6 ("Imposing Logical Order"); <span>Ethan Rasiel</span>, <em>The McKinsey Way</em> (MECE in consulting practice).</p>
+  </div>
+
+  <div class="eninsight">
+    "If you can't say it MECE, you haven't thought it through." A McKinsey saying. MECE is less about the output and more about the discipline of the input.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a problem you're working on now ("why is retention dropping?"). Decompose it MECE-style into three to five categories of cause. Then run two checks. First: do any two categories overlap? Second: do all categories together cover one hundred percent of the possibility space? Iterate the dimension of the cut until both pass. Pin the pyramid on a wall for a week.</p>
+  </div>
+</section>
+
+<!-- Card 3: Top-down vs bottom-up -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Top-Down vs Bottom-Up</h2>
+  <div class="en-name">Two ways to build a pyramid — one for thinking, one for telling.</div>
+  <span class="tag">Pyramid · Workflow</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>You can build a pyramid in two directions. Top-down: fix the conclusion first, then find supporting points. Bottom-up: gather material, then induce a conclusion. The first is faster but risks premature closure. The second is slower but easier to get lost in. Mature writers use both: bottom-up to think, top-down to tell.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Building a pyramid top-down is generally easier than trying to build it bottom-up… Your easiest starting point is what you know about the subject. And what you know best is its purpose — the question it will answer in the reader's mind."
+      <span class="source">— Barbara Minto, <em>The Pyramid Principle</em>, ch. 4</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Bottom-up (group, then summarize) suits the exploration stage, when you don't yet know the answer and the data needs to speak. Top-down (hypothesis, then test) suits the expression stage, when you do know and you need it to land. The most common failure is using bottom-up to <em>express</em> — dumping the research process on the reader and asking them to assemble it themselves.</p>
+    <div class="pyramid-vis">           ▲  Main Point (Answer)
+          / \
+         /   \
+        Sub1  Sub2  Sub3   ← MECE
+       /|\    /|\    /|\
+      data  facts  examples   ← evidence
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">(Bottom-up draft.) We interviewed 23 users, reviewed six months of data, and benchmarked competitors. DAU is down 15%. In interviews, 18 of 23 mentioned onboarding was too long. Competitors average two onboarding steps. So we may want to simplify onboarding.</span>
+      <span class="after">(Top-down rewrite.) Simplify onboarding to two steps this quarter. Three lines of evidence support it: (1) DAU is down 15%, driven by first-use drop-off; (2) 18 of 23 interviewed users named the step count as the friction; (3) leading competitors have stabilized at two steps or fewer.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Thinking stage, for yourself.) I'll hold off on conclusions. Q2 incidents: 3 in January, 5 in February, 2 in March; root causes mixed…</span>
+      <span class="after">(Expression stage, for the reader.) Q2 incidents rose 40%, driven primarily by an undisciplined release process. Three categories of cause follow…</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Top-down: whenever you already know the conclusion and need it to land (about 90% of work communication).</li>
+      <li>Bottom-up: exploratory research, user-interview synthesis, surveys of unfamiliar territory.</li>
+      <li>Do not: hand the reader your bottom-up draft (unless they have explicitly asked for the process).</li>
+      <li>Beware: closing top-down too early misses the counterintuitive finding hiding in the data.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Submitting the research narrative as the deliverable ("first I did A, then B, then I noticed C…").</li>
+      <li>Doing top-down with a foregone conclusion — bias dressed as analysis.</li>
+      <li>Skipping bottom-up entirely; writing top-down on evidence you don't actually have.</li>
+      <li>Mixing both structures inside one document, losing the reader.</li>
+      <li>Showing the process to prove the workload. The reader cares only about the result.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Barbara Minto</span>, <em>The Pyramid Principle</em>, ch. 4 ("Building a Pyramid Structure"); <span>Paul Graham</span>, "The Age of the Essay" (on the difference between the act of thinking and its presentation).</p>
+  </div>
+
+  <div class="eninsight">
+    "Think bottom-up, write top-down." A useful working motto. The reader does not need your scaffolding — only the building.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take a longer document you've written (500+ words). Underline the core point of each paragraph. Reorder so the answer leads the first sentence of the first paragraph, and the supporting points line up MECE behind it. Read both versions. Which one would you rather receive as a reader?</p>
+  </div>
+</section>
+
+<!-- Card 4: SCQA -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>SCQA: The Story-Shaped Opening</h2>
+  <div class="en-name">Situation – Complication – Question – Answer</div>
+  <span class="tag">Pyramid · The Opening</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Minto proposed that the opening of any serious document should read like a miniature story: <em>Situation</em> (where we are), <em>Complication</em> (what changed), <em>Question</em> (what the change forces us to ask), <em>Answer</em> (your recommendation). The reader walks into a shared world, sees the disruption, feels the question rise naturally, and meets your answer ready to hear it.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "The classic pattern of an introduction is: Situation, Complication, Question, Answer. Together, they tell a 'story' that draws the reader into recognizing your question as his question, so that he will be interested in your answer."
+      <span class="source">— Barbara Minto, <em>The Pyramid Principle</em>, ch. 3</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A pure-conclusion opening can land too hard, with no setup. A pure-background opening drags. SCQA is the bridge between them. The situation is shared ground; the complication is the tension; the question is the hook the tension creates; the answer is the resolution you offer. This is the same load-bearing shape that runs through Aristotle's rhetoric, Hollywood three-act structure, and the opening of an Amazon six-page memo. Humans have been listening to that pattern since before writing existed.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Recommend upgrading the core database to PostgreSQL 16. Reasons: performance, security, cost.</span>
+      <span class="after">[S] Our core database has run PostgreSQL 12 since 2021. [C] Last month PG 12 entered its end-of-life countdown — security patches stop in November. [Q] Which version should we move to, and when? [A] Upgrade to PG 16 this quarter. Three reasons: compliance, a 30% performance gain, and long-term support through 2028.</span>
+    </div>
+    <div class="example">
+      <span class="before">We need to decide this week whether to ship the Agent feature in Q3. Please share your views.</span>
+      <span class="after">[S] We promised users an AI assistant in Q3. [C] Last week's technical review found that core model latency falls short of the usable bar. [Q] Ship on time, delay, or ship a reduced scope? [A] Ship a reduced scope: release "instruction mode" now, follow with "conversation mode" in three months.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Use in: decision memos, proposals, the opening of a PRD, the opening of a quarterly review.</li>
+      <li>Use whenever the reader needs to feel <em>why now</em> before they hear the answer.</li>
+      <li>Do not apply to: pure status updates (weekly metrics don't need a story).</li>
+      <li>Skip when: the message is short enough that SCQA would slow it down (Slack-length).</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Writing the situation as grand-context throat-clearing ("In this era of rapid AI advancement…") — empty.</li>
+      <li>Manufacturing a complication where none truly exists.</li>
+      <li>Posing a question that interests the writer but not the reader.</li>
+      <li>Letting the SCQA sprawl across three paragraphs and lose its momentum.</li>
+      <li>Treating SCQA as a fill-in-the-blank template instead of a shape — the language goes flat.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Barbara Minto</span>, <em>The Pyramid Principle</em>, ch. 3 ("Why a Storylike Introduction?"); <span>Amazon</span> Working Backwards / PR-FAQ (the same storyshaped opening, applied to launches).</p>
+  </div>
+
+  <div class="eninsight">
+    "Every good piece of writing begins with both a mystery and a magic trick." Useful reframing: Situation + Complication is the mystery; Answer is the magic.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a decision email or proposal you need to send next week. Write a four-sentence opening: one situation, one complication, one question, one answer. Show only those four sentences to a colleague. Ask: do you know what decision I want? Does it feel urgent? If both answers are yes, the opening is doing its job.</p>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 2 · 2026</footer>
+
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+</body>
+</html>

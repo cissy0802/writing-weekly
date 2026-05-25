@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: The Principle of Clarity — Week 1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 1 · 2026.05.21</div>
+  <h1>The Principle of Clarity<span class="topic">Writing &amp; Expression</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Clarity is craft, not gift. Every padded phrase, every passive, every limp abstract verb steals a piece of the reader's attention. This week we start with Zinsser, and we learn to cut.</p>
+</header>
+
+<!-- Card 1: Cut the clutter -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Cut the Clutter</h2>
+  <div class="en-name">Every needless word is a small theft from the reader.</div>
+  <span class="tag">Clarity · Foundations</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Every word must earn its place. If a word can come out without losing the meaning, take it out. Zinsser calls the residue <em>clutter</em>, and he names it the central enemy of good prose.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Writing improves in direct ratio to the number of things we can keep out of it that shouldn't be there. 'Up' in 'free up' shouldn't be there. Examine every word you put on paper. You'll find a surprising number that don't serve any purpose."
+      <span class="source">— William Zinsser, <em>On Writing Well</em>, ch. 3 ("Clutter")</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Every word costs the reader a slice of attention. Clutter doesn't only take up space — it dilutes the signal. The denser the information, the more willing a reader is to stay. This is especially true of working memos and decision documents. Your reader has no time to filter your water out for you.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">It is important to note that the system, in many cases, currently has the ability to process requests in a fairly efficient manner.</span>
+      <span class="after">The system processes requests efficiently.</span>
+    </div>
+    <div class="example">
+      <span class="before">At this point in time, we would like to take the opportunity to provide a brief overview of the relevant background of this project.</span>
+      <span class="after">Here is the project background, briefly.</span>
+    </div>
+    <div class="example">
+      <span class="before">Due to a wide variety of complex factors and circumstances, the meeting has, regrettably, been forced to undergo a postponement.</span>
+      <span class="after">The meeting is postponed. Reasons attached.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Use freely in: memos, decision emails, product copy, API docs, Slack messages.</li>
+      <li>Use with care in: literary essays and personal writing, where rhythm and repetition carry meaning.</li>
+      <li>Do not apply to: poetry and ceremonial speech, where some redundancy serves emotional and social work.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Hedges: <em>basically</em>, <em>essentially</em>, <em>to some extent</em> — almost always cuttable.</li>
+      <li>Verb scaffolding: <em>conduct an analysis of</em> → <em>analyze</em>; <em>make a decision</em> → <em>decide</em>.</li>
+      <li>Dummy subjects: <em>It is X that…</em>, <em>There are people who…</em> — lead with the real subject.</li>
+      <li><em>In order to</em> → <em>to</em>. <em>Due to the fact that</em> → <em>because</em>.</li>
+      <li>Stacked adjectives. One exact word beats three vague ones.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>William Zinsser, <em>On Writing Well</em></span> (ch. 3, "Clutter"); <span>Strunk &amp; White, <em>The Elements of Style</em></span> (Rule 17: <em>Omit needless words</em>).</p>
+  </div>
+
+  <div class="eninsight">
+    <strong>English Insight:</strong> "Omit needless words. Vigorous writing is concise." — Strunk &amp; White. Read your draft aloud. Every word your tongue stumbles over is a candidate for the cutting room.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take an email or memo you wrote in the past week (300–500 words). Mark every piece of clutter — padding, hedging, throat-clearing. Aim to remove thirty percent. Read it aloud twice. If the meaning is intact and the rhythm tighter, you won. Paste the two versions side by side and look at each cut.</p>
+  </div>
+</section>
+
+<!-- Card 2: Active voice -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Active Voice</h2>
+  <div class="en-name">Give the sentence a subject, an action, and an owner.</div>
+  <span class="tag">Clarity · Voice</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The active voice is shorter, clearer, and stronger. Unless you have a deliberate reason to hide the actor, reach for active first. The passive is not wrong — it is a tool. But the default tool should be active.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Never use the passive where you can use the active… The active voice is much more pungent, direct, and vigorous than the passive."
+      <span class="source">— George Orwell, "Politics and the English Language" / Strunk &amp; White</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The passive blurs responsibility. <em>The decision was made</em> — by whom? <em>An error was found</em> — by whom? In technical and organizational writing, blurred responsibility is blurred action. Pinker, in <em>The Sense of Style</em>, defends the legitimate uses of the passive (old information first, new information last), but warns that habitual passive is the signature of bureaucratic prose.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">A decision was made by the leadership team that the project would be paused.</span>
+      <span class="after">Leadership paused the project.</span>
+    </div>
+    <div class="example">
+      <span class="before">The bug was introduced in last week's deployment.</span>
+      <span class="after">An engineer introduced the bug in last week's deployment. (Unless you mean to protect them — then the passive is right.)</span>
+    </div>
+    <div class="example">
+      <span class="before">It has been determined, after careful consideration, that the proposal will be moved forward.</span>
+      <span class="after">After careful consideration, we are moving the proposal forward.</span>
+    </div>
+    <div class="example">
+      <span class="before">The issue has been identified and has been assigned to the relevant team for resolution.</span>
+      <span class="after">We've identified the issue and assigned it to Team X.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Default active: decision memos, technical RFCs, action items, performance feedback.</li>
+      <li>Legitimate passive: scientific method sections ("the sample was heated to 100°C"); journalism protecting a source; emphasizing the object of an action ("the defendant was acquitted").</li>
+      <li>Watch yourself: when writing upward, the urge to hide in the passive is strongest. The result reads as lack of ownership.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Using the passive to dodge responsibility — <em>Mistakes were made</em>, Orwell's standing target.</li>
+      <li>Stacking passives: <em>The proposal was raised, was discussed, was approved.</em> Make it: <em>We discussed the proposal and approved it.</em></li>
+      <li>Hiding behind a generic "one" or "it": <em>It is believed that…</em> → <em>I believe…</em></li>
+      <li>Burying the agent when naming them would be more honest and clearer.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>George Orwell, "Politics and the English Language"</span>; <span>Steven Pinker, <em>The Sense of Style</em></span> (ch. 4, on legitimate uses of the passive).</p>
+  </div>
+
+  <div class="eninsight">
+    <strong>English Insight:</strong> Passive isn't a sin, but it's a tell. When you read "It has been decided that…", ask: by whom? In leadership writing, naming the actor is naming the accountability.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Find a status update or decision memo you wrote in the past. Circle every passive ("was / were / been" + past participle). For each, ask: who did this? Could they be moved to the subject position? Compare the two drafts. Which one sounds like a person taking responsibility?</p>
+  </div>
+</section>
+
+<!-- Card 3: Concrete nouns and strong verbs -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Concrete Nouns, Strong Verbs</h2>
+  <div class="en-name">Nouns the reader can see; verbs that move.</div>
+  <span class="tag">Clarity · Word Choice</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Abstract nouns — <em>implementation</em>, <em>optimization</em>, <em>capability</em>, <em>synergy</em> — leave the reader hovering. Concrete nouns — <em>the login button</em>, <em>the 3 a.m. pager</em>, <em>the red folder</em> — let them land. Weak verbs — <em>is</em>, <em>has</em>, <em>makes</em>, <em>conducts</em> — sag in the sentence. Strong verbs — <em>pierce</em>, <em>hammer</em>, <em>shipped</em>, <em>cut</em> — stand it up.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Authors' Words</div>
+    <div class="quote">
+      "Write with nouns and verbs, not with adjectives and adverbs. The adjective hasn't been built that can pull a weak or inaccurate noun out of a tight place."
+      <span class="source">— Strunk &amp; White, <em>The Elements of Style</em></span>
+    </div>
+    <div class="quote" style="margin-top:14px">
+      "Verbs are the most important of all your tools. They push the sentence forward and give it momentum. Active verbs push hard; passive verbs tug fitfully."
+      <span class="source">— William Zinsser, <em>On Writing Well</em></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The brain processes concrete images faster than abstractions — Pinker calls it the primacy of the mental image. <em>She cried</em> activates mirror neurons. <em>She experienced a downturn in affect</em> only stirs the semantic module. In technical writing, "the system returns in three seconds" carries more credibility than "the system exhibits a downward trend in responsiveness."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">We will conduct an implementation of an optimization of the system.</span>
+      <span class="after">We will optimize the system. (Better: we'll cut p99 latency from 800ms to 200ms.)</span>
+    </div>
+    <div class="example">
+      <span class="before">The team made a decision regarding the utilization of the new framework.</span>
+      <span class="after">The team chose React.</span>
+    </div>
+    <div class="example">
+      <span class="before">A comprehensive retrospective was carried out on the project.</span>
+      <span class="after">We held a retrospective on the project.</span>
+    </div>
+    <div class="example">
+      <span class="before">The proposal has demonstrable enhancement effects on user experience.</span>
+      <span class="after">The proposal cut first-page load time from 4 seconds to 1.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Strongly: tech docs, product launches, performance self-reviews, leadership updates, brand copy.</li>
+      <li>With care: legal contracts (precise abstractions sometimes have no concrete substitute); official formal writing constrained by genre.</li>
+      <li>The trap: piling on abstractions to "sound professional." The effect is the opposite — it reads hollow.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Nominalization: <em>have a discussion</em> for <em>discuss</em>; <em>make a decision</em> for <em>decide</em>.</li>
+      <li>Vague quantifiers: <em>a number of</em>, <em>several</em>, <em>multiple</em>. Give the number.</li>
+      <li>All-purpose weak verbs: <em>have</em>, <em>make</em>, <em>do</em>, <em>conduct</em>, <em>execute</em>, <em>perform</em>.</li>
+      <li>Adjective rescue: <em>extremely effective</em>, <em>highly important</em>. Cut the modifier and strengthen the noun or verb instead.</li>
+      <li>Worn jargon: <em>leverage</em>, <em>synergy</em>, <em>circle back</em>, <em>at scale</em>. Once a phrase has faded, it says nothing.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Steven Pinker, <em>The Sense of Style</em></span> (chapter on nominalization); <span>王小波《我的师承》</span> (Wang Xiaobo, "My Lineage," on the clean force of modern Chinese — an instructive parallel essay on prose as a moral instrument).</p>
+  </div>
+
+  <div class="eninsight">
+    <strong>English Insight:</strong> Hunt your sentences for nominalizations — verbs and adjectives smothered into nouns. <em>Conduct an investigation</em> → <em>investigate</em>. <em>Is reflective of</em> → <em>reflects</em>. Unbury the verb, and the sentence breathes.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a 200-word technical paragraph you've written. Do two passes. First: circle every <em>conduct</em>, <em>perform</em>, <em>carry out</em>, <em>make a</em>, <em>have a</em>, and collapse it into a single verb. Second: replace every abstract noun (<em>efficiency</em>, <em>capability</em>, <em>framework</em>) with a concrete, measurable detail — a number, a user action, a system state. Read it aloud. Which version sounds like an engineer talking, and which sounds like a slide deck?</p>
+  </div>
+</section>
+
+<!-- Card 4: Zinsser's four -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Zinsser's Four Articles of Faith</h2>
+  <div class="en-name">Clarity · Simplicity · Brevity · Humanity</div>
+  <span class="tag">Clarity · Synthesis</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Zinsser distilled the entire creed of nonfiction into four words: clarity, simplicity, brevity, humanity. The first three are engineering. The fourth is the soul. Readers do not read words; they read the person on the other side of them.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "The four articles of faith I cherish are clarity, simplicity, brevity, and humanity… Writing is an act of ego, and you might as well admit it. Use its energy to keep yourself going."
+      <span class="source">— William Zinsser, <em>On Writing Well</em></span>
+    </div>
+    <div class="quote" style="margin-top:14px">
+      "Clutter is the disease of American writing. We are a society strangling in unnecessary words, circular constructions, pompous frills, and meaningless jargon."
+      <span class="source">— William Zinsser</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The four nest inside each other. Without clarity there is no simplicity; without simplicity there is no brevity. But strip the humanity out, and the first three turn mechanical — you have shaved a piece into a report with no temperature. Zinsser insists, again and again, that writing is not the transfer of information. It is the act of putting <em>yourself</em> on the page. In an age of generative text, that point matters more, not less. A model can be clear, simple, and brief. It cannot be you.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <p style="margin-bottom:10px;font-size:0.95rem;color:#5a5a5a">All four principles, applied to a self-review:</p>
+    <div class="example">
+      <span class="before">In Q1, significant progress was made on a number of strategic initiatives, with cross-functional collaboration being leveraged to drive impactful outcomes across the organization.</span>
+      <span class="after">In Q1 I led three projects: A, B, C. A shipped on time and cut support tickets by 40%. B slipped two weeks — I underestimated the migration risk. C is on track. Lesson: I'll add a 20% buffer for migrations going forward.</span>
+    </div>
+    <p style="margin-top:14px;margin-bottom:10px;font-size:0.95rem;color:#5a5a5a">An upward update, before and after:</p>
+    <div class="example">
+      <span class="before">Across multiple workstreams, the team has made meaningful incremental progress on a number of high-priority items this quarter.</span>
+      <span class="after">Three things shipped this quarter: A went live and tickets dropped 40%; B slipped two weeks (I missed the migration risk); C is on plan. Next quarter I'm padding migrations by 20%.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Apply</div>
+    <ul>
+      <li>Universal: any nonfiction prose — memos, emails, newsletters, blogs, internal docs.</li>
+      <li>Especially for the independent writer: your words are your reputation, and your clarity is your credibility.</li>
+      <li>Adjust for: poetry and ad copy (rhythm and ambiguity outrank clarity); diplomatic prose (vagueness is the instrument).</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Chasing a "professional" tone with jargon — losing clarity.</li>
+      <li>Trying to cover everything — losing brevity.</li>
+      <li>Refusing to take a position to seem "rigorous" — losing humanity.</li>
+      <li>Confusing simplicity with childishness. Simple prose is high-density clarity, not shallow thought.</li>
+      <li>Imitating an admired writer's voice until you lose your own — what Zinsser calls losing your <em>voice</em>.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>William Zinsser, <em>On Writing Well</em></span> (chapters 1–5 are the core); <span>Paul Graham, "Write Simply"</span> (extends Zinsser into the essay form).</p>
+  </div>
+
+  <div class="eninsight">
+    <strong>English Insight:</strong> "Writing is hard work. A clear sentence is no accident. Very few sentences come out right the first time, or even the third time. Remember this in moments of despair." — Zinsser. The mark of a good writer is not effortless prose. It is the patience to rewrite.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Write a 200-word introduction of yourself — to a leader or collaborator you haven't met. Don't edit the first draft; just write. Then revise four times, once per principle. (1) Clarity: one idea per sentence. (2) Simplicity: cut every piece of clutter. (3) Brevity: under 100 words. (4) Humanity: add back one detail that only you could write — a specific project, a real failure, an odd preference. The fourth draft is your introduction. Save it.</p>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</nav>
+
+<footer>BigCat · Writing Weekly · Week 1 · 2026.05.21</footer>
+
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+</body>
+</html>
