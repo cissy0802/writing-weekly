@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Weekly: Rhetoric &amp; Persuasion — Week 7</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7;text-align:left}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:12px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:8px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal;letter-spacing:1px}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal;letter-spacing:1px}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.pillars-box{background:#f8f6f1;padding:24px 18px 18px;margin:18px 0;border-radius:2px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pillar{background:#1f1f1f;color:#fafafa;text-align:center;padding:22px 12px;border-radius:2px;font-family:Georgia,serif}
+.pillar .gk{font-size:1rem;letter-spacing:2px;color:#d8c98a;margin-bottom:6px;font-style:italic}
+.pillar .nm{font-size:1.4rem;font-weight:800;color:#fafafa;margin-bottom:8px;letter-spacing:1px}
+.pillar .cn{font-size:0.85rem;color:#c8c8c8;line-height:1.6;font-style:italic}
+.pillars-box .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:16px;font-family:Georgia,serif;text-align:center}
+
+.ladder{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.rung{display:flex;align-items:center;gap:14px;padding:8px 0;border-bottom:1px dashed #d8d0bc}
+.rung:last-child{border-bottom:none}
+.rung .lvl{flex-shrink:0;width:36px;height:36px;background:#1f1f1f;color:#fafafa;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:800;font-size:0.95rem}
+.rung .bar{flex-grow:1;height:14px;border-radius:2px;background:#d8d0bc;position:relative;overflow:hidden}
+.rung .bar .fill{height:100%;background:#1f1f1f}
+.rung .nm{flex-shrink:0;width:150px;font-family:Georgia,serif;font-size:0.92rem;font-weight:700;color:#1f1f1f}
+.rung .ex{flex-shrink:0;width:200px;font-size:0.82rem;color:#5a5a5a;font-style:italic}
+.ladder .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+
+.steel-box{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.steel-cell{padding:18px 18px;border-radius:2px;font-family:Georgia,serif}
+.steel-cell .hd{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:700}
+.steel-cell .body{font-size:0.92rem;line-height:1.7;font-style:italic}
+.steel-cell.mine{background:#fff;border:1px solid #d0d0d0;color:#1f1f1f}
+.steel-cell.mine .hd{color:#8a8a8a}
+.steel-cell.steel{background:#1f1f1f;color:#fafafa}
+.steel-cell.steel .hd{color:#d8c98a}
+
+.flow-box{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center}
+.flow .step{background:#fff;border:1px solid #d0d0d0;padding:14px 10px;border-radius:2px;text-align:center;font-family:Georgia,serif}
+.flow .step .hd{font-size:0.78rem;letter-spacing:1.5px;color:#8a7a4a;font-weight:700;margin-bottom:4px}
+.flow .step .nm{font-size:0.95rem;font-weight:800;color:#1f1f1f;margin-bottom:3px}
+.flow .step .cn{font-size:0.78rem;color:#5a5a5a;font-style:italic;line-height:1.4}
+.flow .arrow{font-family:Georgia,serif;font-size:1.4rem;color:#8a7a4a;text-align:center}
+.flow-box .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:14px;text-align:center;font-family:Georgia,serif}
+
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:14px 18px;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:700;color:#1f1f1f;font-size:0.98rem;font-family:Georgia,serif}
+details[open] summary{margin-bottom:10px;border-bottom:1px solid #d8d0bc;padding-bottom:8px}
+details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .pillars{grid-template-columns:1fr;gap:10px}
+  .pillar{padding:16px 10px}
+  .rung .ex{display:none}
+  .rung .nm{width:auto}
+  .steel-box{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;gap:6px}
+  .flow .arrow{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 7 · 2026.05.25</div>
+  <h1>Writing &amp; Speaking: The Rhetoric of Persuasion<span class="topic">From Aristotle to Kahneman — Moving Another Mind</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Writing is not showing off. Speaking is not performing. A technical document is not a checklist. They are tools for one thing: to displace another mind. Two thousand years ago Aristotle named the three pillars — character, emotion, logic. Two thousand years later Kahneman added the cognitive substrate: System 1 has to let you in before System 2 will listen. This week's four principles — three pillars, evidence hierarchy, pre-empted counter-argument, cognitive ease — turn "I said it" into "they moved." Engineers most often limp on ethos and pathos. We fix that this week.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Three Pillars: Ethos · Pathos · Logos</h2>
+  <div class="en-name">Aristotle's Symmetry of Persuasion</div>
+  <span class="tag">E · P · L · Pillars</span>
+
+  <div class="section">
+    <div class="label">One-line Principle + The Master's Words</div>
+    <p>Persuasion = credible character (ethos) × resonant emotion (pathos) × tight logic (logos). They multiply. If one pillar is zero, the product is zero.</p>
+    <div class="quote">
+      "Of the modes of persuasion furnished by the spoken word there are three kinds. The first depends on the personal character of the speaker [ethos]; the second on putting the audience into a certain frame of mind [pathos]; the third on the proof, or apparent proof, provided by the words of the speech itself [logos]."
+      <span class="source">— Aristotle《Rhetoric》Book I, Ch. 2 (c. 350 BCE)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Engineers' default blind spot: lean entirely on logos. "My data is clean, therefore he should be persuaded." But if the listener doesn't trust you (ethos missing) or doesn't care about the topic (pathos missing), even the cleanest data slides off. Aristotle's symmetric prescription — three pillars, no hierarchy — still holds. The non-obvious part: ethos is not "I say I'm an expert." It is what the audience reads off you right now — your opening (confident or fidgeting), your scars (what you've shipped, what you've failed), whose shoulders you stand on. Pathos is not sentimentality. It is making the topic stop being abstract and start being theirs.</p>
+
+    <div class="pillars-box">
+      <div class="pillars">
+        <div class="pillar">
+          <div class="gk">Ethos</div>
+          <div class="nm">Character</div>
+          <div class="cn">Why me<br>Scars · Track · Stand</div>
+        </div>
+        <div class="pillar">
+          <div class="gk">Pathos</div>
+          <div class="nm">Emotion</div>
+          <div class="cn">Why care<br>Story · Stake · Empathy</div>
+        </div>
+        <div class="pillar">
+          <div class="gk">Logos</div>
+          <div class="nm">Logic</div>
+          <div class="cn">Why true<br>Data · Proof · Reason</div>
+        </div>
+      </div>
+      <div class="caption">Three pillars, no rank. Drop one — the whole argument drops.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">"Over the last 12 months I led 4 P0 projects, lifted team NPS from 38 to 67, and improved efficiency by 32%." (Promotion packet — pure logos, one pillar standing)</span>
+      <span class="after">"Four years ago when I joined, this system went down six times a month (pathos: lands the panel back in the pain). I'd led a similar migration at Company X in 2019 — it failed, and every judgment I have today is downstream of that failure (ethos: scars include failure). Over the last 12 months: 4 P0s, NPS +29, efficiency +32% (logos: the hard landing)."</span>
+    </div>
+    <div class="example">
+      <span class="before">"Our service has 99.95% uptime and 23ms P99 latency."</span>
+      <span class="after">"In 2021 we lost three days of orders to a single cache miscalculation (pathos: a story, not a metric). The on-call who fixed it now runs reliability for the team (ethos: who guards the gate). Today: 99.95% uptime, 23ms P99 (logos: landing)."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When To Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Promo packet · decision memo · external keynote · fundraising pitch · cross-team ask</li>
+      <li>✗ Don't use: pure tech review (the reviewer wants spec/data, not ethos theatre); daily Slack (rhetoric overkill reads as performative)</li>
+      <li>Mistake 1: Engineer at 90% logos — assumes the audience is rational. But the audience first asks "why should I trust you?"</li>
+      <li>Mistake 2: Sales at 90% pathos — emotional opening, thin data, gets called fluff afterwards</li>
+      <li>Mistake 3: Self-declared ethos — "I am an industry expert" reads as anti-ethos. Ethos is what others (or your scars) say about you</li>
+      <li>Mistake 4: Mistaking pathos for raised voice. Pathos is making them care, not making yourself loud</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Aristotle</span>《Rhetoric》Book I, Ch. 2 · <span>James A. Herrick</span>《The History and Theory of Rhetoric》Ch. 3 — the three pillars in modern rhetorical theory</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Take the next packet/memo you owe (nomination, ask, cross-team push). Label every sentence E / P / L. If 80% is L with 10% each E and P, rewrite: paragraph one adds "why me" (ethos); paragraph two adds "why this matters" (pathos); save your hardest data for the closing landing.<br><strong>Reflection:</strong> In the AI era, who underwrites ethos? When more of "my" writing is AI-drafted and AI-sent, is the reader still reading "me" — or "the me who reviewed it"?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Evidence Hierarchy: Show How Sure You Are</h2>
+  <div class="en-name">Explicit Epistemic Status</div>
+  <span class="tag">H · Evidence</span>
+
+  <div class="section">
+    <div class="label">One-line Principle + The Master's Words</div>
+    <p>Every claim carries an invisible "how sure am I" tag — and the basis of that tag has a public ladder: intuition &lt; analogy &lt; anecdote &lt; data &lt; consensus &lt; empirical. Make the ladder visible and your credibility multiplies.</p>
+    <div class="quote">
+      "What you see is all there is. ... System 1 is radically insensitive to both the quality and the quantity of the information."
+      <span class="source">— Daniel Kahneman《Thinking, Fast and Slow》(2011), Ch. 7 (WYSIATI)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Pair with Hitchens's Razor: "That which can be asserted without evidence can be dismissed without evidence." (《God Is Not Great》, 2007)</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The most common dishonesty in business writing is not lying — it is omitting uncertainty. "Users prefer A" may come from (a) your gut, (b) four interviews, (c) a 1,000-person A/B, (d) three third-party reports. Four very different evidence levels — but the sentence flattens them into one. The reader trusts at the level of the strongest possible source. That is structural deception.<br>The fix, popularized by Scott Alexander at Slate Star Codex, is the "Epistemic Status" tag. In technical writing: append parenthetical evidence type to each claim — "(n=4 interviews)", "(A/B, n=1000)", "(my guess)". Looks humble. Actually raises trust across the whole piece, because: <em>if the author labels weak evidence, then the unlabeled claims must be strong.</em></p>
+
+    <div class="ladder">
+      <div class="rung"><div class="lvl">1</div><div class="nm">Intuition</div><div class="bar"><div class="fill" style="width:12%"></div></div><div class="ex">"I feel that..."</div></div>
+      <div class="rung"><div class="lvl">2</div><div class="nm">Analogy</div><div class="bar"><div class="fill" style="width:24%"></div></div><div class="ex">"Last time X was like this"</div></div>
+      <div class="rung"><div class="lvl">3</div><div class="nm">Anecdote</div><div class="bar"><div class="fill" style="width:40%"></div></div><div class="ex">"Customer A told me..."</div></div>
+      <div class="rung"><div class="lvl">4</div><div class="nm">Data</div><div class="bar"><div class="fill" style="width:60%"></div></div><div class="ex">"Survey, n=200"</div></div>
+      <div class="rung"><div class="lvl">5</div><div class="nm">Consensus</div><div class="bar"><div class="fill" style="width:78%"></div></div><div class="ex">"Three independent experts agree"</div></div>
+      <div class="rung"><div class="lvl">6</div><div class="nm">Empirical</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="ex">"RCT / A/B, p&lt;0.01"</div></div>
+      <div class="caption">Evidence rungs, weakest to strongest. The writer's discipline: tag each claim.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">"Users prefer the new onboarding flow. We should ship." (Decision memo — the reader can't tell how sure the author is)</span>
+      <span class="after">"The new onboarding lifted D1 retention from 38% to 47% in an A/B test (n=12,000, p&lt;0.001 — empirical). The direction matches our August change (anecdotal support). I'm less sure about the long tail — the March lift partially reversed by June (flagged weak). Recommend: ship + 90-day monitoring."</span>
+    </div>
+    <div class="example">
+      <span class="before">"Our users want simpler dashboards."</span>
+      <span class="after">"Three customer interviews (anecdote, n=3) and one in-product survey (data, n=842; 67% prefer fewer panels) both point to simpler dashboards. I'm 70% confident this generalizes to the enterprise tier — we have not tested there."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When To Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Decision memo · technical RFC · ADR · promotion self-review · executive ask</li>
+      <li>✓ Before every "I recommend X" — make it a reflex to ask "how sure?"</li>
+      <li>✗ Don't use: pure narrative (epistemic tags break the rhythm); sales copy (flagging weakness deflates pitch)</li>
+      <li>Mistake: Using the strongest evidence as cover for the whole — 80% of the claims are gut, but the piece reads like all data</li>
+      <li>Mistake: "Research shows..." as a universal shield — uncited equals unsaid</li>
+      <li>Mistake: Labeling everything "100% confident" — uniformly strong reads as untrustworthy. A humble "70%" earns more trust</li>
+      <li>Mistake: Equating "three customer calls" with data — n=3 is anecdote, not data</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 7 — WYSIATI · <span>Christopher Hitchens</span>《God Is Not Great》(2007) — Hitchens's Razor · <span>Scott Alexander</span>《Slate Star Codex》— modern champion of the "Epistemic Status" tag</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Take a recent decision memo. Tag each sentence E1–E6. If more than 60% sits in E1–E2, rewrite: either explicitly flag the weak ones, or go find stronger evidence. Bonus: add an "Epistemic Status" closing paragraph — "I'm overall 70% on this; here's what I'm guessing at."<br><strong>Reflection:</strong> In your org culture, does "over-humble" get read as weak, or does "over-confident" get read as fluff? What mix holds up best in your specific room?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Steelmanning: Make the Counter-argument Stronger Than Your Opponent Would</h2>
+  <div class="en-name">Pre-empt the Best Objection, Pre-mortem the Failure</div>
+  <span class="tag">S · Counter</span>
+
+  <div class="section">
+    <div class="label">One-line Principle + The Master's Words</div>
+    <p>Before they rebut you, rebut yourself — but better than they could. If you can, you've half-won. If you can't, your claim isn't ready to ship.</p>
+    <div class="quote">
+      "I never allow myself to have an opinion on anything that I don't know the other side's argument better than they do."
+      <span class="source">— Charlie Munger《Poor Charlie's Almanack》(1996 USC Law speech)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Companion: Gary Klein's "Pre-mortem," cited in Kahneman《Thinking, Fast and Slow》Ch. 24 — "Imagine the project has failed. Now write a history of that failure."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Most memos and proposals are "half-baked optimism" — the author has seen 90% of what's pro-self and 10% of what's anti-self. Steelmanning inverts the ratio. After stating your case, write one paragraph titled "Strongest Counterargument" and organize the best possible opposing case for them. Can't write it? You aren't ready to ship. Can write it? The reader's trust jumps: <em>the author already thought of what I was going to push back with — so the rest of my doubts are probably also covered.</em><br>Pre-mortem is the temporal twin: before anything has gone wrong, pretend it has, and write the failure backwards. Narrative recruits more concrete detail than a risk checklist ever will.</p>
+
+    <div class="steel-box">
+      <div class="steel-cell mine">
+        <div class="hd">My View</div>
+        <div class="body">"Recommend H1 all-in on Feature X, projecting +30% DAU."</div>
+      </div>
+      <div class="steel-cell steel">
+        <div class="hd">Steelman</div>
+        <div class="body">"If the real cause of low retention is onboarding, not the absence of X, Feature X will pull a short-term lift then revert within 3 months — exactly the trajectory of the Q1 experiment."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">"Recommend H1 all-in on Feature X, projecting +30% DAU. Risks: execution risk, market risk." (Risks written as boilerplate)</span>
+      <span class="after">"Recommend H1 all-in on Feature X, projecting +30% DAU.<br><strong>Strongest counterargument (steelman):</strong> if low retention stems from onboarding rather than absence of X, Feature X will deliver a brief lift then revert within 3 months — matching the Q1 experiment's curve — while we burn the window for onboarding redesign.<br><strong>Pre-mortem:</strong> six months out, the most plausible failure story is: shipped, D7 +35%, D90 back to baseline, team exhausted, onboarding untouched.<br><strong>Mitigation:</strong> 90-day kill criteria (stop if D60 reversion &gt;50%) and a parallel onboarding discovery track."</span>
+    </div>
+    <div class="example">
+      <span class="before">"We should migrate to Service Y. It's better."</span>
+      <span class="after">"We should migrate to Service Y. <em>Steelman of staying:</em> Y is 18 months less battle-tested; our incident playbook is X-native; the 40ms latency gain sits below user-perceptible threshold for our workload. <em>Why I still recommend Y:</em> compounding cost curve; rollback gated on day-30 metrics."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When To Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Decision memo · product/tech RFC · investment analysis · promo defense · high-stakes negotiation</li>
+      <li>✓ The higher the stake, the stronger the steelman should be — it's the maturity test</li>
+      <li>✗ Don't use: calls to action with a tight time window ("We must ship now!" followed by counter-argument dissolves urgency)</li>
+      <li>Mistake: Writing a strawman — the weakest version of opposition, designed to lose</li>
+      <li>Mistake: Pre-mortem reduced to a risk list — loses the "it has already failed" narrative force, reverts to boilerplate</li>
+      <li>Mistake: Listing a steelman without answering it. If you raise it, you must address it. Raising and ignoring is worse than not raising</li>
+      <li>Mistake: Steelmanning yourself easily self-deceives. The strongest steelman comes from a sharp colleague — or an LLM prompted to attack your proposal at full power</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Charlie Munger</span>《Poor Charlie's Almanack》— Mental Models · <span>Gary Klein</span>"Performing a Project Premortem"《Harvard Business Review》2007 · <span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 24</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Take the most important decision memo on your plate. Add two paragraphs: (1) Steelman (≥150 words — write until you've half-convinced yourself); (2) Pre-mortem (≥120 words — a narrative of the failure). Bonus: prompt an LLM, in an adversarial persona, to attack your proposal — fold the strongest blow back into the steelman.<br><strong>Reflection:</strong> In your org's culture, does publicly conceding "the other side has one strong point" read as "candid strength" or "wavering"? What language makes both possible at once?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Cognitive Ease: System 1 Lets You In, System 2 Listens</h2>
+  <div class="en-name">Persuade the Fast Brain Before You Address the Slow One</div>
+  <span class="tag">K · Cognition</span>
+
+  <div class="section">
+    <div class="label">One-line Principle + The Master's Words</div>
+    <p>Persuasion is not "make them think." It is: let System 1 (fast, intuitive) relax, so System 2 (slow, logical) will actually engage. Hard to read → System 1 alarm → System 2 stays home → you lose.</p>
+    <div class="quote">
+      "A reliable way to make people believe in falsehoods is frequent repetition, because familiarity is not easily distinguished from truth. ... Anything that makes it easier for the associative machine to run smoothly will also bias beliefs."
+      <span class="source">— Daniel Kahneman《Thinking, Fast and Slow》(2011), Ch. 5</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The principle is cognitive ease. Four practical consequences for writing:<br>(1) <strong>Readability = credibility.</strong> Clean font, comfortable size, short sentences, rhythm and rhyme. The classic experiment: the same sentence rendered in a clean vs. blurry font — the clean version is rated more likely to be true.<br>(2) <strong>Sentence economy.</strong> Past ~25 English words / ~35 Chinese characters, the reader is using System 2 to parse syntax — and has none left for your argument.<br>(3) <strong>Anchoring.</strong> The first number sets the scale for every number after. Open with "$100B market" then "we need $100M" reads modest. Reverse the order — reads greedy.<br>(4) <strong>Familiarity.</strong> Anchor on a concept the reader already knows ("the Stripe of payroll") — System 1 accepts it in under a second. Unfamiliar terms must be glossed before they are used; otherwise System 2 stalls and the paragraph collapses.</p>
+
+    <div class="flow-box">
+      <div class="flow">
+        <div class="step"><div class="hd">Step 1</div><div class="nm">System 1</div><div class="cn">Glance<br>Smooth? Or alarm?</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="hd">Pass ✓</div><div class="nm">Ease</div><div class="cn">Clean type · short<br>familiar · rhythm</div></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="hd">Step 2</div><div class="nm">System 2</div><div class="cn">Now willing<br>to read the argument</div></div>
+      </div>
+      <div class="caption">Two gates inside the reader. The second never opens if the first refuses.</div>
+    </div>
+
+    <p style="margin-top:14px"><strong>Field rule:</strong> within the first 5 seconds (title, opening line, first paragraph), maximize ease. Mid-piece can afford local friction (one hard pivot for a key insight). Close on ease.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">"It is our recommendation that, in light of the aforementioned constraints, the team should consider the prioritization of refactoring efforts before the implementation of new functionality." (28 words, passive, three nominalizations)</span>
+      <span class="after">"Refactor before building new. The constraints above leave no other order." (12 words across two sentences. Active. The argument is the whole sentence, not buried.)</span>
+    </div>
+    <div class="example">
+      <span class="before">"Given the existing A/B testing infrastructure's limitations in statistical power calibration and multi-arm bandit allocation, this proposal proposes to implement a sequential hypothesis testing framework to mitigate said issues."</span>
+      <span class="after">"Our A/B tests have two old aches: small samples mislead us, and multi-arm decisions skew. This proposal adds sequential testing — it treats both."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When To Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Anywhere attention is scarce — exec updates · external docs · landing-page copy · talk openings</li>
+      <li>✓ Cross-language readers — ease losses compound for L2 readers</li>
+      <li>✓ High-stake first impressions — pitch deck page 1 · interview intro · tech talk open</li>
+      <li>✗ Don't use: legal / compliance text (precision &gt; ease); academic papers (the audience expects friction)</li>
+      <li>Mistake: "Professional means hard to read." Actually inverse — the truly fluent write simply</li>
+      <li>Mistake: Refusing to break long sentences — long isn't dense, it's lazy paragraphing</li>
+      <li>Mistake: Term-bomb in the first sentence — reader isn't warm, System 2 walks out</li>
+      <li>Mistake: Anchor inverted — opening with your small number then expanding to market size reads small-time</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 5 — Cognitive Ease · <span>Robert Cialdini</span>《Influence》— Reciprocity / Authority / Social Proof · <span>Adam Alter &amp; Daniel Oppenheimer</span>"Effects of fluency on judgments" Psychological Science 2006</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Take any recent paragraph (memo, email, doc). Three passes: (1) Sentence length — anything over 25 English words / 35 Chinese characters, split or cut. (2) Term count — every non-universal term in the first 200 words needs a plain-language gloss before its first use. (3) First number in paragraph one — if it's small, add a bigger anchor in front (market size, total org). Read both aloud — if the after-version is twice as smooth, you're done.<br><strong>Reflection:</strong> Extreme concision and "Made to Stick"-style concrete detail can conflict — short sentences sacrifice detail; detail sacrifices brevity. In your writing context, how do you decide which way a given sentence should lean?</p>
+  </div>
+</section>
+
+<!-- Resources -->
+<section class="card">
+  <div class="num">Deep Dive</div>
+  <h2>Further Reading</h2>
+  <div class="en-name">The Persuasion Shelf</div>
+  <span class="tag">REF · Library</span>
+  <div class="section">
+    <ul>
+      <li><strong>Aristotle</strong>《Rhetoric》Book I — the origin of the three pillars, somehow not obsolete after 2,300 years</li>
+      <li><strong>Daniel Kahneman</strong>《Thinking, Fast and Slow》(2011) — Ch. 5 cognitive ease, Ch. 7 WYSIATI, Ch. 24 pre-mortem</li>
+      <li><strong>Charlie Munger</strong>《Poor Charlie's Almanack》— steelmanning and multidisciplinary mental models, working version</li>
+      <li><strong>Christopher Hitchens</strong>《God Is Not Great》(2007) — Hitchens's Razor as a model of polemical rhetoric</li>
+      <li><strong>Robert Cialdini</strong>《Influence: The Psychology of Persuasion》— the six classic levers (reciprocity, authority, social proof, etc.)</li>
+      <li><strong>Scott Alexander</strong>《Slate Star Codex / Astral Codex Ten》— modern exemplar of the "Epistemic Status" tag in essay practice</li>
+      <li><strong>Gary Klein</strong> "Performing a Project Premortem"《Harvard Business Review》2007 — three-page operational guide</li>
+      <li><strong>James A. Herrick</strong>《The History and Theory of Rhetoric》— a standard entry into the Western rhetorical tradition</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Reflection -->
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Open Questions</h2>
+  <div class="en-name">For the Practitioner</div>
+  <span class="tag">Q · Reflect</span>
+  <div class="section">
+    <details>
+      <summary>1. In the AI era, who underwrites ethos? When the reader suspects "this paragraph was AI-written," how does the author rebuild credibility?</summary>
+      <div>Three paths: (a) Make the AI role explicit — "I drafted with AI and revised" reads more credibly than "I wrote it all," because transparency itself is ethos; (b) Preserve in the piece things only you could write — a specific failure, a household detail, a customer by name; (c) Logos must work harder — AI tends to be lazy with data, which is exactly where you can outperform. The locus of ethos migrates from "wrote it" to "judged and stood behind it."</div>
+    </details>
+    <details>
+      <summary>2. Pathos vs. "rational composure" in East Asian executive culture — too much feeling reads as soft. How to resolve?</summary>
+      <div>In Chinese-language rooms, pathos leans toward weight (heft, pause, restraint) rather than affect (tears, raised voice). Learn from Dong Qiao or Lung Ying-tai, not from actors. A single concrete detail (a customer's name, a specific evening) — touched once, not unfolded — is weight. Unfold it and it tips into sentimentality. This inverts the Anglo tradition where pathos is delivered by unfolding.</div>
+    </details>
+    <details>
+      <summary>3. The metric of "cognitive ease" differs between languages. What goes wrong when you transplant the metric directly?</summary>
+      <div>English short-sentence ease comes from the closure of a clean SVO boundary. Chinese short-sentence ease comes from rhythm — 2-2-3, four-character compounds. Apply "&lt;25 words" mechanically to Chinese and you lose the rhythm that signals fluency. Apply Chinese parallel constructions to English and you lose the precision of subordinate clauses. Two metrics, two languages — don't transport.</div>
+    </details>
+    <details>
+      <summary>4. Is steelmanning honesty, or high-grade rhetoric? Where is the line?</summary>
+      <div>Technically rhetoric — strengthening the opposition raises the author's perceived fairness, which boosts ethos. But there's a side effect: write enough steelmen and your brain actually starts to entertain them, and your judgment shifts. Formal honesty produces substantive honesty. A rare case in the history of rhetoric where the tool reshapes its user.</div>
+    </details>
+    <details>
+      <summary>5. Across forms (essay / talk / video), how does evidence-grading get surfaced differently?</summary>
+      <div>Essays can carry the parenthetical "(n=12,000)" inline. Talks can't — reading the parenthetical kills rhythm; substitute tone of voice ("we ran this on twelve thousand people"). Video sits in the middle — a lower-third caption or a B-roll cut shows the source. Essays tolerate the most surfaced evidence, talks the least, video in between. Moving content between forms means redesigning how evidence shows up.</div>
+    </details>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Weekly index</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 7 · 2026</footer>
+
+</div>
+</body>
+</html>
