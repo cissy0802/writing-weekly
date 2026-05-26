@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Made to Stick — Week 5</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.success-box{background:#f8f6f1;padding:24px 18px 18px;margin:18px 0;border-radius:2px}
+.success-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.success-grid .cell{background:#fff;border:1px solid #d8d0bc;padding:14px 10px;text-align:center;font-family:Georgia,serif;border-radius:2px}
+.success-grid .cell .letter{display:block;font-size:1.8rem;font-weight:800;color:#8a7a4a;line-height:1;margin-bottom:6px}
+.success-grid .cell .name{display:block;font-size:0.92rem;font-weight:700;color:#1f1f1f}
+.success-grid .cell .cn{display:block;font-size:0.82rem;color:#5a5a5a;margin-top:3px}
+.success-grid .cell.highlight{background:#1f1f1f;border-color:#1f1f1f}
+.success-grid .cell.highlight .letter{color:#d8c98a}
+.success-grid .cell.highlight .name,.success-grid .cell.highlight .cn{color:#fafafa}
+.success-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.gap-box{background:#f8f6f1;padding:24px 18px;margin:18px 0;border-radius:2px}
+.gap-box .gap-row{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+.gap-box .pill{background:#fff;border:1px solid #d8d0bc;padding:12px 14px;border-radius:20px;font-family:Georgia,serif;font-size:0.88rem;min-width:130px;text-align:center}
+.gap-box .pill .role{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:1.5px;font-weight:700;margin-bottom:4px}
+.gap-box .pill.gap{background:#1f1f1f;border-color:#1f1f1f;color:#fafafa;font-style:italic}
+.gap-box .pill.gap .role{color:#d8c98a}
+.gap-box .arrow{font-size:1.3rem;color:#8a7a4a;font-family:Georgia,serif}
+.gap-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .success-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 5 · 2026.05.23</div>
+  <h1>Made to Stick — The SUCCESs Six<span class="topic">Simple · Unexpected · Concrete · Credible · Emotional · Story</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Why do some ideas travel and others die in inbox? The Heath brothers — Chip, a professor at Stanford; Dan, a writer — spent ten years studying urban legends, proverbs, ad slogans, and political one-liners, and found that sticky ideas share six traits: Simple, Unexpected, Concrete, Credible, Emotional, Story — the acronym SUCCESs. This week we sharpen the first four. Use them on memos, briefings, product copy, even family letters, and watch your words move from "heard" to "remembered" to "retold."</p>
+</header>
+
+<!-- Framework Overview -->
+<section class="card">
+  <div class="num">Framework</div>
+  <h2>SUCCESs: Six Hooks That Make an Idea Stick</h2>
+  <div class="en-name">The Six Principles of Sticky Ideas — Chip &amp; Dan Heath, 2007</div>
+  <span class="tag">Overview · Made to Stick</span>
+
+  <div class="section">
+    <div class="label">The Framework</div>
+    <p>An idea sticks, the Heaths argue, when it hits several of six petals. <em>Sticky</em> means understood, remembered, and capable of changing thought or action. This week we go deep on the first four — Simple, Unexpected, Concrete, Credible. Emotional and Story were already covered in Weeks 3 and 4. But the truly sticky pieces of writing use all six at once.</p>
+
+    <div class="success-box">
+      <div class="success-grid">
+        <div class="cell highlight"><span class="letter">S</span><span class="name">Simple</span><span class="cn">find the core</span></div>
+        <div class="cell highlight"><span class="letter">U</span><span class="name">Unexpected</span><span class="cn">open a curiosity gap</span></div>
+        <div class="cell highlight"><span class="letter">C</span><span class="name">Concrete</span><span class="cn">make it touchable</span></div>
+        <div class="cell highlight"><span class="letter">C</span><span class="name">Credible</span><span class="cn">make it believable</span></div>
+        <div class="cell"><span class="letter">E</span><span class="name">Emotional</span><span class="cn">make them care</span></div>
+        <div class="cell"><span class="letter">S</span><span class="name">Story</span><span class="cn">make them act</span></div>
+      </div>
+      <div class="caption">SUCCESs — the dark cells are this week's focus. The last two were Weeks 3 and 4.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Isn't About Creativity</div>
+    <p>The Heaths' core finding is that stickiness is not a stroke of genius; it is a set of learnable design choices. <em>"It is far easier to uncover an idea that is already sticky than to manufacture stickiness from scratch."</em> When writing an email, a decision memo, or a quarterly update, you don't need to be a creative wizard. You just need to walk the six petals one by one and fill in the blanks.</p>
+  </div>
+</section>
+
+<!-- Card 1: Simple -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Simple: Find the Core, Then Have the Nerve to Drop the Rest</h2>
+  <div class="en-name">Find the Core — Commander's Intent</div>
+  <span class="tag">S · Simple</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Simple does not mean dumbed-down. It means core <em>plus</em> compact. The Heaths borrow a concept from the U.S. Army's field manuals — <em>Commander's Intent</em>: every order must contain a single sentence that tells a soldier what to do <em>if every plan fails</em>. That sentence is the core. The writer's version is the same: strip your draft to a single line. If that line can stand alone, you have your core. If it can't, you haven't found it yet.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "To strip an idea down to its core, we must be masters of exclusion. We must relentlessly prioritize. Saying something short is not the mission — saying something profound while saying it short is the goal."
+      <span class="source">— Chip &amp; Dan Heath, <em>Made to Stick</em>, ch. 1</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Cognitive science says it plainly: a reader's recall of "three priorities" is about the same as their recall of "one priority," and recall of "six" rounds to zero. But the mind resists cutting, because every item feels important. The Heaths offer an engineering fix: rank every candidate idea in absolute order (not by category — by <strong>number</strong>), then cut everything below position one and ask whether item one can carry the document alone. If yes, that is your core. If not, item one isn't sharp enough yet — sharpen it.</p>
+    <p style="margin-top:10px">The famous bad example is the law firm whose tagline is "we provide comprehensive legal services" — a sentence that tries to cover everything and so says nothing. The famous good example is Southwest Airlines' <em>"The low-fare airline"</em> — three words sharp enough that, with no manual, any employee can decide whether to add a chicken-salad meal (no — it isn't low-fare).</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">This quarter we will focus on: customer growth, product quality, R&D efficiency, organizational culture, compliance, cost optimization, and brand. (Seven priorities means none.)</span>
+      <span class="after">Q3, one thing: lift first-month retention of new signups from 38% to 60%. Everything else continues, but yields when it conflicts. (One sentence of commander's intent — any teammate in any meeting can make a judgment from it.)</span>
+    </div>
+    <div class="example">
+      <span class="before">This memo seeks to outline our strategic considerations regarding the multi-faceted opportunities in the AI infrastructure space. (Throat-clearing.)</span>
+      <span class="after">If we don't ship a unified inference gateway by October, we lose three enterprise accounts. Everything else in this memo serves that one fact. (Core first; the rest in service of it.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Strategic memos, annual letters, first slide of a pitch, all-hands openings, product OKRs</li>
+      <li>Complex decision emails — put "I recommend X" in sentence one, with reasons below</li>
+      <li>Skip for: operating manuals (must be exhaustive), API reference (must enumerate)</li>
+      <li>Use with care in multi-stakeholder policy documents, where "one core" can be politically inconvenient — but keep the core clear in your own head even if not on the page</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Confusing simple with short — it's core <em>plus</em> compact, in that order</li>
+      <li>Five parallel bullets used as a substitute for one ranked priority, then pretending it's prioritized</li>
+      <li>Core stated as a noun phrase, not an actionable claim — "AI strategy" is not a core; "ship v1 to five design partners before September" is</li>
+      <li>Cutting the secondary feels rude, so it stays — and dilutes the primary</li>
+      <li>Different levels of the org write different "commander's intents" that don't fit together — the director's core and the engineer's daily are disconnected</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Chip &amp; Dan Heath</span>, <em>Made to Stick: Why Some Ideas Survive and Others Die</em>, ch. 1 — Simple · <span>U.S. Army Field Manual</span>, source of the Commander's Intent concept</p>
+  </div>
+
+  <div class="eninsight">
+    "If you say three things, you say nothing." — Find the one sentence a tired teammate at 11 p.m. can still act on. That's your core.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take a strategy or update document of yours over a thousand words. Force yourself to rewrite its commander's intent in <strong>one sentence</strong> — eighteen English words or fewer. Lose the plan, lose the page numbers, lose the meeting — can a teammate still make the right call from that line alone? If you can't write it, it isn't the reader who's slow; it's the thinking that isn't done. Paste the sentence at the top of the document and reread. You'll often find thirty percent of the body becomes deletable.</p>
+  </div>
+</section>
+
+<!-- Card 2: Unexpected -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Unexpected: Open a Curiosity Gap, Then Close It</h2>
+  <div class="en-name">Gap Theory of Curiosity — Surprise Then Reward</div>
+  <span class="tag">U · Unexpected</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The opposite of attention is not distraction — it is <strong>the already-known</strong>. The brain filters anything it can predict. So you first <strong>break the reader's guessing model</strong> (the schema), forcing the realization "I thought I knew — actually I don't," and only then deliver the knowledge. The Heaths cite the psychologist George Loewenstein's <em>gap theory</em>: curiosity is the pain of "I know I don't know X." Open the gap first; fill it second.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "To get people's attention, we have to violate their schemas. But surprise that lacks insight is empty — surprise must lead to insight. Curiosity is the intellectual need to answer questions and close open patterns."
+      <span class="source">— Chip &amp; Dan Heath, <em>Made to Stick</em>, ch. 2 (citing George Loewenstein, 1994)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The Heaths' classic example: in the 1980s, the Center for Science in the Public Interest analyzed movie-theater popcorn and found that a single medium bucket contained 37 grams of saturated fat — more than a bacon-and-eggs breakfast, a Big Mac lunch, and a steak dinner combined. The fact has stuck for thirty years. Its engineering: first break the schema ("popcorn? a light snack, right?"); then close the gap with a visceral comparison (three meals in a bucket).</p>
+
+    <div class="gap-box">
+      <div class="gap-row">
+        <div class="pill"><span class="role">Step 1</span>Reader's schema</div>
+        <div class="arrow">→</div>
+        <div class="pill gap"><span class="role">Step 2</span>Break it</div>
+        <div class="arrow">→</div>
+        <div class="pill"><span class="role">Step 3</span>Curiosity gap</div>
+        <div class="arrow">→</div>
+        <div class="pill"><span class="role">Step 4</span>Insight</div>
+      </div>
+      <div class="caption">Gap theory — the four steps from surprise to insight.</div>
+    </div>
+    <p style="margin-top:14px">Crucially, the gap must be one your content can close. An empty surprise — clickbait — only triggers anger; the reader leaves feeling betrayed, and skips your byline next time.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Our new model achieves significant gains across multiple benchmarks — see attached. (No surprise, no gap, attachment unopened.)</span>
+      <span class="after">Same question, the old model gets wrong; the new model gets right — and the only difference is one word we changed in the prompt. Why does one word carry so much leverage? It took us three weeks to figure out. (Surprise → gap → promise of insight.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Our Q3 results show strong performance across key metrics. (Schema unchallenged.)</span>
+      <span class="after">We grew revenue 22%, but our two largest customers churned — in the same week. This memo is about what those seven days taught us. (Contradiction breaks the "success = good" schema.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Headlines, openings, the first thirty seconds of a TED talk, sales-email subject lines, the first sentence of a thread</li>
+      <li>Postmortems — a counterintuitive fact as the hook is ten times more memorable than a chronological recap</li>
+      <li>Skip for: crisis announcements (be plain and direct), regulatory notices (no flourishes)</li>
+      <li>Be very cautious in grave contexts — "Surprise!" as a rhetorical hook in a layoff announcement is a disaster</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Surprise without insight — the reader leaves confused or angry (clickbait)</li>
+      <li>Surprise via inflated numbers ("300% surge!") — readers are desensitized to that register</li>
+      <li>Wrong audience — telling seasoned practitioners a "counterintuitive" fact they already know just makes you look shallow</li>
+      <li>Every paragraph surprises — when everything pops, nothing pops. Cadence beats frequency</li>
+      <li>Open the gap and never close it — leftover curiosity curdles into distrust</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Heath</span>, <em>Made to Stick</em>, ch. 2 — Unexpected · <span>George Loewenstein</span>, "The Psychology of Curiosity" (1994), the original gap-theory paper</p>
+  </div>
+
+  <div class="eninsight">
+    "Surprise grabs. Curiosity holds." — One opens the door; the other walks the reader through it. Engineer both, not just the first.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take your next work email. The subject line is usually something like "Re: Q3 OKR discussion" or "Project weekly: Week 21." Rewrite it twice. Version A — a contrast of facts: "Customer orders 3× last week, but margin down 8 points." Version B — a question opening a gap: "Why do our best customers churn first?" Send each version to a different group and see which gets opened first, and whether anyone says, "I clicked because of the subject." That tells you whether you've tuned the schema-violation right.</p>
+  </div>
+</section>
+
+<!-- Card 3: Concrete -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Concrete: Turn Abstractions into Pictures You Can Touch</h2>
+  <div class="en-name">The Velcro Theory of Memory — Hooks for the Brain</div>
+  <span class="tag">C · Concrete</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Abstract = hard to remember + easy to misread + hard to coordinate around. Concrete = easy to remember, shared understanding, executable. The Heaths offer the Velcro theory of memory: the mind is Velcro, and <strong>the more hooks, the more it sticks</strong>. An abstract "improve efficiency" is a smooth marble; "cut new-hire onboarding from fourteen days to three" is a ball of yarn covered in hooks. Concrete isn't dumbing down — it's translating an abstraction into something every reader can see in the same picture.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Language is often abstract, but life is not abstract. Concrete is memorable because our brains are wired to remember concrete data. Abstraction makes it harder to understand an idea, and harder to remember it. It also makes it harder to coordinate our activities."
+      <span class="source">— Chip &amp; Dan Heath, <em>Made to Stick</em>, ch. 3</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Concrete isn't just more detail — it's a picture the reader can draw in their own head. Three engineering moves:</p>
+    <ul>
+      <li><strong>Replace abstract nouns with observable behaviors</strong>: "improve execution" → "before each weekly, every owner posts a three-line status"</li>
+      <li><strong>Replace vague magnitudes with concrete units</strong>: "millions of users" → "a small city's worth of people installed it"</li>
+      <li><strong>Replace concepts with images</strong>: "we want to be the industry leader" → "competitors quote our product as the baseline in their own weeklies"</li>
+    </ul>
+    <p style="margin-top:12px">The Heaths cite JFK in 1961: <em>"Land a man on the moon and return him safely before the decade is out."</em> Every word is something a six-year-old can draw — man, moon, home. That is why 300,000 NASA engineers could walk in the same direction.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">We will build a customer-first culture and grow our team's empathy and service mindset. (Four abstract nouns. Zero pictures.)</span>
+      <span class="after">Starting Monday, every engineer does one customer-support rotation per month — two hours on the real phone queue. The engineering director owns this and forwards me three out of thirty recordings each month. (Seen, asked, measured.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Our product offers significant productivity improvements for knowledge workers. (Any B2B SaaS could say this.)</span>
+      <span class="after">Sarah, a designer at a forty-person startup, used to spend ninety minutes every Monday morning stitching together a weekly report. Now she runs one command. Her Mondays start at 10:30 instead of 8. (One name. One number. One picture.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Any document that requires cross-functional collaboration — concrete is the greatest common denominator of coordination</li>
+      <li>Explaining technical work to non-engineers — one good analogy beats a half-hour at the whiteboard</li>
+      <li>Education, training, family letters, life advice to your kids</li>
+      <li>Skip for: legal contracts (which deliberately use abstractions to cover future cases) and mathematical proofs</li>
+      <li>Be careful across cultures — your concrete picture ("like a Saturday at Costco") may be empty in another country</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Jargon dressed up as concreteness — "enable," "leverage," "synergize" are abstractions in costume; you can't draw them</li>
+      <li>Concrete only in the headline; the body slides back into abstraction — the reader feels like they watched a great trailer then read the warranty</li>
+      <li>Over-detailing into noise — pick one or two representative details, don't dump them all</li>
+      <li>Vivid image unrelated to the point — the reader remembers the picture but forgets the claim</li>
+      <li>Idioms passing for images — phrases like "moving the needle" have abstracted with use</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Heath</span>, <em>Made to Stick</em>, ch. 3 — Concrete · <span>William Zinsser</span>, <em>On Writing Well</em>, "Words" chapter — the hazard of abstract nouns</p>
+  </div>
+
+  <div class="eninsight">
+    "If you can't draw it, you haven't said it." — A six-year-old should be able to sketch your strategy. If not, it's not strategy yet — it's vocabulary.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>List the five most-used abstract verbs in your team's vocabulary — enable, leverage, synergize, streamline, align, or your own. For each, write a one-sentence concrete substitute that contains either an observable behavior or a countable object. Example: instead of "improve alignment," write "every Wednesday at 9:30, the three owners spend fifteen minutes naming this week's conflicts." Next time you write a memo, replace every abstract verb with its concrete sentence. Watch comprehension roughly double in speed.</p>
+  </div>
+</section>
+
+<!-- Card 4: Credible -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Credible: Trust Built from Details, Not Logos</h2>
+  <div class="en-name">The Sinatra Test, Anti-Authorities &amp; Vivid Statistics</div>
+  <span class="tag">C · Credible</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Credibility isn't "add a CEO title" or "paste a McKinsey logo." The Heaths offer three internal credibility moves: <strong>(1) the Sinatra Test</strong> — "if I can make it there, I'll make it anywhere": one unimpeachable hard case beats ten soft proof points; <strong>(2) anti-authority</strong> — let the ordinary person who was affected do the testifying, not the expert; <strong>(3) tangible statistics</strong> — translate every number into a physical quantity the reader can feel.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Statistics are rarely meaningful in and of themselves. Statistics will, and should, almost always be used to illustrate a relationship. It's more important for people to remember the relationship than the number."
+      <span class="source">— Chip &amp; Dan Heath, <em>Made to Stick</em>, ch. 4</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Each move maps to a psychological mechanism:</p>
+    <ul>
+      <li><strong>Sinatra Test</strong> — one extreme success carries the implied argument "if they pulled that off, the rest is easy." The Indian logistics firm Safexpress delivered the launch shipments of new <em>Harry Potter</em> books for Bollywood — and after that, every customer believed Safexpress could handle confidential cargo.</li>
+      <li><strong>Anti-authority</strong> — a late-stage lung-cancer patient talking about quitting smoking is more persuasive than ten doctors. Readers run a silent substitution: "if they could change, why can't I?"</li>
+      <li><strong>Tangible statistics</strong> — "our power plant produces X MWh per year" goes nowhere; "enough to power Los Angeles for a week" lands. The Heaths call it the Human Scale Principle — squeeze numbers back to the dimensions of human senses.</li>
+    </ul>
+    <p style="margin-top:12px">The deeper insight: credibility isn't "more authority"; it's "less friction." Every moment the reader has to pause, convert, or speculate is leaking trust. A reader who clicks on the first pass — that is credibility.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Our solution delivered strong results across multiple customers (no numbers); per a Gartner report, we lead the segment (a borrowed badge can't substitute for your own evidence).</span>
+      <span class="after">Three customers, before and after we shipped — A: support response from 14 hours to 2; B: order-error rate from 3.2% to 0.4%; C: new-hire onboarding from 14 days to 3. C's ops director is the toughest customer in the industry — even he renewed. (Sinatra Test + concrete statistics.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Our platform processes billions of requests per day. (Big number, no feel.)</span>
+      <span class="after">Every time you blink, our platform handles 50,000 requests — about the population of a small town reaching for their phones at once. (Translated to human scale.)</span>
+    </div>
+    <div class="example">
+      <span class="before">According to McKinsey, AI will drive significant productivity gains. (Borrowed authority; reader has heard it.)</span>
+      <span class="after">My designer Sarah used to dread Mondays — ninety minutes of report-stitching before she could do any real work. Last Monday she sent a screenshot at 8:15: "Done. Going for coffee." (Anti-authority — the person actually affected speaks for herself.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>The Traction slide of a pitch deck, annual reviews, customer case studies, promotion narratives</li>
+      <li>Internal budget asks — decision-makers tire of Gartner and respond to a first-line case</li>
+      <li>Public communication — expert authority is in steady decline; ordinary stories are rising</li>
+      <li>Skip for: regulatory filings and clinical research (which must lean on external authority and sample sizes)</li>
+      <li>Use with care for hyper-rational engineering audiences — they want distributions, not N=1</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Logo soup as a proxy for credibility — "Used by 500+ companies including…" — readers tune it out</li>
+      <li>A statistic without a baseline — "we improved 30%" — improved over what?</li>
+      <li>Sinatra examples too extreme — listeners write them off as outliers</li>
+      <li>Anti-authority picked badly — a small-time influencer instead of the actual person changed by your work</li>
+      <li>Decimal-point precision as a trust signal — "23.47% improvement" is more suspicious than "about a quarter" (over-precision triggers alarm)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Heath</span>, <em>Made to Stick</em>, ch. 4 — Credible · <span>Daniel Kahneman</span>, <em>Thinking, Fast and Slow</em> — anchoring and the psychology of credibility</p>
+  </div>
+
+  <div class="eninsight">
+    "Don't tell me it's big. Tell me it's bigger than my city." — Translate every number to a thing the reader can touch, walk through, or count on their fingers.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pull up a recent data-heavy report or pitch. For each number, ask three questions. (1) Can the reader feel the order of magnitude intuitively? If not, translate to human scale. (2) Is there a stated baseline? If not, add one. (3) Do I have one unimpeachable hard case (a Sinatra Test)? If not, find the most extreme customer and tell their story. Then show both versions to a non-specialist and ask, "Which numbers do you remember?" The ones they can recite are the ones that stuck.</p>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</nav>
+
+<footer>BigCat · Writing Weekly · Week 5 · 2026</footer>
+
+</div>
+</body>
+</html>
