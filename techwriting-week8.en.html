@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Weekly: Technical Writing — Week 8</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7;text-align:left}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:12px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:8px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example pre{background:#1f1f1f;color:#fafafa;padding:10px 14px;margin:6px 0;font-family:"Courier New",monospace;font-size:0.86rem;line-height:1.5;border-radius:2px;white-space:pre-wrap;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.doc-skeleton{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.skl-row{display:flex;align-items:center;gap:14px;padding:10px 14px;background:#fff;border:1px solid #d8d0bc;margin-bottom:8px;border-radius:2px}
+.skl-row .nm{flex-shrink:0;width:200px;font-family:Georgia,serif;font-weight:700;font-size:0.92rem;color:#1f1f1f}
+.skl-row .ds{font-size:0.88rem;color:#5a5a5a;line-height:1.5;font-style:italic}
+.doc-skeleton .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+
+.diataxis-box{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.diataxis{display:grid;grid-template-columns:90px 1fr 1fr;gap:8px;font-family:Georgia,serif}
+.diataxis .corner{background:transparent}
+.diataxis .ax-top{text-align:center;font-size:0.74rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:8px 4px;background:#f0ebd9;border-radius:2px}
+.diataxis .ax-side{font-size:0.74rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;font-weight:700;background:#f0ebd9;border-radius:2px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3}
+.diataxis .quad{background:#fff;border:1px solid #d0d0d0;padding:14px 14px;border-radius:2px}
+.diataxis .quad .nm{font-size:1.02rem;font-weight:800;color:#1f1f1f;margin-bottom:3px}
+.diataxis .quad .en{font-size:0.8rem;color:#8a7a4a;font-style:italic;margin-bottom:6px}
+.diataxis .quad .ds{font-size:0.82rem;color:#5a5a5a;line-height:1.55}
+.diataxis-box .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+
+.adr{background:#fff;border:1.5px solid #1f1f1f;margin:18px 0;border-radius:2px;font-family:Georgia,serif;overflow:hidden}
+.adr-row{display:flex;border-bottom:1px solid #e0e0e0}
+.adr-row:last-child{border-bottom:none}
+.adr-row .field{flex-shrink:0;width:140px;background:#1f1f1f;color:#fafafa;padding:12px 14px;font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.adr-row .val{padding:12px 16px;font-size:0.92rem;color:#2a2a2a;line-height:1.65;flex-grow:1}
+.adr-row .val .meta{color:#8a7a4a;font-style:italic;font-size:0.86rem}
+
+.cmt-table{width:100%;border-collapse:collapse;margin:18px 0;font-family:Georgia,serif;font-size:0.92rem;background:#f8f6f1;border-radius:2px;overflow:hidden}
+.cmt-table th{background:#1f1f1f;color:#fafafa;padding:10px 12px;text-align:left;font-size:0.76rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.cmt-table td{padding:11px 14px;border-bottom:1px solid #e6e0d0;background:#fff;font-size:0.9rem;line-height:1.6;color:#2a2a2a;vertical-align:top}
+.cmt-table tr:last-child td{border-bottom:none}
+.cmt-table td:first-child{width:140px;font-weight:700;color:#1f1f1f}
+.cmt-table td code{background:#f0ebd9;padding:1px 6px;border-radius:2px;font-family:"Courier New",monospace;font-size:0.85rem;color:#3a3a3a}
+
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:14px 18px;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:700;color:#1f1f1f;font-size:0.98rem;font-family:Georgia,serif}
+details[open] summary{margin-bottom:10px;border-bottom:1px solid #d8d0bc;padding-bottom:8px}
+details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .skl-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .skl-row .nm{width:auto}
+  .diataxis{grid-template-columns:1fr}
+  .diataxis .ax-top,.diataxis .ax-side,.diataxis .corner{display:none}
+  .adr-row{flex-direction:column}
+  .adr-row .field{width:100%}
+  .cmt-table td:first-child{width:auto}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 8 · 2026.05.26</div>
+  <h1>Writing Weekly: Technical Writing<span class="topic">Docs that Outlive their Authors</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">A senior engineer's leverage lives less in code than in the writing that survives it — RFCs, ADRs, API docs, the occasional well-placed comment. None of these are written for today's reviewer; they're written for a stranger six months out (often a version of yourself who has lost the context). This week's four principles — design docs, Diátaxis, ADRs, and the philosophy of comments — turn "I once thought this through" into "I left a trace of the thinking." The investment most engineers skip.</p>
+</header>
+
+<!-- Card 1: Design Doc / RFC -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Design Docs: Written for the You of Six Months From Now</h2>
+  <div class="en-name">Design Docs &amp; RFCs — Writing as Thinking, Not Archiving</div>
+  <span class="tag">RFC · Design Doc</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>The first reader of a design doc isn't the reviewer — it's you in six months. The doc preserves your judgment at the time, the options you rejected, the "why not" — not a performance of how clever you were at submission.</p>
+    <div class="quote">
+      "The single most important point of a design doc is to make the author reason about the design at the right level of abstraction."
+      <span class="source">— Malte Ubl《Design Docs at Google》(industrialempathy.com, 2020)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The value is not in the artifact; the value is in forcing the author to reason at the right altitude — not at "what code will we write," not at "what shall we name the company strategy," but at "what tradeoff are we making, and why."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Engineers often think "doc = record of decisions already made." Wrong. The real value of a design doc is in the writing itself: vague intuitions become sentences, and <strong>half the flaws fall out on the way to the keyboard</strong>. This is the engineering version of "writing is thinking."<br>And the future reader (you, or a new hire) won't ask "what is this" — they'll ask "<strong>why didn't we pick B</strong>?" That's why <em>Alternatives Considered</em> is the most long-tail-valuable section of the whole doc: it preserves the rejected options and the reasoning, so the next engineer doesn't re-walk a pothole you already mapped.</p>
+
+    <div class="doc-skeleton">
+      <div class="skl-row"><div class="nm">Context &amp; Goals</div><div class="ds">Where the problem is; what counts as winning</div></div>
+      <div class="skl-row"><div class="nm">Non-goals</div><div class="ds">Explicit "not solving" — the shield against scope creep</div></div>
+      <div class="skl-row"><div class="nm">Design</div><div class="ds">A paragraph or two + a diagram. Intent, not code</div></div>
+      <div class="skl-row"><div class="nm">Alternatives Considered</div><div class="ds">≥ 3 options, each with "why not" — the section with the longest tail of value</div></div>
+      <div class="skl-row"><div class="nm">Risks &amp; Open Questions</div><div class="ds">Known risks + what's still unresolved (named honestly)</div></div>
+      <div class="skl-row"><div class="nm">Rollout &amp; Rollback</div><div class="ds">How to ship; how to retreat if it goes wrong</div></div>
+      <div class="caption">Six-section skeleton. Full ≠ good — but every missing section is where future "strange coincidences" originate.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision examples</div>
+    <div class="example">
+      <span class="before">We will use Kafka for the event pipeline because it is scalable and reliable. (Empty — "scalable / reliable" is true of every candidate, so it says nothing.)</span>
+      <span class="after">Chose Kafka over Pulsar after benchmarking both at our 10K msg/s peak (3 days each). <strong>Pulsar's broker-bookie split adds two ops surfaces we don't have headcount for.</strong> Tradeoff accepted: weaker geo-replication — fine through Q3 because all consumers are us-east. Revisit when EU goes live.</span>
+    </div>
+    <div class="example">
+      <span class="before">This design adopts a microservice architecture to improve system scalability. (Same empty pattern — "improves scalability" tells the reader nothing about why this option, this tradeoff.)</span>
+      <span class="after">Between "monolith + modular packages" and "three microservices," we chose the latter. <strong>The deciding factor: paid-tier and free-tier release cadence have diverged 3x over the last 8 weeks</strong> (data: 12 vs 4 deploys); shared-repo merge conflicts are the bottleneck. Rejected third option, "event-sourced rewrite": no one on the team has shipped event sourcing in two years; the cost of a new paradigm outweighs the benefit.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use · Common errors</div>
+    <ul>
+      <li>✓ Any decision ≥ 2 weeks / 1 person-month · cross-team interface change · architectural baseline migration</li>
+      <li>✗ Skip for: single-file refactors · product micro-copy tweaks — a PR description suffices</li>
+      <li>Error 1: Writing only after the decision is made — the doc should precede the call, not archive it</li>
+      <li>Error 2: Listing alternatives without the "why not" — losing all long-tail value</li>
+      <li>Error 3: Pseudocode or class diagrams in place of design — the reader cannot read intent or tradeoff</li>
+      <li>Error 4: No Non-goals — reviewers keep asking "what about X" that was never in scope</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Malte Ubl</span>《Design Docs at Google》industrialempathy.com 2020 · <span>Will Larson</span>《An Elegant Puzzle》Ch. 4 — the leverage of decisions and memos in engineering orgs · <span>Gergely Orosz</span>"How Big Tech Runs Tech Projects" — comparative RFC / TDD practices</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Pick your next RFC. Cut "Implementation Details" by half; expand "Alternatives Considered" to twice its current size. Have a cross-team peer read it first — every "why not X" they ask is an X that belongs in Alternatives.<br><strong>Reflect:</strong> As AI authorship of RFCs rises, who is doing the "reasoning about the design"? Does AI-drafted prose let the author skip the thinking step? What human–AI split preserves the "writing is thinking" return?</p>
+  </div>
+</section>
+
+<!-- Card 2: API Docs / Diátaxis -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>API Docs: Four Functions, Four Pages</h2>
+  <div class="en-name">API Docs &amp; Diátaxis — Four Modes That Cannot Share a Page</div>
+  <span class="tag">API · Diátaxis</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>One page cannot simultaneously teach beginners, serve as reference, walk through tasks, and explain design intent. Separate the four — tutorials, how-to guides, reference, explanation — and let each reader find their lane.</p>
+    <div class="quote">
+      "Documentation needs to include and be structured around its four different functions: tutorials, how-to guides, technical reference and explanation. Each of them requires a distinct mode of writing."
+      <span class="source">— Daniele Procida《Diátaxis》(diataxis.fr · PyCon AU 2017)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">From "What nobody tells you about documentation" — the talk that became the framework most modern doc sites (Django, NumPy, GitLab, Cloudflare) eventually adopted.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>What happens without the split? <strong>Beginners stare at the reference; experts skim the tutorial for the field they need; SREs hunting how-to-guides drown in design philosophy. Everyone is annoyed.</strong> Diátaxis maps docs across two axes — vertical "study vs work," horizontal "practical vs cognitive." Four quadrants, four jobs.</p>
+
+    <div class="diataxis-box">
+      <div class="diataxis">
+        <div class="corner"></div>
+        <div class="ax-top">Practical / Action</div>
+        <div class="ax-top">Cognitive / Theory</div>
+
+        <div class="ax-side">Study</div>
+        <div class="quad"><div class="nm">Tutorials</div><div class="en">learning-oriented</div><div class="ds">"Follow me." One happy path, 10 minutes to a working Hello World. Don't explain why.</div></div>
+        <div class="quad"><div class="nm">Explanation</div><div class="en">understanding-oriented</div><div class="ds">"Why is it this way?" Background, tradeoffs, history. For the reader who's up and running and now curious.</div></div>
+
+        <div class="ax-side">Work</div>
+        <div class="quad"><div class="nm">How-to guides</div><div class="en">problem-oriented</div><div class="ds">"How do I handle webhook retries?" Recipes for known problems. Quick, specific.</div></div>
+        <div class="quad"><div class="nm">Reference</div><div class="en">information-oriented</div><div class="ds">Full API tables, fields, types, errors. The kind of doc a machine could generate. Cold, complete, storyless.</div></div>
+      </div>
+      <div class="caption">Four quadrants. Stripe's docs are gold standard because they enforce the split rigorously — and link generously across.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision examples</div>
+    <div class="example">
+      <span class="before">Single "Getting Started" page — 300 lines mixing install, quickstart, full API table, and design philosophy. New users stall on the API table; experts dig through stories to find a field.</span>
+      <span class="after">Split into four: ① Tutorial ("10 minutes to your first charge," single happy path) · ② How-to ("Handle webhook retries," "Test refunds in sandbox") · ③ Reference (full API + fields, auto-generated) · ④ Explanation ("Why idempotency keys look like this"). The landing page is now a router, not a textbook.</span>
+    </div>
+    <div class="example">
+      <span class="before">A single markdown blending function signature, usage demo, caveats, and design philosophy. The reader cannot tell where one ends and the next begins.</span>
+      <span class="after">Signature &amp; demo go to Reference. Caveats go to How-to ("Handling rate-limits"). Design philosophy goes to Explanation. The Reference page links to both — scanners stay; "why" readers click through.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use · Common errors</div>
+    <ul>
+      <li>✓ Public APIs · SDKs · internal developer platforms · CLI tools</li>
+      <li>✓ Doc-site refactors — Diátaxis is information architecture, not a styling decision</li>
+      <li>✗ Skip for: single-file libraries (one README is enough) · one-off scripts</li>
+      <li>Error 1: Cramming all four into the README — the README is a foyer, not the full collection</li>
+      <li>Error 2: Tutorials that read like reference — stacking API tables instead of walking the happy path</li>
+      <li>Error 3: Reference that reads like a tutorial — story instead of field definitions</li>
+      <li>Error 4: Putting Explanation on the front page — most arriving readers want how, not why; Explanation is for those who are up and running</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Daniele Procida</span>《Diátaxis: A systematic framework for technical documentation》diataxis.fr · <span>Stripe API Docs</span> docs.stripe.com — textbook Diátaxis in production · <span>Google</span>《Technical Writing Courses》developers.google.com/tech-writing — free two-stage course</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Pick a doc you've written and tag each section against the four Diátaxis modes. If any mode is at zero, ask: is it truly unnecessary, or did you skip it by default? Missing tutorials or explanation is often why a doc "looks complete but feels stuck" in use.<br><strong>Reflect:</strong> When LLMs become the "intermediate reader" for most APIs (developers querying your API through ChatGPT), should docs be written for humans or for LLMs? Which of the four quadrants do LLMs handle worst — tutorials? explanation?</p>
+  </div>
+</section>
+
+<!-- Card 3: ADR -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>ADRs: Time-Stamp the Decision</h2>
+  <div class="en-name">Architecture Decision Records — Immutable Memos for the Future</div>
+  <span class="tag">ADR · Decision Record</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>A decision = context + choice + consequences. Drop any one and six months later it reads as a "strange coincidence." An ADR time-stamps the decision — once written, never edited; to change your mind, write a new ADR marked "Supersedes ADR-042."</p>
+    <div class="quote">
+      "We will keep a collection of records for 'architecturally significant' decisions: those that affect the structure, non-functional characteristics, dependencies, interfaces, or construction techniques."
+      <span class="source">— Michael Nygard《Documenting Architecture Decisions》(Cognitect blog, 2011)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Three pages of blog that changed how a generation of engineering organizations track decisions. ThoughtWorks moved "Lightweight ADRs" to Adopt on its Tech Radar in 2018.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Design docs are about <em>design</em>; ADRs are about <em>decisions</em>. They differ. A design doc may evaluate three options; an ADR is the gavel: "We picked A."<br>What matters in an ADR isn't the format (five fields, that's it) — it's the <strong>immutability stance</strong>: once written, never edited. This is git-commit thinking, not wiki thinking. If you change your mind, write a new ADR with "Supersedes ADR-042"; the original stays. History isn't rewritten, and learning compounds.</p>
+
+    <div class="adr">
+      <div class="adr-row"><div class="field">Title</div><div class="val">ADR-042: Migrate to Postgres 15</div></div>
+      <div class="adr-row"><div class="field">Status</div><div class="val">Accepted <span class="meta">· 2026-05-10 · authors: bc, jh · superseded by ADR-067 (2027-03)</span></div></div>
+      <div class="adr-row"><div class="field">Context</div><div class="val">PG12 reaches EOL 2024-11. Security patches end. PG16 was released 2023-09 (8 months old, low adoption). PG15 has been GA &gt; 2 years and is mature. Our org is conservative on database majors.</div></div>
+      <div class="adr-row"><div class="field">Decision</div><div class="val">Migrate production and replicas to <strong>PG15</strong> (not 16). Two-week window over a Q3 weekend.</div></div>
+      <div class="adr-row"><div class="field">Consequences</div><div class="val">+ JSONB performance gain · + EOL exit before EU regulatory review · − must rewrite 12 JSONpath queries to PG15-compatible form · − lose access to PG16's improved logical replication; revisit in 12 months.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision examples</div>
+    <div class="example">
+      <span class="before">PR description: "Switch to Postgres 15." (Eighteen months later a new engineer reads the repo: "Why PG15 and not PG16?" — no one can answer.)</span>
+      <span class="after">ADR-042 with the five fields above. The doc lives at <code style="background:#eaeaea;padding:1px 5px;border-radius:2px;font-family:Courier New,monospace;font-size:0.86rem">docs/adr/0042-postgres-15.md</code>. Never edited. Eighteen months later the new engineer reads the ADR: decision and context obvious — "they weren't dumb; they were risk-averse."</span>
+    </div>
+    <div class="example">
+      <span class="before">Wiki page "Database choice" — edited 12 times by 5 people over six months. No one can tell why PG was chosen. Every new hire reopens the same argument.</span>
+      <span class="after">Same decision migrated to ADR-042 plus immutable git history. The "why PG" question closes permanently — link to the ADR, 5 minutes to read. New hires who disagree write ADR-067 proposing an alternative with counter-evidence. Progress moves along the ADR chain; history isn't lost.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use · Common errors</div>
+    <ul>
+      <li>✓ Framework · database · protocol · regional-infra choices · company-wide build vs buy · critical-dependency up/down-grades</li>
+      <li>✓ Any decision where the future will ask "why this?"</li>
+      <li>✗ Skip for: day-to-day implementation calls (third-party package, variable name) — too frequent, ADRs become noise</li>
+      <li>Error 1: Treating ADRs as wiki — they get edited, no one remembers the original. ADRs are immutable.</li>
+      <li>Error 2: Decision but no Context — the reader cannot judge "does this still hold?"</li>
+      <li>Error 3: No Consequences — the next engineer doesn't see the tradeoff the author already understood, re-discovers it the hard way</li>
+      <li>Error 4: Written too late — backfilling an ADR after execution is "writing the exam after taking it"; the reasoning trace is gone</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Michael Nygard</span>《Documenting Architecture Decisions》Cognitect blog 2011 — the five-field source · <span>ThoughtWorks</span>《Technology Radar》— "Lightweight Architecture Decision Records" (Adopt, 2018) · <span>adr.github.io</span> — templates and community resources</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> Take the most important technical decision you've made in the last six months (with or without an ADR) and backfill the five fields. Spend the most time on Context — back at that moment, <strong>what didn't you know that you know now</strong>? Write that delta.<br><strong>Reflect:</strong> ADR immutability seems to fight organizational learning — people get smarter, knowledge updates. How do you design the relationship between ADRs and their successors so history isn't rewritten but learning still propagates?</p>
+  </div>
+</section>
+
+<!-- Card 4: Comments -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Code Comments: WHY in Comments, WHAT in Names</h2>
+  <div class="en-name">Code Comments — Why &amp; Why-not, Not What</div>
+  <span class="tag">Comments · Philosophy</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>Comments explain <strong>WHY and WHY-NOT</strong>; names explain <strong>WHAT</strong>. Overlap is noise. When you find yourself adding a line to explain what the code does, first ask: can I rename a variable or extract a function instead?</p>
+    <div class="quote">
+      "The most important reason to write comments is abstraction: comments can describe things that can't be inferred from the code. Without comments, you can't hide complexity."
+      <span class="source">— John Ousterhout《A Philosophy of Software Design》Ch. 12 (Stanford, 2018)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Pair with Robert C. Martin《Clean Code》Ch. 4: "Don't comment bad code — rewrite it." If you need a paragraph of prose to defend the function, the function is the problem.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>A three-layer division of labor:</p>
+    <table class="cmt-table">
+      <thead><tr><th>Dimension</th><th>Carrier</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>WHAT it does</td><td>Names</td><td><code>retryBudget</code> · <code>archiveUsersBefore()</code></td></tr>
+        <tr><td>HOW it does it</td><td>Code itself</td><td>Function body</td></tr>
+        <tr><td>WHY this way</td><td>Comments</td><td><code># 3 because upstream SLA P95 is 800ms</code></td></tr>
+        <tr><td>WHY NOT another way</td><td>Comments</td><td><code># not async: workers share a db conn pool</code></td></tr>
+        <tr><td>Invariants</td><td>Comments</td><td><code># list must stay sorted — bisect downstream</code></td></tr>
+        <tr><td>Contracts</td><td>Docstrings</td><td>"Returns timestamp in UTC ms; raises TimeoutError after 5s"</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:8px">One under-used role of comments: <strong>mark future invariants</strong> — e.g. <code style="background:#eaeaea;padding:1px 5px;border-radius:2px;font-family:Courier New,monospace;font-size:0.86rem"># this list must stay sorted — binary search downstream</code>. A documented constraint that warns the next engineer: "check before you change this."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision examples</div>
+    <div class="example">
+      <span class="before">Comment restates code — zero information:
+<pre># increment i
+i += 1</pre></span>
+      <span class="after">Comment explains where "3" comes from:
+<pre># retry budget is 3 — beyond this upstream
+# (payments-svc) gives up, so we should too
+i += 1</pre></span>
+    </div>
+    <div class="example">
+      <span class="before">Comment is a vague fragment; magic numbers hardcoded:
+<pre># fix for legacy users created before 2018
+if user.created_at &lt; datetime(2018, 1, 1):
+    user.role = "legacy"</pre></span>
+      <span class="after">Extract constants to carry the WHAT; the comment points to an ADR:
+<pre># Pre-cutoff users predate the role-schema migration
+# in ADR-019; default to LEGACY so they don't get
+# write-locked by new RBAC checks.
+if user.created_at &lt; LEGACY_USER_CUTOFF:
+    user.role = ROLE_LEGACY</pre></span>
+    </div>
+    <div class="example">
+      <span class="before">Comment doing the work of a name:
+<pre>// loop through users
+for (const u of users) { ... }</pre></span>
+      <span class="after">Delete the comment — <code>for (const u of users)</code> is self-evident. A short form of Martin's rule: "Don't comment obvious code — delete the comment."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use · Common errors</div>
+    <ul>
+      <li>✓ Any non-obvious "why this number" / "why not that approach" / "future readers must be careful here"</li>
+      <li>✓ Public APIs / SDKs / cross-team interfaces — contracts must live in docstrings (pre/post-conditions, exceptions, units)</li>
+      <li>✗ Skip for: restating code · decorative banners · version numbers (git already tracks) · authorship (lives in LICENSE)</li>
+      <li>Error 1: Comments doing the WHAT job — rename or extract a function instead</li>
+      <li>Error 2: <strong>Lying comments</strong> — code changed, comment didn't. A stale comment is worse than no comment because it actively misleads</li>
+      <li>Error 3: JSDoc/docstrings as decoration — type-only, no semantics; the reader still doesn't know units or failure modes</li>
+      <li>Error 4: A paragraph of prose excusing a tangled function — if the function needs prose, the function is what to fix</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>John Ousterhout</span>《A Philosophy of Software Design》(2018, 2nd ed. 2021) Ch. 12–15 — the core text on comments and abstraction · <span>Robert C. Martin</span>《Clean Code》Ch. 4 — the 17 rules of comments, controversial but useful · <span>Steve McConnell</span>《Code Complete》Ch. 32 — self-documenting code</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p><strong>Exercise:</strong> In your most recent PR, apply a three-way test to every comment: (a) restates code → delete; (b) explains WHY → keep; (c) names could replace it → rename and delete. Bonus: find a comment from three months ago and check whether it still matches the code — update or delete. This is the most under-rated piece of comment hygiene.<br><strong>Reflect:</strong> When AI can instantly generate "what this code does" comments, the marginal cost of WHAT-comments approaches zero. Is that a feature or a bug? Can AI generate WHY-comments — or is WHY forever the human author's territory?</p>
+  </div>
+</section>
+
+<!-- Resources -->
+<section class="card">
+  <div class="num">Deep Dive</div>
+  <h2>For Further Reading</h2>
+  <div class="en-name">Books, Essays, Talks</div>
+  <span class="tag">REF · Further</span>
+  <div class="section">
+    <ul>
+      <li><strong>Malte Ubl</strong>《Design Docs at Google》industrialempathy.com 2020 — the public-facing description of Google's internal RFC culture</li>
+      <li><strong>Daniele Procida</strong>《Diátaxis》diataxis.fr — the four-quadrant doc structure, the most influential tech-doc framework of the last decade</li>
+      <li><strong>Michael Nygard</strong>《Documenting Architecture Decisions》Cognitect blog 2011 — three pages that changed how a generation of engineers track decisions</li>
+      <li><strong>John Ousterhout</strong>《A Philosophy of Software Design》Ch. 12–15 — Stanford CS 190 textbook, source for the comments-and-abstraction view</li>
+      <li><strong>Robert C. Martin</strong>《Clean Code》Ch. 4 — 17 rules of comments; controversial but practical</li>
+      <li><strong>Will Larson</strong>《An Elegant Puzzle》Ch. 4 ·《Staff Engineer》Ch. 6 — writing as leverage inside engineering organizations</li>
+      <li><strong>Google</strong>《Technical Writing Courses》developers.google.com/tech-writing — free two-stage course; thirty minutes that pays off for years</li>
+      <li><strong>Stripe API Docs</strong> docs.stripe.com — textbook Diátaxis in production; worth reverse-engineering the information architecture</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Reflection -->
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Open Questions</h2>
+  <div class="en-name">For the Practitioner</div>
+  <span class="tag">Q · Open</span>
+  <div class="section">
+    <details>
+      <summary>1. After AI drafts the RFC, who owns the "writing-is-thinking" return?</summary>
+      <div>The risk is real — AI removes the "things fall out while you type" effect, and the author skips the reasoning. A practical hedge: let AI handle the skeleton and the prose (section headers, transitions, grammar polish), but the author drafts the load-bearing sections by hand — Goals, Non-goals, Alternatives Considered, Risks. The test: after you're done, can you verbally justify every rejected alternative? If yes, you kept the return. If no, you outsourced too much.</div>
+    </details>
+    <details>
+      <summary>2. How can ADR immutability and organizational learning coexist?</summary>
+      <div>Three paths: (a) the ADR chain — new decisions write new ADRs marked "Supersedes ADR-042"; originals stay; (b) separate ADRs from RFCs — RFCs are mutable (still under discussion), ADRs are immutable once Accepted; (c) add a status field to ADRs allowing "Deprecated" but never an edit. The underlying tension is git-commit thinking vs wiki thinking: knowledge bases evolve, but the history of decisions must not be rewritten — otherwise no future reader can reconstruct "what they were thinking at the time."</div>
+    </details>
+    <details>
+      <summary>3. Why is Diátaxis less adopted in Chinese tech-doc communities?</summary>
+      <div>A few hypotheses: (a) Chinese SaaS/platform markets matured later, with a smaller body of public dev-facing docs; (b) Chinese doc tradition favors the "tutorial + reference combined into a definitive book" form (《XX 权威指南》), the opposite of Diátaxis's "four independent forms"; (c) the tooling — most Diátaxis-style sites lean on Sphinx / MkDocs / Docusaurus, with thinner coverage of Chinese in the doc-as-code chain. A way in: introduce Diátaxis as an IA framework first, not a styling rule. Categorize before formatting.</div>
+    </details>
+    <details>
+      <summary>4. Bilingual code comments — how should mixed-language teams choose?</summary>
+      <div>Three cases: (a) Internal small tools — use the team's main language consistently; (b) Open source / cross-region collaboration — must be English, and term-consistent; (c) Mixed Chinese/foreign teams — a workable compromise is "WHY-comments in the main language, TODOs and link references in English." The worst trap is mixing — same-file Chinese-English comments break grep and confuse AI assistants. A simple rule: comments live in either the codebase's lingua franca or fully in another language — never a blend.</div>
+    </details>
+    <details>
+      <summary>5. "Writing for future you" vs "writing for the new hire" — which audience produces better docs?</summary>
+      <div>The "new hire" persona produces friendlier docs (background, term definitions) but skews toward tutorial-shape — content-heavy, decision-light. The "future you" persona produces tighter, decision-dense docs with fat Alternatives sections — because the future you is impatient and wants the rejected B in detail. A useful blend: write the body for "future you" (high decision density); add a 30-word "for context" first paragraph (the new-hire on-ramp). Both audiences served, neither diluted.</div>
+    </details>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly Index</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 8 · 2026</footer>
+
+</div>
+</body>
+</html>
