@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Presentation Zen — Week 6</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.slide-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.slide{aspect-ratio:16/9;border:1px solid #d0d0d0;padding:14px;font-family:Georgia,serif;position:relative;border-radius:2px;overflow:hidden}
+.slide .stitle{font-size:0.72rem;color:#8a8a8a;letter-spacing:1px;text-transform:uppercase;position:absolute;top:-22px;left:0;font-style:italic}
+.slide.bad{background:#fff;color:#1f1f1f}
+.slide.bad .title{font-size:0.7rem;font-weight:700;border-bottom:1px solid #8a8a8a;padding-bottom:3px;margin-bottom:6px}
+.slide.bad ul{font-size:0.6rem;line-height:1.4;padding-left:14px;list-style:disc;color:#3a3a3a}
+.slide.bad ul li{padding:1px 0}
+.slide.bad .footer{position:absolute;bottom:6px;right:8px;font-size:0.5rem;color:#a04040}
+.slide.bad .footer-l{position:absolute;bottom:6px;left:8px;font-size:0.5rem;color:#8a8a8a}
+.slide.zen{background:#1f1f1f;color:#fafafa;display:flex;align-items:center;justify-content:center;text-align:center}
+.slide.zen .big{font-size:1.6rem;font-weight:800;line-height:1.2;letter-spacing:0.5px;font-family:Georgia,serif}
+.slide.zen .sub{font-size:0.7rem;color:#a8a8a8;margin-top:6px;font-style:italic;letter-spacing:1px}
+.slide-compare .stack{position:relative;margin-top:22px}
+.slide-caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:18px;text-align:center;font-family:Georgia,serif}
+
+.snr-box{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.snr-row{margin-bottom:14px}
+.snr-row:last-child{margin-bottom:0}
+.snr-label{font-family:Georgia,serif;font-size:0.85rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;display:flex;justify-content:space-between}
+.snr-label .ratio{color:#8a7a4a;font-style:italic;font-weight:400}
+.snr-bar{display:flex;height:24px;border:1px solid #d8d0bc;border-radius:2px;overflow:hidden}
+.snr-bar .sig{background:#1f1f1f}
+.snr-bar .noise{background:repeating-linear-gradient(45deg,#e8e0c8,#e8e0c8 4px,#fff 4px,#fff 8px)}
+.snr-box .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.crap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
+.crap-cell{background:#f8f6f1;border:1px solid #d8d0bc;padding:14px 14px;border-radius:2px;font-family:Georgia,serif}
+.crap-cell .ch{display:block;font-size:1.8rem;font-weight:800;color:#8a7a4a;line-height:1;margin-bottom:4px}
+.crap-cell .nm{display:block;font-size:0.95rem;font-weight:700;color:#1f1f1f;margin-bottom:2px}
+.crap-cell .cn{display:block;font-size:0.82rem;color:#5a5a5a;margin-bottom:8px}
+.crap-cell .what{display:block;font-size:0.86rem;color:#3a3a3a;line-height:1.55;font-style:italic}
+
+.rule-box{background:#f8f6f1;padding:24px 18px 18px;margin:18px 0;border-radius:2px}
+.rule-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rule-pillar{background:#1f1f1f;color:#fafafa;text-align:center;padding:22px 12px;border-radius:2px;font-family:Georgia,serif}
+.rule-pillar .num{font-size:2.6rem;font-weight:800;color:#d8c98a;line-height:1;margin-bottom:6px}
+.rule-pillar .unit{font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;color:#fafafa;margin-bottom:8px}
+.rule-pillar .desc{font-size:0.85rem;color:#c8c8c8;line-height:1.55;font-style:italic}
+.rule-box .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:16px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .crap-grid{grid-template-columns:1fr}
+  .rule-pillars{grid-template-columns:1fr;gap:10px}
+  .rule-pillar{padding:16px 10px}
+  .rule-pillar .num{font-size:2rem}
+  .slide-compare{grid-template-columns:1fr}
+  .slide.zen .big{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 6 · 2026.05.24</div>
+  <h1>Presentation Zen — The Discipline of Less<span class="topic">Garr Reynolds &amp; the empty space that lets an idea land</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">PowerPoint isn't the problem; <em>PowerPoint sickness</em> is — the wall of bullets, the 12-point body type, the slide deck used as teleprompter. Garr Reynolds carries the aesthetic of a Kyoto tea room into the boardroom: empty space, restraint, one image worth a thousand words, the speaker present rather than the projectionist hidden. This week, his four principles — emptiness, design, visual storytelling, the 10/20/30 rule — are the shortest path from "endured for sixty minutes" to "remembered for ten years." One right slide is worth a beautiful deck.</p>
+</header>
+
+<!-- Card 1: Empty Space -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Empty Space: The Strongest Design Element Is Nothing</h2>
+  <div class="en-name">Ma (間) — The Power of Empty Space</div>
+  <span class="tag">Z · Empty</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>There is a Japanese word, <em>ma</em> (間), for the space between things — the silence between notes, the sky between eaves, the breath between characters. Reynolds carries <em>ma</em> into slide design: emptiness is not "unfinished," it is "deliberate." It leads the eye, gives weight to the important, and leaves room for the audience's mind to do its own work. A crowded slide is something to be endured; a restrained slide is something to be approached.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "It is not the ink that makes the calligraphy beautiful — it is the empty space. Likewise, in slide design, what you choose to leave out is as important as what you put in. Empty space implies elegance, clarity, and sophistication."
+      <span class="source">— Garr Reynolds, <em>Presentation Zen</em> (2008)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The cognitive-science name is <em>signal-to-noise ratio</em>. Every element that doesn't serve the message — decorative border, company logo, page number, template background, "Confidential" watermark — is noise. Noise isn't zero; it's negative. It steals from your signal's already finite share of attention. Reynolds cites Edward Tufte's <em>chartjunk</em> — most of what "looks professional" is camouflage for thin content.</p>
+
+    <div class="slide-compare">
+      <div class="stack"><span class="stitle">Cluttered</span>
+        <div class="slide bad">
+          <div class="title">Q3 Strategic Priorities</div>
+          <ul>
+            <li>Customer growth — differentiate enterprise vs. mid-market</li>
+            <li>Product strength: stability, scalability, observability triad</li>
+            <li>R&amp;D efficiency: CI/CD upgrade + automated test coverage to 85%</li>
+            <li>Org culture: weekly reform + OKR transparency + cross-rotation</li>
+            <li>Compliance: SOC2 + GDPR + internal audit framework</li>
+            <li>Cost: cloud spend governance + productivity optimization</li>
+          </ul>
+          <div class="footer-l">v2.3 · Draft</div>
+          <div class="footer">CONFIDENTIAL · BigCat Co. © 2026</div>
+        </div>
+      </div>
+      <div class="stack"><span class="stitle">Zen</span>
+        <div class="slide zen">
+          <div>
+            <div class="big">Lift first-month retention<br>from 38% to 60%</div>
+            <div class="sub">Q3 · one thing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="slide-caption">Same Q3 strategy. The left is a speaker's notes; the right is a speech. Projectionist vs. presenter.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">One slide: title + six bullets + sub-bullets + a photo in the corner + company logo + page number + departmental watermark (and the speaker reading it aloud).</span>
+      <span class="after">One slide: a high-resolution photo filling eighty percent of the canvas + three words in the lower left ("The lonely customer"). The speaker tells the story for ninety seconds; the photo is doing the rest of the talking.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>External talks, keynotes, TED-style, all-hands, product launches</li>
+      <li>Executive briefings — one clean core slide beats twenty pages (decision-makers hate noise)</li>
+      <li>Skip for "slideuments" — decks meant to be both spoken and read alone. Split them in two: a presentation version (sparse) and a reading version (full)</li>
+      <li>Use with care for deep technical reviews — they need specs, data, interfaces; restraint is not the priority</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Equating "empty" with "large font" — large but full is still noise</li>
+      <li>Last-minute stuffing — afraid of looking "empty," you cram a logo, a page number, a divider line</li>
+      <li>Template ornament as "design" — template aesthetics are average aesthetics, not your content's aesthetics</li>
+      <li>Filling the emptiness with animations — animation is noise's fancier sibling</li>
+      <li>Pasting the script into bullets — when the audience is reading, they aren't listening; when they're listening, they aren't reading</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Garr Reynolds</span>, <em>Presentation Zen</em>, ch. 4 — Crafting the Story / Simplicity · <span>Edward Tufte</span>, <em>The Visual Display of Quantitative Information</em> — chartjunk</p>
+  </div>
+
+  <div class="eninsight">
+    "Subtract until it hurts, then subtract one more." — In Zen, restraint is not poverty. It is the room your idea needs to land.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Find your busiest slide. Open a blank file and rebuild it under strict constraints: <strong>no bullets, no sub-titles, no logo, no page number, no watermark</strong>. You may use (1) one sentence of no more than eight English words; (2) one image filling at least seventy percent of the canvas. Send the new slide to a colleague and ask, "What do you think I'm about to say?" If they can guess, the emptiness has done its work.</p>
+  </div>
+</section>
+
+<!-- Card 2: CRAP -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Slide Design: Signal-to-Noise and the CRAP Framework</h2>
+  <div class="en-name">Signal-to-Noise &amp; the CRAP Framework</div>
+  <span class="tag">D · Design</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Non-designers don't design with taste; they design with <strong>rules</strong>. Robin Williams (the designer, not the actor) gave us four — Contrast, Repetition, Alignment, Proximity — in <em>The Non-Designer's Design Book</em>. Reynolds carried them straight into <em>Presentation Zen</em> as an actionable checklist. Any slide that violates one of the four will "look unprofessional," and the audience won't be able to say why — but they will know.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Design is not just what it looks like and feels like. Design is how it works."
+      <span class="source">— Steve Jobs, quoted in <em>The New York Times</em> (2003), often cited by Garr Reynolds</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>First, signal-to-noise made concrete. Three decks with the same information, three different fates:</p>
+
+    <div class="snr-box">
+      <div class="snr-row">
+        <div class="snr-label">Consulting-firm deck<span class="ratio">Signal 20% / Noise 80%</span></div>
+        <div class="snr-bar"><div class="sig" style="width:20%"></div><div class="noise" style="width:80%"></div></div>
+      </div>
+      <div class="snr-row">
+        <div class="snr-label">Typical engineering update<span class="ratio">Signal 50% / Noise 50%</span></div>
+        <div class="snr-bar"><div class="sig" style="width:50%"></div><div class="noise" style="width:50%"></div></div>
+      </div>
+      <div class="snr-row">
+        <div class="snr-label">Presentation Zen<span class="ratio">Signal 90% / Noise 10%</span></div>
+        <div class="snr-bar"><div class="sig" style="width:90%"></div><div class="noise" style="width:10%"></div></div>
+      </div>
+      <div class="caption">Signal vs. noise — black is the part that earns its place; the hatch is decorative noise.</div>
+    </div>
+
+    <p style="margin-top:14px">Then the CRAP checklist — walk every slide through it, line by line:</p>
+
+    <div class="crap-grid">
+      <div class="crap-cell">
+        <span class="ch">C</span>
+        <span class="nm">Contrast</span>
+        <span class="cn">make the important heavy, the rest light</span>
+        <span class="what">Don't let 14pt sit next to 16pt — either 18 or 48. Weight, color, size: differ by threefold, not five percent.</span>
+      </div>
+      <div class="crap-cell">
+        <span class="ch">R</span>
+        <span class="nm">Repetition</span>
+        <span class="cn">one visual language across the deck</span>
+        <span class="what">Same kind of element, same treatment: every quote gets the same left rule; every data point lives in the same palette. Repetition creates rhythm.</span>
+      </div>
+      <div class="crap-cell">
+        <span class="ch">A</span>
+        <span class="nm">Alignment</span>
+        <span class="cn">every element earns its position</span>
+        <span class="what">Three invisible lines are enough — left, center, right. Nothing floats. Everything snaps to a line.</span>
+      </div>
+      <div class="crap-cell">
+        <span class="ch">P</span>
+        <span class="nm">Proximity</span>
+        <span class="cn">group tight, separate wide</span>
+        <span class="what">Title 4px from its body, sections 32px apart — the eye reads "these two belong together" at a glance.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Default template: title 24pt bold, body 20pt, sub-bullet 16pt — three steps too close, each one half-baked (Contrast violated).</span>
+      <span class="after">Keep two levels: title 48pt bold, body 24pt regular. Anything that wants a third level is either cut or moves to the next slide. (Strong contrast.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Customer logos centered on slide 3, right-aligned on slide 7, centered again on slide 12 — the eye searches anew on every slide. (Repetition + Alignment violated.)</span>
+      <span class="after">Across the deck: every chart on the left, every title top-left, every customer logo centered along the bottom. Consistency is professionalism.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Any deck that must "look professional" — fundraising, board, customer, public relations</li>
+      <li>Designing a team template — CRAP as the review standard means new hires can't go wrong</li>
+      <li>Skip for: whiteboard sessions, ad-hoc sketches — over-polish on a temporary surface looks affected</li>
+      <li>Use with care in highly formal legal or compliance settings — follow the existing template rather than chase beauty</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Trusting the default template — default is "average," not "right"</li>
+      <li>More than three colors — one brand color, one accent, one neutral. That's it</li>
+      <li>More than two fonts — one serif, one sans-serif. No calligraphy, no WordArt</li>
+      <li>Aligning by eye — use the software's alignment tools or a grid; don't trust the eyeball</li>
+      <li>Every slide trying to be unique — consistency outranks per-slide "creativity"</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Robin Williams</span>, <em>The Non-Designer's Design Book</em> — origin of CRAP · <span>Garr Reynolds</span>, <em>Presentation Zen Design</em> — applies CRAP to slides</p>
+  </div>
+
+  <div class="eninsight">
+    "The user does not notice good design. They only notice bad design." — Aim for invisible. CRAP is the floor of competence, not the ceiling of craft.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take the next deck you're writing. Walk every slide through the CRAP checklist (print it to be ruthless): (1) is the contrast far enough — heavy enough, light enough? (2) does the same kind of element get the same treatment everywhere? (3) is every element on an invisible alignment line? (4) are related things tight, unrelated things wide? Any "no" gets fixed. Then show the before-and-after to a colleague and ask, "What changed?" They'll rarely say "alignment." They'll say, "It feels calmer." That's the right answer.</p>
+  </div>
+</section>
+
+<!-- Card 3: Visual Storytelling -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Visual Storytelling: One Image Beats a Thousand Bullets</h2>
+  <div class="en-name">Visual Storytelling — One Slide, One Idea, One Image</div>
+  <span class="tag">V · Visual</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The brain processes images vastly faster than text — the often-cited figure is 60,000×. Reynolds's central claim is the <strong>Picture Superiority Effect</strong>: memory for image + text is roughly six times memory for text alone. So: one slide, one idea, one image. The image is not decoration; the image is the argument. The remaining text shrinks to a small label, a number, a quotation — a footnote to the image, not a substitute for it.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "If your words alone could carry the message, you wouldn't need to be in the room. Use images for what images do best: trigger emotion, ground abstraction in the body, and let the audience see what you are saying — not just hear it."
+      <span class="source">— Garr Reynolds, <em>Presentation Zen</em>, on visual communication</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Reynolds sorts slide images into three kinds, with three different jobs:</p>
+    <ul>
+      <li><strong>Symbolic</strong> — anchors an abstract concept in a single picture. A close-up of a cracked bowl for "broken trust" lands a thousand times harder than "trust erosion 28%."</li>
+      <li><strong>Evidential</strong> — charts and comparisons. One rule: let the data speak, and delete everything that isn't data (borders, shadows, redundant labels). Tufte's data-ink ratio.</li>
+      <li><strong>Narrative</strong> — a single photograph carrying a person or a scene; the visual embodiment of story. Jobs introducing the iPhone wasn't a demo table; it was a black background with one clean product shot.</li>
+    </ul>
+    <p style="margin-top:12px">Three iron rules for any image: (1) always <em>full bleed</em> (edge to edge — floating islands look amateur); (2) always high resolution — better none than blurry; (3) never use PowerPoint's built-in clip art or stock-photo libraries — they are the visual clichés of "looking like a presentation."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">"Our users are churning": title + one line, "Churn rate up 12% QoQ" + a smiling stock-photo face in the corner (effort applied in the wrong direction).</span>
+      <span class="after">Full-bleed: a high-resolution photograph of a closed door against a dark background; in the lower left, white type — "12 / 100." Twelve of last quarter's hundred customers walked. The speaker uses sixty seconds to name the first one and say why.</span>
+    </div>
+    <div class="example">
+      <span class="before">Data chart: 3D bars, saturated colors, drop shadows, gridlines, legend, every data label on. (Data-ink 50% / chartjunk 50%.)</span>
+      <span class="after">2D black-and-grey bars; no grid, no shadow, no 3D. The single color belongs to the bar you want the audience to see. The legend becomes a small label next to the bar. The title becomes the sentence you want them to remember: "Q3 was actually the worst quarter in eighteen months."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Kickoffs, product launches, TED talks, brand storytelling, customer meet-ups — anywhere emotion comes first</li>
+      <li>Executive meetings — decision-makers remember pictures far more often than they remember numbers</li>
+      <li>Multi-language audiences — images travel through translation losses</li>
+      <li>Skip for: audits, compliance, technical RFCs — evidentiary completeness outranks impact</li>
+      <li>Use with care — a wrong image is harder to retract than a wrong sentence (culture, sensitivity, stereotype)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Stock-photo clichés — businesspeople shaking hands, city skylines, applauding teams. Audiences have stopped seeing these</li>
+      <li>Decorative images — picture unrelated to claim, "just to fill the page"</li>
+      <li>Four to six thumbnails on one slide — dilutes the signal; equivalent to none</li>
+      <li>Image at too low a resolution — pixelated on the projector is worse than no image</li>
+      <li>Keeping every chart default — 3D + shadows + grid — data-ink drops to 30%</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Garr Reynolds</span>, <em>Presentation Zen Design</em>, ch. 3 — Working with Images · <span>Nancy Duarte</span>, <em>Slide:ology</em> — the grammar of visual storytelling</p>
+  </div>
+
+  <div class="eninsight">
+    "You are not delivering a document — you are delivering a moment." — A great image makes the audience remember the moment. They will tell the story for you, and that is how an idea travels.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>From your next talk, pull the three most critical messages. Give each one a picture — no PowerPoint clip art, no commercial stock libraries. Allowed sources: Unsplash, your own phone, real product screenshots. Each picture must (1) be full bleed, (2) carry no more than six words of type, (3) print to wall size and read from three meters. If you can't read it at three meters, the image is too weak or the type too much. Iterate until you can.</p>
+  </div>
+</section>
+
+<!-- Card 4: 10/20/30 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>10/20/30: The Hard Constraints of a Pitch</h2>
+  <div class="en-name">The Guy Kawasaki 10/20/30 Rule of PowerPoint</div>
+  <span class="tag">R · Rule</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Guy Kawasaki — Apple's former chief evangelist, then a well-known investor — sat through more than a thousand startup pitches before writing the 10/20/30 rule in a 2005 blog post: <strong>no more than ten slides, no more than twenty minutes, no font smaller than thirty points</strong>. All three numbers are hard constraints designed <em>for the audience</em>. Reynolds promoted the rule in <em>Presentation Zen</em> as the default lower bound for any business presentation. It is not an upper bound — it is the red line past which you are wasting the audience's life.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "A PowerPoint presentation should have ten slides, last no more than twenty minutes, and contain no font smaller than thirty points. The reason people use a small font is twofold: first, that they don't know their material well enough; second, they think that more text is more convincing. Total bullshit."
+      <span class="source">— Guy Kawasaki, <em>How to Change the World</em> blog (2005)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+
+    <div class="rule-box">
+      <div class="rule-pillars">
+        <div class="rule-pillar">
+          <div class="num">10</div>
+          <div class="unit">Slides</div>
+          <div class="desc">Short-term memory's ceiling. Past slide 10, slide 1 is gone.</div>
+        </div>
+        <div class="rule-pillar">
+          <div class="num">20</div>
+          <div class="unit">Minutes</div>
+          <div class="desc">First major attention drop. Leave forty minutes for Q&amp;A — the real persuasion happens there.</div>
+        </div>
+        <div class="rule-pillar">
+          <div class="num">30</div>
+          <div class="unit">Point Font</div>
+          <div class="desc">Below 30pt means you're stuffing words. 30pt forces you to keep only what matters.</div>
+        </div>
+      </div>
+      <div class="caption">Kawasaki's 10/20/30 — three hard constraints on any presentation.</div>
+    </div>
+
+    <p style="margin-top:14px">Every number has a physical reason:</p>
+    <ul>
+      <li><strong>10 slides</strong> — "7±2" is the canonical memory span; ten is the engineering cap including open and close. An investor deck doesn't need to be comprehensive, only to cover the seven decision points (Problem / Solution / Market / Product / Traction / Team / Ask)</li>
+      <li><strong>20 minutes</strong> — the first marked decline in adult attention. Kawasaki's logic is fiercer: in a sixty-minute meeting, reserve forty minutes for real conversation — Q&amp;A, challenge, co-creation. Twenty minutes is the opener, not the whole thing</li>
+      <li><strong>30pt</strong> — a content auditor. At 30pt, you fit perhaps thirty to forty English characters on a slide. Bullet seas are physically impossible. The slide forces you to keep only the core. This third rule is the most engineered and the most effective</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">A 38-page fundraising deck, 45-minute talk, smallest type 14pt. The investor starts checking their phone around slide 12.</span>
+      <span class="after">10 core slides, a 20-minute talk, smallest type 30pt. Attach a separate 30-page reading appendix (not flipped to during the talk) and send it to whoever asks afterward.</span>
+    </div>
+    <div class="example">
+      <span class="before">A 60-minute technical talk with 70+ slides ("plenty of information," we tell ourselves).</span>
+      <span class="after">A 20-minute headline talk with 10 core slides, then 40 minutes of live Q&amp;A and whiteboarding. The audience ends up retaining three times as much — because they participated rather than were talked at.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Fundraising pitches, board updates, product launches, external brand talks, TED-style keynotes</li>
+      <li>High-density executive meetings — 20 minutes of talk plus 40 minutes of discussion is the golden structure</li>
+      <li>Skip for: training courses (must be long and complete), deep technical reviews (need code and spec)</li>
+      <li>Use with care for cross-timezone async — those situations want a written document (Amazon's 6-pager), not a meeting</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>One deck for both speaking and reading — neither works. Split it into a talk version and a reading version</li>
+      <li>Ten slides crammed with eighty bullets — page count obeyed, spirit violated</li>
+      <li>"I can't fit twenty minutes, so I'll add more pages" — not finding the core, not lacking pages</li>
+      <li>Small font as preservation — "I can't bear to cut" disguised as necessity</li>
+      <li>Treating 10/20/30 as an aesthetic rather than an engineering rule — it is a hard constraint; enforce it like one</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Guy Kawasaki</span>, <em>The Art of the Start 2.0</em>, ch. 4 — Pitching · <span>Garr Reynolds</span>, <em>Presentation Zen</em>, ch. 2 — Preparation</p>
+  </div>
+
+  <div class="eninsight">
+    "Constraints are not the enemy of creativity — they are its midwife." — 30pt is not a font choice. It is an editor that won't let you cheat.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take any deck you have in progress, whatever its length. Force 10/20/30 onto it. (1) Cut to ten slides — and write down what you couldn't bear to lose; that list is your real priority order. (2) Set the minimum font to 30pt — what no longer fits must be cut, moved to the next slide, or sent to the appendix. (3) Time the talk; if you can't finish in twenty minutes, the core hasn't converged. The seventy percent you cut becomes your Q&amp;A ammunition — which is where it belonged all along.</p>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</nav>
+
+<footer>BigCat · Writing Weekly · Week 6 · 2026</footer>
+
+</div>
+</body>
+</html>
