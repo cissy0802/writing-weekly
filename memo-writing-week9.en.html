@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Weekly: The Memo — Week 9</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7;text-align:left}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:12px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:8px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example pre{background:#1f1f1f;color:#fafafa;padding:10px 14px;margin:6px 0;font-family:"Courier New",monospace;font-size:0.86rem;line-height:1.5;border-radius:2px;white-space:pre-wrap;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Card 1: 6-pager skeleton */
+.six-pager{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.sp-page{display:flex;gap:14px;padding:11px 14px;background:#fff;border:1px solid #d8d0bc;margin-bottom:7px;border-radius:2px;align-items:flex-start}
+.sp-page .pg{flex-shrink:0;width:38px;font-family:Georgia,serif;font-weight:800;font-size:0.84rem;color:#8a7a4a;letter-spacing:0.5px;padding-top:2px}
+.sp-page .nm{flex-shrink:0;width:160px;font-family:Georgia,serif;font-weight:700;font-size:0.92rem;color:#1f1f1f;padding-top:2px}
+.sp-page .ds{font-size:0.88rem;color:#5a5a5a;line-height:1.55;font-style:italic}
+.six-pager .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+.six-pager .ritual{background:#1f1f1f;color:#fafafa;padding:11px 14px;border-radius:2px;font-size:0.88rem;line-height:1.6;margin-top:10px;font-family:Georgia,serif}
+.six-pager .ritual strong{color:#d8c98a}
+
+/* Card 2: Bullets vs Narrative split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;font-family:Georgia,serif}
+.split .col{background:#fff;border:1.5px solid #d0d0d0;padding:16px 18px;border-radius:2px}
+.split .col.bad{border-color:#c5a0a0;background:#faf4f4}
+.split .col.good{border-color:#9ab59a;background:#f4f8f4}
+.split .col .ttl{font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:800;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid currentColor}
+.split .col.bad .ttl{color:#8a4040}
+.split .col.good .ttl{color:#3a6a3a}
+.split .col ul{list-style:none;margin:0;font-size:0.86rem;line-height:1.65;color:#2a2a2a}
+.split .col li{padding:3px 0 3px 14px;position:relative}
+.split .col li:before{content:"·";position:absolute;left:4px;color:#8a8a8a}
+.split .col p{font-size:0.88rem;line-height:1.7;color:#2a2a2a;font-family:Georgia,"Noto Serif SC",serif}
+.split-caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:6px;text-align:center;font-family:Georgia,serif}
+
+/* Card 3: 1-pager template */
+.onepg{background:#fff;border:1.5px solid #1f1f1f;margin:18px 0;border-radius:2px;font-family:Georgia,serif;overflow:hidden}
+.onepg-row{display:flex;border-bottom:1px solid #e0e0e0}
+.onepg-row:last-child{border-bottom:none}
+.onepg-row .field{flex-shrink:0;width:130px;background:#1f1f1f;color:#fafafa;padding:12px 14px;font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.onepg-row .val{padding:12px 16px;font-size:0.9rem;color:#2a2a2a;line-height:1.65;flex-grow:1}
+.onepg-row .val .meta{color:#8a7a4a;font-style:italic;font-size:0.84rem}
+.onepg-row .val strong{color:#1f1f1f}
+
+/* Card 4: Working Backwards funnel */
+.wb-funnel{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.wb-step{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px dashed #d8d0bc;position:relative}
+.wb-step:last-child{border-bottom:none}
+.wb-step .arr{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1f1f1f;color:#fafafa;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:800;font-size:0.9rem}
+.wb-step .body{flex-grow:1;padding-top:3px}
+.wb-step .body .nm{font-family:Georgia,serif;font-weight:800;font-size:1rem;color:#1f1f1f;margin-bottom:3px}
+.wb-step .body .nm .en{font-size:0.82rem;color:#8a7a4a;font-style:italic;font-weight:600;margin-left:6px}
+.wb-step .body .ds{font-size:0.88rem;color:#5a5a5a;line-height:1.6}
+.wb-caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:10px;text-align:center;font-family:Georgia,serif}
+
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:14px 18px;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:700;color:#1f1f1f;font-size:0.98rem;font-family:Georgia,serif}
+details[open] summary{margin-bottom:10px;border-bottom:1px solid #d8d0bc;padding-bottom:8px}
+details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .sp-page{flex-direction:column;gap:4px}
+  .sp-page .nm,.sp-page .pg{width:auto}
+  .split{grid-template-columns:1fr}
+  .onepg-row{flex-direction:column}
+  .onepg-row .field{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 9 · 2026.05.27</div>
+  <h1>Writing Weekly: The Memo<span class="topic">How Narrative Sharpens Thought</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">PowerPoint is beloved because it lets the author hide gaps in thinking — the white space between bullets is filled in by the audience's imagination. Bezos bet his entire decision-making machine on the opposite: spend the first twenty minutes of every meeting reading a six-page narrative memo in silence. <strong>Narrative forces the author to supply the verbs and causality</strong>; if the thinking is shallow, the page goes thin and the author can't escape it. This week's four principles — the 6-pager, narrative over bullets, the 1-pager &amp; BLUF, and Working Backwards — are the senior leader's core toolkit: a well-written memo is, in effect, a second decision, doubling the quality of the first.</p>
+</header>
+
+<!-- Card 1: Amazon 6-pager -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Amazon 6-Pager: Silent Reading Instead of Presenting</h2>
+  <div class="en-name">Replace the Pitch with Collective Thinking</div>
+  <span class="tag">6-Pager · Narrative Memo</span>
+
+  <div class="section">
+    <div class="label">Principle &amp; canonical quote</div>
+    <p>Replace 20 slides with a 6-page narrative memo; spend the first 20 minutes of the meeting reading it in silence. <strong>Trade the "reporting performance" for collective thinking.</strong> When discussion starts, no one is wondering "should I ask this?" — they've all just read the same thing.</p>
+    <div class="quote">
+      "Many years ago, we outlawed PowerPoint presentations at Amazon. ... We have a 'study hall' at the start of our meeting. The reason writing a good four-page memo is harder than 'writing' a twenty-page PowerPoint is because the narrative structure of a good memo forces better thought and better understanding of what's more important than what."
+      <span class="source">— Jeff Bezos,《2017 Letter to Shareholders》(Amazon, April 2018)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>PowerPoint's problem isn't the tool — it's the grammar. Bullets have no predicate, so an author can place "sales down 30%" next to "team morale is low" and let the audience invent the causal link that the page never actually claimed. Narrative forces the gap open: <strong>every claim must be followed by a complete sentence of explanation. The author owns the causality; it cannot be outsourced to the listener.</strong></p>
+
+    <div class="six-pager">
+      <div class="sp-page"><div class="pg">P1</div><div class="nm">Introduction</div><div class="ds">The question and the ask: within 60 seconds, the reader knows what this is about and what decision is required</div></div>
+      <div class="sp-page"><div class="pg">P2</div><div class="nm">Tenets</div><div class="ds">Three to five principles — the judgment anchors of this memo. Return to tenets when options get tangled</div></div>
+      <div class="sp-page"><div class="pg">P3-4</div><div class="nm">State of Business</div><div class="ds">Current data, customer experience, key trends — objective facts, not arguments</div></div>
+      <div class="sp-page"><div class="pg">P5</div><div class="nm">Lessons Learned</div><div class="ds">What went wrong last cycle, what changed — honest, not polished</div></div>
+      <div class="sp-page"><div class="pg">P6</div><div class="nm">Strategic Priorities</div><div class="ds">The three to five biggest things next cycle + a stop-doing list</div></div>
+      <div class="sp-page"><div class="pg">App</div><div class="nm">Appendix</div><div class="ds">Supporting data / detailed charts / FAQ — outside the body. Doesn't count toward the 6 pages</div></div>
+      <div class="ritual"><strong>Meeting cadence:</strong>　0:00 silent reading by everyone → 0:20 facilitator asks "which pages had questions?" → 0:21 discussion, section by section → 1:00 decision. Zero slides; no "the next slide shows..."</div>
+      <div class="caption">The skeleton is illustrative, not prescriptive. The two iron rules are: ≤ 6 narrative pages + appendix not counted, and silent reading before discussion.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">A 15-slide "Q3 Strategy" deck: 5 chart pages, 3 roadmap timelines, 6 competitor screenshots, 1 "next steps" page. After 45 minutes the room still asks "so what are you actually proposing?"</span>
+      <span class="after">6-page memo. P1 opens with one paragraph: "<strong>We propose moving 60% of R&amp;D from Product A to Product C in Q3.</strong> This memo argues why, what we'd stop doing, and the three risks we'd take on." P2 sets three tenets ("serve paying customers first / don't fight the giants head-on / cut long-tail dilution"). P3-4 carry data: Product A NPS down 18 points; C retention up 22%. P5 says the lesson honestly — last year we underestimated the competitor's release cadence. P6 names the decision and the stop-doing list. Discussion starts at minute 21, not minute 46.</span>
+    </div>
+    <div class="example">
+      <span class="before">"Q3 Strategy Update" — typical 15-slide deck. Author talks; audience guesses what the ask is; half write parallel emails during the meeting.</span>
+      <span class="after">6-page memo distributed at meeting start. Twenty minutes of silence. Then the facilitator: "Page 3, anyone?" The author has already done the work; the room has already done the reading; the next 40 minutes are spent on the one or two decisions, not on context-loading.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it / common failures</div>
+    <ul>
+      <li>✓ Quarterly strategy reviews · major investment decisions · cross-team priority conflicts · any "easy to forget by Friday" meeting</li>
+      <li>✓ The higher the room, the more it pays off — decision-makers' time is the organization's most expensive resource</li>
+      <li>✗ Not for: pure status updates (use a wiki or 1-pager) · 50-person town halls (use a story + visuals)</li>
+      <li>Failure 1: pasting PowerPoint text into Word — bullets never became sentences, you didn't get the narrative dividend</li>
+      <li>Failure 2: skipping the silent reading — readers half-read while speaking, thinking is interrupted, the meeting degrades back to PPT mode</li>
+      <li>Failure 3: appendix sprawl — a 6-page memo dragging a 40-page appendix means readers are still slogging through a deck</li>
+      <li>Failure 4: author checks out during study hall — everyone reads, the author scrolls Slack. Use those 20 minutes to re-read your own memo with adversarial eyes</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Jeff Bezos</span>《2017 Letter to Shareholders》Amazon 2018 — the public-facing statement of the 6-pager · <span>Colin Bryar &amp; Bill Carr</span>《Working Backwards》(2021) Ch. 4 — ex-Amazon executives walk through the 6-pager and narrative culture · <span>Brad Porter</span>"The Beauty of Amazon's 6-Pager" (LinkedIn, 2015)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p><strong>Exercise:</strong> Take your next decision-track report — whatever it was going to be (deck or email). Force it into the 6-pager skeleton: Introduction / Tenets / State / Lessons / Priorities / Appendix. <strong>Limit yourself to complete sentences; no bullets allowed in the body.</strong> After you finish, find three places where you can say "the PPT would have glossed past this in one bullet; writing a full sentence forced me to actually figure it out." Those three places are the dividend.<br><strong>Reflection:</strong> Can the "20 minutes of silent reading" ritual survive in high-context meeting cultures (e.g., East Asian organizations) where seating, speaking order, and saving face matter? If not, what substitute keeps the structural benefit — pre-reading 24 hours in advance, plus a 5-minute meeting recap? Or something else entirely?</p>
+  </div>
+</section>
+
+<!-- Card 2: Narrative over Bullets -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Narrative over Bullets: Where Shallow Thinking Hides</h2>
+  <div class="en-name">The Cognitive Style of Complete Sentences</div>
+  <span class="tag">Narrative · Verbs</span>
+
+  <div class="section">
+    <div class="label">Principle &amp; canonical quote</div>
+    <p>Bullets are an invisibility cloak for thought — they let an author place two claims side by side without writing the causal link. Complete sentences (with subject, verb, object, with "because" and "therefore") are thought's medical exam: <strong>where you haven't actually figured it out, your fingers stop at the keyboard.</strong></p>
+    <div class="quote">
+      "When you have to write your ideas out in complete sentences, complete paragraphs, it forces a deeper clarity of thinking. ... PowerPoint-style presentations somehow give permission to gloss over ideas, flatten out any sense of relative importance, and ignore the interconnectedness of ideas."
+      <span class="source">— Jeff Bezos, on the 6-pager (Forum on Leadership, 2018; quoted in《Working Backwards》Ch. 4)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The same critique appears in Edward Tufte《The Cognitive Style of PowerPoint》(2003): bullet lists destroy syntactic carrying capacity and flatten multivariate relationships into a single linear sequence.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Compare the two columns and the point makes itself:</p>
+
+    <div class="split">
+      <div class="col bad">
+        <div class="ttl">Bullets</div>
+        <ul>
+          <li>Q3 revenue down 15%</li>
+          <li>European market expansion</li>
+          <li>Hiring difficulties</li>
+          <li>New SKU launch delayed</li>
+        </ul>
+        <p style="margin-top:10px;font-size:0.84rem;font-style:italic;color:#8a4040">The reader has to invent causality: who caused what? Which is most important? Is this a recommendation or a complaint? The author has outsourced the thinking.</p>
+      </div>
+      <div class="col good">
+        <div class="ttl">Narrative</div>
+        <p>Q3 revenue is down 15%, <strong>primarily because European market expansion slipped by 6 weeks</strong> — hiring in Europe was slower than planned, and the key PM vacancy delayed the new SKU. Of the 15-point gap, 11 points trace to this slip; the remaining 4 points are FX. We recommend pausing one minor US launch to reallocate headcount toward European hiring.</p>
+        <p style="margin-top:6px;font-size:0.84rem;font-style:italic;color:#3a6a3a">Same facts. Now causality is explicit, ownership is clear, the recommendation surfaces. The author's thinking is visible on the page.</p>
+      </div>
+    </div>
+    <p class="split-caption">Same facts. Bullets let the author skip the verb; narrative forces "cause, effect, therefore."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before"><pre>Why the project slipped:
+• Upstream API late
+• QA capacity
+• Lunar New Year
+• New feature requests</pre>(Four bullets, no causality, no recommendation. The reader can construct any story they like.)</span>
+      <span class="after">The project slipped 3 weeks. <strong>The dominant cause was the upstream API arriving on Jan 15 — four weeks late against its commit</strong>, which blocked downstream QA. Lunar New Year and mid-stream feature requests <em>amplified</em> the slip (~1 week) but were not the primary driver. We recommend a hard-freeze date for upstream interface commits, and a moratorium on new feature requests after that date.</span>
+    </div>
+    <div class="example">
+      <span class="before"><pre>Reasons for delay:
+• Upstream interface unready
+• Testing resources tight
+• Lunar New Year impact
+• New requirements jumped queue</pre>(Four points in parallel. Reader cannot tell precedence, causal links, or what the author proposes to do.)</span>
+      <span class="after">This project slipped 3 weeks. <strong>The root cause is that the upstream interface was delivered on January 15 — four weeks behind commit</strong>, blocking downstream QA. Lunar New Year and queue-jumping requests <em>amplified</em> the impact (an additional week) but are not the primary driver. We propose: lock a hard-freeze date with upstream, and after that date refuse any downstream test-schedule overrides.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it / common failures</div>
+    <ul>
+      <li>✓ Any decision-grade writing: memos, BLUF emails, design docs, promo packets, post-mortems</li>
+      <li>✓ The more causality and tradeoffs you carry, the more you must avoid bullets — bullets' grammar is "parallel," not "because/therefore"</li>
+      <li>✗ Exception: pure enumeration (checklists, config items, SKU lists) — bullets are clearer here; forcing narrative is over-correction</li>
+      <li>Failure 1: write narrative, then "polish" it into bullets — you just discarded the clarity you bought. Keep narrative in decision drafts; reserve bullets for appendix-style lists</li>
+      <li>Failure 2: complete sentences stuffed with nominalizations ("perform an evaluation of," "carry out an analysis on") — verbs castrated, page still empty. Plain verbs do the work, not Latinate nouns</li>
+      <li>Failure 3: confusing "longer sentences = deeper thinking" — the dividend is in verbs and causality, not word count. If one sentence carries the meaning, don't stretch it to three</li>
+      <li>Failure 4: using narrative for status updates — updates should be bullets. Narrative is for decisions, not for daily syncs</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Edward Tufte</span>《The Cognitive Style of PowerPoint》(Graphics Press, 2003) — the foundational evidence-based critique of bullets · <span>Colin Bryar &amp; Bill Carr</span>《Working Backwards》Ch. 4 — inside view of Bezos's narrative culture · <span>Patrick McKenzie</span>"Doing Business" series — decision memos in modern tech companies</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p><strong>Exercise:</strong> Take a recent bullet list of your own (email, PR description, status update — any). Rewrite the whole thing as narrative. No bullets allowed; every adjacent pair of bullets must be connected by "because / so / by contrast / meanwhile" or similar. Watch for the places where your fingers <strong>pause for a second</strong> during the rewrite — that pause is the hole the bullet had been hiding for you.<br><strong>Reflection:</strong> Native-Chinese and native-English writers have different bullet habits. Chinese tends toward short clauses and fewer explicit connectives — can it sometimes <em>look</em> like narrative while still hiding causality? What's the real test — formatting (are there bullet glyphs?), or syntax (does each sentence have a verb and a causal connector)?</p>
+  </div>
+</section>
+
+<!-- Card 3: 1-pager / BLUF -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The 1-Pager &amp; BLUF: Conclusion in the First Paragraph</h2>
+  <div class="en-name">Bottom Line Up Front</div>
+  <span class="tag">1-Pager · BLUF</span>
+
+  <div class="section">
+    <div class="label">Principle &amp; canonical quote</div>
+    <p>The first question every reader asks when opening a memo is "<strong>what do you want me to decide?</strong>" — not "what's the background?" BLUF (Bottom Line Up Front) puts that answer in the first paragraph. The 1-pager is BLUF in extremis: an entire decision memo compressed onto a single page of A4, with no room left for preamble.</p>
+    <div class="quote">
+      "BLUF is a military communications principle: state the conclusion, the recommended action, or the key information in the first sentence. Everything that follows is support, not setup."
+      <span class="source">— US Army Field Manual, adapted in Kabir Sehgal,《How to Write Email with Military Precision》(Harvard Business Review, 2016)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The same structural argument runs through Barbara Minto《The Pyramid Principle》(1987) Ch. 1: lead with the answer, then the evidence — that's the top of the optimal pyramid.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>A reader's attention curve through a memo is <strong>steeply decaying</strong> — paragraph one read in full, paragraph two at 70%, paragraph three at 30%, then scanning. It isn't laziness; it's the physics of cognitive load. Burying the conclusion bets that every reader will hang on to the end — but a leader with 30 memos a day cannot. BLUF reverses the bet: put the highest-value information (the conclusion and the ask) where attention is highest.<br>The 1-pager is BLUF with hard constraints attached — one page of A4 leaves no oxygen for filler.</p>
+
+    <div class="onepg">
+      <div class="onepg-row"><div class="field">TITLE</div><div class="val"><strong>Proposal: Approve $1.2M Q3 budget for EU launch</strong> <span class="meta">· 1-pager · author: bc · 2026-05-27</span></div></div>
+      <div class="onepg-row"><div class="field">BLUF</div><div class="val"><strong>Recommend approving the $1.2M EU-launch budget by 2026-06-10.</strong> Without approval by that date, we miss the August Frankfurt event, which is our only cost-effective channel for the next 12 months.</div></div>
+      <div class="onepg-row"><div class="field">CONTEXT</div><div class="val">EU pipeline has grown 3.2× in 2 quarters; the current US-only team cannot service it. Frankfurt has a 4-month lead time on sponsorship slots.</div></div>
+      <div class="onepg-row"><div class="field">OPTIONS</div><div class="val"><strong>A. Approve $1.2M (recommended).</strong> Risks: 2 new hires, EU compliance ramp.<br><strong>B. Approve $600K, defer event.</strong> Saves 50% but kills our main channel.<br><strong>C. Decline.</strong> EU revenue capped; competitor lock-in within 9 months.</div></div>
+      <div class="onepg-row"><div class="field">RISKS</div><div class="val">Hiring timeline (September ramp) · GDPR audit timing · USD/EUR exposure on $400K (hedge planned).</div></div>
+      <div class="onepg-row"><div class="field">ASK</div><div class="val">Decision by <strong>2026-06-10</strong>. If approved, hiring posts go live 2026-06-12.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">"Dear team, I hope this email finds you well. Over the past quarter we've been discussing the EU opportunity, and I wanted to share some thoughts on next steps. As you know, our pipeline has grown substantially, and we've been evaluating various options. After much deliberation, ..." (Two and a half paragraphs of throat-clearing before "we propose $1.2M" appears. The leader has already closed the tab.)</span>
+      <span class="after"><strong>"Proposal: Approve $1.2M Q3 budget for EU launch by 2026-06-10.</strong> Without approval by that date we miss the August Frankfurt event — our only cost-effective EU channel for the next 12 months. Three options follow; recommended is A. Context, risks, and ask on this page."</span>
+    </div>
+    <div class="example">
+      <span class="before">"Following our discussions around expanding into Europe and incorporating the team's feedback over the last three months, after careful evaluation, I'd like to align on Q3 budget allocation —" (Polite preamble; the actual ask doesn't surface until paragraph two. By then the reader is skimming.)</span>
+      <span class="after"><strong>"I'm asking for approval of a $1.2M Q3 EU-launch budget by June 10.</strong> Miss that date and we miss the Frankfurt event, our only cost-effective EU channel for the next 12 months. Three options below; A is recommended. Context, risks and ask all fit on this page."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it / common failures</div>
+    <ul>
+      <li>✓ Any decision-requiring document — budget approvals, headcount asks, final tech-selection calls, promo nominations</li>
+      <li>✓ Anything going to a CEO / VP — they read 30 a day with no patience for the second paragraph</li>
+      <li>✓ Urgent communications — incidents, PR crises, the first page of a production post-mortem</li>
+      <li>✗ Not for: narrative writing (fiction, brand stories, TED talks) — BLUF kills suspense</li>
+      <li>✗ Not for: open exploration ("should we do X?") — there's no bottom line yet to put up front</li>
+      <li>Failure 1: BLUF too soft, "recommend considering an evaluation of..." — the leader cannot find the decision point. BLUF must be <strong>verb + object + deadline</strong></li>
+      <li>Failure 2: 1-pager actually 1.5 pages, layout squeezed — when the hard limit breaks, preamble sneaks back. One page means one page</li>
+      <li>Failure 3: BLUF contradicts the body — BLUF says "recommend A," body argues "but B might also work." Readers who only read BLUF will make the wrong call</li>
+      <li>Failure 4: treating BLUF as a writing style — it's a <strong>structural</strong> rule, not a tone choice</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Kabir Sehgal</span>"How to Write Email with Military Precision" Harvard Business Review 2016 — concise BLUF primer · <span>Barbara Minto</span>《The Pyramid Principle》(1987) Ch. 1 — the structural argument for conclusion-first · <span>Will Larson</span>《An Elegant Puzzle》Ch. 4 — decision memos as leverage in engineering organizations</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p><strong>Exercise:</strong> Write a real 1-pager. Pick the topic (a leveling-framework decision / a hiring ask / a team reorg / a strategy pivot). Hard rules: one page of A4, BLUF as the first sentence of the first paragraph, an Options section, an Ask section. Print it. If it spills past one page, what to cut isn't the font size — it's the filler.<br><strong>Reflection:</strong> BLUF runs into resistance in high-context cultures (East Asian business norms, indirect speech, face). A junior author writing "I need your decision by June 10" to a senior leader can read as overstepping. How do you keep the structural dividend of BLUF while softening the tone — change the wording ("I'd be grateful for your decision by June 10"), change the framing (write strong BLUF to peers, BLUF-as-ask to leaders), or both?</p>
+  </div>
+</section>
+
+<!-- Card 4: Working Backwards / Pre-FAQ -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Working Backwards: Press Release Before Product</h2>
+  <div class="en-name">Iterate on Paper, Not on Code</div>
+  <span class="tag">PR/FAQ · Working Backwards</span>
+
+  <div class="section">
+    <div class="label">Principle &amp; canonical quote</div>
+    <p>Before writing any code, write "the press release we'd publish the day this ships" and "the five questions customers will ask." <strong>If the press release sounds boring, or if the FAQ has no good answers, the product shouldn't exist.</strong> Narrative is the cheapest prototype you can buy.</p>
+    <div class="quote">
+      "The product manager typically writes an internal press release announcing the finished product. The target audience for the press release is the new/updated product's customers. ... Iterating on a press release is a lot less expensive than iterating on the product itself."
+      <span class="source">— Ian McAllister, ex-Amazon GM (Quora answer, 2012; canonical in《Working Backwards》Ch. 5)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>The default product flow is: ideate → build → market. Working Backwards inverts the back half: <strong>write the press release and FAQ first, then decide whether to build.</strong> The PR forces the team to answer "why would the customer care?" — and if you cannot write a compelling one, the value proposition isn't there. That's usually the project worth killing.</p>
+
+    <div class="wb-funnel">
+      <div class="wb-step">
+        <div class="arr">1</div>
+        <div class="body">
+          <div class="nm">Write the Press Release <span class="en">PR</span></div>
+          <div class="ds">Imagine the day the product ships. The press release: customer problem / solution / customer quote / call to action. One page, written in customer language — not engineering jargon.</div>
+        </div>
+      </div>
+      <div class="wb-step">
+        <div class="arr">2</div>
+        <div class="body">
+          <div class="nm">Write the FAQ <span class="en">Frequently Asked Questions</span></div>
+          <div class="ds">Internal FAQ: cost? engineering effort? dependencies? biggest risk? why now? External FAQ: pricing? compatibility? data? privacy? support scope? Questions you can't answer mean you haven't thought it through.</div>
+        </div>
+      </div>
+      <div class="wb-step">
+        <div class="arr">3</div>
+        <div class="body">
+          <div class="nm">Iterate the PR/FAQ <span class="en">On paper, not on code</span></div>
+          <div class="ds">Small-group review → edit PR → edit FAQ → edit PR. Three to five rounds. Every week here saves three months downstream.</div>
+        </div>
+      </div>
+      <div class="wb-step">
+        <div class="arr">4</div>
+        <div class="body">
+          <div class="nm">Decide whether to build <span class="en">Go / No-Go</span></div>
+          <div class="ds">PR/FAQ passes review → enter MLP (Minimum Lovable Product) development. Doesn't pass → kill the project. <strong>Killing on paper is the cheapest kill there is.</strong></div>
+        </div>
+      </div>
+      <div class="wb-step">
+        <div class="arr">5</div>
+        <div class="body">
+          <div class="nm">Build &amp; Ship <span class="en">Build to the PR</span></div>
+          <div class="ds">Development tracks the PR — it is the north star. When features start drifting from the PR, either change the PR or cut the feature; "silent drift during build" is not allowed.</div>
+        </div>
+      </div>
+      <div class="wb-caption">Flow inverted: press release and FAQ before code. Amazon has killed countless bad projects at step 3.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">PM writes a 5-page PRD: features, user stories, technical dependencies, roadmap. Engineering can build from it, but after reading it the executive sponsor <strong>still doesn't know why customers will be excited</strong> — and neither does the PM, deep down.</span>
+      <span class="after">PM writes the PR first. Headline: "Acme Launches Real-Time Refund Reconciliation for Fortune 500 Retailers." Customer pain (30-day reconciliation delay) → our solution (real-time API + automation) → mock customer quote → ship date. Then the FAQ: pricing model? why not outsource? engineering effort? biggest risk? Three iteration rounds. They discover the mock customer quote sounds hollow — differentiation isn't sharp enough. <strong>Killed at step 3. Saved 6 months of engineering.</strong></span>
+    </div>
+    <div class="example">
+      <span class="before">"We should build an AI retrospective assistant for engineering managers — it auto-summarizes team status from PRs, JIRA, and email." (Sounds plausible. But why will a customer pay? Competitors are building the same thing; where's the wedge? You only find out 4 months into code: not differentiated.)</span>
+      <span class="after">Write the PR first: "Acme launches AI Engineering Pulse — a 5-minute team weekly for mid-level leaders. Customer quote: 'I used to spend two weekend hours writing the weekly; now it's ten minutes.'" Writing the quote, you realize it doesn't actually land. Then the FAQ: "How are you different from Tool X?" You can't answer it crisply — just vague "AI is better." <strong>Two signals that the value prop hasn't been sharpened. Go back to step 1, or kill it. Two weeks of paper saves six months of code.</strong></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it / common failures</div>
+    <ul>
+      <li>✓ New product / feature kickoff · strategic pivot · internal platform services (where "customers" are other teams)</li>
+      <li>✓ Strategic narrative — when you need alignment on "where we're going" before the product exists</li>
+      <li>✗ Not for: bug fixes, small iterations, A/B experiments — PR/FAQ overhead exceeds the value</li>
+      <li>✗ Not for: research-mode exploration ("does this path exist?") — there's no "product shape" yet to announce</li>
+      <li>Failure 1: PR reads like a feature brochure — listing capabilities instead of customer pain + solution. PR is written for <strong>the customer</strong>, not for sales</li>
+      <li>Failure 2: FAQ skips the hard questions — only "how great is the product?", not "what if revenue hits only 30% of plan in year one?" or "why won't a competitor crush us?" The FAQ's job is to <strong>force the devils into daylight</strong></li>
+      <li>Failure 3: PR/FAQ written, then archived — never re-read during development. Three months in, shipped product diverges from PR by miles; marketing rewrites the story from scratch</li>
+      <li>Failure 4: PR/FAQ outsourced to marketing — loses its entire value as a thinking tool. It must be written by <strong>the PM with end-to-end ownership</strong></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Colin Bryar &amp; Bill Carr</span>《Working Backwards》(St. Martin's, 2021) Ch. 5 — full PR/FAQ process from inside Amazon · <span>Ian McAllister</span>"What is Amazon's approach to product development?" Quora 2012 — the original public description · <span>Amazon Leadership Principle</span>"Customer Obsession" — PR/FAQ is the writing instantiation of this principle</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p><strong>Exercise:</strong> Pick a project your team is doing or considering. <strong>Write the PR/FAQ in reverse:</strong> (1) a one-page PR with headline, customer problem, our solution, and one mock customer quote; (2) an 8-question FAQ that includes 4 hard questions ("Where's the differentiation?" "What if year-one revenue hits 30% of plan?" "What happens if our key dependency hikes price 50%?" "Why won't customers just stitch it together themselves?"). After you finish, ask: did the customer quote feel <strong>grounded in a real scenario</strong>, or was it hollow? Can you answer the hard questions? If not, the project may belong back at step 3.<br><strong>Reflection:</strong> The PR/FAQ process barely works once a project has been over-promised upstream — the commitment is already made, no PR is hollow enough to kill it. How does an organization put <strong>PR/FAQ before commitment</strong> rather than after? Is this a process design problem or a culture problem?</p>
+  </div>
+</section>
+
+<!-- Resources -->
+<section class="card">
+  <div class="num">Deep Dive</div>
+  <h2>For Further Reading</h2>
+  <div class="en-name">Books, essays, and primary sources</div>
+  <span class="tag">REF · Beyond this week</span>
+  <div class="section">
+    <ul>
+      <li><strong>Colin Bryar &amp; Bill Carr</strong>《Working Backwards》(St. Martin's, 2021) — Two ex-Amazon executives detail the 6-pager and PR/FAQ cultures; half this week's quotes come from this book</li>
+      <li><strong>Jeff Bezos</strong>《2017 Letter to Shareholders》Amazon 2018 — the public declaration of the narrative-memo philosophy; two paragraphs distill the whole stance</li>
+      <li><strong>Edward Tufte</strong>《The Cognitive Style of PowerPoint》(Graphics Press, 2003) — the evidence-based critique of bullets and PowerPoint at large</li>
+      <li><strong>Barbara Minto</strong>《The Pyramid Principle》(1987) — the canonical structural argument for conclusion-first writing (covered in Week 2; revisited here as decision practice)</li>
+      <li><strong>Will Larson</strong>《An Elegant Puzzle》Ch. 4 &amp;《Staff Engineer》Ch. 6 — decision memos as the senior IC's leverage point</li>
+      <li><strong>Kabir Sehgal</strong>"How to Write Email with Military Precision" Harvard Business Review 2016 — concise BLUF primer</li>
+      <li><strong>Patrick McKenzie</strong>"Doing Business" series, patio11.com — decision memos in the wild at modern tech companies, including failure modes</li>
+      <li><strong>Brad Porter</strong>"The Beauty of Amazon's 6-Pager" (LinkedIn, 2015) — ex-Amazon VP perspective with concrete rewrite examples</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Reflection -->
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Open Questions for the Practitioner</h2>
+  <div class="en-name">Questions worth sitting with</div>
+  <span class="tag">Q · Open</span>
+  <div class="section">
+    <details>
+      <summary>1. With AI drafting the memo, does "narrative forces deep thinking" still pay out?</summary>
+      <div>This is the live, open question. Bezos's bet assumes that "when the author types complete sentences, the gaps in thought reveal themselves." If AI types the sentences, that forcing function disappears. Hedges to try: (a) AI drafts only P3-4 (State of Business, objective data), while the author hand-writes the high-stakes sections (Introduction, Tenets, Strategic Priorities); (b) reviews add a "verbal recap" step — if the author cannot articulate the memo's causal chains out loud, the memo doesn't count as written. The test remains the same: can the author defend every judgment? The tool is incidental.</div>
+    </details>
+    <details>
+      <summary>2. How does the 6-pager evolve in remote / async organizations?</summary>
+      <div>Async-first organizations (GitLab, Automattic, the Basecamp lineage) give up the "20 minutes of silent reading" because there is no synchronous meeting to anchor it. The substitute is a long-form Slack thread or Notion comment trail: the author posts the memo and opens a 24-48 hour window for stakeholders to ask asynchronously. Upside: more thinking time. Downside: loss of "forced single-sitting attention" — readers skim across days, and questions scatter across lost context. One workable hybrid: post the memo, leave a 24-hour window, then hold a focused 30-minute synchronous call — not to discuss the memo as a whole, but to resolve the top three disagreements the comments surfaced.</div>
+    </details>
+    <details>
+      <summary>3. How do BLUF and the "indirectness aesthetic" of East Asian business communication coexist?</summary>
+      <div>The conflict is on the surface, not at depth. "Indirectness" is rhetoric; BLUF is structure — you can have conclusion-first <em>and</em> softer phrasing. Example: "Recommend we cancel Project X" → "I'd like to propose a decision to stop Project X this week — the main consideration is..." (conclusion still up front, tone softened). The failure mode is using "indirectness" as cover for <strong>structural</strong> burial — moving the conclusion to paragraph three, padding with throat-clearing. Readers feel neither informed nor respected. Indirectness should be BLUF's rhetorical clothing, not its replacement.</div>
+    </details>
+    <details>
+      <summary>4. How does PR/FAQ differ across consumer, B2B, internal platform, and research work?</summary>
+      <div>(a) <strong>Consumer products</strong>: PR is for real customers — closest to Amazon's original use case; (b) <strong>B2B</strong>: write two PRs, one for the buyer (CFO/CIO) and one for the user (developer / operator); their concerns diverge; (c) <strong>Internal platforms</strong>: "customers" are other teams, PR is for team leads; the FAQ gains a brutal question: "why should my team adopt your platform instead of building our own?" — usually the hardest one; (d) <strong>Research work</strong>: usually doesn't fit PR/FAQ since there's no "product shape." A useful variant: imagine the paper's abstract, or the conference demo, as the forcing function instead.</div>
+    </details>
+    <details>
+      <summary>5. Can memo culture grow bottom-up in organizations without a Bezos-style CEO mandating it?</summary>
+      <div>Hard but possible. Top-down has the advantage of "switch the whole company overnight" — change the meeting rules, change the habit immediately. Bottom-up has to be slower water: (a) use the 6-pager in your own reviews for a year and let results speak — if decision quality goes up and reviewer satisfaction goes up, others will copy; (b) find one ally who's sick of decks (often a tech leader) and run two-person memo communication; (c) use the 1-pager as a low-friction entry — easier acceptance than 6-pagers, and once it pays off once, the cultural permission to try more emerges. The biggest trap: evangelizing "let's be like Amazon" — culture imports trigger organizational immune responses. Just write better memos than the next person; results compound.</div>
+    </details>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly Index</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 9 · 2026</footer>
+
+</div>
+</body>
+</html>
