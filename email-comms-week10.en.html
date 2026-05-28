@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Weekly: Email &amp; Business Comms — Week 10</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7;text-align:left}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:12px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:8px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Card 2: BLUF structure */
+.bluf{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.bluf .row{padding:12px 16px;background:#fff;border:1px solid #d8d0bc;margin-bottom:8px;border-radius:2px}
+.bluf .row:last-of-type{margin-bottom:0}
+.bluf .row.lead{background:#1f1f1f;border-color:#1f1f1f}
+.bluf .row .nm{font-family:Georgia,serif;font-weight:700;font-size:0.92rem;color:#1f1f1f;display:block;margin-bottom:3px}
+.bluf .row.lead .nm{color:#d8c98a}
+.bluf .row .ds{font-size:0.86rem;color:#5a5a5a;line-height:1.55;font-style:italic}
+.bluf .row.lead .ds{color:#cfcfcf}
+.bluf .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+
+/* Card 3: SBI three steps */
+.sbi-wrap{background:#f8f6f1;padding:20px 16px;margin:18px 0;border-radius:2px}
+.sbi{display:flex;gap:8px}
+.sbi .step{flex:1;background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:14px 12px;text-align:center;font-family:Georgia,serif}
+.sbi .step .n{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.sbi .step .t{display:block;font-weight:800;color:#1f1f1f;font-size:0.98rem;margin-bottom:4px}
+.sbi .step .d{font-size:0.82rem;color:#5a5a5a;line-height:1.5}
+.sbi-wrap .caption{font-size:0.84rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+
+/* Card 4: sync vs async */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.vs-grid .col{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:16px 16px;font-family:Georgia,serif}
+.vs-grid .col h4{font-size:0.92rem;color:#1f1f1f;margin-bottom:8px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #e0d8c4;padding-bottom:6px}
+.vs-grid .col.async h4{color:#8a7a4a}
+.vs-grid .col ul{list-style:none}
+.vs-grid .col li{font-size:0.85rem;color:#4a4a4a;line-height:1.55;padding:4px 0 4px 16px;position:relative}
+.vs-grid .col li:before{content:"·";position:absolute;left:4px;color:#8a7a4a;font-weight:700}
+.vs-cap{font-size:0.84rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:-6px;margin-bottom:18px}
+
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:14px 18px;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:700;color:#1f1f1f;font-size:0.98rem;font-family:Georgia,serif}
+details[open] summary{margin-bottom:10px;border-bottom:1px solid #d8d0bc;padding-bottom:8px}
+details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .sbi{flex-direction:column}
+  .vs-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 10 · 2026.05.28</div>
+  <h1>Writing Weekly: Email &amp; Business Comms<span class="topic">Writing for People Who Won't Read</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Recipients don't read your email — they scan it. A leader gets dozens a day and decides "open it? reply when?" in half a second. The first nine weeks trained you to write a good piece; this week trains you to move work forward even when the other person is impatient, missing context, and mid-task-switch. Four principles — subject lines, BLUF, saying no &amp; hard feedback, async culture — turn the words that "vanish into the void" into words that get read, understood, and acted on.</p>
+</header>
+
+<!-- Card 1: Subject Lines -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Subject Lines: The Only Line You're Guaranteed to Be Read</h2>
+  <div class="en-name">The inbox is a scanning surface, not a reading surface</div>
+  <span class="tag">Subject · Inbox Triage</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>The inbox is a <strong>scanning surface, not a reading surface</strong>. A subject line isn't a "title" — it's a <strong>routing label + priority label</strong>. It answers two questions for the recipient before they open anything: does this concern me, and do I deal with it now?</p>
+    <div class="quote">
+      "We don't read pages. We scan them."
+      <span class="source">— Steve Krug, Don't Make Me Think, Ch. 2</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Krug was writing about web pages — but the inbox is worse: readers never even open the body. They scan the subject line and decide.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>With 60 unread, the reader's action isn't "reading" — it's <strong>triage</strong>: half a second each to decide delete / archive / reply now / to-do. The subject line is the only information in that half-second. A good one does two things: ① <strong>front-loads the action</strong> — labels like <code style="background:#f0ebd9;padding:1px 5px;border-radius:2px">[Decision needed]</code><code style="background:#f0ebd9;padding:1px 5px;border-radius:2px">[FYI, no reply]</code> declare its nature; ② <strong>is specific enough to be searchable</strong> — three months later when you grep your inbox, "Update" and "Meeting" are noise; "Q3 launch date" is signal. A counterintuitive trick: <strong>write the subject line last</strong> — only once the body is settled do you know what you're actually asking for.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">Subject: Meeting / Sync / Update</span>
+      <span class="after">Subject: [Your call by Thu] Q3 launch — 8/12 or 8/19? (I lean 8/12)</span>
+    </div>
+    <div class="example">
+      <span class="before">Subject: Quick question</span>
+      <span class="after">Subject: [Decision by Fri] Approve $12k vendor switch? (saves 30% / 1-yr lock-in)</span>
+    </div>
+    <p style="font-size:0.9rem;color:#6a6a6a;margin-top:6px">The revised lines tell the reader <strong>without opening the body</strong>: what it is, what they must do, by when, and your lean. Opening it is only to confirm details.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any email expecting action · broadcasts · decision emails you'll search for later</li>
+      <li>✗ Personal thanks, pure pleasantries — forcing a label feels robotic</li>
+      <li>Mistake 1: writing "vagueness" — "about that thing"; they must open it to learn it's not for them</li>
+      <li>Mistake 2: three unrelated topics in one thread — no one can search by subject later</li>
+      <li>Mistake 3: [Urgent] as a habit — cry wolf, and no one believes the real one</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Steve Krug</span> Don't Make Me Think (2000) — scanning, not reading · <span>David Shipley &amp; Will Schwalbe</span> Send (2007) — chapter on subject lines · <span>Todd Rogers &amp; Jessica Lasky-Fink</span> Writing for Busy Readers (2023) — subject lines and response rates</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p><strong>Exercise:</strong> Open your last 10 sent emails and rewrite each subject line: add a nature label (Decision / Action / FYI), cut empty words like "Update" and "Sync," make it specific enough to search. Against the original, ask which one lets you find it in three months at a glance.<br><strong>Question:</strong> If the recipient only ever reads the subject line and never opens the body, can this email still move things forward? If not, the subject line isn't done yet.</p>
+  </div>
+</section>
+
+<!-- Card 2: BLUF -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>BLUF: Put the Conclusion in the First Sentence</h2>
+  <div class="en-name">Bottom Line Up Front — Lead with the Answer</div>
+  <span class="tag">BLUF · Answer First</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>Open the body with the <strong>conclusion, request, or decision</strong>, then give context and detail. One sentence in, the reader knows "what's in it for me, and what I must do" — whether they read on is up to them. This is the standard opening of military correspondence.</p>
+    <div class="quote">
+      "Military professionals lead their emails with a short, staccato statement known as the BLUF (Bottom Line Up Front). It declares the purpose of the email and the action required."
+      <span class="source">— Kabir Sehgal, "How to Write Email with Military Precision," Harvard Business Review, 2016</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This is Week 2's Pyramid Principle applied to email. Novices default to "<strong>story order</strong>" — chronological: background → process → conclusion, with the ask buried in paragraph four. But the reader is in triage mode and leaves by paragraph two if "what do I do" hasn't surfaced. <strong>Moving the conclusion to sentence one hands the reader the choice of whether to keep reading — instead of forcing them to finish before they learn they could have skipped it.</strong></p>
+    <div class="bluf">
+      <div class="row lead"><span class="nm">① BLUF — Conclusion / Request / Decision</span><span class="ds">Sentence one. What you need them to do, by when, your recommendation</span></div>
+      <div class="row"><span class="nm">② Context — Why</span><span class="ds">Minimum necessary background, 2–3 sentences</span></div>
+      <div class="row"><span class="nm">③ Details — Options / Data</span><span class="ds">Those who want to dig read on; those who don't are done here</span></div>
+    </div>
+    <div style="font-size:0.84rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:-6px">Inverted pyramid: order by the reader's urgency of need, not by the order events happened</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">We met with the data team last week and got into a few old pipeline issues, which surfaced some upstream dependencies... (three paragraphs later) ...so I wanted to ask whether you could approve adding two machines.</span>
+      <span class="after"><strong>Please approve today: add 2 machines to the ETL cluster (~$1.8k/mo).</strong> Why: upstream volume doubled this month; the nightly job has timed out 3 times, blocking the morning report. Alternatives and cost comparison below.</span>
+    </div>
+    <div class="example">
+      <span class="before">Following up on our roadmap discussion last week, and after syncing with several stakeholders, there are a few considerations... (buried) ...could you let me know your thoughts on the timeline?</span>
+      <span class="after"><strong>Need your call by Thursday: ship Feature X in v2.4 (Jun) or v2.5 (Aug)?</strong> I recommend Aug — June risks the migration overlapping with the audit. Context and tradeoffs below.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Approval requests · status reports · decision emails · almost all internal email</li>
+      <li>✗ Caution: highly sensitive / bad news — a blunt conclusion can read cold; lead with one buffer line (see Card 3)</li>
+      <li>Mistake 1: writing a "topic summary" as the "conclusion" — "re: launch timing" isn't a conclusion; "I recommend 8/12" is</li>
+      <li>Mistake 2: gave the conclusion but not "what they must do" — the reader still has to guess the action item</li>
+      <li>Mistake 3: repeating the same line again at the end — trust the reader, don't pad</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Kabir Sehgal</span> "How to Write Email with Military Precision," HBR 2016 · <span>U.S. Army</span> AR 25-50, Preparing and Managing Correspondence — official source of BLUF · <span>Barbara Minto</span> The Minto Pyramid Principle — the parent of answer-first (Week 2)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p><strong>Exercise:</strong> Find a long email whose request got ignored. Cut it to three parts: a one-sentence BLUF (conclusion + action + deadline), then context, then detail. Count the words before and after — usually you halve it while the response rate climbs.<br><strong>Question:</strong> BLUF assumes the reader "wants the answer first." Is there a kind of communication where the process matters more than the conclusion, and leading with the answer is rude? How much does that depend on culture (direct vs. indirect)?</p>
+  </div>
+</section>
+
+<!-- Card 3: Saying No & Hard Feedback -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Saying No &amp; Hard Feedback: Hard on the Issue, Soft on the Person</h2>
+  <div class="en-name">Vague kindness hurts more than a clear hard truth</div>
+  <span class="tag">Candor · Bad News</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>Bad news, refusals, negative feedback — don't blur the message to "spare feelings." Be <strong>direct about the issue (state the problem clearly), caring about the person (mind the relationship)</strong>. Vague kindness hurts more than a clear hard truth, because the other person never learns what to change.</p>
+    <div class="quote">
+      "Radical Candor is what happens when you put 'Care Personally' and 'Challenge Directly' together. ... Challenging people generally shows you care."
+      <span class="source">— Kim Scott, Radical Candor (2017)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Facing negative feedback, most people slide into two failure modes: <strong>Ruinous Empathy</strong> (caring but afraid to say it — hedging, hinting, mush; the signal never lands) or <strong>Obnoxious Aggression</strong> (direct but uncaring — labeling, attacking the person not the issue). To be "direct on the issue" without "attacking the person," use <strong>SBI</strong>: don't say "you have an attitude problem" (personal, vague, unchangeable); describe three facts — <strong>Situation–Behavior–Impact</strong>. Facts are hard to dispute; labels guarantee defensiveness.</p>
+    <div class="sbi-wrap">
+      <div class="sbi">
+        <div class="step"><span class="n">S</span><span class="t">Situation</span><span class="d">Specific time/place: "in Tuesday's review"</span></div>
+        <div class="step"><span class="n">B</span><span class="t">Behavior</span><span class="d">Observable action, not judgment: "interrupted three times"</span></div>
+        <div class="step"><span class="n">I</span><span class="t">Impact</span><span class="d">The consequence: "the risk point went unsaid, we missed the dependency"</span></div>
+      </div>
+      <div class="caption">SBI model (Center for Creative Leadership) — facts in place of labels</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">Your performance has been off lately, and your attitude in meetings is a bit of a problem — people have noticed. Watch it.</span>
+      <span class="after">In Tuesday's review (S), you interrupted Lin three times before she finished (B); as a result her risk points went unsaid, and afterward we missed that upstream dependency (I). Next time, could you note it down and ask after she's done? I raise this because your judgment matters — I want it heard in full.</span>
+    </div>
+    <div class="example">
+      <span class="before">(refusing, vaguely) I'll try to squeeze it in... (result: it doesn't get done, and they wait for nothing)</span>
+      <span class="after">It won't fit this sprint — I have to say so plainly. If it's more urgent than X, I can pull X to make room — you set the priority. <span style="color:#6a6a6a;font-style:italic">(A clear "no" plus one exit beats a vague "I'll try.")</span></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Performance feedback · declining a request · stopping a project · flagging issues in review</li>
+      <li>✗ Caution in writing: emotionally loaded, easily-misread feedback → do it in person / by call first; email only for the record</li>
+      <li>Mistake 1: the "feedback sandwich" (praise–critique–praise) buries the core — they remember only the praise at both ends</li>
+      <li>Mistake 2: when saying "no," piling on explanation and apology but never saying the "no" — they think there's still a chance</li>
+      <li>Mistake 3: attacking the person, not the issue — "you're careless" is a label; "this missed 3 cases" is a fact</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Kim Scott</span> Radical Candor (2017) — the care × challenge framework · <span>Center for Creative Leadership</span> SBI Feedback Model — Situation-Behavior-Impact · <span>Douglas Stone &amp; Sheila Heen</span> Thanks for the Feedback (2014) — the receiving side</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p><strong>Exercise:</strong> Think of one piece of negative feedback you've been "holding back." Write it as three sentences using SBI: situation, behavior (observable, no judgment), impact. Check for labels like "you always" / "you just are" — and rewrite them into specific facts.<br><strong>Question:</strong> Radical Candor was born in Silicon Valley's direct culture. In more hierarchical, indirect workplaces, "challenging your boss directly" carries higher risk — how should the framework be adapted to keep the candor while not stepping on cultural mines?</p>
+  </div>
+</section>
+
+<!-- Card 4: Async Culture -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Async-First: Write the Whole Context Once</h2>
+  <div class="en-name">Every "you there?" is a two-way interruption</div>
+  <span class="tag">Async · Slack Culture</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>The golden rule of async communication (email, Slack, docs): <strong>say the whole thing in one message</strong> — context, the question, your lean, and the response time you expect. Don't fire off "you there?" and wait. Every "wait for them to be online" is a two-way interruption.</p>
+    <div class="quote">
+      "Real-time sometimes. Asynchronous most of the time."
+      <span class="source">— Jason Fried &amp; David Heinemeier Hansson, Basecamp, "How We Communicate"</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Real-time communication requires everyone present at once — that's a luxury, not the default.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>"You there?" is a way of <strong>offloading the thinking cost onto the other person</strong>: it spares you the effort of composing, but forces them to stop, ask back, and wait for you to type. The core of async writing is being <strong>self-contained</strong> — the reader, opening it at any moment, can act without follow-up. It is therefore inherently <strong>searchable and durable</strong>: a decision written in a doc is still there in six months; a consensus reached over live voice evaporates by the next day. To judge sync vs. async, ask one thing: <strong>does it need an immediate back-and-forth, or just one clear pass?</strong></p>
+    <div class="vs-grid">
+      <div class="col">
+        <h4>Sync</h4>
+        <ul>
+          <li>High-bandwidth, high-emotion: firing, conflict, bad news</li>
+          <li>Rapid multi-round volleys: brainstorming, crisis response</li>
+          <li>Relationship-building: 1:1s, onboarding</li>
+          <li>Cost: requires everyone present at once</li>
+        </ul>
+      </div>
+      <div class="col async">
+        <h4>Async</h4>
+        <ul>
+          <li>Status updates, broadcasts, FYIs</li>
+          <li>Decisions that need reflection (give them time to think)</li>
+          <li>Across time zones / across deep-work hours</li>
+          <li>Upside: searchable, durable, no interruption</li>
+        </ul>
+      </div>
+    </div>
+    <div class="vs-cap">Async by default, sync on demand — reserve sync for what truly needs presence</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">(Slack) You around? ... (them: "yeah, what's up") ... can we chat about the payment thing? ... (five rounds before getting to the point)</span>
+      <span class="after">(Slack) [No rush] Payment callback timeout: I want to raise the timeout from 3s to 8s — upstream P99 is now 5s (PR link). If no objection by Thu, I'll merge; flag concerns anytime.</span>
+    </div>
+    <div class="example">
+      <span class="before">Hey, you around? Got a sec?</span>
+      <span class="after">[No rush] Reviewing the Q3 plan — one blocker: the launch date assumes infra is ready by 7/1, but I haven't seen a confirmation. Can you confirm by Wed, or tell me who owns it? Doc here: [link]</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Remote / cross-time-zone teams · deep-work roles · any collaboration the "interruption tax" can grind down</li>
+      <li>✗ Don't async: live crises, conversations that need emotional warmth, complex topics that take repeated clarification to align</li>
+      <li>Mistake 1: opening with "you there?" — forces a round of zero-information back-and-forth</li>
+      <li>Mistake 2: treating async as instant — sending then staring at it waiting, more anxious than sync</li>
+      <li>Mistake 3: five topics in one message — they answer three and forget two; searchability goes to zero</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Jason Fried &amp; DHH</span> It Doesn't Have to Be Crazy at Work (2018) · <span>GitLab</span> Handbook — Asynchronous Communication — a public template for remote work · <span>Cal Newport</span> A World Without Email (2021) — the harm of the "hyperactive hive mind"</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p><strong>Exercise:</strong> This week, catch one urge to send "you there?" and turn it into a self-contained message: context, question, your lean, expected response time — one sentence each. Watch whether the reply lands in one shot, sparing the back-and-forth.<br><strong>Question:</strong> Async saves interruptions but sacrifices instant clarification and emotional warmth. When a team goes almost fully async, what "weak ties" and rapport does it lose? Which things would you deliberately reserve for sync, even at lower efficiency?</p>
+  </div>
+</section>
+
+<!-- Resources -->
+<section class="card">
+  <div class="num">Deep Dive</div>
+  <h2>For Further Reading</h2>
+  <div class="en-name">Across the Four Principles</div>
+  <span class="tag">REF · Further</span>
+  <div class="section">
+    <ul>
+      <li><strong>David Shipley &amp; Will Schwalbe</strong> Send (2007) — the classic on email etiquette and structure; the subject-line chapter rewards rereading</li>
+      <li><strong>Todd Rogers &amp; Jessica Lasky-Fink</strong> Writing for Busy Readers (2023) — behavioral-science experiments proving "shorter gets answered," with hard data on response rates</li>
+      <li><strong>Kabir Sehgal</strong> "How to Write Email with Military Precision," HBR 2016 — the best popular intro to BLUF, three minutes to read</li>
+      <li><strong>Kim Scott</strong> Radical Candor (2017) — the care × challenge framework, the modern bible of negative feedback</li>
+      <li><strong>Cal Newport</strong> A World Without Email (2021) — dissects the "hyperactive hive mind," the case for async and deep work as allies</li>
+      <li><strong>GitLab</strong> Handbook — Asynchronous Communication — the public playbook of the largest all-remote company</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Reflection -->
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Open Questions for the Practitioner</h2>
+  <div class="en-name">Push the Edges of the Principles</div>
+  <span class="tag">Q · Reflection</span>
+  <div class="section">
+    <details>
+      <summary>1. BLUF puts the conclusion first — but should bad news also be "stated bluntly first"?</summary>
+      <div>BLUF optimizes for "getting the action item fast," but with sensitive news the reader's first need is to feel respected, not efficiency. The two reconcile: keep the answer-first skeleton, but make sentence one a very short buffer ("there's a not-great development to share"), then the conclusion. The key is that the buffer doesn't become a detour — one line only, and the second sentence must land on the conclusion. Culture lives here too: high-context cultures (East Asia) need a heavier buffer; low-context cultures (US, Germany) read directness as respect for their time.</div>
+    </details>
+    <details>
+      <summary>2. How does Radical Candor land in hierarchical cultures?</summary>
+      <div>The framework assumes "challenging directly" is safe in both directions, but in high-power-distance workplaces a subordinate challenging a boss is high-risk, and a boss's "directness" easily amplifies into humiliation. Adaptations: upward feedback goes private and question-shaped ("is that risk covered?") rather than assertive; downward feedback front-loads the Care-Personally signal, since hierarchy already makes directness feel heavier; use SBI to lower the face cost. Keep the core (no hedging); tune the shell (degree of directness) to the culture.</div>
+    </details>
+    <details>
+      <summary>3. Once you outsource the "wording" to AI, is the "judgment" of communication still yours?</summary>
+      <div>AI can instantly write subject lines, draft refusals, compress long emails into BLUF — wording cost trends to zero. But the hard part of communication was never wording; it's judgment: whether to say it, to whom, sync or async, how direct, where the cultural mines are. These are functions of context and relationship, and AI lacks the tacit background in your head. Practical division: let AI do "compression and polish"; keep the judgment layer (whether to send, to whom, which channel, how direct) for yourself. Danger sign: when you start letting AI decide "whether to refuse," not just "how to word the refusal gracefully."</div>
+    </details>
+    <details>
+      <summary>4. When a team goes almost fully async, what "weak ties" does it lose?</summary>
+      <div>Async optimizes the efficiency of information transfer but compresses "non-task contact" — water-cooler chat, the two minutes before a meeting, the flash of someone's expression. These weak ties are the culture medium for trust and rapport, and the source of accidental creative collisions. Fully-async teams drift toward "efficient but distant": everything gets done, yet no one really knows each other, and there's no trust buffer when conflict hits. A practical hedge: deliberately make room for "agenda-less sync" (regular 1:1s, virtual coffee, in-person gatherings). Async runs the work; sync grows the people.</div>
+    </details>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly index</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 10 · 2026</footer>
+
+</div>
+</body>
+</html>
