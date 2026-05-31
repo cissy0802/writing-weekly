@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Weekly: Personal-Brand Writing — Week 13</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px;line-height:1.7}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.contract-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.contract-vis .row{display:flex;gap:10px;align-items:stretch}
+.contract-vis .pillar{flex:1;padding:16px 12px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;border-radius:2px}
+.contract-vis .pillar .head{display:block;font-weight:700;color:#1f1f1f;font-size:1rem;margin-bottom:6px}
+.contract-vis .pillar .en{display:block;font-size:0.78rem;color:#8a7a4a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+.contract-vis .pillar .desc{display:block;font-size:0.86rem;color:#3a3a3a;line-height:1.55;font-style:italic}
+.contract-vis .equals{text-align:center;font-family:Georgia,serif;color:#8a7a4a;font-size:0.9rem;margin-top:12px;letter-spacing:1px}
+.contract-vis .equals strong{color:#1f1f1f;font-weight:700}
+.contract-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+.length-grid{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.length-grid table{width:100%;border-collapse:collapse;font-family:Georgia,serif;font-size:0.9rem}
+.length-grid th{background:#1f1f1f;color:#d8c98a;padding:10px 8px;text-align:left;font-size:0.76rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.length-grid td{background:#fff;padding:12px 10px;border-bottom:1px solid #ececec;color:#2a2a2a;line-height:1.55;vertical-align:top}
+.length-grid td.depth{font-weight:700;color:#8a7a4a;white-space:nowrap}
+.length-grid td.format{font-style:italic;color:#5a5a5a;font-size:0.85rem}
+.length-grid .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+.deepthink{margin-top:32px;padding:28px 24px;background:#fff;border-top:3px solid #1f1f1f;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.deepthink h3{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin-bottom:18px;font-family:Georgia,serif;letter-spacing:0.5px}
+.deepthink details{margin-bottom:14px;border-bottom:1px solid #ececec;padding-bottom:14px}
+.deepthink details:last-child{border-bottom:none}
+.deepthink summary{cursor:pointer;font-size:1rem;font-weight:600;color:#1f1f1f;padding:6px 0;outline:none;line-height:1.5}
+.deepthink summary:hover{color:#8a7a4a}
+.deepthink details[open] summary{color:#8a7a4a}
+.deepthink details > div{margin-top:10px;padding:12px 16px;background:#f8f6f1;font-size:0.94rem;color:#3a3a3a;line-height:1.75;border-left:3px solid #8a7a4a;border-radius:2px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .contract-vis .row{flex-direction:column}
+  .length-grid{padding:14px 8px}
+  .length-grid table{font-size:0.82rem}
+  .length-grid th,.length-grid td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 13 · 2026.05.31</div>
+  <h1>Writing Weekly: Personal-Brand Writing<span class="topic">Newsletter · Twitter · LinkedIn · Long vs Short</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">A personal brand isn't packaging yourself to look better — it's <strong>the leverage that keeps producing influence when you're not in the room</strong>. For senior engineers, writing is the highest-ROI tool for building credibility beyond title. This week: four vehicles — the clockwork Newsletter, the razor-edged Tweet, the teach-don't-announce LinkedIn post, and the discipline of knowing how long to make a piece.</p>
+</header>
+
+<!-- Card 1: Newsletter Covenant -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Newsletter Covenant: Become a clock in your reader's inbox</h2>
+  <div class="en-name">Topic × Cadence × Promise — the three pillars of subscription trust</div>
+  <span class="tag">Newsletter · The Substack Era</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Voice</div>
+    <p>A newsletter is not the "inbox version" of a blog. It's an <strong>implicit covenant</strong> with your reader — you promise a topic, a cadence, and a kind of payoff; they spend the scarcest real estate on the internet (their inbox) to take you up on it.</p>
+    <div class="quote">
+      "The fundamental currency of the internet is no longer pageviews — it's subscriptions. And subscriptions are built on a single thing: showing up, again, with the same promise."
+      <span class="source">— Ben Thompson, Stratechery (Aggregation Theory)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A blog is "pull" — readers come to you. A newsletter is "push" — you walk into their inbox. The inbox is sacred ground: break the covenant once (skip an issue, change topic, sneak in a sales pitch) and the unsubscribe button is half a second away. So the first discipline of newsletter writing is <strong>covenant discipline</strong>: (1) topic narrow enough that someone can decide to subscribe in one breath; (2) cadence predictable to the day and hour; (3) payoff consistent — length, depth, voice don't drift. Ben Thompson built Stratechery by doing this for ten years straight: one deep tech-strategy piece every weekday, never off-topic, never late. That's where compounding lives.</p>
+    <div class="contract-vis">
+      <div class="row">
+        <div class="pillar"><span class="head">Topic</span><span class="en">What</span><span class="desc">Narrow enough for one sentence; broad enough to last years</span></div>
+        <div class="pillar"><span class="head">Cadence</span><span class="en">When</span><span class="desc">Specific to day and hour; readers can set a clock by you</span></div>
+        <div class="pillar"><span class="head">Promise</span><span class="en">How</span><span class="desc">Length, depth, voice — drifting them is breaking the deal</span></div>
+      </div>
+      <div class="equals">Topic × Cadence × Promise = <strong>Newsletter Covenant</strong></div>
+      <div class="caption">Miss any one pillar and "subscription" collapses into "bulk email"</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">Subscribe to my newsletter — I write about tech, life, and random thoughts whenever I feel inspired.</span>
+      <span class="after">Every Sunday: one 1,500-word essay on the trade-offs hidden in distributed-systems design. Nothing else. Miss a week and I owe you one. Subscribe.</span>
+    </div>
+    <div class="example">
+      <span class="before">Just launched my newsletter! Sharing my thoughts on technology, product, and the future. Updates whenever something catches my eye.</span>
+      <span class="after">Sundays at 9pm ET — one long-form take on AI × distributed systems. No takes on lifestyle, no sponsored sections. If I skip, I'll explain why in the next issue.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Failures</div>
+    <ul>
+      <li>✓ Anyone building a long-term niche brand; engineering leaders extending their internal-memo habit outward</li>
+      <li>✗ When your topic hasn't stabilized — explore on a blog or Twitter first; never use a newsletter as a sales channel — one pitch burns three months of trust</li>
+      <li>Failure: topic too broad ("tech / life / musings") = no topic at all</li>
+      <li>Failure: cadence drift — this week, then next month — readers stop expecting you, and expectation is the asset</li>
+      <li>Failure: repackaging old blog posts — readers can tell when nothing was written specifically for the inbox</li>
+    </ul>
+    <p class="refs"><span>Sources:</span> Ben Thompson, <em>Stratechery</em> (every weekday for 10+ years — the format-defining example) · Patrick McKenzie, <em>Kalzumeus</em> · David Perell, <em>Write of Passage</em>.</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">Exercise + Question</div>
+    <p>Write the <strong>cover covenant</strong> for your (future) newsletter — three lines: Topic (precise to one niche), Cadence (precise to day and hour), Promise (precise to length and form). Paste it at the top of issue #1.<br><br><strong>Question:</strong> Can you survive the first 12 weeks of silence? In the early months your subscribers are probably your mom and three former colleagues. Covenant discipline is only really tested when no one is clapping.</p>
+  </div>
+</section>
+
+<!-- Card 2: Twitter / X -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Twitter / X: The first 12 characters are the headline</h2>
+  <div class="en-name">In a scrolling world, the opening twelve letters decide everything</div>
+  <span class="tag">Twitter / X · The 280-Character Discipline</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Voice</div>
+    <p>In a timeline that scrolls past at four tweets a second, your <strong>first 12 characters</strong> are the whole game — they decide whether a reader stops to expand or thumbs past. 280 characters is a ceiling, not a target.</p>
+    <div class="quote">
+      "How do you write briefly? By doing five things: throwing away words, throwing away whole paragraphs, throwing away whole sections, leaving things implicit that readers can figure out, and stopping when you're done."
+      <span class="source">— Paul Graham, "Writing, Briefly" (2005)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>X's physical constraint is "scroll plus fold." If your first line isn't a hook, your second line is never read. The same constraint governs email subject lines, PR titles, Slack channel-toppers, and Linear ticket titles — same problem, same fix. Patrick McKenzie's working observation: <strong>a specific name, a specific number, or a personal stake — hit one and someone stops; hit none and you're invisible</strong>. Vague preambles like "sharing some thoughts on..." are dead on arrival. Threads obey the same law: tweet #1 determines the survival rate of the entire thread; brilliance in tweet #4 reaches no one.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">I've been thinking a lot lately about how engineering teams approach productivity, and I think there's a really important factor that we as an industry might be overlooking...</span>
+      <span class="after">The real killer of engineering productivity isn't meetings — it's the compounding cost of context switches. One switch doesn't cost 15 minutes; it costs the next 2 hours of depth.</span>
+    </div>
+    <div class="example">
+      <span class="before">A few thoughts on a problem I've been working on regarding the assumptions we make in distributed code...</span>
+      <span class="after">Most production bugs aren't in the code. They're in the assumptions the code wasn't told about. (1/7)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Failures</div>
+    <ul>
+      <li>✓ All public short-form: tweets, Slack channel topics, PR titles, email subjects, release-note openers</li>
+      <li>✓ First tweet of any thread — it decides whether the thread is read at all</li>
+      <li>✗ Never use a hook for a tweet with no payoff — that burns trust faster than being boring would</li>
+      <li>Failure: preamble in tweet #1 ("here are some thoughts...") = squandering the most expensive real estate you own</li>
+      <li>Failure: every tweet trying to be a "zinger" = aesthetic fatigue, you turn into a fortune-cookie account; the hook should serve a payoff</li>
+    </ul>
+    <p class="refs"><span>Sources:</span> Paul Graham, <em>Writing, Briefly</em> &amp; <em>How to Write Usefully</em> · Patrick McKenzie, <em>Don't Call Yourself a Programmer</em> &amp; threads · Naval Ravikant, <em>How to Get Rich</em> tweetstorm.</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">Exercise + Question</div>
+    <p>Take the most valuable sentence you said out loud last week. Compress it to 80 characters. Then to 60. Read it aloud — could a stranger grok it in 1.5 seconds? Post it; watch which words get quoted back. The words people drop are the fat you cut next time.<br><br><strong>Question:</strong> Does the 280-character discipline poison your long-form writing? If every paragraph trains the "zinger" muscle, you may lose the capacity to build, breathe, and pace — and your essays start reading like a string of tweets.</p>
+  </div>
+</section>
+
+<!-- Card 3: LinkedIn -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>LinkedIn as professional narrative: from Résumé to Reputation</h2>
+  <div class="en-name">Teach a lesson; don't announce a milestone</div>
+  <span class="tag">LinkedIn · Professional Narrative</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Voice</div>
+    <p>LinkedIn is not a résumé in digital form. It's <strong>your professional proxy when you're not in the room</strong>. Write the "what I learned, and why it's useful to you" mini-essay; don't write the "I got promoted again" announcement.</p>
+    <div class="quote">
+      "Your career is largely determined by what your colleagues and former colleagues say about you when you're not in the room. So spend more energy giving them better things to say."
+      <span class="source">— Patrick McKenzie, "Don't Call Yourself a Programmer"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>LinkedIn's algorithm pushes "I taught you something" content roughly 10× harder than "I did something." The reason is simple: the former has value for the passing stranger; the latter only has value for you. The repeatable recipe — used by Adam Grant, Sahil Lavingia, Lara Hogan and other long-term high-engagement accounts — is four parts: (1) open with a counter-intuitive observation; (2) ground it in a lived story with specific time/place/people; (3) extract a pattern others can use; (4) end with a prompt, not a declaration. The corporate-buzzword trap ("synergistic enablement of cross-functional alignment") is dense to the algorithm and empty to the reader — easy to detect, impossible to learn from.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">Thrilled to share that I've been promoted to VP of Engineering at FAANG Inc! Couldn't have done it without my amazing team. Onwards and upwards! #blessed #grateful</span>
+      <span class="after">The most counter-intuitive lesson on the way to VP: my job stopped being "doing the right things" and became "making it cheap for others to do the right things." Three concrete shifts that bought back ten hours/week — and made the team faster. Which of these costs you the most today?</span>
+    </div>
+    <div class="example">
+      <span class="before">Excited to announce I've joined a new company in a new role. Looking forward to the journey ahead!</span>
+      <span class="after">Five years from IC to Senior Director, and the most expensive lesson I paid for: confusing "I can do this" with "I should do this." The team waited for me to approve instead of running ahead. Three fixes that reversed it — and the one I still get wrong.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Failures</div>
+    <ul>
+      <li>✓ Promotions, transitions, launches, retrospectives — anywhere you want professional identity to build credibility</li>
+      <li>✓ Recruiting — describing how your team works pulls 10× the candidates that a JD does</li>
+      <li>✗ Deep technical pieces — host them on a blog or newsletter; LinkedIn's attention curve can't sustain them</li>
+      <li>Failure: stacking buzzwords ("fully enablement deep-loop") = legible to the algorithm, invisible to humans</li>
+      <li>Failure: only sharing wins, never failures = unconvincing, and useless to readers; self-congratulatory hashtags read as anxious, not confident</li>
+    </ul>
+    <p class="refs"><span>Sources:</span> Patrick McKenzie, <em>Don't Call Yourself a Programmer</em> &amp; <em>Salary Negotiation</em> · Adam Grant's long-running LinkedIn essays · Lara Hogan, <em>Resilient Management</em>.</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">Exercise + Question</div>
+    <p>Pick the most expensive lesson of your last 12 months (ideally a failure or counter-intuitive shift). Write it in four paragraphs: counter-intuitive observation / specific story / portable pattern / prompt to the reader. <strong>Under 350 words.</strong> Post it; a week later, look at which sentence people are quoting back — that's the line that became your brand.<br><br><strong>Question:</strong> Why is corporate-buzzword writing so sticky on LinkedIn — is it the platform's user mix (heavy HR/sales), a cultural reflex against blunt self-disclosure, or a habit your native language reinforces?</p>
+  </div>
+</section>
+
+<!-- Card 4: Long vs Short -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Long vs Short: Length serves argument depth, not author vanity</h2>
+  <div class="en-name">Short as a sniper round; long as a guided tour</div>
+  <span class="tag">Length Discipline · Strunk &amp; White</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Voice</div>
+    <p>The length of a piece isn't decided by "how much I want to write." It's decided by <strong>how many layers the argument needs to open</strong>. Short when you can, long only when you must — length serves depth, not the other way around.</p>
+    <div class="quote">
+      "Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts."
+      <span class="source">— Strunk &amp; White, The Elements of Style (Rule 17)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Short isn't a compressed long. They're different forms. <strong>A short piece is a sniper round — one claim, one shot, no follow-up. A long piece is a guided tour — you walk the reader through terrain they couldn't cross alone.</strong> The judgment call is: how many layers does this idea actually have? One layer ("we should start using Claude for tests") = a one-line email. Three layers ("why our team should rewrite CI, why now, why this stack") = a necessary long piece. The two failure modes are mirror images: too long for a one-layer point — readers leave by screen three; too short for a three-layer point — readers finish unconvinced and trust you less.</p>
+    <div class="length-grid">
+      <table>
+        <thead>
+          <tr><th>Argument depth</th><th>Right length</th><th>Typical form</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="depth">One layer</td><td>1 sentence – 1 paragraph</td><td class="format">Tweet / Slack top / first line of email / PR title</td></tr>
+          <tr><td class="depth">Two layers</td><td>200 – 600 words</td><td class="format">Short email / LinkedIn post / 1-pager / design summary</td></tr>
+          <tr><td class="depth">Three layers</td><td>800 – 2,000 words</td><td class="format">Newsletter / blog post / decision memo / RFC</td></tr>
+          <tr><td class="depth">Four+ layers</td><td>2,500+ words / split into N</td><td class="format">Deep essay / design doc / six-pager / multi-part series</td></tr>
+        </tbody>
+      </table>
+      <div class="caption">As many layers as your argument has — give it that many layers of length. Don't pad for the form; don't cut the argument for brevity.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">(One-layer point dragged out for five paragraphs) Lately I've been thinking about the rhythm of our team. I've noticed that everyone seems busy, but the output isn't where I'd hope. I think there are a few reasons behind this. First...</span>
+      <span class="after">Our team isn't short on effort. It's short on "what we won't do" decisions.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Three-layer point crushed into one sentence) Distributed consensus is hard; Raft is the right answer.</span>
+      <span class="after">Open it to 800 words across three layers: (1) consensus is "hard" because of trade-offs, not algorithm complexity; (2) Raft vs Multi-Paxos differ on teachability, not capability; (3) given our latency and failure assumptions, Raft beats Multi-Paxos here — each layer the necessary premise for the next.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Failures</div>
+    <ul>
+      <li>✓ Every time you're about to write — email, PR, memo, newsletter, blog: first ask "how many layers is this?"</li>
+      <li>✓ Reverse use: if you can't write the short version, you haven't thought it through — go think, not write</li>
+      <li>✗ When the form fixes the length (tweet 280, six-pager 6 pages), satisfy the form first</li>
+      <li>Failure: assuming "long = effort = depth" — most of the time, long is just unfinished thinking in disguise</li>
+      <li>Failure: every paragraph trying to be a zinger in a long piece — readers can't breathe; let necessary build-up build</li>
+    </ul>
+    <p class="refs"><span>Sources:</span> Strunk &amp; White, <em>The Elements of Style</em>, Rule 17 "Omit Needless Words" · Paul Graham, <em>Writing, Briefly</em> &amp; <em>The Age of the Essay</em> · Mark Twain: "I didn't have time to write a short letter, so I wrote a long one instead."</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">Exercise + Question</div>
+    <p>Pick the next document you have to write. Ask three questions: (1) How many layers does this argument actually have? (2) What length does the table above recommend? (3) How far off is my current draft? Trim if long; build if short — obey depth, not habit.<br><br><strong>Question:</strong> In English the default is "shorter signals respect for the reader's time." In Chinese the implicit equation runs "longer = more sincere" — a 300-character email reads as dismissive, a 3,000-character memo reads as serious. How do you keep short under that cultural gravity?</p>
+  </div>
+</section>
+
+<!-- Deeper Questions -->
+<div class="deepthink">
+  <h3>Deeper Questions</h3>
+
+  <details>
+    <summary>Does AI-written personal-brand content end up eroding the personal brand?</summary>
+    <div>Yes, and faster than most expect. Short term (six months) AI helps you sustain "daily output" and the reader can't quite tell; long term (a year+) the reader's AI-smell detector improves exponentially. A vague "leverage / enable" opener, a story with no specific time-place-person, a too-tidy three-act structure — once tagged as machine-written, the trust you spent years building zeroes out. Safer pattern: AI for research, outline, first draft. The final layer — unique POV, personal story, private voice — has to be yours. Treat AI as a writing coach, not a stunt double.</div>
+  </details>
+
+  <details>
+    <summary>Does platform ROI rank the same for English and Chinese personal brands?</summary>
+    <div>No. In English: Twitter/X &gt; LinkedIn &gt; Newsletter &gt; personal blog (ranked by speed of reputation-building). In Chinese the landscape is fragmented: WeChat Official Accounts have high stickiness but heavy algorithmic burial; Jike is a tighter "circle" Twitter analog; Xiaohongshu suits softer professional content; Zhihu suits long answers; Twitter has a small but high-quality Chinese audience. For a Chinese-speaking technical leader, the strongest combo is usually: Official Account (long-form / archive) + Jike (short-form / reach) + self-hosted newsletter (platform-risk hedge) — one topic, three cross-sections.</div>
+  </details>
+
+  <details>
+    <summary>Real name vs pseudonym vs anonymous — how much does it shift leverage?</summary>
+    <div>In the main professional-brand arena: real name &gt; pseudonym &gt; anonymous. A real name locks all output into a single reputation account where compounding is maximal. A pseudonym buys the freedom to write on sensitive topics (industry gossip, ex-employer experiences) but loses convertibility — followers don't translate into your next offer. Anonymous makes sense almost only when the topic is sensitive and you don't intend to monetize the identity. For most technical leaders: keep the core account real-name; use a pseudonym to validate exploratory or risky topics, then merge winners back to the real-name account once proven.</div>
+  </details>
+
+  <details>
+    <summary>Steady weekly publishing vs occasional viral hits — which compounds more for a technical leader?</summary>
+    <div>Steady weekly. Virality is a lottery, and lottery-acquired followers churn quickly — they came for one tweet, they leave when the next doesn't match. Worse, the hope of going viral again deforms your topic choice. A weekly cadence trains your writing muscle and trains readers in the expectation-and-payoff loop. Naval, Paul Graham, Patrick McKenzie all built over years, not in a single hit. On a five-year horizon: 50 average essays &gt; 1 viral one — the former builds reputation; the latter only buys reach.</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly index</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 13 · 2026</footer>
+
+</div>
+</body>
+</html>
