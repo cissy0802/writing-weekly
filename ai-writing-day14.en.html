@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Writing in the Age of AI — Day 14</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .think{margin-top:12px;padding-top:12px;border-top:1px solid #4a4a4a;color:#d8c98a;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: writing pipeline ownership */
+.pipeline{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.pipeline .pl-row{display:flex;gap:6px;align-items:stretch}
+.pipeline .pl-step{flex:1;padding:12px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.82rem;color:#3a3a3a;line-height:1.4;border-radius:2px}
+.pipeline .pl-step .pl-name{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.9rem}
+.pipeline .pl-step.ai{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.pipeline .pl-step.ai .pl-name{color:#d8c98a}
+.pipeline .pl-step .pl-who{display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;margin-top:6px;color:#8a7a4a}
+.pipeline .pl-step.ai .pl-who{color:#d8c98a}
+.pipeline .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization: prompt anatomy */
+.anatomy{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.anatomy .an-part{display:flex;align-items:baseline;gap:12px;padding:9px 12px;background:#fff;border-left:3px solid #8a7a4a;margin:7px 0;border-radius:2px}
+.anatomy .an-key{flex-shrink:0;font-family:Georgia,serif;font-weight:700;color:#8a5a2a;font-size:0.86rem;min-width:110px;letter-spacing:0.5px}
+.anatomy .an-val{font-size:0.92rem;color:#3a3a3a;line-height:1.55}
+.anatomy .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Deep thinking */
+.deepthink{margin-top:32px;padding:28px 24px;background:#fff;border-top:3px solid #1f1f1f;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.deepthink h3{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin-bottom:18px;font-family:Georgia,"Noto Serif SC",serif;letter-spacing:0.5px}
+.deepthink details{margin-bottom:14px;border-bottom:1px solid #ececec;padding-bottom:14px}
+.deepthink details:last-child{border-bottom:none}
+.deepthink summary{cursor:pointer;font-size:1rem;font-weight:600;color:#1f1f1f;padding:6px 0;outline:none;line-height:1.5}
+.deepthink summary:hover{color:#8a7a4a}
+.deepthink details[open] summary{color:#8a7a4a}
+.deepthink details > div{margin-top:10px;padding:12px 16px;background:#f8f6f1;font-size:0.94rem;color:#3a3a3a;line-height:1.75;border-left:3px solid #8a7a4a;border-radius:2px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .pipeline .pl-row{flex-direction:column}
+  .anatomy .an-part{flex-direction:column;gap:2px}
+  .anatomy .an-key{min-width:0}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 14 · 2026.06.01</div>
+  <h1>Writing & Expression: Writing in the Age of AI<span class="topic">Framework · Killing the AI Smell · Collaboration · Prompt as Writing</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">AI can produce a structurally complete essay in three seconds — and that is exactly the danger. When generation becomes free, the only scarce craft left is <strong>judgment: deciding what's worth writing, what to cut, and whose voice to keep</strong>. This issue won't teach you to make AI write more. It will teach you to write more human, and more judged.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Framework: AI Is the Draft Engine, You Are the Editor</h2>
+  <div class="en-name">AI as Draft Engine, You as Editor-in-Chief</div>
+  <span class="tag">Division of Labor · Workflow</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>Treat AI as a "draft engine" and yourself as the editor-in-chief: <strong>AI owns volume, you own judgment</strong>. It's best at the step you dread most — facing the blank page; it's worst at the step you care about most — choosing, taste, deciding what to cut.</p>
+    <div class="quote">
+      "Almost all good writing begins with terrible first drafts. You need to start somewhere."
+      <span class="source">— Anne Lamott, Bird by Bird (1994)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The whole value of AI is that it hands you that "terrible first draft" instantly — so you can spend your energy where it counts: revising.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Writing isn't one act; it's an assembly line: <strong>intent → gather material → draft → restructure → tune voice</strong>. AI is astonishingly efficient in the middle three; at the two ends — what you actually mean, and whose voice it's said in — it can barely help, because those require your judgment and experience, while it has only statistical averages. The most common mistake is outsourcing the ends too: the result is correct, fluent, and indistinguishable from anyone else's.</p>
+    <div class="pipeline">
+      <div class="pl-row">
+        <div class="pl-step"><span class="pl-name">Intent</span>what to say<span class="pl-who">You</span></div>
+        <div class="pl-step ai"><span class="pl-name">Material</span>evidence & examples<span class="pl-who">AI</span></div>
+        <div class="pl-step ai"><span class="pl-name">Draft</span>fill the blank page<span class="pl-who">AI</span></div>
+        <div class="pl-step ai"><span class="pl-name">Restructure</span>reorder logic<span class="pl-who">AI+You</span></div>
+        <div class="pl-step"><span class="pl-name">Voice</span>whose voice<span class="pl-who">You</span></div>
+      </div>
+      <div class="caption">The two ends are yours; the middle can go to AI — black = AI-led, white = you-led</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Demonstration (the core)</div>
+    <div class="example">
+      <span class="before">(AI draft) In today's fast-paced digital landscape, leveraging cross-functional synergies is crucial for driving impactful outcomes.</span>
+      <span class="after">(Edited) Two teams built the same dashboard last quarter. Neither knew the other existed.</span>
+    </div>
+    <div class="example">
+      <span class="before">(AI 初稿) 在当今快速发展的数字化时代，团队协作的重要性不言而喻，对提升整体效率具有深远意义。</span>
+      <span class="after">(主编后) 上季度我们三次延期，都卡在同一处：没人知道别人在做什么。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Use for: routine email, first drafts, turning scattered notes into structure, finding counter-examples</li>
+      <li>✗ Beware: decision memos you haven't thought through — AI hides a hollow argument behind fluency</li>
+      <li>Trap: pasting a whole AI draft — readers spot the "no person, no judgment, no risk" flavor at once</li>
+      <li>Trap: asking AI for the "intent" — you forfeit writing's biggest dividend: being forced to think clearly</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pick one email you owe this week. Let AI draft it, then <strong>only subtract and add judgment</strong>: cut every cliché, swap each abstract noun for a concrete fact, add one line only you could write. Compare the word counts.</p>
+    <p class="think">Reflection: if the draft were yours, not AI's, would you cut just as much? Why or why not?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Killing the "AI Smell": Correct but Hollow</h2>
+  <div class="en-name">Correct but Hollow — Removing the Tell</div>
+  <span class="tag">Language · Style</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>The "AI smell" is a scent of being <strong>correct yet hollow</strong>: every sentence flows, yet not one names a real person, time, or cost. You remove it with three moves — get concrete, cut words, break the symmetry.</p>
+    <div class="quote">
+      "Modern writing at its worst… consists in gumming together long strips of words which have already been set in order by someone else."
+      <span class="source">— George Orwell, Politics and the English Language (1946)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Orwell described this flaw seventy years before LLMs — and it is precisely how they work: a language model literally "gums together" word-strips by statistical likelihood.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A model predicts "the most likely next word," so it slides toward the most average, least offensive, most common phrasing — the root of the AI smell: <strong>statistical mediocrity</strong>. The classic tells: the all-purpose opener ("In today's…"), an addiction to tricolons, words like "delve / leverage / crucial / it's worth noting," uniform sentence length, and a mandatory uplifting close. Each is a "strip set in order by someone else." The antidote is the old advice Orwell and Zinsser kept repeating: replace the abstract with the concrete, cut what you can, and deliberately break the rhythm — because <strong>a real person's sentences are uneven</strong>.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Demonstration (the core)</div>
+    <div class="example">
+      <span class="before">It's worth noting that this approach not only improves efficiency but also enhances collaboration and fosters innovation.</span>
+      <span class="after">This cut our deploy time from two days to twenty minutes. The cost: new hires are lost for a week.</span>
+    </div>
+    <div class="example">
+      <span class="before">值得注意的是，这个方案不仅显著提升了效率，还有效增强了团队凝聚力，具有重要的现实意义。</span>
+      <span class="after">这个方案把部署时间从两天压到二十分钟。代价是：新人头一周会懵。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Use for: anything carrying your name and building trust — newsletters, reviews, public statements</li>
+      <li>✗ Skip for: purely functional text (auto-receipts, template notices) where flavor is irrelevant</li>
+      <li>Trap: only swapping synonyms — "essential" for "crucial" is still AI smell; replace the abstraction itself</li>
+      <li>Trap: keeping tricolons and all-purpose openers — these are the strongest AI fingerprints</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take an AI passage and run the "<strong>de-smell triple</strong>": ① delete the first sentence (usually a generic opener); ② replace each abstract noun with a number or a scene; ③ split the longest sentence into two of unequal length. Read it aloud — does it sound more human?</p>
+    <p class="think">Reflection: do you have verbal tics that are already "AI-fied"? Which ones?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Collaboration: A Sparring Partner, Not a Ghostwriter</h2>
+  <div class="en-name">The Dialogue Loop — You Judge, It Offers Options</div>
+  <span class="tag">Collaboration · Thinking</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>Don't aim for a draft in one shot. Make writing a multi-turn dialogue with AI: <strong>you supply judgment, it supplies options; you draw conclusions, it plays critic</strong>. The core claim must be yours — otherwise you lose the whole point of writing.</p>
+    <div class="quote">
+      "Writing about something, even something you know well, usually shows you that you didn't know it as well as you thought."
+      <span class="source">— Paul Graham, Putting Ideas Into Words (2022)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Hand the drafting to AI and you give up this chance to be "exposed" — the moment writing reveals the gaps in your own understanding.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Writing <strong>is thinking</strong>, not merely its record. Outsourcing the thinking is "cognitive offloading": easier now, but over time it erodes your ability to turn chaos into clarity. So the rule of division is: <strong>outsource search and critique, never the core judgment</strong>. The most powerful use is AI as sparring partner, not ghostwriter — you rough out your claim first, then ask it to play the skeptical reader: find the weakest argument, surface counter-examples you missed, propose three different structures. You think it through by answering it.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Demonstration (the core)</div>
+    <div class="example">
+      <span class="before">(Ghostwriter prompt) Write me an essay on why we should adopt microservices.</span>
+      <span class="after">(Sparring prompt) Here's my draft arguing for microservices. Don't rewrite it. Find the three weakest claims a skeptical senior engineer would attack, and give one counter-example for each.</span>
+    </div>
+    <div class="example">
+      <span class="before">(枪手式) 帮我写一篇关于"为什么团队该上微服务"的文章。</span>
+      <span class="after">(陪练式) 这是我支持微服务的草稿。别改写。指出三处一个怀疑的资深工程师会反驳的地方，每处给一个我没考虑到的反例。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Use for: decision memos, design docs, contested proposals — anything that must survive rebuttal</li>
+      <li>✓ Universal critic prompts: "Where would a reader not believe this?" "Find the weakest link."</li>
+      <li>Trap: letting AI just "fix it" — you never see the holes in your reasoning, only a smoothed surface</li>
+      <li>Trap: accepting the first answer — good thinking comes from the second and third follow-up</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Write 200 words on a view you hold firmly, then ask AI to do one thing only: <strong>list the three strongest rebuttals</strong>. Don't let it touch your words. After reading, rewrite it yourself — did your view go soft, or get sharper?</p>
+    <p class="think">Reflection: in which writing tasks does "thinking it through" matter more than "getting it down"? Should AI's role there shrink or grow?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Prompting Is Writing: A Vague Brief Yields a Vague Draft</h2>
+  <div class="en-name">A Prompt Is a Spec — Garbage In, Average Out</div>
+  <span class="tag">Prompt · Expression</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>Writing a good prompt <em>is</em> writing. <strong>A prompt is a brief</strong>: whatever you leave unsaid, the model fills with its "average." A vague instruction must yield a vague draft.</p>
+    <div class="quote">
+      "Clear thinking becomes clear writing; one can't exist without the other. It is impossible for a muddy thinker to write good English."
+      <span class="source">— William Zinsser, On Writing Well (1976)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The same law holds for prompts: if you can't think it clearly, you can't ask for it clearly.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A good prompt is the same craft as a good brief to a junior colleague or a clear design doc. It needs five parts: <strong>Role + Context + Task + Limits + Example</strong>. "Limits" and "Example" are the most underused — limits tell the model what not to do (length, tone, taboos), and an example hands over the standard of "good" directly. Every part you omit gets filled by the default: the most common, safest, most mediocre option. Learning to prompt is really practicing "stating requirements clearly" — exactly what a leader does to people every day.</p>
+    <div class="anatomy">
+      <div class="an-part"><span class="an-key">Role</span><span class="an-val">You're the hiring manager / a senior editor / a skeptical reader</span></div>
+      <div class="an-part"><span class="an-key">Context</span><span class="an-val">Candidate codes well, but communicates system design poorly</span></div>
+      <div class="an-part"><span class="an-key">Task</span><span class="an-val">Write a final-round rejection</span></div>
+      <div class="an-part"><span class="an-key">Limits</span><span class="an-val">Under 120 words · warm not formulaic · one improvement tip · no false hope</span></div>
+      <div class="an-part"><span class="an-key">Example</span><span class="an-val">Attach a rejection you admire, as the standard of "good"</span></div>
+      <div class="caption">Whichever part you omit, the model fills with its average</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Demonstration (the core)</div>
+    <div class="example">
+      <span class="before">Write a rejection email to a candidate.</span>
+      <span class="after">You're the hiring manager. Reject a senior engineer who failed the final round. Context: strong coding, weak at communicating system design. Limits: under 120 words, warm but direct, one concrete tip, no false hope.</span>
+    </div>
+    <div class="example">
+      <span class="before">写一封拒绝候选人的邮件。</span>
+      <span class="after">你是招聘经理。给一位终面被刷的资深工程师写拒信。背景：技术过关，但系统设计沟通不清。约束：120 字内，真诚直接，给一条具体可改进的建议，不给虚假希望。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Use for: any repeatable high-quality output — one good prompt beats ten edits of a bad draft</li>
+      <li>✗ Beware: treating an ever-longer prompt as a cure-all — past five parts, switch to multi-turn dialogue</li>
+      <li>Trap: giving only the task, no limits or example — the most common form of a "vague instruction"</li>
+      <li>Trap: an AI-smelly prompt ("please go deep and be comprehensive") — vague modifiers buy no precision</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pick one thing you ask AI to do every week and turn it into a <strong>reusable prompt template with all five parts</strong>. Pay special attention to the "Limits" and "Example" you usually skip.</p>
+    <p class="think">Reflection: is stating requirements clearly the same skill for AI and for people? Will practicing prompts make your human communication clearer too?</p>
+  </div>
+</section>
+
+<!-- Deep thinking -->
+<div class="deepthink">
+  <h3>Going Deeper</h3>
+
+  <details>
+    <summary>AI removed writing's "starting friction" — is that good or bad?</summary>
+    <div>The starting friction was actually a filter. The pain of the blank page forced you to decide first whether the thing was worth writing at all. AI drops that threshold to zero — the upside is volume and courage, the downside is a flood of mediocre content that shouldn't exist, and the skipping of "thinking it through." A pragmatic middle: use AI to break the friction, but keep one gate of your own — before starting, write in one sentence "the single thing I want the reader to remember." If you can't write that line, don't let AI begin.</div>
+  </details>
+
+  <details>
+    <summary>If AI can imitate your voice, is a "personal voice" still scarce?</summary>
+    <div>Voice can be imitated; judgment cannot. AI can learn your syntax and pet words, but not "why you chose this example, why you stopped here, why you dared to conclude that" — those come from your experience and your choices. So the truly scarce thing isn't the surface "voice" but the <strong>judgment and stance behind it</strong>. The moat of a personal brand will migrate from "writes well" to "has a distinct view and owns the consequences."</div>
+  </details>
+
+  <details>
+    <summary>Does the "AI smell" look the same in English and Chinese?</summary>
+    <div>The core is identical (statistical mediocrity); the surface differs. English AI smell: tricolons, "delve / leverage / crucial / it's important to note," over-hedging. Chinese AI smell: bureaucratic report-speak, stacked four-character idioms, mandatory uplifting endings, words like "赋能 / 助力 / 抓手." Chinese also carries an extra "translationese" risk, since model corpora skew toward English-to-Chinese. De-smelling must be targeted: in English cut the tricolons and clichés; in Chinese cut the idiom-stacks and report-speak.</div>
+  </details>
+
+  <details>
+    <summary>Will long-term reliance on AI drafting erode our ability to think?</summary>
+    <div>There's a real risk, called "cognitive offloading" — the same way constant GPS use dulls your sense of direction. It depends which layer you outsource: outsourcing retrieval, formatting, and counter-examples is harmless and frees energy; outsourcing core judgment and argument lets that muscle atrophy. A self-check: periodically do "AI-free writing" — take an important view, shut off every tool, and write from blank page to conclusion. If that grows harder and more painful over time, you've offloaded too much.</div>
+  </details>
+
+  <details>
+    <summary>In five years, will "written by a human" still be a quality signal?</summary>
+    <div>Probably yes, but in a changed form. Once AI text becomes the default, content that is "verifiably from a real person, carrying personal risk and accountability" will re-appreciate — just as, after mass production, "handmade" became a premium label rather than a sign of backwardness. The signal won't be "did you use AI" (unprovable) but <strong>whether the writing contains specifics, judgment, and costs only someone who lived it could produce</strong>. Rather than agonize over the tool, make sure your writing always holds something AI can't supply.</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 14 · 2026</footer>
+
+</div>
+</body>
+</html>
