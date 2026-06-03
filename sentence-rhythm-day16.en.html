@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: The Rhythm of Sentences — Day 16</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .think{margin-top:12px;padding-top:12px;border-top:1px solid #4a4a4a;color:#d8c98a;font-style:italic}
+
+/* Visualization: sentence-rhythm bars */
+.rhythm{background:#f8f6f1;padding:24px 20px 16px;margin:18px 0;border-radius:2px}
+.rhythm .rh-group{margin-bottom:18px}
+.rhythm .rh-title{font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:#8a7a4a;font-weight:700;margin-bottom:10px;font-family:Georgia,serif}
+.rhythm .bar{height:13px;background:#c9ba8c;border-radius:2px;margin:7px 0}
+.rhythm .bar.punch{background:#1f1f1f}
+.rhythm .legend{font-size:0.82rem;color:#5a5a5a;font-family:Georgia,serif;margin-top:4px}
+.rhythm .legend b{color:#1f1f1f}
+.rhythm .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Deep Dive */
+.deepthink{margin-top:32px;padding:28px 24px;background:#fff;border-top:3px solid #1f1f1f;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.deepthink h3{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin-bottom:18px;font-family:Georgia,"Noto Serif SC",serif;letter-spacing:0.5px}
+.deepthink details{margin-bottom:14px;border-bottom:1px solid #ececec;padding-bottom:14px}
+.deepthink details:last-child{border-bottom:none}
+.deepthink summary{cursor:pointer;font-size:1rem;font-weight:600;color:#1f1f1f;padding:6px 0;outline:none;line-height:1.5}
+.deepthink summary:hover{color:#8a7a4a}
+.deepthink details[open] summary{color:#8a7a4a}
+.deepthink details > div{margin-top:10px;padding:12px 16px;background:#f8f6f1;font-size:0.94rem;color:#3a3a3a;line-height:1.75;border-left:3px solid #8a7a4a;border-radius:2px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 16 · 2026.06.03</div>
+  <h1>Writing &amp; Expression: The Rhythm of Sentences<span class="topic">Sentence variety · Long &amp; short · Paragraphs that breathe · The poetry of punctuation</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Good prose is not only "correct" — it has to sound good. The reader's eye sub-vocalizes as it goes, so whether a sentence has rhythm decides whether reading feels easy or exhausting. The same meaning, lined up as a string of equal-length sentences, chants like a sutra; varied in length, it becomes music. Today: the four levels of rhythm — <strong>how to vary structure, how to mix length, how paragraphs breathe, and how punctuation keeps time</strong>.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Sentence Variety: Hear It Before You Trust It</h2>
+  <div class="en-name">Vary your structure so the meaning gets heard</div>
+  <span class="tag">Syntax · Ear</span>
+
+  <div class="section">
+    <div class="label">The principle + a master's words</div>
+    <p>Push several sentences forward with the same structure and the reader tires. Varying your syntax is not showing off — it is how the meaning gets <strong>heard</strong>. To judge a sentence, read it aloud.</p>
+    <div class="quote">
+      "The sound of the language is where it all begins. ... the primary way you feel and control the rhythm of your prose is by hearing it."
+      <span class="source">— Ursula K. Le Guin, Steering the Craft (1998)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The Chinese essayist Yu Guangzhong agrees: the natural state of Chinese is "concise diction, flexible sentence patterns, a ringing cadence" (On the Normal and the Abnormal in Chinese, 1987).</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>When we read silently, the brain "voices" the words. Three sentences all built as subject-verb-object share an identical beat, and the ear drifts off — a metronome, regular to the point of hypnosis. Switching patterns (statement, question, an inserted short sentence, a moved subject) changes the beat and pulls attention back. <strong>The point of variety is not decoration; it is to land the key idea on a stressed beat.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action (the core)</div>
+    <div class="example">
+      <span class="before">The system was slow. The users were unhappy. The team was worried. The deadline was near.</span>
+      <span class="after">The system was slow, and the users let us know it. The team worried. The deadline? Days away.</span>
+    </div>
+    <div class="example">
+      <span class="before">我们上线了新功能。我们收到了用户反馈。我们修复了三个 bug。我们计划下周复盘。<br><span style="color:#8a8a8a;font-style:italic">(Four clauses, all "We + verb" — a flat ledger.)</span></span>
+      <span class="after">新功能上线了。用户反馈随之而来——三个 bug，已经修完。下周复盘。<br><span style="color:#8a8a8a;font-style:italic">(Break the subject, insert a short clause, end on a three-character beat.)</span></span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Four identical structures read like a ledger. Break the subject, slip in a short clause, mix in a question — the rhythm wakes up.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Narrative passages, speeches, product copy — any prose meant to be "read aloud"</li>
+      <li>✓ Final pass: read three sentences in a row; if the beat is identical, fix it</li>
+      <li>Trap: thinking "variety" = piling on long sentences and fancy words; the most effective change is often a short sentence dropped in</li>
+      <li>Trap: overusing parallelism — parallelism is "deliberate sameness," but past three items it slides from forceful to monotonous</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's drill + a question</div>
+    <p>Take a paragraph you wrote recently and mark each sentence's <strong>subject and length</strong>. If three in a row share a subject and a similar length, rewrite it: change the subject, drop in a short one, add a question.</p>
+    <p class="think">Question: when you write, do you "hear" it in your head — or only scan it with your eyes?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Long and Short: Long Sets Up, Short Strikes</h2>
+  <div class="en-name">The music of sentence length</div>
+  <span class="tag">Length · Cadence</span>
+
+  <div class="section">
+    <div class="label">The principle + a master's words</div>
+    <p>All long sentences leave the reader breathless; all short ones rattle like a machine gun. Real rhythm comes from mixing length — <strong>and especially, after a run of long sentences, one sudden short one. That is the hammer.</strong></p>
+    <div class="quote">
+      "I vary the sentence length, and I create music. ... The writing sings. It has a pleasant rhythm, a lilt, a harmony."
+      <span class="source">— Gary Provost, 100 Ways to Improve Your Writing (1985)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>A short sentence draws its force from contrast. Surrounded by other short sentences, it goes unnoticed; but placed after several long ones, it lands like a drumbeat — the eye has trudged through the long clauses, then hits three or four words and instinctively pauses and leans in. That is the <strong>"hammer sentence"</strong>: put your most important judgment in your shortest sentence.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">See it: a sentence-rhythm chart</div>
+    <div class="rhythm">
+      <div class="rh-group">
+        <div class="rh-title">Monotone · even length</div>
+        <div class="bar" style="width:62%"></div>
+        <div class="bar" style="width:60%"></div>
+        <div class="bar" style="width:64%"></div>
+        <div class="bar" style="width:61%"></div>
+        <div class="legend">Every sentence the same length → a metronome beat; the mind drifts.</div>
+      </div>
+      <div class="rh-group">
+        <div class="rh-title">Rhythmic · mixed length</div>
+        <div class="bar" style="width:92%"></div>
+        <div class="bar" style="width:84%"></div>
+        <div class="bar punch" style="width:20%"></div>
+        <div class="bar" style="width:95%"></div>
+        <div class="bar punch" style="width:16%"></div>
+        <div class="legend"><b>Black short bars = hammer sentences</b>: they fall after the long setup, and the point is amplified.</div>
+      </div>
+      <div class="caption">Same amount of information; different rhythm; a world of difference in how it reads.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action (the core)</div>
+    <div class="example">
+      <span class="before">Although the proposal is technically feasible and fits within our budget, I believe that, given the time constraints and the current workload of the team, we should not pursue it this quarter.</span>
+      <span class="after">The proposal is feasible and affordable. But we have no time, and the team is full. Not this quarter.</span>
+    </div>
+    <div class="example">
+      <span class="before">这个方案虽然在技术上具备可行性并且能够在预算范围内完成，但是考虑到时间成本以及团队目前的负载情况，我认为我们不应该在这个季度推进它。</span>
+      <span class="after">这个方案技术可行，预算也够。但时间不允许，团队也满了。这季度别做。 <span style="color:#8a8a8a;font-style:italic">("Not this quarter," nailed in three characters.)</span></span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The long clauses carry the conditions; the shortest sentence nails the conclusion. "Not this quarter." — it drops.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Conclusions, turns, emphasis — compress them into the shortest sentence in the paragraph</li>
+      <li>✓ Long arguments: every few long sentences, give the reader a short one to breathe</li>
+      <li>Trap: all long sentences (academic, legalese) — the reader forgets the start before reaching the end</li>
+      <li>Trap: all short sentences — seems crisp, but it pokes at the reader; no rise and fall is also tiring</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's drill + a question</div>
+    <p>Write a five-sentence paragraph deliberately shaped <strong>"long—long—short—long—short,"</strong> with the last sentence under six words. Read it aloud and check that the short one lands hard.</p>
+    <p class="think">Question: where does your "hammer sentence" usually fall? Is it often buried in the middle of a long sentence, and wasted?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Paragraphs Breathe: Give the Page Air</h2>
+  <div class="en-name">Let the page have white space</div>
+  <span class="tag">Paragraph · White space</span>
+
+  <div class="section">
+    <div class="label">The principle + a master's words</div>
+    <p>The paragraph is a larger unit of beat. <strong>One idea per paragraph, and vary the length too.</strong> Break when it's time to break — a lone single-sentence paragraph is a stress mark on the page.</p>
+    <div class="quote">
+      "When you finish, read it through at least twice, and ruthlessly cut every word, sentence, and paragraph that could be spared — without the slightest regret."
+      <span class="source">— Lu Xun, Reply to the Beidou Magazine (1931)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Lu Xun lists "paragraph" alongside "word" and "sentence": pruning for rhythm is not only within the sentence — if a whole paragraph can be spared, cut the whole paragraph.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Faced with one dense, airless block of text, the reader sighs inwardly — tired before reading a word. The line break is a visual place to breathe. One paragraph, one idea: finishing each completes a small loop of "understand—confirm." Put a key judgment in <strong>its own paragraph</strong> (even a single sentence) and the page isolates it, magnifies it — white space shouting the point. This is the hammer sentence at the paragraph level.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action (the core)</div>
+    <div class="example">
+      <span class="before">We looked at the data, and the data showed that conversion dropped after the redesign, and we also noticed that bounce rate went up, so we think the redesign hurt us and we should roll it back.</span>
+      <span class="after">We looked at the data. Conversion dropped after the redesign; bounce rate rose.<br><br>The redesign hurt us. Roll it back.</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Same in Chinese: split a 300-character "background + problem + conclusion" block into three paragraphs, and give the conclusion its own line — "So: we are stopping this project." The decision stands right up.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Memos, emails, long posts — especially content read on a phone, where dense paragraphs repel</li>
+      <li>✓ To stress a conclusion: let it own a paragraph</li>
+      <li>Trap: a paragraph that runs 300 words with no break (a "wall of text")</li>
+      <li>Trap: the opposite extreme — breaking every sentence, so the rhythm shatters and the stress disappears</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's drill + a question</div>
+    <p>Take a recent long email and re-break it on <strong>"one idea per paragraph,"</strong> then pull the single most important sentence into its own paragraph. Compare versions: which would you rather read?</p>
+    <p class="think">Question: on a phone screen, is the right "paragraph" length shorter than on paper? Have you ever tuned your paragraphing for the medium?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Poetry of Punctuation: It Is the Score</h2>
+  <div class="en-name">Punctuation tells the reader how to play</div>
+  <span class="tag">Punctuation · Breath</span>
+
+  <div class="section">
+    <div class="label">The principle + a master's words</div>
+    <p>Punctuation is not the grammar police; it is the score for reading aloud. <strong>A comma is a small pause, a period is a landing, a dash is a sudden turn, a colon says "listen — here comes the point."</strong> Punctuate well and the reader reads to your beat.</p>
+    <div class="quote">
+      "Punctuation directs you how to read, in the way musical notation directs a musician how to play."
+      <span class="source">— Lynne Truss, Eats, Shoots &amp; Leaves (2003)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Wang Xiaobo says the same of prose: the poet-translators "discovered the cadence of modern Chinese. Without that cadence there would be no literature." (My Literary Lineage) — and half of that cadence lives in the punctuation.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Same words, different punctuation, different rhythm. A comma lets the sentence flow on; a period cuts it off; a dash creates a dramatic pause — readers hold their breath for half a beat at a dash. A colon is a promise: it tells the reader "the answer is coming," and creates anticipation. <strong>Treat punctuation as breath marks and you control exactly where the reader pauses and where they lean in.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action (the core)</div>
+    <div class="example">
+      <span class="before">There is one thing that matters here and that thing is trust.</span>
+      <span class="after">One thing matters here: trust.</span>
+    </div>
+    <div class="example">
+      <span class="before">我们只有一个选择就是重写它没有别的办法了。</span>
+      <span class="after">我们只有一个选择——重写它。没有别的办法。 <span style="color:#8a8a8a;font-style:italic">(A dash replaces "that is," forcing a pause; a period leaves a final echo.)</span></span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The colon replaces "and that thing is" and pushes "trust" into the spotlight, ending abruptly. The dash does the same work in Chinese.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Emphasis, reveal, reversal — use a dash or colon to create a pause and anticipation</li>
+      <li>✓ Reading a speech aloud: punctuation is where you breathe</li>
+      <li>Trap: overusing exclamation points — shouting everywhere is shouting nothing; force comes from restraint</li>
+      <li>Trap: comma splices — joining two complete sentences with a comma blurs the rhythm; when a period is needed, use one</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's drill + a question</div>
+    <p>Take a flat declarative sentence and rewrite it three times — with a <strong>period, a dash, and a colon</strong>. Read each aloud and feel the difference in rhythm and stress.</p>
+    <p class="think">Question: do you use the em dash enough? Or do you default to only commas and periods?</p>
+  </div>
+</section>
+
+<!-- Deep Dive -->
+<div class="deepthink">
+  <h3>Deep Dive</h3>
+
+  <details>
+    <summary>Is rhythm an innate "ear," or a trainable skill?</summary>
+    <div>Both. The ear comes from listening at scale — reading aloud, audiobooks, poetry. But it breaks down into trainable skills: sentence variety, mixing length, paragraph breathing, punctuation control. Translate the vague "this doesn't read smoothly" into the concrete "four long sentences in a row here," and you can fix it. The ear is intuition built from accumulation; technique is the scaffold for intuition — drill the technique, and over time it settles into a new instinct.</div>
+  </details>
+
+  <details>
+    <summary>Are the rules of rhythm the same in Chinese and English?</summary>
+    <div>The principles carry over (mix length, leave white space, land stress on the short sentence), but the materials differ. Chinese has the four-character set phrase and a natural beat of mono- and di-syllables; a "ringing cadence" is Chinese-specific music (Yu Guangzhong) — yet stacking four-character phrases turns stiff. English rides stress rhythm and the variation of subordinate structures, building long sentences through clauses. Roughly: the force of the short sentence is more direct in Chinese; English leans more on punctuation and connectives to create pauses.</div>
+  </details>
+
+  <details>
+    <summary>Is the "scale" of rhythm the same for essays, speeches, and video scripts?</summary>
+    <div>No. An essay is for the eye: rhythm rides on punctuation and paragraph white space; the reader sets the pace and can re-read, so longer sentences are tolerated. A speech is for the ear: sentences must be shorter and pauses clearer — the audience can't rewind, and a long sentence loses them. A video script also fights the image for attention, so its rhythm is choppier, leaning on spoken short sentences and pauses. The same idea, written to be read versus heard, breaks into completely different units.</div>
+  </details>
+
+  <details>
+    <summary>Can chasing rhythm hurt accuracy? When should music yield?</summary>
+    <div>There is real tension. In technical docs, API references, and legal clauses, no-ambiguity comes first and rhythm yields — here "boring but precise" is a virtue. Even so, mixing length and sensible paragraphing still make precise content easier to read; the two are not always opposed. The principle: where information density is extreme and misreading is intolerable, accuracy wins; in narrative, persuasion, branding, and speech, the weight of music rises sharply.</div>
+  </details>
+
+  <details>
+    <summary>Why do AI-written sentences so often feel "rhythmically flat"?</summary>
+    <div>Because the model tends to produce "safe" medium-length sentences — neat structures, even lengths, the statistical average. The result is technically faultless and quietly hypnotic: no sudden short-sentence hammer, no turn of the dash, no single-sentence paragraph for white space. This is exactly where a human adds the most value: take the model's smooth draft and deliberately break its evenness — carve out short sentences, merge long ones, re-paragraph, swap punctuation. Rhythm is, for now, one of the most human-looking signatures there is.</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Index</a>
+</div>
+<footer>BigCat · Writing Daily · Day 16 · 2026</footer>
+
+</div>
+</body>
+</html>
