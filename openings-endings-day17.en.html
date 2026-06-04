@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Openings &amp; Endings — Day 17</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .think{margin-top:12px;padding-top:12px;border-top:1px solid #444;color:#d8c98a;font-style:italic;font-size:0.92rem}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visual 1: the real opening hides in paragraph three */
+.draft-funnel{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.draft-funnel .para{padding:10px 14px;margin:8px 0;border:1px solid #d8d0bc;background:#fff;font-family:Georgia,serif;font-size:0.9rem;color:#9a9a9a;position:relative}
+.draft-funnel .para.cut{text-decoration:line-through;opacity:0.65}
+.draft-funnel .para.real{color:#1f1f1f;border:1px solid #1f1f1f;border-left:4px solid #1f1f1f;font-weight:700;text-decoration:none}
+.draft-funnel .note{font-size:0.78rem;color:#8a7a4a;font-style:italic;letter-spacing:0.5px;margin-left:8px}
+.draft-funnel .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visual 2: the curiosity gap */
+.gap-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.gap-vis .gap-row{display:flex;align-items:stretch;gap:0}
+.gap-vis .gbox{flex:1;padding:18px 10px;text-align:center;font-family:Georgia,serif;font-size:0.9rem;border:1px solid #d8d0bc;background:#fff;line-height:1.5}
+.gap-vis .gbox small{display:block;font-size:0.74rem;color:#a0a0a0;margin-top:4px}
+.gap-vis .gbox.known{color:#6a6a6a;border-right:none}
+.gap-vis .gbox.gap{background:#1f1f1f;color:#d8c98a;font-weight:700;border-color:#1f1f1f}
+.gap-vis .gbox.want{color:#6a6a6a;border-left:none}
+.gap-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visual 3: the full-circle ending */
+.loop-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.loop-vis .loop-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.loop-vis .node{padding:14px 16px;border:1px solid #d8d0bc;background:#fff;font-family:Georgia,serif;font-size:0.86rem;max-width:210px;line-height:1.5}
+.loop-vis .node small{display:block;font-size:0.74rem;color:#a0a0a0;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.loop-vis .node.start{border-left:4px solid #8a7a4a}
+.loop-vis .node.end{border-left:4px solid #3a6a3a}
+.loop-vis .mid{color:#8a8a8a;font-style:italic;font-size:0.82rem;font-family:Georgia,serif}
+.loop-vis .arrow{font-size:1.3rem;color:#8a7a4a;font-family:Georgia,serif}
+.loop-vis .return{margin-top:12px;font-size:0.86rem;color:#3a6a3a;font-style:italic;font-family:Georgia,serif}
+.loop-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+/* Deep dive */
+.deep{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.deep h2{font-size:1.3rem;font-weight:700;color:#1f1f1f;margin-bottom:6px}
+.deep .sub{font-size:0.9rem;color:#8a8a8a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+.deep details{border-bottom:1px solid #e0ddd4;padding:13px 0}
+.deep details summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;list-style:none}
+.deep details summary::-webkit-details-marker{display:none}
+.deep details summary:before{content:"+ ";color:#8a7a4a;font-weight:700}
+.deep details[open] summary:before{content:"– "}
+.deep details .ans{margin-top:10px;font-size:0.94rem;color:#4a4a4a;line-height:1.8;padding-left:16px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .deep{padding:24px 20px}
+  .gap-vis .gap-row{flex-direction:column}
+  .loop-vis .arrow{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 17 · 2026.06.04</div>
+  <h1>Writing &amp; Expression: Openings &amp; Endings<span class="topic">In Medias Res · Curiosity Gap · The Hook · Full-Circle</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">A reader gives you a sentence or two of patience. The opening decides whether they read on; the ending decides what they remember and whether they act. However good the middle is, a hook that doesn't catch and an ending that doesn't land waste it all. Today we take apart the two highest-leverage positions in any piece — opening on a scene, opening with a question, the anatomy of the hook, and the ending that closes the loop.</p>
+</header>
+
+<!-- Card 1: Open on a scene -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Open Cold on a Scene: Drop the Reader Into the Moment</h2>
+  <div class="en-name">In Medias Res — Into the Middle of Things</div>
+  <span class="tag">Opening · Concrete</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Don't clear your throat. The first two paragraphs of most drafts are a warm-up — background, definitions, "as we all know." Cut them and <strong>start on a specific moment, an image, an action</strong>. Horace gave us the rule two thousand years ago: in medias res, "into the middle of things."</p>
+    <div class="quote">
+      "He does not begin from the egg, but always he hurries to the outcome and snatches his hearer into the middle of things."
+      <span class="source">— Horace, Ars Poetica (c. 19 BC)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Abstract information makes the reader render the picture themselves; a concrete scene arrives already rendered — they see it, they're there. Neurologically, <strong>concrete language fires the sensory cortex; abstract propositions don't</strong>. So "our ops process has efficiency problems" slides right past, while "3 a.m., and the on-call engineer restarts that server by hand for the seventh time" makes you stop. And the real opening of a draft often hides in your third paragraph — the first two were a warm-up you wrote for yourself. When revising, ask first: can I start from paragraph three?</p>
+    <div class="draft-funnel">
+      <div class="para cut">¶1: background, industry context, "with the rise of…"<span class="note">warm-up — cut</span></div>
+      <div class="para cut">¶2: defining terms, "as we all know," throat-clearing<span class="note">for yourself — cut</span></div>
+      <div class="para real">¶3: a specific moment — the real opening is here ↑</div>
+      <div class="caption">Revision rule: delete the first two paragraphs and see if it reads better</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Before we discuss distributed locks, it is worth reviewing the basic concepts of concurrency. Concurrency refers to multiple execution units…</span>
+      <span class="after">Two requests grab the same inventory row in the same millisecond. With no lock, both read "1 left," both decrement — and you've just sold two of something you had one of. That hole is what a distributed lock plugs.</span>
+    </div>
+    <div class="example">
+      <span class="before">This document provides an overview of the challenges our team has faced regarding deployment reliability over the past quarter.</span>
+      <span class="after">Last Tuesday, a one-line config change took down checkout for 19 minutes — the third such outage this quarter. Here's why our deploys keep breaking, and the three fixes that will stop it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Tech blogs, incident retros, talk openings, pitches, personal essays, the "impact story" in a promo packet</li>
+      <li>✗ Pure API docs, legal/compliance text — the occasion forbids scene-setting</li>
+      <li>Trap: the scene has nothing to do with the point — vivid for its own sake, it leads the reader astray</li>
+      <li>Trap: the scene runs too long (five sentences and still no point); or you forget to land it — a scene needs one sentence afterward to connect back to the point</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Horace</span>, Ars Poetica (origin of in medias res) · <span>Sol Stein</span>, Stein on Writing ("start in the middle of an action") · <span>William Zinsser</span>, On Writing Well</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take something you wrote recently. Delete the first paragraph and read it — better? If so, ask whether the second can go too. Then write a "scene opening" for it: a specific moment, person, action, in three sentences or fewer, with a fourth that connects the image back to your point.</p>
+    <p class="think">Reflection: How much of what you call an "opening" is really a warm-up you wrote for yourself?</p>
+  </div>
+</section>
+
+<!-- Card 2: Open with a question -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Open With a Question: Cut a Gap That Must Be Filled</h2>
+  <div class="en-name">The Curiosity Gap — An Itch to Scratch</div>
+  <span class="tag">Opening · Suspense</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Curiosity isn't a trait, it's a state — lit the instant you realize a piece is missing (Loewenstein's "information-gap" theory). A good opening doesn't rush to the answer; it <strong>cuts a precise gap and lets the reader itch</strong>.</p>
+    <div class="quote">
+      "Curiosity happens when we feel a gap in our knowledge. Gaps cause pain. When we want to know something but don't, it's like having an itch that we need to scratch."
+      <span class="source">— Chip &amp; Dan Heath, Made to Stick, "Unexpected"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>It all rides on the precision of the gap. "Today let's talk about leadership" cuts no gap — too big, too vague, no itch. "Why do the best engineers, once promoted to management, so often fail to lead a team?" cuts a gap — it names something you thought was obvious but that turns out to contradict itself. The Heaths' insight: <strong>instead of asking "what information do I need to convey," ask "what question do I want the reader to feel"</strong>. And the gap must sit on what the reader already knows — they have to "think they know" before you can let them discover "I hadn't actually thought it through."</p>
+    <div class="gap-vis">
+      <div class="gap-row">
+        <div class="gbox known">Known<small>reader thinks they get it</small></div>
+        <div class="gbox gap">Gap = the itch<small>"wait, why?"</small></div>
+        <div class="gbox want">Want to know<small>reads on for the answer</small></div>
+      </div>
+      <div class="caption">Too big, no itch; not real, no itch — cut it precisely between "I thought I knew" and "I hadn't thought it through"</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Today I'd like to share some of our team's experience and reflections on rolling out AI tools.</span>
+      <span class="after">We gave the whole team Copilot licenses. Three months later, the people using it hardest had gotten less done. That broke my model of what an "efficiency tool" even is — so today I'll explain why.</span>
+    </div>
+    <div class="example">
+      <span class="before">In this post I'll discuss the importance of writing good documentation.</span>
+      <span class="after">Your best engineer just quit. In her exit interview she never mentioned pay. She said: "I spent half my time reverse-engineering code no one bothered to explain." This is a post about docs — but really it's about why people leave.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Newsletters, talks, blogs, pitches, meeting openings, teaching</li>
+      <li>✗ Urgent alerts, pure specs — the reader wants the answer, not suspense</li>
+      <li>Trap: the gap is too big and vague (a whole field), no itch; or you misjudge what the reader knows and the gap doesn't even form</li>
+      <li>Trap: clickbait — you cut a gap and don't pay it off; fooled once, never trusted again; or you answer immediately, leaving no time to itch</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Chip &amp; Dan Heath</span>, Made to Stick, "Unexpected" (gap theory) · <span>George Loewenstein</span>, "The Psychology of Curiosity" (1994, the original information-gap paper)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Rewrite the thesis of your next piece as a question the reader "thinks they can answer but hasn't really worked through." The test: send it to three colleagues and see how many reply "huh, why?" — the more who do, the more precisely you've cut the gap.</p>
+    <p class="think">Reflection: Where exactly is the line between "clickbait" and "curiosity gap"?</p>
+  </div>
+</section>
+
+<!-- Card 3: The hook -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Hook: The First Sentence Has Only One Job</h2>
+  <div class="en-name">The Hook — Induce, Don't Summarize</div>
+  <span class="tag">Opening · Mechanism</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>The only job of the first sentence is to get the second one read; the second's only job is the third. <strong>An opening needn't "summarize the whole piece"; it must "generate momentum."</strong> Zinsser put it most bluntly: if it doesn't catch, the piece is dead.</p>
+    <div class="quote">
+      "The most important sentence in any article is the first one. If it doesn't induce the reader to proceed to the second sentence, your article is dead."
+      <span class="source">— William Zinsser, On Writing Well, "The Lead and the Ending"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Note Zinsser's verb: <strong>"induce," not "summarize."</strong> Many writers treat the opening as an abstract — "This article will explore…" — which is exactly how you strip the momentum out of a first sentence. Stephen King spends months on openings; a good one, he says, tells the reader: "Listen. Come in here. You want to know about this." It's an invitation, not a table of contents. There's a sharper test, from journalism: Nora Ephron's high-school teacher had the class write a lede — the principal announces the whole faculty will attend a conference Thursday. The students piled up details; the teacher said the lede was one line: "<strong>There will be no school Thursday.</strong>" The one thing the reader actually cares about — that's your hook.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">This article will systematically present our data-governance plan across four dimensions: background, current state, problems, and solutions.</span>
+      <span class="after">We have 47 "single sources of truth," and 9 of them contradict each other. That's why last week's two reports didn't reconcile.</span>
+    </div>
+    <div class="example">
+      <span class="before">This essay explores the relationship between writing and thinking.</span>
+      <span class="after">You don't write to record a thought. You write to find out whether you have one.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ A piece's first line, email subject lines and first lines, a talk's opening words, PR descriptions, a promo-packet summary</li>
+      <li>Trap: writing the first sentence as a table of contents ("This article has three parts"); or throat-clearing ("With the rapid rise of AI…") — a one-size-fits-all opening is no opening</li>
+      <li>Trap: the hook is disconnected from the body — you catch hard but can't follow through; or you over-promise and the body can't match the appetite</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>William Zinsser</span>, On Writing Well, "The Lead and the Ending" · <span>Stephen King</span>, "Why I Spend Months on Opening Sentences" (The Atlantic, 2013) · <span>Nora Ephron</span>, recalling the "no school Thursday" lede lesson</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Find three openings you've written and circle the first sentence of each. Ask of each: is it "summarizing" or "inducing"? Turn the summarizers into inducers — cut "This article will," and swap in a concrete fact, a surprise, or an unanswered question.</p>
+    <p class="think">Reflection: An email subject line is essentially a one-sentence hook — would your last subject line make you want to open it?</p>
+  </div>
+</section>
+
+<!-- Card 4: The full-circle ending -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Full-Circle Ending: Return to the Start, but the Reader Has Changed</h2>
+  <div class="en-name">Full-Circle — Land Where You Took Off</div>
+  <span class="tag">Ending · Resolution</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>The best ending often returns to the opening image, line, or question — but because of the road traveled, <strong>the same thing now carries new meaning</strong>. It gives the reader a sense of completion, like a song resolving to the tonic.</p>
+    <div class="quote">
+      "The perfect ending should take your readers slightly by surprise and yet seem exactly right."
+      <span class="source">— William Zinsser, On Writing Well, "The Lead and the Ending"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The full circle is powerful because it works both ends of memory — primacy and recency. The image planted at the start lingers in the reader's mind; the ending calls it back, and the arc gathers everything between. McPhee says a piece must "start somewhere, go somewhere, and sit down when it gets there" — the ending isn't a stop, it's a seat. That 3 a.m. engineer from the opening can return at the end as: "Now, at 3 a.m., nobody has to be awake — the system handles it itself." Same scene, meaning inverted. But mind Zinsser's "surprise yet exactly right": <strong>a pure repeat of the opening is cheap</strong> — the reader must discover "the same image, but I'm no longer the person I was a moment ago."</p>
+    <div class="loop-vis">
+      <div class="loop-row">
+        <div class="node start"><small>Opening</small>3 a.m., the engineer restarts the server by hand for the seventh time</div>
+        <div class="arrow">→</div>
+        <div class="mid">(the piece: diagnosis · argument · three fixes)</div>
+        <div class="arrow">→</div>
+        <div class="node end"><small>Ending</small>3 a.m., nobody has to be awake — the system handles it itself</div>
+      </div>
+      <div class="return">↩ Same image, meaning inverted: the reader has completed an arc</div>
+      <div class="caption">Full circle = return to the start + added meaning (not a verbatim replay)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">In summary, through the measures above, we are confident we can significantly improve deployment reliability next quarter. Thank you all.</span>
+      <span class="after">Remember those 19 minutes at the start? Once we've done these three things, the next identical config change gets caught automatically — in 19 seconds. That's where we're headed.</span>
+    </div>
+    <div class="example">
+      <span class="before">In conclusion, documentation is very important and we should all write more of it.</span>
+      <span class="after">Remember the engineer who quit? The next one won't have to reverse-engineer anything. That's the whole point of writing it down.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Talks, long essays, memos, pitches, retros, personal essays</li>
+      <li>Trap: "In summary / to conclude" — a bureaucratic close that deflates; or piling on more after the peak, diluting the landing (finish and sit down)</li>
+      <li>Trap: introducing brand-new information at the end — this is no place to open a new topic; or a pure repeat of the opening with zero gain, leaving the reader feeling led in a circle</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>William Zinsser</span>, On Writing Well, "The Lead and the Ending" · <span>John McPhee</span>, Draft No. 4 ("sit down when it gets there"; on the ending echoing the start)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Dig out an old piece that had an opening image or question. Rewrite the ending so it returns to that image or question — but carries the new meaning earned by the whole journey. Read it twice: once to check it's a "surprise," once to check it's "exactly right."</p>
+    <p class="think">Reflection: Which forms suit a full-circle ending, and which are better off cutting off sharply or ending on a call to action?</p>
+  </div>
+</section>
+
+<!-- Deep dive -->
+<div class="deep">
+  <h2>Going Deeper</h2>
+  <div class="sub">Pushing the limits of each principle, the EN/ZH differences, and fit across forms</div>
+
+  <details>
+    <summary>Which is harder, opening or ending? Why can so many people start well but fail to land?</summary>
+    <div class="ans">The opening is hard because it's "something from nothing"; the ending is hard because it's "resolution from a full hand." Most people get lit by an image, then arrive at the ending drained and deflate into "in summary." A practical move: after the first draft, lay the ending and opening side by side and ask whether they can "talk to each other." Whatever question the opening asked, whatever image it drew, the ending has a ready echo to use — the full-circle method turns "inventing an ending" into "answering the opening," halving the difficulty.</div>
+  </details>
+
+  <details>
+    <summary>EN/ZH opening habits: the classic Chinese build-up vs. the inverted-pyramid lead — which way should you lean?</summary>
+    <div class="ans">Classic Chinese composition values build-up — set the stage, then arrive at the point; English news and business writing run the inverted pyramid — conclusion first. For a senior engineer and leader, the workplace tilts almost entirely toward the latter: your readers are impatient peers and bosses. But separate "build-up" from "scene": what you cut is abstract preamble (background, definitions); what you keep is the concrete scene — a single image can arrive at the point instantly. The scene opening is, in fact, the intersection of both traditions.</div>
+  </details>
+
+  <details>
+    <summary>Across essay, talk, and video, how long is the hook's window in each? Same mechanism?</summary>
+    <div class="ans">An essay's window is the first sentence (a ~3-second skim); a talk's is the first 30 seconds; a short video is brutal — the first 3 seconds (one thumb swipe and you're gone). The mechanism is the same — all "generate momentum to continue" — but the levers differ: text relies on a surprising fact or a precise question; a talk can add a pause, eye contact, a prop; video leans on visual conflict and pace. The shorter the form, the more you must front-load the gap — there's no room even to clear your throat.</div>
+  </details>
+
+  <details>
+    <summary>Why does AI so often open with "with the rise of…"? How do you train it (and yourself) to skip the warm-up?</summary>
+    <div class="ans">Because that kind of opening is the statistically safest — it's the highest-frequency move across vast text, and the model defaults to the mean. Two fixes: first, an explicit instruction — "no background preamble; the first sentence must be a concrete scene or an unanswered question"; second, treat its draft as a "warm-up draft," cut the first two paragraphs outright, and start reading from the third. Same goes for yourself — admit the first two paragraphs were written for you, and they're easier to delete.</div>
+  </details>
+
+  <details>
+    <summary>"Surprise yet exactly right" is a contradiction — what makes it a surprise, what makes it right, and how do you get both?</summary>
+    <div class="ans">Surprise comes from "angle" — the ending doesn't restate old lines but lifts the reader to a slightly higher vantage to look back; rightness comes from "setup" — that angle must have been seeded at the opening or along the way, so the reader reads it and thinks "ah, of course." The full circle gets both for free: returning to the opening image is "right" (the clue was planted early), and the inversion of the image's meaning is the "surprise" (the same thing now reads differently). A good ending isn't a line conjured from thin air — it's a fruit the opening planted, the whole piece watered, and the close finally bore.</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to index</a>
+</div>
+<footer>BigCat · Writing Daily · Day 17 · 2026</footer>
+
+</div>
+</body>
+</html>
