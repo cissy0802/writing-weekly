@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Metaphor &amp; Analogy — Day 18</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:6px;font-size:0.85rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .think{margin-top:12px;padding-top:12px;border-top:1px solid #444;color:#d8c98a;font-style:italic;font-size:0.92rem}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization 1: conceptual metaphor mapping */
+.map-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.map-vis .map-head{display:flex;justify-content:space-between;font-family:Georgia,serif;font-size:0.76rem;color:#8a7a4a;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding:0 6px}
+.map-vis .map-row{display:flex;align-items:center;gap:10px;margin:7px 0}
+.map-vis .src,.map-vis .tgt{flex:1;padding:9px 12px;background:#fff;border:1px solid #d8d0bc;font-family:Georgia,serif;font-size:0.86rem;line-height:1.4}
+.map-vis .src{color:#6a6a6a}
+.map-vis .tgt{border-left:3px solid #8a7a4a;color:#1f1f1f}
+.map-vis .arrow{color:#8a7a4a;font-family:Georgia,serif;font-size:1rem}
+.map-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization 2: the three parts of a metaphor */
+.triad{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.triad .triad-row{display:flex;gap:8px}
+.triad .t-box{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.84rem;line-height:1.5}
+.triad .t-box .t-name{display:block;font-weight:700;color:#1f1f1f;margin-bottom:2px;font-size:0.92rem}
+.triad .t-box .t-en{display:block;font-size:0.72rem;color:#8a7a4a;font-style:italic;margin-bottom:6px}
+.triad .t-box.ground{background:#1f1f1f;border-color:#1f1f1f;color:#fafafa}
+.triad .t-box.ground .t-name{color:#d8c98a}
+.triad .t-box.ground .t-en{color:#d8c98a}
+.triad .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization 3: analogy alignment table */
+.align-table{background:#f8f6f1;padding:18px 16px;margin:18px 0;border-radius:2px}
+.align-table table{width:100%;border-collapse:collapse;font-family:Georgia,serif;font-size:0.86rem}
+.align-table th{text-align:left;color:#8a7a4a;font-size:0.74rem;letter-spacing:1px;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid #c8c0a8}
+.align-table td{padding:8px;border-bottom:1px solid #e6e0d2;color:#3a3a3a;line-height:1.5}
+.align-table tr.break td{background:#fff;color:#a04040}
+.align-table tr.break td:first-child{font-weight:700}
+.align-table .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization 4: metaphor-lifespan spectrum */
+.spectrum{background:#f8f6f1;padding:22px 18px 16px;margin:18px 0;border-radius:2px}
+.spectrum .bar{height:12px;border-radius:6px;background:linear-gradient(to right,#3a6a3a 0%,#3a6a3a 22%,#a04040 42%,#a04040 60%,#9a9a9a 80%,#9a9a9a 100%);margin:0 4px}
+.spectrum .marks{display:flex;justify-content:space-between;margin-top:12px;gap:6px}
+.spectrum .mark{flex:1;text-align:center;font-family:Georgia,serif;padding:0 2px}
+.spectrum .mark .m-title{display:block;font-weight:700;color:#1f1f1f;font-size:0.86rem}
+.spectrum .mark .m-eg{display:block;font-size:0.74rem;color:#8a8a8a;margin-top:3px;line-height:1.4}
+.spectrum .mark.danger .m-title{color:#a04040}
+.spectrum .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+/* Deep thinking */
+.deep{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.deep h2{font-size:1.3rem;font-weight:700;color:#1f1f1f;margin-bottom:6px}
+.deep .sub{font-size:0.9rem;color:#8a8a8a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+.deep details{border-bottom:1px solid #e0ddd4;padding:13px 0}
+.deep details summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;list-style:none}
+.deep details summary::-webkit-details-marker{display:none}
+.deep details summary:before{content:"+ ";color:#8a7a4a;font-weight:700}
+.deep details[open] summary:before{content:"– "}
+.deep details .ans{margin-top:10px;font-size:0.94rem;color:#4a4a4a;line-height:1.8;padding-left:16px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .deep{padding:24px 20px}
+  .triad .triad-row{flex-direction:column}
+  .spectrum .marks{flex-direction:column;gap:10px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 18 · 2026.06.05</div>
+  <h1>Writing &amp; Expression: Metaphor &amp; Analogy<span class="topic">Conceptual Metaphor · What Works · Argument by Analogy · Killing Clichés</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Metaphor isn't a poet's ornament — it's the operating system of thought. When we say "time is money" or "the team's moat," that isn't decoration; it's how we understand the world. Used well, one line lights up an unfamiliar idea; used badly, a single figure drives a whole team into a ditch. Today we take apart this double-edged blade: how it shapes thinking, what makes a metaphor work, how to argue by analogy, and how to dodge the clichés that died long ago.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Conceptual Metaphor: You Think You're Describing — You're Framing</h2>
+  <div class="en-name">We Think in Metaphor, Not Just Speak in It</div>
+  <span class="tag">Lakoff · Frame</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Metaphor is not only a feature of language — it's a feature of cognition. We borrow a familiar domain (the source) to grasp an abstract one (the target). "Argument is war" makes us <em>defend</em> a position, <em>attack</em> a flaw, <em>win</em> the debate. Swap the metaphor and thought switches tracks. So: <strong>choosing a metaphor is choosing the lens your reader will see the world through.</strong></p>
+    <div class="quote">
+      "The essence of metaphor is understanding and experiencing one kind of thing in terms of another."
+      <span class="source">— Lakoff &amp; Johnson, Metaphors We Live By, Ch. 1</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Lakoff's subversive finding: metaphor lives not in the dictionary but in thought. "Argument is war" isn't one figure of speech — it's an entire system we don't notice, the reason we say a claim is "indefensible" or that we "surrendered." If a culture saw argument as a <em>dance</em> rather than a war, people would have an entirely different experience of it. For the writer this means: <strong>every metaphor you use quietly installs a frame</strong>. Treat "tech debt" as a moral stain and the team feels guilt and avoids it; treat it as financial leverage and the team weighs and repays.</p>
+    <div class="map-vis">
+      <div class="map-head"><span>Source · what you borrow</span><span>Target · what you discuss</span></div>
+      <div class="map-row"><div class="src">Battlefield · enemy</div><div class="arrow">→</div><div class="tgt">Debate · opponent</div></div>
+      <div class="map-row"><div class="src">Attack / defend / surrender</div><div class="arrow">→</div><div class="tgt">Rebut / justify / concede</div></div>
+      <div class="map-row"><div class="src">Win the battle</div><div class="arrow">→</div><div class="tgt">Win the argument</div></div>
+      <div class="caption">"Argument is war": the source's structure is imported wholesale — along with all its implications</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">We've piled up far too much tech debt; it's a disgrace to the team and must be wiped out at once.</span>
+      <span class="after">Tech debt is like a loan: we borrowed speed up front and now pay interest monthly. This quarter we won't repay principal — just the three highest-interest items, to put the system back in "positive cash flow."</span>
+      <span class="note">Swapping the "moral stain" frame for a "finance" frame — the team moves from guilt to trade-off.</span>
+    </div>
+    <div class="example">
+      <span class="before">We're drowning in bugs and need to fight our way through this backlog.</span>
+      <span class="after">Think of the backlog as a garden, not a battlefield: we'll never "win" it, but we can keep weeding the beds that matter most.</span>
+      <span class="note">The "war" frame is exhausting and endless; the "gardening" frame brings priorities and sustainability.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Strategy narratives, change communication, team culture, naming abstractions (project codenames, metric names) — anywhere you want to quietly shift how a reader thinks</li>
+      <li>Trap: unconsciously inheriting someone else's frame ("war," "race"), importing all its implications with it</li>
+      <li>Trap: a pretty metaphor that pulls against the action you want — a "death march" codename deflates the team before work even starts</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>George Lakoff &amp; Mark Johnson</span>, Metaphors We Live By (1980, founding text of conceptual metaphor theory) · <span>George Lakoff</span>, Don't Think of an Elephant! (metaphor framing applied to political communication)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a metaphor your team uses daily ("race," "war," "moat," "debt"). Write down its three hidden implications: what to do, who the enemy is, what counts as winning. Then force-swap in a different metaphor and rewrite the three. See which lens is closer to the action you actually want.</p>
+    <p class="think">Question: in your last big decision, which unspoken metaphor was at the wheel?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>What Makes a Metaphor Work: The Vehicle Must Sit Closer Than the Tenor</h2>
+  <div class="en-name">Explain the Unknown with the Known</div>
+  <span class="tag">Aristotle · Craft</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>A metaphor is a bridge: from the reader's known shore (the vehicle) to an unfamiliar one (the tenor). <strong>For the bridge to hold, the vehicle must be more concrete, more familiar, more sensory than the tenor</strong> — explain what people haven't seen with what they see every day. Reverse it and you explain the strange with the strange; the bridge collapses.</p>
+    <div class="quote">
+      "The greatest thing by far is to be a master of metaphor… it is the one thing that cannot be learnt from others; and it is also a sign of genius, since a good metaphor implies an intuitive perception of the similarity in dissimilars."
+      <span class="source">— Aristotle, Poetics, 1459a</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The rhetorician I.A. Richards split a metaphor into three: the <em>tenor</em> (what you're explaining), the <em>vehicle</em> (what you borrow), and the <em>ground</em> (the structure they share). The whole craft lies in making the ground <strong>align on what matters</strong>, while keeping the vehicle inside the reader's comfort zone. Bad metaphors die two ways: the vehicle is even stranger than the tenor (explaining love through quantum entanglement), or the ground misaligns where it counts — "a neural net is like a human brain" has fooled millions; it resembles a brain in "learning" but not at all in mechanism, and readers slide down the wrong ground into misunderstanding.</p>
+    <div class="triad">
+      <div class="triad-row">
+        <div class="t-box"><span class="t-name">Tenor</span><span class="t-en">the subject</span>the unfamiliar<br>thing you explain</div>
+        <div class="t-box"><span class="t-name">Vehicle</span><span class="t-en">the image</span>the familiar<br>thing you borrow</div>
+        <div class="t-box ground"><span class="t-name">Ground</span><span class="t-en">shared structure</span>where success or<br>failure is decided</div>
+      </div>
+      <div class="caption">The three parts: whether the ground aligns on what matters decides if the bridge holds</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">A vector database performs semantic retrieval by embedding text into a high-dimensional space and computing cosine similarity.</span>
+      <span class="after">A vector database is like a library that shelves books by <em>meaning</em>: ask for "books about courage" and it hands you the closest ones — no title match needed. (Under the hood, text becomes high-dimensional coordinates and it measures the distances.)</span>
+      <span class="note">Give the familiar library first, the technical line second — vehicle ahead, jargon behind.</span>
+    </div>
+    <div class="example">
+      <span class="before">A load balancer distributes incoming requests across multiple backend servers per a scheduling algorithm.</span>
+      <span class="after">A load balancer is the host at a busy restaurant: instead of letting everyone pile into one section, it seats each new guest at the emptiest table.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Misleading metaphor) Our AI thinks just like a human brain.</span>
+      <span class="after">Our AI is a very fast pattern-matcher trained on text — closer to autocomplete than to a mind.</span>
+      <span class="note">The original misaligns where it matters; readers overestimate its "understanding."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Technical explanation, onboarding docs, pitches to non-technical audiences, teaching</li>
+      <li>Trap: a vehicle harder than the tenor (metaphor as showing off); or a ground that resembles only on the surface and misleads on essentials</li>
+      <li>Trap: stretching one metaphor too far — push it to a fourth layer and the structure breaks</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Aristotle</span>, Poetics (1459a, "the similarity in dissimilars" as the mark of genius) · <span>I.A. Richards</span>, The Philosophy of Rhetoric (1936, tenor / vehicle / ground) · <span>Steven Pinker</span>, The Sense of Style (the concrete beats the abstract)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a concept you often explain to laypeople (caching, rate limiting, compounding). Write three metaphors for it, drawing vehicles from the kitchen, from traffic, and from the body. Read them to a layperson and ask them to paraphrase — if they get it right, the ground aligned.</p>
+    <p class="think">Question: "a neural net is like a human brain" — what does it illuminate, and what does it hide?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Argument by Analogy: Moving a Verdict with a Familiar Structure</h2>
+  <div class="en-name">Borrowing a Conviction the Reader Already Holds</div>
+  <span class="tag">Hofstadter · Argument</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Analogy isn't only an explaining tool — it's an arguing tool. When you say "A is to B as C is to D," you borrow the verdict everyone already accepts about C–D to move the verdict on A–B. <strong>An analogy's persuasive power comes from structural alignment; its danger comes from structural misalignment.</strong></p>
+    <div class="quote">
+      "Without concepts there can be no thought, and without analogies there can be no concepts."
+      <span class="source">— Hofstadter &amp; Sander, Surfaces and Essences, Preface</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Argument by analogy is powerful because it anchors an abstract claim to a conviction the reader already holds. "Shipping without tests is like driving without a seatbelt" — the reader's verdict on seatbelts is ready-made, and the analogy carries it over to tests, sparing you a statistics lecture. But borrowed force needs a clear title: <strong>does the core structure truly correspond? Where does it stop corresponding? Is that gap precisely the essential point?</strong> "National finance is like a household budget" rolls off the tongue but breaks where it counts: a household can't print money or set tax rates. The best analogists mark the boundary themselves — "the analogy ends here" — and gain credibility for it.</p>
+    <div class="align-table">
+      <table>
+        <tr><th>Structural point</th><th>Driving (vehicle)</th><th>Shipping (tenor)</th></tr>
+        <tr><td>Normal case</td><td>You usually arrive safely</td><td>Most deploys go fine</td></tr>
+        <tr><td>Rare disaster</td><td>The one crash costs dearly</td><td>The one outage costs dearly</td></tr>
+        <tr><td>Cheap prevention</td><td>Buckle the seatbelt</td><td>Write tests / roll out gradually</td></tr>
+        <tr class="break"><td>Break point</td><td>The person is hurt</td><td>The system auto-alerts</td></tr>
+      </table>
+      <div class="caption">Stress-test the bridge: list the matches, then surface a break point — naming the boundary is a plus</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">We should invest in a gradual rollout because it lowers the risk of production incidents.</span>
+      <span class="after">A full rollout is like dumping fish straight from cold water into a hot tank — the shock kills them. A gradual rollout is "tempering": release one small bucket, let the temperature match, then add more. (Boundary: fish can't alarm you, but a system can.)</span>
+    </div>
+    <div class="example">
+      <span class="before">We shouldn't optimize this code path yet; it isn't the bottleneck.</span>
+      <span class="after">Optimizing this now is like widening a driveway to fix a jam that's actually on the highway — weeks of work, and the cars still won't move. Let's profile first, then widen the real bottleneck.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Decision memos, arguing for a technical approach, persuasion, teaching, promotion cases</li>
+      <li>Trap: the "false analogy" — surface-similar, essentially different, yet offered as evidence (the most common sophistry)</li>
+      <li>Trap: leaving the boundary unmarked so readers extrapolate forever; or an analogy so clever readers pick at it and forget your claim</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Douglas Hofstadter &amp; Emmanuel Sander</span>, Surfaces and Essences (2013, analogy as the core of cognition) · <span>Douglas Hofstadter</span>, "Analogy as the Core of Cognition" (2001 lecture) · <span>Chip &amp; Dan Heath</span>, Made to Stick (concrete and credible)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take the next claim you need to argue and write an analogy ("this is like…"). Run the "bridge stress test": list two matching points, find one break point, and write it into the text — "this analogy fails at X." See whether credibility rose or fell.</p>
+    <p class="think">Question: same claim, one good analogy versus one bad — how much does persuasion differ? Can readers tell?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Dodging Dead Metaphors: When a Figure Turns to Jargon</h2>
+  <div class="en-name">Avoiding Dead Metaphors</div>
+  <span class="tag">Orwell · Revision</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Metaphors have a lifespan. Alive, they make you see a picture; overused, they "die" into jargon that no longer summons any image — "synergize," "leverage," "circle back," "move the needle." <strong>The real danger of a dead metaphor isn't ugliness — it's that it lets you think you said something when you said nothing.</strong></p>
+    <div class="quote">
+      "Never use a metaphor, simile, or other figure of speech which you are used to seeing in print."
+      <span class="source">— George Orwell, Politics and the English Language (1946)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Orwell distinguished three kinds: live ones (they carry a picture), fully dead ones (like "deadline" or "branch" — now ordinary words, harmless), and the worst, the "half-dead" — which has lost its image yet still strikes the pose of a metaphor, so people reach for it without thinking. English office-speak like "leverage," "synergy," "granularity," and "move the needle" is exactly this kind: once vivid, now a clever fog that <strong>hides "I haven't actually figured out what to do"</strong>. The test: swap the metaphor for the literal meaning it claims; if the sentence suddenly empties, it was covering a void for you all along.</p>
+    <div class="spectrum">
+      <div class="bar"></div>
+      <div class="marks">
+        <div class="mark"><span class="m-title">Alive</span><span class="m-eg">carries a picture<br>"like restarting a server at 3am"</span></div>
+        <div class="mark danger"><span class="m-title">Half-dead (danger)</span><span class="m-eg">image gone, pose remains<br>"leverage / synergy / circle back"</span></div>
+        <div class="mark"><span class="m-title">Fully dead (harmless)</span><span class="m-eg">now ordinary words<br>"deadline / main branch"</span></div>
+      </div>
+      <div class="caption">The lifespan spectrum: hunt the middle band — half-dead jargon</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">We need to empower the front-line team, find the right lever, hit them with a combination punch, and close the growth loop.</span>
+      <span class="after">We'll give the front-line team three concrete things: a self-serve reporting tool, a same-day data Q&amp;A channel, and a weekly growth checklist.</span>
+      <span class="note">Each dead metaphor is replaced by a concrete, checkable action.</span>
+    </div>
+    <div class="example">
+      <span class="before">Let's leverage our synergies and move the needle by thinking outside the box.</span>
+      <span class="after">Let's merge the data and sales teams so we can ship the churn dashboard by Friday.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ The final revision pass of any formal writing — hunt half-dead metaphors, especially in strategy / vision / OKR docs, where jargon runs thickest</li>
+      <li>Trap: feeling professional for using dead metaphors while actually dodging a concrete commitment</li>
+      <li>Trap: overcorrecting — replacing even harmless dead metaphors ("main branch," "deadline"); they're ordinary words now, and swapping them just adds clutter</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>George Orwell</span>, Politics and the English Language (1946, on "dying metaphors") · <span>William Zinsser</span>, On Writing Well (the "Clutter" chapter) · <span>Wang Xiaobo</span>, "My Literary Lineage" (on how clichés and translationese corrupt Chinese)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Dig out a recent OKR or strategy doc and circle every metaphor-jargon word (empower, lever, loop, granularity). For each, ask: what concrete action does it mean? Rewrite it as that action. Count how many words per page were covering "not yet figured out."</p>
+    <p class="think">Question: jargon spreads in organizations — is it because it "saves thinking" or because it "avoids accountability"? How do you tell the two apart?</p>
+  </div>
+</section>
+
+<!-- Deep thinking -->
+<div class="deep">
+  <h2>Deeper Questions</h2>
+  <div class="sub">Pushing the edges, cross-language differences, fitting different forms</div>
+
+  <details>
+    <summary>If metaphor can shape thought (Lakoff), can it also imprison it? When a metaphor traps you, how do you climb out?</summary>
+    <div class="ans">The flip side of Lakoff is the "frame trap" — once you accept "argument is war," it's hard not to treat the other side as an enemy. Two moves: first, "swap the vehicle" — describe the same thing with three metaphors (argument as dance / as building a house / as chess), and the new ones expose what the old one hid; second, go literal — strip every metaphor and ask "what actually happened?" The most dangerous metaphor is the one you don't notice you're using.</div>
+  </details>
+
+  <details>
+    <summary>How different are the Chinese and English metaphor systems? Why does a fine English metaphor often "die" when translated literally?</summary>
+    <div class="ans">Metaphor is rooted in cultural experience, so it often fails across languages. "Low-hanging fruit," translated literally into Chinese, lacks the bodily resonance of picking and reads worse than "grabbing the easy gains." The deeper gap is at the conceptual level: "time is money" (spend / waste time) runs very deep in English; Chinese says "spend time" too, but the financial coloring is far fainter. Don't translate the vehicle — find a substitute with the same ground and a native vehicle.</div>
+  </details>
+
+  <details>
+    <summary>AI writing loves metaphors ("riding the wave of the digital age," "opening a window") — why do they read so fake?</summary>
+    <div class="ans">Because they're exactly Orwell's "half-dead metaphors" — statistically the most frequent and safest, so the model emits them by default. A good metaphor comes from one person's concrete observation ("like restarting a server at 3am"), carrying this person's fingerprint at this moment; AI's metaphors are the fingerprint-free average. The fix: either order it to "use no cliché metaphors," or delete all of its metaphors and replace them with concrete objects from your own life.</div>
+  </details>
+
+  <details>
+    <summary>Argument by analogy is both the most powerful persuasion and the most common sophistry. As a reader, how do you quickly spot a "false analogy"?</summary>
+    <div class="ans">Stress the bridge in three steps: one, find the claimed match — A is like B because both have X; two, ask "does the essential part really have X?" — false analogies often have X on the surface but not at the decisive level; three, ask "does a counter-analogy hold just as well?" — if both directions flow, the analogy has no argumentative force and is only decorating a stance. Someone who states the boundary of their own analogy is more credible than one who makes it seamless.</div>
+  </details>
+
+  <details>
+    <summary>If dead metaphors should be dodged, why does great writing so often "reuse old words"? Where's the line between cliché and deliberate revival?</summary>
+    <div class="ans">The line is whether the picture is re-lit. A cliché is reached for unconsciously and slid past unconsciously; "revival" is when the writer knows it's a stock phrase yet twists it so the image flares up again — turning "break the glass ceiling" into "she didn't break the ceiling; she found there was no ceiling, just a crowd looking up and pretending there was one." Same dead metaphor — the first is laziness, the second is craft.</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to index</a>
+</div>
+<footer>BigCat · Writing Daily · Day 18 · 2026</footer>
+
+</div>
+</body>
+</html>
