@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: The Hidden Ailments of Chinese Prose — Day 19</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"WEAK ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"FIXED ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .gloss{display:block;margin-top:5px;font-size:0.85rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Translationese diagnostic table */
+.diag-box{background:#f8f6f1;padding:18px 16px;margin:18px 0;border-radius:2px}
+.diag-box .diag-row{display:flex;align-items:baseline;gap:10px;padding:8px 6px;border-bottom:1px dashed #d8d0bc;font-size:0.92rem;line-height:1.6}
+.diag-box .diag-row:last-child{border-bottom:none}
+.diag-box .sym{flex-shrink:0;min-width:130px;font-weight:700;color:#8a5a2a;font-family:Georgia,"Noto Serif SC",serif}
+.diag-box .desc{color:#3a3a3a}
+.diag-box .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+/* Nominalization formula */
+.formula{background:#1f1f1f;color:#fafafa;padding:22px 20px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif;text-align:center}
+.formula .eq{font-size:1.05rem;line-height:1.9;letter-spacing:0.5px}
+.formula .eq .op{color:#d8c98a;margin:0 8px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:3px 9px;border-bottom:1px dashed #d8c98a}
+.formula .eq .result{display:inline-block;padding:3px 11px;background:#d8c98a;color:#1f1f1f;font-weight:700;border-radius:2px}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .diag-box .diag-row{flex-direction:column;gap:2px}
+  .formula .eq{font-size:0.95rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 19 · 2026.06.06</div>
+  <h1>Writing &amp; Expression: The Hidden Ailments of Chinese Prose<span class="topic">Translationese · Empty Verbs · Bureaucratese · Classical Texture</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Your Chinese may be quietly turning into a translation of English, or an echo of officialdom. These ailments aren't glaring, but they make sentences go dull and hollow. Today we don't learn new tricks — we learn diagnosis: spotting the acquired bad habits inside your mother tongue and picking them out one by one. (Today's topic is Chinese-specific; examples keep the Chinese, with English glosses.)</p>
+</header>
+
+<!-- Card 1: Translationese -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Diagnosing Translationese: The English Skeleton Inside Chinese</h2>
+  <div class="en-name">When every word is right but the whole thing reads "translated"</div>
+  <span class="tag">Yu Guangzhong · Diagnosis</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Idiomatic Chinese is built on <strong>verbs</strong> and fleshed out with <strong>short clauses</strong>; translationese transplants English nouns, passives, front-loaded modifiers, articles and plurals straight into Chinese — it reads wrong but you can't say why. You must learn the symptoms before you can treat the disease.</p>
+    <div class="quote">
+      "A great crisis in today's Chinese is being Westernized without being assimilated… nouns where verbs belong, padding where concision belongs. The most conspicuous is the flood of 的 (de) — what I call <em>de-de-bu-xiu</em>, 'the endless de.'"
+      <span class="source">— Yu Guangzhong, <em>On the Norm and the Aberration of Chinese</em> (1987)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Translationese comes from <strong>copying structure</strong>: English frames sentences with nouns and prepositions (the analysis of the impact of…) and marks grammar with passives and articles; Chinese flows on verbs and fixes meaning by word order. Import the English skeleton and every function word is correct, yet the whole sentence reeks of translation. The six symptoms below are the vital signs to check first.</p>
+    <div class="diag-box">
+      <div class="diag-row"><span class="sym">Endless 的 (de)</span><span class="desc">Three or four 的 stacked in one sentence — a chain of pre-noun modifiers</span></div>
+      <div class="diag-row"><span class="sym">Overused 被 (bèi)</span><span class="desc">Forcing the passive everywhere; Chinese often expresses passive meaning actively</span></div>
+      <div class="diag-row"><span class="sym">一个 / 们</span><span class="desc">Literal a/an and plural -s: "this is a challenge," "the engineers"</span></div>
+      <div class="diag-row"><span class="sym">Front-loaded clauses</span><span class="desc">Piling a relative clause before the noun instead of letting it follow</span></div>
+      <div class="diag-row"><span class="sym">Weak verbs</span><span class="desc">进行 / 作出 / 给予 standing in for a real verb (see Principle 2)</span></div>
+      <div class="diag-row"><span class="sym">Redundant prepositions</span><span class="desc">关于…方面, 对于…来说, 在…的情况下 — empty connective scaffolding</span></div>
+      <div class="caption">Six vital signs for Chinese — check these first, highest hit rate</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">这是一个由我们团队所负责的、关于明年预算的、十分重要的项目。</span>
+      <span class="after">这个项目关乎明年预算，由我们团队负责，分量很重。</span>
+      <span class="gloss">Three stacked 的 and a needless 一个 → split into short verb-led clauses.</span>
+    </div>
+    <div class="example">
+      <span class="before">该性能问题已经被工程师们成功地加以解决了。</span>
+      <span class="after">工程师已经解决了这个性能问题。</span>
+      <span class="gloss">Drop the passive 被, the plural 们 and the empty 加以 → one clean active verb.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Traps</div>
+    <ul>
+      <li>✓ All Chinese: tech docs, decision memos, promo packets, public announcements</li>
+      <li>✓ Especially drafts "translated" out of English sources or English thinking</li>
+      <li>✗ Trap: turning "de-translationese" into "delete every 的 and 被" — keep them when they read naturally and remove ambiguity</li>
+      <li>✗ Trap: over-correcting into telegram-speak that drops necessary logical connectives</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    English leans on nouns and prepositions; Chinese flows on verbs. Translationese is what you get when the English skeleton shows through the Chinese skin — every word correct, the whole thing stiff.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take something you wrote recently in Chinese (ideally a doc or email) and run the six vital signs sentence by sentence, marking every 的 / 被 / 一个 / 们. Cut until meaning suffers, then read aloud. <strong>Question</strong>: which symptom is your most frequent offender — and does it correlate with how much English you read?</p>
+  </div>
+</section>
+
+<!-- Card 2: Empty verbs -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Empty Verbs: The 进行 X / 加以 X Padding</h2>
+  <div class="en-name">Zombie Nouns — Give the Verb Back Its Job</div>
+  <span class="tag">Yu Guangzhong · Helen Sword · Nominalization</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Crushing a perfectly good verb into a noun and propping it up with an empty all-purpose verb (进行 "conduct," 作出 "make," 加以 / 予以 "apply to," 实现 "achieve") is Chinese prose's favorite diluent. <strong>If one real verb will do, never use "empty verb + noun."</strong></p>
+    <div class="quote">
+      "The most fashionable all-purpose verb of the past decade is 进行 ('to conduct')… '对这件事进行了研究' could simply be '研究了这件事' ('studied this matter'). Once the verb is nominalized, the sentence goes soft and limp."
+      <span class="source">— Yu Guangzhong, <em>On the Norm and the Aberration of Chinese</em></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This is exactly what Helen Sword calls <strong>zombie nouns</strong> — turning verbs and adjectives into abstract nouns so the sentence loses its acting subject, as if drained of blood. Chinese 进行/加以 and English <em>conduct/make/achieve</em> are the same disease: a meaningless verb props up the stage while the real action is buried in a noun. The cure is one move: <strong>turn the noun back into a verb and delete the empty shell.</strong></p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">进行 (empty verb)</span>
+        <span class="op">+</span>
+        <span class="term">讨论 (noun)</span>
+        <span class="op">→</span>
+        <span class="result">讨论 (real verb)</span>
+      </div>
+      <div class="caption">"作出决定" → "决定" (decide); "加以审查" → "审查" (review); "实现优化" → "优化" (optimize)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">我们对该方案进行了讨论，并对其细节作出了优化。</span>
+      <span class="after">我们讨论了这个方案，并优化了细节。</span>
+      <span class="gloss">"conducted a discussion of… and made an optimization" → "discussed… and optimized."</span>
+    </div>
+    <div class="example">
+      <span class="before">请对代码加以审查，对潜在风险予以评估。</span>
+      <span class="after">请审查代码、评估风险。</span>
+      <span class="gloss">Two empty verbs vanish; two real verbs do the work.</span>
+    </div>
+    <div class="example">
+      <span class="before">We conducted an investigation of the issue and made a decision.</span>
+      <span class="after">We investigated the issue and decided.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Traps</div>
+    <ul>
+      <li>✓ Official documents, status reports, minutes — ground zero for empty verbs</li>
+      <li>✓ English-to-Chinese and AI-generated drafts (models love 进行 / 实现)</li>
+      <li>✗ Trap: thinking 进行 sounds formal and professional — it only sounds hollow</li>
+      <li>✗ Exception: a few fixed collocations needn't be forced; the test is always whether the empty verb carries real meaning</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    "Nouns formed from other parts of speech are called nominalizations… they sap the energy from your sentences." — Helen Sword, <em>Zombie Nouns</em> (NYT, 2012). The English cousins are <em>conduct, perform, achieve, make</em>.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Search your document for the six words 进行 / 作出 / 加以 / 予以 / 实现 / 给予, and ask of each: "Remove it, turn the noun back into a verb — is the sentence more direct?" <strong>Question</strong>: why do workplaces and officialdom systematically reward this dilution? What does it let the writer avoid?</p>
+  </div>
+</section>
+
+<!-- Card 3: Bureaucratese -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Bureaucratese: Slogans That Hide Unfinished Thinking</h2>
+  <div class="en-name">When the Reverse Is Absurd, the Sentence Says Nothing</div>
+  <span class="tag">Lu Xun · Wang Xiaobo · Orwell</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Report-speak like "attach high importance, coordinate and advance, grasp implementation firmly" is <strong>correct, grand, and unfalsifiable</strong> — delete a line and no information is lost. Its opposite is the concrete: who, does what, by when, verified how.</p>
+    <div class="quote">
+      "I write as I speak… I cut without mercy every word, sentence, and paragraph that can be done without."
+      <span class="source">— Lu Xun, <em>Reply to the Beidou Magazine</em> (1931)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The danger of cliché isn't ugliness — it's that it <strong>thinks for you</strong>. Orwell saw it in <em>Politics and the English Language</em>: stale language corrodes thought, because when you reach for a ready-made phrase you aren't thinking, only assembling prefab parts. Wang Xiaobo, in <em>The Silent Majority</em>, mocks the same "false propriety": pages of correctness, devoid of content. The diagnostic is simple: <strong>can you say the reverse?</strong> No one argues for "attach low importance, fight in silos, do a sloppy job." If the opposite has no advocates, the sentence is empty.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">我们要高度重视项目质量，统筹推进各项工作，狠抓落实，不断开创工作新局面。</span>
+      <span class="after">下周一前完成三件事：关闭旧接口、上线灰度、补一份故障复盘。质量卡点是接口兼容，王工负责。</span>
+      <span class="gloss">Four unfalsifiable slogans → three dated actions, one named owner, one real risk.</span>
+    </div>
+    <div class="example">
+      <span class="before">Going forward, we will leverage cross-functional synergies to optimize stakeholder value.</span>
+      <span class="after">Next quarter, support and engineering will share one bug queue, so customers get fixes in days, not weeks.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Traps</div>
+    <ul>
+      <li>✓ Weekly reports, OKRs, all-hands letters, promo packets — the genres that slide into slogans</li>
+      <li>✓ Self-check with the falsifiability test: if the reverse has no opponent, it's filler</li>
+      <li>✗ Trap: thinking slogans are "safe" — readers see through them and read insecurity</li>
+      <li>✗ Trap: mistaking "concrete" for "wordy" and retreating to grand abstractions</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    "The great enemy of clear language is insincerity… Political language is designed to make lies sound truthful and to give an appearance of solidity to pure wind." — George Orwell, <em>Politics and the English Language</em> (1946).
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Pull up a recent weekly report or OKR and run the falsifiability test on each line: state the reverse — if it's absurd enough that no one would advocate it, strike it and rewrite as a concrete action. <strong>Question</strong>: which slogans does your organization force on you, and which are just your own laziness? How can you smuggle the concrete into the former without offending the system?</p>
+  </div>
+</section>
+
+<!-- Card 4: Classical texture -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Borrowing Texture: Classical Concision Without Affectation</h2>
+  <div class="en-name">Borrow the Bones, Not the Costume</div>
+  <span class="tag">Yu Guangzhong · Wang Xiaobo · Bai Xianyong</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Modern vernacular needn't imitate Classical Chinese, but it can <strong>borrow its concision and rhythm</strong> — one four-character phrase can save half a wordy clause. Borrow the bones, not the wardrobe: piling on archaic formulae (兹 / 特此 / 谨 / 望周知) is just another bureaucratese.</p>
+    <div class="quote">
+      "Vernacular prose should be vernacular, but it need not be flat speech; it should learn from Classical Chinese its concision, its ring, its elasticity. A healthy Chinese is one where the literary and the vernacular nourish each other."
+      <span class="source">— Yu Guangzhong (on the language of modern prose, in <em>On the Watershed</em> and related essays)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The vernacular's strength is being <strong>warm and able to breathe</strong>; its weakness is going slack and wordy. Classical Chinese is <strong>terse and rhythmic</strong>; its weakness is distance and affectation. Masters take the best of both. Wang Xiaobo, in <em>My Literary Lineage</em>, credits the translators Zha Liangzheng (the poet Mu Dan) rendering Pushkin and Wang Daoqian rendering Duras for letting him first hear how musical modern Chinese could be — a music born precisely from the tension between literary and vernacular. The prose of Dong Qiao and Bai Xianyong are models of the same blend. The key measure of proportion: <strong>borrow the concision and cadence of the classical, never its posturing; classical words must serve a modern meaning, not decorate the doorway.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">这件事情在我的内心里面造成了非常巨大的、一时难以平复下来的震动。</span>
+      <span class="after">此事在我心里掀起的波澜，久久难平。</span>
+      <span class="gloss">A sprawling vernacular sentence → tightened with classical cadence (此事 / 久久难平), no archaism for show.</span>
+    </div>
+    <div class="example">
+      <span class="before">兹为推进本项目计，特此知会诸位同仁，敬请周知为盼。</span>
+      <span class="after">项目要往前推，先跟大家同步一下。</span>
+      <span class="gloss">Fake-classical officialese (兹 / 特此 / 为盼) → plain, human vernacular.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Traps</div>
+    <ul>
+      <li>✓ Speech endings, memorable lines, personal-brand writing — when you need rhythm and aftertaste</li>
+      <li>✓ A measured four-character phrase, parallelism, or classical particle (之 / 其 / 而) can tighten a sentence</li>
+      <li>✗ Trap: turning the blend into pedantry, piling obscure allusions that stall the reader</li>
+      <li>✗ Trap: fake-classical officialese (兹 / 特此 / 谨) — that's not concision, it's another slogan</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    English has its own version: Anglo-Saxon plainness vs. Latinate formality. "We shall endeavour to ascertain the facts" → "We'll find out." Borrow the music of an older register, never its pomposity.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Write a 150-character passage (say, the opening of a retro), first in the plainest vernacular, then revise once: borrow a four-character phrase or classical cadence only at the one or two spots that most deserve tightening and aftertaste. Read both aloud and hear the difference. <strong>Question</strong>: where is the reasonable boundary for this blend in technical docs? When should the prose be uniformly plain, with zero rhetoric?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Deeper Questions —</div>
+
+<details>
+  <summary>Is translationese simply bad? Has it ever nourished modern Chinese?</summary>
+  <div class="ans">Not entirely bad. Modern vernacular Chinese was itself born of the massive translation effort since the May Fourth era — Europeanized syntax brought precise logic and complex subordination that Classical Chinese struggles to carry. The problem isn't "Europeanization" but "importing without digesting": swallowing structure whole instead of assimilating it into Chinese sinew. Healthy absorption keeps English's logical precision while swapping its skeleton for Chinese verbs and word order. The test is always whether it reads as natural, unambiguous Chinese.</div>
+</details>
+<details>
+  <summary>How should the same principle shift across a tech doc, a speech, and a personal essay?</summary>
+  <div class="ans">A tech doc wants zero ambiguity and searchability; concision yields to precision, classical texture is almost useless — but "kill empty verbs and slogans" should be enforced most strictly. A speech is an auditory medium where rhythm and aftertaste matter most; four-character phrases, parallelism, and classical cadence earn their keep. A personal essay is the freest, letting language show its personality. "We discussed the plan" should stay flat in a doc, but a speech may deserve a rhythmic close. Form sets the slack of the language.</div>
+</details>
+<details>
+  <summary>Why is AI-generated Chinese especially prone to these ailments?</summary>
+  <div class="ans">Large models train on corpora heavy with official documents, reports, and English-to-Chinese text — exactly where translationese and bureaucratese concentrate. Models also lean "safe and formal," defaulting to diluted phrasing like 进行优化 and 高度重视. So AI first drafts need this issue's six vital signs most of all — search the 进行/作出/加以, run the falsifiability test. In human-AI collaboration, the last filter humans should supply is precisely this native ear.</div>
+</details>
+<details>
+  <summary>How do you write more concrete Chinese without offending the organizational culture?</summary>
+  <div class="ans">Don't fight the slogans head-on. The tactic is "smuggling the concrete": keep the necessary boilerplate as a buffer, but follow every slogan with a verifiable fact — "grasp implementation firmly" immediately followed by "specifically, close the old API by Monday." Readers skip the former and remember the latter. Over time your writing gets known as "both proper and substantive" — which is exactly a leader's language capital.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 19 · 2026</footer>
+
+</div>
+</body>
+</html>
