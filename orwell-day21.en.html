@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Masters · Orwell — Day 21</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+
+/* rules list */
+.rules{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin:18px 0;border-radius:2px}
+.rules ol{margin:0;padding-left:22px;counter-reset:r}
+.rules li{list-style:none;position:relative;padding:7px 0 7px 4px;font-size:0.96rem;line-height:1.6;border-bottom:1px solid #333}
+.rules li:last-child{border-bottom:none}
+.rules li:before{counter-increment:r;content:counter(r,lower-roman);position:absolute;left:-22px;color:#d8c98a;font-family:Georgia,serif;font-style:italic;font-weight:700}
+.rules strong{color:#d8c98a}
+
+/* thought-language loop */
+.formula{background:#1f1f1f;color:#fafafa;padding:22px 20px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif;text-align:center}
+.formula .eq{font-size:1.05rem;line-height:1.9;letter-spacing:0.5px}
+.formula .eq .op{color:#d8c98a;margin:0 8px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:3px 9px;border-bottom:1px dashed #d8c98a}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .formula .eq{font-size:0.95rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 21 · 2026.06.08</div>
+  <h1>Writing & Expression: Masters · Orwell<span class="topic">Six Rules · The Translation · Honesty & Political Language · Like a Window Pane</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Orwell wrote 1984 — but he also wrote something more useful to every writer: "Politics and the English Language." He believed vague prose isn't a minor flaw but a symptom of decay. Today, not his dystopia but his craft: six rules so plain they're almost brutal, one honest translation experiment, and that famous metaphor about glass.</p>
+</header>
+
+<!-- Card 1: Six Rules -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Six Rules: Subtraction Against Vagueness</h2>
+  <div class="en-name">Plain English as Discipline</div>
+  <span class="tag">Orwell · Concision · Rules</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Orwell ended "Politics and the English Language" with six rules, almost all of them "nevers." They aren't elegant or deep, but they are <strong>subtraction you can run on the spot</strong>: for every sentence, ask each in turn, then cut the needless word, the passive, the long word, the cliché.</p>
+    <div class="rules">
+      <ol>
+        <li>Never use a <strong>metaphor</strong> you are used to seeing in print</li>
+        <li>Never use a <strong>long word</strong> where a short one will do</li>
+        <li>If it is possible to cut a word out, <strong>always cut it out</strong></li>
+        <li>Never use the <strong>passive</strong> where you can use the active</li>
+        <li>Never use a <strong>foreign phrase or jargon word</strong> if you can think of an everyday equivalent</li>
+        <li>Break any of these rules sooner than say anything <strong>outright barbarous</strong></li>
+      </ol>
+    </div>
+    <div class="quote">
+      "(iii) If it is possible to cut a word out, always cut it out."
+      <span class="source">— George Orwell, "Politics and the English Language" (1946)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The spirit of the six is a <strong>distrust of the ornate</strong>. Orwell saw that bad writing comes not from a poor vocabulary but from too many ready-made phrases — prefab slabs the writer stacks without thinking, while the meaning evaporates in the stacking. The rules force a pause: every long word, every passive, every cliché must justify itself or be cut. They demote "writing well" from a question of talent to <strong>a checking move anyone can practice</strong>. Note rule six — it admits the rules have limits. Break one sooner than write something stiff. Rules are servants, not masters.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">In light of the aforementioned considerations, it was decided that the implementation would be facilitated.</span>
+      <span class="after">So we decided to ship it.</span>
+      <span class="note">Cut the long words (aforementioned/facilitated), go active, drop the filler — the six rules in one pass: 14 words down to 5.</span>
+    </div>
+    <div class="example">
+      <span class="before">With regard to the relevant circumstances of the present incident, the following clarification is hereby provided.</span>
+      <span class="after">Here is what caused the outage.</span>
+      <span class="note">"With regard to / relevant / hereby provided" are the prefab slabs — delete them all and lose nothing.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any writing that needs clarity: memos, email, docs, announcements — especially the line-by-line cut after a draft is done</li>
+      <li>✓ Turn the six into a checklist and run it mechanically when revising</li>
+      <li>✗ Pitfall: treating the rules as dogma and forgetting rule six — writing something awkward just to avoid a passive</li>
+      <li>✗ Pitfall: cutting only at the word level, never at the level of thought — the sentence gets clean but still says nothing clearly</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    Orwell's rules are subtractive: not "write beautifully" but "cut, shorten, prefer the plain." They turn good prose from a gift into a checklist anyone can run. Rule six admits the rest are servants, not masters.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a recent email or doc, apply all six rules line by line, and count how many words you cut. <strong>Question</strong>: Rule six says to break a rule rather than write something barbarous. Can you name a case where a rule <em>should</em> be broken? Where is the edge?</p>
+  </div>
+</section>
+
+<!-- Card 2: The Translation -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Translation: Watching Jargon Kill Meaning</h2>
+  <div class="en-name">Concreteness vs. the Empty Shell</div>
+  <span class="tag">Orwell · Concreteness · Anti-Example</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Orwell ran a famous experiment: he translated a beautiful passage of the Bible into "modern English of the worst sort." It is a <strong>rewrite run in reverse</strong> — deliberately making a good sentence bad, so you watch abstract nouns, passives, and jargon drain the blood step by step, leaving a grammatically correct corpse.</p>
+    <div class="quote">
+      "I returned and saw under the sun, that the race is not to the swift, nor the battle to the strong … but time and chance happeneth to them all."
+      <span class="source">— Ecclesiastes, King James Version (Orwell's model of "good English")</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The original is all <strong>concrete pictures</strong>: running, battle, bread, time and chance. Orwell's "modern" version swaps them for <em>objective considerations, competitive activities, innate capacity</em> — abstract nouns replacing images, passives and Latin roots replacing short Anglo-Saxon words. The two "mean the same," yet one you can see and remember, while the other leaves your mind blank. That's his core claim: <strong>abstraction isn't sophistication, it's evasion</strong>. When you can't be specific, it's usually because you haven't thought it through — or don't want it seen clearly. Concrete nouns and verbs are a by-product of honesty.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">Objective considerations of contemporary phenomena compel the conclusion that success or failure in competitive activities exhibits no tendency to be commensurate with innate capacity.</span>
+      <span class="after">The race is not to the swift, nor the battle to the strong.</span>
+      <span class="note">This is Orwell's actual experiment: above is the "worst modern English" he built; below is the original it murdered. Concrete always beats abstract.</span>
+    </div>
+    <div class="example">
+      <span class="before">Business performance this quarter did not meet projected growth targets, and certain downward pressures are present.</span>
+      <span class="after">We sold 30% less this quarter. We have four months of cash left.</span>
+      <span class="note">Same disease: hiding the concrete ("30% less," "four months") inside the fog of "downward pressures."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Status updates, post-mortems, board reports, fundraising decks — anywhere you're tempted to dress up bad news in big words</li>
+      <li>✓ Self-check: interrogate every abstract noun — "what specifically? who? how much?"</li>
+      <li>✗ Pitfall: thinking jargon and long words look professional — more often they look like hiding</li>
+      <li>✗ Pitfall: filling sentences with "leverage / synergy / circle back" you can't even define yourself</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    Orwell ran the experiment backward — translating good prose into bad — so you could watch concreteness die in real time. Abstraction isn't sophistication; it's evasion. Specific nouns are a by-product of honest thinking.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Do what Orwell did, in reverse: take a clean sentence you admire and deliberately make it "bad" with abstract nouns, passives, and jargon — then compare. Wrecking a good sentence with your own hands teaches more than reading "be concrete" a hundred times. <strong>Question</strong>: When is abstraction an honest description of a genuinely abstract idea, rather than evasion?</p>
+  </div>
+</section>
+
+<!-- Card 3: Honesty -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Honesty: The Great Enemy of Clear Language</h2>
+  <div class="en-name">Euphemism as the Enemy of Clear Prose</div>
+  <span class="tag">Orwell · Honesty · Euphemism</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Orwell traced the language problem back to a <strong>moral one</strong>: vagueness isn't poor style, it's an unwillingness to tell the truth. Euphemism exists to make the unacceptable sound acceptable — and clear writing requires, first, that you <strong>actually want to be understood</strong>.</p>
+    <div class="quote">
+      "Political language … is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind."
+      <span class="source">— George Orwell, "Politics and the English Language" (1946)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Orwell wrote that "the great enemy of clear language is insincerity." When there's a gap between what a person thinks and what they say, they <strong>reach instinctively for long words and ready-made phrases</strong>, like a cuttlefish squirting ink. "Layoffs" become "right-sizing"; "a fire sale" becomes "value optimization"; "we screwed up" becomes "we fell short of expectations." More dangerous still is the reverse loop: vague language doesn't just reflect vague thought, it <strong>manufactures</strong> it — use "optimize" long enough and you stop feeling that you're firing living people. Language and thought feed each other. So writing clearly is, first, forcing yourself to <strong>think clearly and face the truth</strong>.</p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">Vague Thought</span>
+        <span class="op">⇄</span>
+        <span class="term">Vague Language</span>
+      </div>
+      <div class="caption">"If thought corrupts language, language can also corrupt thought." — the loop runs both ways; clear writing breaks it</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">We are taking proactive steps to right-size the organization and optimize our talent footprint.</span>
+      <span class="after">We are laying off 200 people. Here is why, and here is what we owe them.</span>
+      <span class="note">Euphemism makes layoffs sound like a software upgrade. Only the honest sentence is worthy of the people being let go.</span>
+    </div>
+    <div class="example">
+      <span class="before">Owing to force majeure and various complex factors, the project's phased outcomes did not fully align with established expectations.</span>
+      <span class="after">The project failed, mainly because we underestimated how hard the migration would be.</span>
+      <span class="note">A long string of "factors" is fog for spreading blame. The honest version is short — and someone dares to own it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Bad news, accountability, apologies, reorgs — the more you want to dodge, the more you should measure it against Orwell's ruler</li>
+      <li>✓ Self-check: in this sentence, am I using words to shield myself from a bullet?</li>
+      <li>✗ Pitfall: mistaking euphemism for tact — most readers see through it, and what's left is distrust</li>
+      <li>✗ Pitfall: confusing "honest" with "harsh" — honesty can be gentle, but never so vague it misleads on the facts</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    For Orwell, vague prose is a moral symptom, not a stylistic one. Euphemism exists to make the unacceptable sound acceptable. Writing clearly means first being willing to be understood — and to think the true thought.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>List the three most common euphemisms in your industry (e.g. "optimize," "leverage," "align"), and write one sentence for each naming what it actually hides. <strong>Question</strong>: As a leader, some information genuinely needs timing and tact. Where is the line between "euphemism out of care for others" and "vagueness to dodge your own accountability"?</p>
+  </div>
+</section>
+
+<!-- Card 4: The Window Pane -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Window Pane: Prose That Disappears</h2>
+  <div class="en-name">When Readers Forget the Glass</div>
+  <span class="tag">Orwell · Transparency · Style</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>In "Why I Write," Orwell gave good prose a metaphor: <strong>a window pane</strong>. The reader sees the meaning through it and shouldn't notice the glass at all. The highest craft of writing is to make the craft invisible — the reader feels clarity, not your cleverness.</p>
+    <div class="quote">
+      "Good prose is like a window pane."
+      <span class="source">— George Orwell, "Why I Write" (1946)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This looks like the opposite of Lu Xun's "break the rule for effect," but it's wisdom from the other pole. Orwell isn't against style — he's against <strong>style that gets in the way</strong>. Ornate adjectives, deliberate inversions, sentences that exist only to look smart: they're smudges on the glass that stop the reader's eye on the words instead of letting it pass through to the meaning. A good pane isn't the absence of craft — quite the reverse: <strong>transparency is the hardest craft of all</strong>. This matters doubly for engineers and leaders: your docs, memos, and email aren't there to make people admire your prose, but to make them <strong>understand you effortlessly</strong>. When the reader finishes remembering your argument and forgetting your sentences, you've won.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">Having delved deeply into this most intricate and multifaceted of matters, I humbly venture to put forth the following forward-looking and considered observations.</span>
+      <span class="after">I looked into this. Here's what I recommend.</span>
+      <span class="note">The first is all smudges on the glass — false modesty, pile-up of adjectives. The reader admires the polish and misses the point.</span>
+    </div>
+    <div class="example">
+      <span class="before">It is with no small measure of enthusiasm that I pen these words to convey my thoughts.</span>
+      <span class="after">Here is what I think.</span>
+      <span class="note">The harder you make readers notice "I write well," the dirtier the glass. Transparency is the master's luxury.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Almost all professional writing: you're conveying information and judgment, not performing prose</li>
+      <li>✓ The test: after reading, does the reader remember your <em>argument</em> or your <em>sentences</em>?</li>
+      <li>✗ Pitfall: mistaking "transparent" for "bland" — transparency is hard; it's what remains after every flourish is cut</li>
+      <li>✗ Pitfall: grinding even the places that need a voice (personal brand, speeches) into colorless glass, losing all character</li>
+    </ul>
+  </div>
+
+  <div class="eninsight">
+    "Good prose is like a window pane." Style isn't the enemy — obtrusive style is. A clean pane isn't the absence of craft; transparency is the hardest craft of all. When readers remember your point and forget your sentences, you've won.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a passage you wrote and were proud of for its "style," and ask of each sentence: does this help the reader see the meaning, or invite them to admire me? Wipe off every smudge and see if the meaning shines brighter. <strong>Question</strong>: Orwell wants glass; Lu Xun wants to break the rule for effect. Do these two contradict — and where would you use each?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>Orwell admitted, "I have not here been considering the literary use of language, but merely language as an instrument… I am sure I have made errors of the very kind I am protesting against." Why couldn't even he escape?</summary>
+  <div class="ans">Because ready-made phrases and abstract words are the path of least resistance in any language; when writing fast, tired, or lazily, you slide into them automatically. Orwell's honesty is in admitting the rules are an ongoing struggle against one's own inertia, not a one-time victory. That's good news: writing clearly isn't a gift but the discipline of stopping to check every time — anyone can practice it, no one can finish it.</div>
+</details>
+<details>
+  <summary>Won't "Plain English" grind every piece of writing into the same characterless shape?</summary>
+  <div class="ans">No, as long as you separate two things: clarity is the foundation, style is the house. What Orwell opposed was decoration that blocks meaning, not voice itself — his own prose is highly distinctive: cool, restrained, with a barbed wit. "Plain" means not vague and not showing off, not flavorless. Real character grows on top of clarity, not out of ornate words. Achieve transparency first, then talk about voice.</div>
+</details>
+<details>
+  <summary>Orwell's six rules were written for English. Do they work for Chinese?</summary>
+  <div class="ans">The spirit transfers entirely; the specifics change. Chinese doesn't suffer the same flood of passives, but it has its own prefab slabs: "进行/加以," "with regard to the question of," "relevant/concerned," plus four-character clichés and report-speak. Aim rule three (cut what you can) and rule five (no jargon) at these and the force is the same. Languages differ, inertia is shared — the rules just need to land on each language's actual ailments.</div>
+</details>
+<details>
+  <summary>Now that AI can instantly produce "fluent, polished" text, is Orwell's warning more dated or more urgent?</summary>
+  <div class="ans">More urgent. What AI does best is exactly what Orwell feared most — generating "plausible-sounding but hollow" text out of grammatically perfect ready-made phrases, giving an appearance of solidity to pure wind. It has no intent to tell the truth; it only mimics the surface of language. So the judgment — "have I actually thought this through, is what I'm saying true?" — falls more squarely back onto the writer. AI can give you fluency; it can't give you honesty.</div>
+</details>
+<details>
+  <summary>Orwell's "window pane" and Lu Xun's "date trees" — who is right?</summary>
+  <div class="ans">Both, on different axes. Orwell describes the default — the vast majority of professional writing (docs, memos, email) should be transparent, letting meaning pass without friction. Lu Xun describes the exception — in literature, the climax of a speech, the place of personal voice, you may let the words "become visible" for a specific effect. The consensus is identical: master clarity utterly first, and only then does breaking the rule become earned and meaningful. Those who can't write transparently and imitate "rule-breaking" get only chaos.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 21 · 2026</footer>
+
+</div>
+</body>
+</html>
