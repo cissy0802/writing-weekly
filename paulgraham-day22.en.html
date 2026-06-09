@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Masters · Paul Graham — Day 22</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"WEAK ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"STRONG ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* formula */
+.formula{background:#1f1f1f;color:#fafafa;padding:22px 20px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif;text-align:center}
+.formula .eq{font-size:1.05rem;line-height:1.9;letter-spacing:0.5px}
+.formula .eq .op{color:#d8c98a;margin:0 8px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:3px 9px;border-bottom:1px dashed #d8c98a}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .formula .eq{font-size:0.95rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 22 · 2026.06.09</div>
+  <h1>Writing & Expression: Masters · Paul Graham<span class="topic">Write Usefully · The Essay as Thinking · Shorter Is Better · Write Like You Talk</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Paul Graham is a Lisp hacker and the founder of Y Combinator, but most people know him through his essays. What he writes isn't fine prose — it's thinking. He turned the essay into a machine for figuring things out. Today, four things from him: how to write usefully, why writing is thinking, why shorter is better, and how to write like you talk.</p>
+</header>
+
+<!-- Card 1: Write Usefully -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Write Usefully: True, Important, Said Without Hedging</h2>
+  <div class="en-name">How to Write Usefully</div>
+  <span class="tag">Paul Graham · Useful · Framework</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>PG doesn't ask "is it well written?" He asks "is it useful?" Useful writing does one thing: it tells the reader something <strong>true, important, and that they didn't already know</strong> — and says it as unequivocally as possible.</p>
+    <div class="quote">
+      "Useful writing tells people something true and important that they didn't already know, and tells them as unequivocally as possible."
+      <span class="source">— Paul Graham, "How to Write Usefully" (2020)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>PG breaks "useful" into four parts you can sharpen separately: important, novel, correct, strong. The first two decide whether it's worth reading; the last two decide whether it can be believed. The most counterintuitive is <strong>strength</strong> — he argues you should make claims as strong as you can without making them false. Most writers instinctively stuff sentences with "perhaps," "to some extent," "I feel," thinking it's safe. It isn't — it just dilutes the information and dodges accountability. Useful writing wants precision, not the false safety of vagueness: push the claim to the edge, but not past the line between true and false.</p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">important</span><span class="op">×</span><span class="term">novel</span><span class="op">×</span><span class="term">correct</span><span class="op">×</span><span class="term">strong</span>
+      </div>
+      <div class="caption">A product — zero any one factor and the whole piece goes to zero; to be more useful, strengthen the weakest factor</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">It could perhaps be argued that, in certain contexts, microservices may sometimes offer some advantages.</span>
+      <span class="after">Microservices help when your teams ship faster apart than together. Otherwise they cost more than they're worth.</span>
+      <span class="note">The first is all padding — you finish it not knowing what the writer claims. The second gives a strong, falsifiable claim. That's what useful looks like.</span>
+    </div>
+    <div class="example">
+      <span class="before">On whether to adopt this approach, one must weigh many factors comprehensively and avoid sweeping conclusions.</span>
+      <span class="after">This approach is worth doing. The only risk is dual-writes during migration, and we'll cover it with a staged rollout.</span>
+      <span class="note">"Weigh comprehensively" pushes the judgment back onto the reader. A strong claim carries the judgment on your own shoulders.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Decision memos, tech-stack choices, postmortem conclusions, public opinions — anywhere the reader expects you to make the call</li>
+      <li>✓ Self-check after writing: which is my strongest claim? Can I make it stronger without lying?</li>
+      <li>✗ Trap: using "maybe / perhaps / to some extent" as a disclaimer, mistaking vagueness for rigor</li>
+      <li>✗ Trap: chasing only "correct" — empty truisms are correct too — while forgetting important and novel</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take a conclusion you wrote recently, circle every "maybe / perhaps / to some extent," and delete each or replace it with a falsifiable strong claim. Watch the information density change. <strong>Question</strong>: at work, how do you balance "pushing a claim to the edge of strong-but-true" against "leaving yourself an exit"?</p>
+  </div>
+</section>
+
+<!-- Card 2: The Essay as Thinking -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Essay as Thinking: Writing Is the Tool for Figuring It Out</h2>
+  <div class="en-name">The Essay as Thinking</div>
+  <span class="tag">Paul Graham · Thinking · Essay</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>The word essay comes from the French <em>essayer</em> — "to try." PG says an essay isn't copying down a conclusion you already have; it's <strong>figuring it out in the act of writing</strong>.</p>
+    <div class="quote">
+      "Writing about something, even something you know well, usually shows you that you didn't know it as well as you thought."
+      <span class="source">— Paul Graham, "Putting Ideas into Words" (2022)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This overturns the common belief — "think it through first, then write." PG's experience is the opposite: you think you understand, and the moment you start writing you find the holes. Ideas can coexist vaguely in your head, even contradict each other, without you noticing; but force them into linear sentences and every leap, every unresolved link, gets exposed. So writing is a <strong>lie detector for thinking</strong>: it rewards not eloquence but honestly thinking something all the way through. For engineers and leaders this is especially valuable — the real payoff of writing a design doc or decision memo is often not the document, but the edge case the writing forced you to discover.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">This cache scheme should be fine, it'll probably hold up.</span>
+      <span class="after">This cache produces dirty reads under write-heavy load, unless we add a version number — I only realized this while writing the doc.</span>
+      <span class="note">The sentence didn't get prettier; the thought got deeper. Writing's real output is the part it forced you to think clearly.</span>
+    </div>
+    <div class="example">
+      <span class="before">I basically understand how OAuth refresh works.</span>
+      <span class="after">Writing the doc, I couldn't explain token rotation — which proved I didn't actually understand it.</span>
+      <span class="note">"Basically understand" doesn't survive the test of writing. If you can't write it, you don't truly know it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Any complex problem you "think you've figured out": architecture decisions, strategy, postmortems — write a draft first to force the holes into the open</li>
+      <li>✓ Treat writing as a thinking tool, not a reporting chore: the first draft is for you to think with, not for others to read</li>
+      <li>✗ Trap: stalling until you've "fully thought it through" — that moment never comes; writing is what brings it</li>
+      <li>✗ Trap: letting AI smooth out your draft — the prose gets smooth, but you skip the most valuable thinking</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Pick something technical or a decision you "already understand." Without looking anything up, force yourself to write 300 words explaining it to a layperson. Note where you get stuck — that's the part you don't actually understand. <strong>Question</strong>: if AI can produce a fluent explanation for you, what do you lose?</p>
+  </div>
+</section>
+
+<!-- Card 3: Shorter Is Better -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Shorter Is Better: Plain Words, Simple Sentences, Cut to the Bone</h2>
+  <div class="en-name">Write Simply</div>
+  <span class="tag">Paul Graham · Brevity · Cutting</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>PG deliberately writes with the plainest words and simplest sentences. Not because his vocabulary is poor, but because <strong>the energy readers spend decoding your sentences should have gone to your ideas</strong>.</p>
+    <div class="quote">
+      "The less energy readers expend on your prose, the more they'll have left for your ideas."
+      <span class="source">— Paul Graham, "Write Simply" (2021)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Complex sentences and big words are often taken as signs of intelligence; PG says they're more often a sign that the writer is lazy or trying to bluff. His logic is economic: the reader's attention is a fixed budget, and every obscure word, every winding clause, <strong>levies a tax</strong>. The more it taxes, the less is left for the idea you actually want to convey. This shares a root with Orwell's "if it's possible to cut a word, cut it," but PG adds a layer of motive — in "Writing, Briefly" he compresses the whole craft into one near-total piece of advice: <strong>cut out everything unnecessary</strong>. Short isn't the goal; short is the means of returning the reader's cognitive budget to the ideas. But note: simple ≠ simplistic. Complex thoughts can ride on simple sentences — the hard part is whether the writer is willing to digest the complexity for the reader first.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">We endeavored to ascertain whether the implementation would be efficacious prior to its deployment.</span>
+      <span class="after">We tested it before shipping.</span>
+      <span class="note">Each big word (endeavored / ascertain / efficacious) taxes the reader; swap in plain words and the meaning is fully intact.</span>
+    </div>
+    <div class="example">
+      <span class="before">Regarding the aforementioned matter, it is recommended that prudent evaluation precede any decision.</span>
+      <span class="after">Let's evaluate this first, then decide.</span>
+      <span class="note">The big-word version is genteel boilerplate; cut to the bone, it's actually stronger.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ All writing whose purpose is to be understood; especially for cross-team, cross-background readers</li>
+      <li>✓ Run a "tax audit" before the final draft: for every big word and long clause, ask whether it's worth the tax</li>
+      <li>✗ Trap: using big words and long sentences to manufacture an air of expertise — most readers feel only the effort, not awe</li>
+      <li>✗ Trap: mistaking "simple" for "simplistic," so you never dare simplify complex ideas — but that's exactly the real skill</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take a passage you wrote to "look professional," swap every big word for the plain word you'd use out loud, and count how much shorter it got and whether any meaning was lost. <strong>Question</strong>: in your industry, could "writing simply" be misread as "thinking simply"? How do you counter that?</p>
+  </div>
+</section>
+
+<!-- Card 4: Write Like You Talk -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Write Like You Talk: Informal Language Is the Athletic Wear of Ideas</h2>
+  <div class="en-name">Write Like You Talk</div>
+  <span class="tag">Paul Graham · Closeness · Voice</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>PG writes like he's chatting with a smart friend — no posturing, no showing off learning. He has a sharp image for it: <strong>informal language is the athletic clothing of ideas</strong>.</p>
+    <div class="quote">
+      "Informal language is the athletic clothing of ideas."
+      <span class="source">— Paul Graham, "Write Like You Talk" (2015)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Formal prose is like a suit — crisp, presentable, and restrictive. PG says that for ideas to run, probe, and pivot, they need athletic wear: spoken language. He offers a wonderfully practical test — <strong>after writing a passage, imagine reading it aloud to a friend, and change anything you'd never actually say out loud</strong>. This isn't lowering the bar; it's using "would I say this to a friend?" as a sincerity detector: written stiffness is the easiest place to hide vagueness and bluster, because it dresses emptiness in a suit. But keep your sense of proportion — "like talking" means natural, close, unpretentious, not dumping your verbal tics, filler, and rambling onto the page. It's pruned speech: keep the warmth, cut the noise.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">It is the contention of the author that this approach is suboptimal.</span>
+      <span class="after">I think this approach is wrong, and here's why.</span>
+      <span class="note">"It is the contention of the author that" is something no one would say to a friend; swap in "I think" and you instantly get a human and a stake.</span>
+    </div>
+    <div class="example">
+      <span class="before">The author submits that this path may admit of further room for optimization.</span>
+      <span class="after">I think this path is wrong; a better way is...</span>
+      <span class="note">"The author submits" and "room for optimization" are suit-talk; talk like a person, and the reader treats you as someone with judgment.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Essays, newsletters, personal brand, internal comms — anywhere you want to be read as "a person," not "a document"</li>
+      <li>✓ The test: read the passage to a friend; which line could you not say out loud? Change it</li>
+      <li>✗ Trap: taking "like talking" as license to ramble and pile on filler — it's pruned speech, not a transcript</li>
+      <li>✗ Trap: forcing casual tone where formality is due (contracts, public notices, compliance docs), losing all sense of proportion</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take a piece of formal writing of yours, read it aloud line by line, and rewrite every "I'd never say this to a friend" sentence into what you'd actually say. <strong>Question</strong>: Orwell wants "transparent glass," PG wants "write like you talk" — are these two sides of the same thing, or in conflict? When should you put the closeness away and put the suit back on?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Deeper Questions —</div>
+
+<details>
+  <summary>PG says useful writing should be "as strong as it can be without becoming false." Doesn't this encourage overconfidence and ignoring uncertainty?</summary>
+  <div class="ans">No — the key is the "without becoming false" boundary. PG doesn't want bluster; he wants you to state your true confidence precisely. If you're only 70% sure, the honest strong claim is "I'm 70% confident in X, with the bet on Y," not a vague "maybe X." Real uncertainty should be described precisely, not diluted with a hedging tone. What padding hides is usually not modesty but unclear thinking or fear of accountability.</div>
+</details>
+<details>
+  <summary>The essay comes from "to try," meaning it can decline to conclude. But workplace writing (memos, decisions) often must give an answer. Are they in conflict?</summary>
+  <div class="ans">It's situational. PG's exploratory essay suits personal thinking, blogs, public probing of hard problems — the process itself is the value. But the reader of a decision memo wants a judgment, so exploration should happen in the first half of the work (your private drafts), while the delivered final draft converges on a conclusion. The trick: think like an essay, deliver like a pyramid. Thinking may diverge; output must converge.</div>
+</details>
+<details>
+  <summary>Does "shorter is better" have a limit? When does short hurt understanding?</summary>
+  <div class="ans">Yes. PG's own principle is "cut out the unnecessary" — the key word is "unnecessary," not "short." When cutting starts to sacrifice the background, examples, and reasoning chain the reader needs, you've crossed the line. Minimalism that leaves readers unable to bridge a logical leap is another kind of selfishness. The yardstick is always the reader: cut until "one more cut and they won't understand," not until the word count is lowest.</div>
+</details>
+<details>
+  <summary>Can Chinese writing directly adopt "write like you talk"? The gap between spoken and written Chinese is bigger than in English.</summary>
+  <div class="ans">The spirit applies; the proportion needs adjusting. The distance between spoken and written Chinese really is larger, and copying colloquialisms wholesale can read as flippant or undignified. But PG's core isn't "use spoken words" — it's "use a sincere, unpretentious voice." In Chinese that means dropping suit-talk like "the author," "hereby," and the literary 之, not piling on internet slang. Wang Xiaobo is the model: the freshness of speech plus the precision of writing, with no trade-off.</div>
+</details>
+<details>
+  <summary>In an age when AI can instantly generate fluent essays, does PG's "writing is thinking" still hold?</summary>
+  <div class="ans">More than ever. AI can produce the text for you, but the payoff of thinking comes precisely from the process of "being forced by your own sentences to reason it through" — that part can't be outsourced. If you let AI write it and ship it directly, you get a document but skip the cognitive upgrade writing was supposed to give you. PG's insight becomes a touchstone: in the AI age, writing's value shifts entirely from "producing text" to "training thought" — and only writing it yourself earns the latter.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 22 · 2026</footer>
+
+</div>
+</body>
+</html>
