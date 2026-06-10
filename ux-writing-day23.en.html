@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Design &amp; UX Copy — Day 23</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"WEAK ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"BETTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* formula / structure */
+.formula{background:#1f1f1f;color:#fafafa;padding:22px 20px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif;text-align:center}
+.formula .eq{font-size:1.05rem;line-height:1.9;letter-spacing:0.5px}
+.formula .eq .op{color:#d8c98a;margin:0 8px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:3px 9px;border-bottom:1px dashed #d8c98a}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+/* Voice & Tone columns */
+.vt{display:flex;gap:14px;margin:18px 0;flex-wrap:wrap}
+.vt .col{flex:1;min-width:200px;background:#f8f6f1;border-radius:2px;padding:16px 18px}
+.vt .col .head{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:#8a7a4a;font-family:Georgia,serif;margin-bottom:8px;font-weight:700}
+.vt .col p{font-size:0.95rem;color:#2a2a2a;line-height:1.7}
+.vt .voice{background:#1f1f1f;color:#fafafa}
+.vt .voice .head{color:#d8c98a}
+.vt .voice p{color:#fafafa}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .formula .eq{font-size:0.95rem}
+  .vt{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 23 · 2026.06.10</div>
+  <h1>Writing &amp; Expression: Design &amp; UX Copy<span class="topic">Microcopy · Humane Errors · Voice &amp; Tone · The Copy Checklist</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Designers and engineers have been writing all along — we just don't call it that: the words on a button, the empty-state hint, the error dialog, the placeholder in a form. This "microcopy" is tiny, yet it lands at the exact moment a user hesitates and decides whether to sail through or rage-quit. Four things today: how to write good microcopy, how to make errors humane, how to build a Voice &amp; Tone system, and a copy checklist you can run line by line.</p>
+</header>
+
+<!-- Card 1: Microcopy -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Microcopy: The Smallest Words, The Biggest Lever</h2>
+  <div class="en-name">The Craft of Microcopy</div>
+  <span class="tag">Yifrah · Microcopy · Conversion</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Microcopy is the unassuming little text in an interface — buttons, labels, placeholders, hints. It uses the fewest words, yet it appears at <strong>the very second a user is deciding</strong>, and becomes their entire guide.</p>
+    <div class="quote">
+      "Good microcopy can completely change the user experience, and turn a website from one that's tense and unclear into one that's friendly, considerate and human."
+      <span class="source">— Kinneret Yifrah, <em>Microcopy: The Complete Guide</em> (2017)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>People don't "read" interfaces; they scan. At every decision point — click this button or not, fill this field or not — those few words are all they have to go on. Generic words ("Submit," "OK") push the decision back onto the user: what happens if I click? Words <strong>specific to the action and its outcome remove that uncertainty</strong>. This is the cheapest, highest-leverage spot in experience design: change nothing in the layout, swap a few words, and conversion and trust both move. The craft isn't in vocabulary — it's in <strong>standing at the moment of hesitation and saying the next step plainly</strong>.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Submit</span>
+      <span class="after">Create my account</span>
+      <span class="note">"Submit" is the developer's view — it names a system action. "Create my account" is the user's view — it says what clicking gets them. A button should answer "what happens when I click."</span>
+    </div>
+    <div class="example">
+      <span class="before">Empty state: "No data"</span>
+      <span class="after">"No projects yet. Hit New in the top right to start your first one."</span>
+      <span class="note">"No data" is a dead end. A good empty state is an invitation — it tells the user what to do and where the door is.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Buttons, form labels, empty states, confirmation dialogs, onboarding hints — every point where a user must decide</li>
+      <li>✓ Self-check: does every button answer "what happens when I click"?</li>
+      <li>✗ Mistake: generic words like "Submit / OK / Cancel" that dump the judgment back on the user</li>
+      <li>✗ Mistake: using a placeholder as a label — it vanishes the moment they type, and they forget what the field was for</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Find a "Submit" button in your product (or a daily app) and rewrite it as a verb phrase that says "what happens when I click." Then picture the user reading it. <strong>Reflection</strong>: who should own microcopy — the designer, the engineer, or a dedicated UX writer?</p>
+  </div>
+</section>
+
+<!-- Card 2: Humane errors -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Humane Errors: Plain Words, the Problem, a Way Out</h2>
+  <div class="en-name">Humane Error Messages</div>
+  <span class="tag">Nielsen · Errors · Empathy</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>A good error does only three things: <strong>in plain words, say what happened, why, and what to do now</strong>. Never dump an error code; never blame the user.</p>
+    <div class="quote">
+      "Error messages should be expressed in plain language (no error codes), precisely indicate the problem, and constructively suggest a solution."
+      <span class="source">— Jakob Nielsen, <em>10 Usability Heuristics</em>, #9 (1994)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>By the time an error appears, the user is already frustrated. A cold "Operation failed" or a bare "Error 500" pours salt in the wound. An error is fundamentally a conversation: the user tried something and it didn't work, and the system should answer like a calm colleague — not an alarm. Watch for <strong>blame</strong> too: turn "you entered it wrong" into a neutral description, and move the subject off "you." A solid error has a clear three-part anatomy you can fill in.</p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">What happened</span><span class="op">+</span><span class="term">Why</span><span class="op">+</span><span class="term">What to do</span>
+      </div>
+      <div class="caption">The error triad — missing "what to do" is deadliest; it strands the user at a dead end</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Error 500: Invalid input.</span>
+      <span class="after">We couldn't save your changes — the connection dropped. Try again; we've kept your draft.</span>
+      <span class="note">The first has only a code and an accusation. The second has all three parts, plus a reassurance (your draft is safe) that takes the panic down a notch.</span>
+    </div>
+    <div class="example">
+      <span class="before">Operation failed. Please try again.</span>
+      <span class="after">That email is already registered. Use a different one, or log in instead.</span>
+      <span class="note">"Operation failed" leaves the user spinning. Name the cause (already registered) and give two ways out, and they know exactly where to go.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Form validation, network errors, empty results, permission denials — any "it didn't work" moment</li>
+      <li>✓ Logs for developers can carry codes; the user-facing UI keeps only plain words</li>
+      <li>✗ Mistake: throwing raw stack traces or error codes at ordinary users, multiplying their panic</li>
+      <li>✗ Mistake: saying only "something went wrong" with no next step, or opening with "you" and turning it into blame</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Find the most common error in your product and rewrite it as "what happened + why + what to do." <strong>Reflection</strong>: which errors deserve detail (for developers to debug) and which deserve a spare, kind line (for ordinary users)? Could one error have two versions?</p>
+  </div>
+</section>
+
+<!-- Card 3: Voice & Tone -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Voice &amp; Tone: One Voice, Many Tones</h2>
+  <div class="en-name">Voice &amp; Tone System</div>
+  <span class="tag">Mailchimp · Voice · Consistency</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Voice is the product's personality — steady throughout. Tone shifts with the situation. <strong>One voice, many tones</strong> — just as a person at a wedding and at a funeral is the same person, speaking differently.</p>
+    <div class="quote">
+      "Your voice doesn't change much from day to day, but your tone changes all the time."
+      <span class="source">— Mailchimp, <em>Content Style Guide</em> (Voice &amp; Tone)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>One person dashing off a line or two goes on instinct, but a product has hundreds of copy touchpoints written by many hands — without a shared voice, the copy develops split personality: playful on this page, bureaucratic on that one. <strong>Voice is a fixed set of adjectives</strong> (say "friendly but not flippant, expert but not stuffy"), written into the style guide so everyone aligns. <strong>Tone reads the situation</strong>: a user who just paid can be greeted cheerfully; one who just hit an error needs restraint and care. The classic disaster is one "playful" tone smeared across every screen — joke while a user loses their data, and the most consistent voice becomes an insult.</p>
+    <div class="vt">
+      <div class="col voice"><div class="head">One Voice</div><p>Friendly, clear, unpretentious — running through both success and failure</p></div>
+      <div class="col"><div class="head">Success · cheerful tone</div><p>"Done! Your report is on its way 🎉"</p></div>
+      <div class="col"><div class="head">Error · restrained tone</div><p>"Your report didn't send. We've saved the draft — try again shortly."</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Oops! Something went wrong, but no worries! 😄 (on a failed-payment page)</span>
+      <span class="after">Your payment didn't go through. Your card wasn't charged — check the number and try again.</span>
+      <span class="note">Tone-situation mismatch is a cardinal sin: the user's payment failed, and that 😄 reads like mockery. Restrain the tone, reassure first (no charge), and it's right.</span>
+    </div>
+    <div class="example">
+      <span class="before">An error page using the same marketing voice as the home page: "Let's begin an amazing journey together!"</span>
+      <span class="after">"This page is gone. Head home, or try a search."</span>
+      <span class="note">The voice can stay consistent (both friendly), but a serious moment must switch to a restrained tone — not recycle the welcome line.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Building a copy style guide, multi-author collaboration, cross-team alignment — define voice first, then talk tone</li>
+      <li>✓ Before writing each line, ask: how does the user feel right now? What tone catches them?</li>
+      <li>✗ Mistake: conflating voice and tone — assuming "the brand is playful" means being cute everywhere</li>
+      <li>✗ Mistake: forcing playfulness into serious moments (errors, payment, privacy) — joking in a crisis</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Write three voice adjectives for your product, then draft one line each for "success / waiting / error" and check whether the voice stays consistent and each tone fits. <strong>Reflection</strong>: do formal B2B or financial products need a "humanized" voice — or is restraint itself their voice?</p>
+  </div>
+</section>
+
+<!-- Card 4: Copy checklist -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Copy Checklist: Can You Cut Half? Does It Sound Human?</h2>
+  <div class="en-name">The UX Copy Checklist</div>
+  <span class="tag">Krug · Checklist · Cutting</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Words on screen need to be even leaner than in an essay — users came to get something done, not to read you. Run a checklist before the final draft, and the first cut is always: <strong>can I delete half of this?</strong></p>
+    <div class="quote">
+      "Get rid of half the words on each page, then get rid of half of what's left."
+      <span class="source">— Steve Krug, <em>Don't Make Me Think</em> (2000)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Krug's "cut half, then cut half again" sounds extreme, but in practice it really does flush out mountains of pleasantries and instructional filler — welcome blurbs, over-explanation, polite padding. Every extra word is in the way. But cutting isn't the only yardstick; a useful checklist asks at least four things: <strong>① Clear</strong> (does the user get it instantly?) <strong>② Concise</strong> (can it be shorter?) <strong>③ Conversational</strong> (does it sound human?) <strong>④ Useful</strong> (do they know what to do after reading?). Between short-but-vague and long-but-clear, always pick clear — cutting is meant to sharpen the guidance, not to minimize the word count.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Welcome to our platform! We're thrilled to have you. To help you get started, please follow the steps below to complete your initial setup…</span>
+      <span class="after">Three steps to start: ① Create a project　② Invite teammates　③ Import data</span>
+      <span class="note">The first is all "happy talk" the user can't use; the second hands over a roadmap, cuts eighty percent, and is friendlier for it.</span>
+    </div>
+    <div class="example">
+      <span class="before">Please be advised that in order to proceed you will need to complete all of the required fields below.</span>
+      <span class="after">Fill in the fields marked * to continue.</span>
+      <span class="note">"Please be advised that in order to" is pure polite noise; cut to the bone, the instruction is actually clearer.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any final-draft audit of interface copy; onboarding and empty states are filler hot zones</li>
+      <li>✓ Run the four questions before shipping: clear / concise / conversational / useful</li>
+      <li>✗ Mistake: warming up with "happy talk," stuffing a whole manual into the UI</li>
+      <li>✗ Mistake: sacrificing clarity for brevity — over-abbreviating or piling on jargon, leaving users more lost</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take an onboarding or empty-state passage from your product, cut it in half Krug-style, then run the four questions over what's left. <strong>Reflection</strong>: does "cut half" apply to character-based languages too, where each character carries more information? How would you adjust the yardstick?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>Who should really own microcopy — the designer, the engineer, or a dedicated UX writer?</summary>
+  <div class="ans">Ideally a dedicated UX writer, but most teams don't have one. In reality it becomes "the placeholder text someone fills in last," written by whoever ships the screen — and the product's voice splinters. A more workable approach: treat microcopy as part of design, write real copy (not Lorem ipsum) at the mockup stage, and let one person or one style guide own the voice. Copy isn't the paint you add before launch; it's the skeleton of the experience.</div>
+</details>
+<details>
+  <summary>Can AI mass-produce microcopy? What can you hand off, and what can't you?</summary>
+  <div class="ans">It can draft; it struggles to set the tone. AI is great at generating piles of first-draft buttons and hints, sparing you the blank-page dread; but the judgment of "how does the user feel right now, what tone catches them" depends on understanding the product's voice and the specific moment, and still needs a human. A workable split: AI produces candidates, a human filters by the Voice &amp; Tone guide, tunes tone, and sets boundaries — especially at high-stakes touchpoints like errors, payment, and privacy, where you shouldn't let AI make the call.</div>
+</details>
+<details>
+  <summary>Errors should "offer a next step," but sometimes there's no fix (the server is down). How do you balance honesty and care?</summary>
+  <div class="ans">When there's no fix, the "next step" is honesty plus the smallest viable action. Don't fake a solution ("please try again" when you know retrying won't help is deception); instead state the situation and give one thing they can actually do: "Something broke on our end and we're fixing it. Check back in a few minutes, or watch our status page." Care isn't whitewashing — it's not letting users batter a wall in vain, and not letting them think it's their fault. Honesty is itself a form of care.</div>
+</details>
+<details>
+  <summary>Should a global product hold one voice across cultures?</summary>
+  <div class="ans">The core of the voice (friendly, clear, trustworthy) should stay globally consistent, or the brand's personality fractures; but the register should localize. Playfulness and a casual "you" that feel natural in English can read as flippant in Japanese or formal business Chinese. So it's not copying the phrasing but carrying the same character expressed in locally appropriate ways — like the same person visiting different countries: temperament unchanged, manners adapted.</div>
+</details>
+<details>
+  <summary>Are concise, concrete, and conversational the same set of principles in long-form and in microcopy?</summary>
+  <div class="ans">The underlying spirit is shared; the constraints are utterly different. Long-form has room to build up, to pace itself, to ease the reader in; microcopy has no such luxury — it lands when the user is distracted, rushed, and just wants the task done, and it's tightly bound by space and context (a button is a few words). So microcopy pushes "concise" to the extreme, focuses "concrete" onto a single action, and even keeps "conversational" restrained — it isn't you talking, it's you saying the user's next step for them.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 23 · 2026</footer>
+
+</div>
+</body>
+</html>
