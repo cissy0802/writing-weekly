@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Getting Feedback — Day 24</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"WEAK ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"STRONG ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* ladder / structure */
+.ladder{background:#1f1f1f;color:#fafafa;padding:24px 22px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif}
+.ladder .rung{display:flex;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px dashed #4a4a4a}
+.ladder .rung:last-child{border-bottom:none}
+.ladder .step{flex-shrink:0;width:26px;height:26px;line-height:26px;text-align:center;background:#d8c98a;color:#1f1f1f;border-radius:50%;font-size:0.82rem;font-weight:700}
+.ladder .rung .name{font-size:0.97rem}
+.ladder .rung .name b{color:#d8c98a}
+.ladder .caption{font-size:0.85rem;color:#d8c98a;margin-top:14px;font-style:italic;text-align:center}
+
+/* two-column compare */
+.vt{display:flex;gap:14px;margin:18px 0;flex-wrap:wrap}
+.vt .col{flex:1;min-width:200px;background:#f8f6f1;border-radius:2px;padding:16px 18px}
+.vt .col .head{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:#8a7a4a;font-family:Georgia,serif;margin-bottom:8px;font-weight:700}
+.vt .col p{font-size:0.95rem;color:#2a2a2a;line-height:1.7}
+.vt .voice{background:#1f1f1f;color:#fafafa}
+.vt .voice .head{color:#d8c98a}
+.vt .voice p{color:#fafafa}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .vt{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 24 · 2026.06.11</div>
+  <h1>Writing &amp; Expression: Getting Feedback<span class="topic">The Feedback Ladder · Finding Readers · AI as a Reader · Receiving Criticism</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Writing is solitary, but writing well never is. Behind every doc you're proud of and every pitch that lands sits an invisible step: you showed it to someone, heard where they stalled, and revised. Today, four things — how to ask for feedback in layers, how to find the right readers and ask the right questions, how to use AI as a tireless reader, and the hardest one: how to catch criticism instead of deflecting it.</p>
+</header>
+
+<!-- Card 1: The Feedback Ladder -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Feedback Ladder: Name the Layer You Want First</h2>
+  <div class="en-name">From Meaning to Prescription</div>
+  <span class="tag">Liz Lerman · Layers · Order</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Feedback has layers: thesis → structure → paragraph → sentence → typos. <strong>Before you ask, declare which layer you want.</strong> Otherwise readers instinctively start at the most surface level — punctuation — while your draft has no skeleton yet.</p>
+    <div class="quote">
+      "The process is built on a fundamental belief: that the maker of the work knows something about it that no one else can know."
+      <span class="source">— Liz Lerman, <em>Critical Response Process</em> (2003)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>When people see your draft, their first reflex is to fix typos and nudge commas — it's the easiest, safest move. But if your draft hasn't even nailed its argument, correcting a comma is pointless: that sentence may get cut whole. So feedback should run <strong>top-down</strong> — foundation before finish. Choreographer Liz Lerman's Critical Response Process (CRP) turns this into a usable ladder: first the responder names what moved them, then the artist asks questions, then responders ask neutral questions, and only with permission do they offer opinions. The point of this order is to delay the reader's reflex to nitpick and move the author's real question to the front.</p>
+    <div class="ladder">
+      <div class="rung"><span class="step">1</span><span class="name"><b>Statements of meaning</b> — reader first: what stuck with you, what landed?</span></div>
+      <div class="rung"><span class="step">2</span><span class="name"><b>Artist asks</b> — you lead: I worry section 2 is convoluted — did you stall there?</span></div>
+      <div class="rung"><span class="step">3</span><span class="name"><b>Neutral questions</b> — facts only, no verdicts: what data is this conclusion based on?</span></div>
+      <div class="rung"><span class="step">4</span><span class="name"><b>Opinions, with permission</b> — "I have a take on the opening — want to hear it?"</span></div>
+      <div class="caption">CRP's four rungs — nitpicking last, the author's question first</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">(asking for feedback) "Take a look at this and tell me anything that's off."</span>
+      <span class="after">"This is a rough draft. I only need to know one thing: does the core argument hold and convince? Ignore wording and typos — that's the next round."</span>
+      <span class="note">The first opens the whole ladder at once, so readers start at the shallowest rung; the second locks one layer, so the feedback is usable.</span>
+    </div>
+    <div class="example">
+      <span class="before">"Can you review this doc?"</span>
+      <span class="after">"This is a rough draft — I only need to know if the argument holds. Ignore wording and typos for now."</span>
+      <span class="note">Naming "which layer this round" puts the reader's time where it counts and avoids fighting over sentences that may get cut.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Design-doc reviews, draft proposals, speech rehearsals — any writing you iterate in rounds</li>
+      <li>✓ Early: ask only for thesis/structure feedback; near final: ask for sentences/typos</li>
+      <li>✗ Mistake: handing out a still-forming draft as if final, inviting a flood of comma fixes</li>
+      <li>✗ Mistake: the author never asks, just absorbs verdicts passively, missing "the part I worried about"</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Before your next review request, write one line naming "the only layer I want this round" and pin it to the top of the doc. <strong>Question</strong>: As a reviewer, when someone hasn't named a layer, should you default to starting at the thesis — or first ask them which layer they want?</p>
+  </div>
+</section>
+
+<!-- Card 2: Finding Readers -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Finding Readers: Write with the Door Closed, Revise with It Open</h2>
+  <div class="en-name">The Right Readers, the Right Questions</div>
+  <span class="tag">Stephen King · Timing · Questions</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Feedback too early kills a draft; too late misses the window to fix. <strong>Write a complete first draft behind a closed door, then open it to a few of the right readers</strong> — and ask specific questions, not "what do you think?"</p>
+    <div class="quote">
+      "Write with the door closed, rewrite with the door open."
+      <span class="source">— Stephen King, <em>On Writing</em> (2000)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A first draft is fragile. Ask for opinions before it's formed and others' hesitation makes you doubt early and abandon it mid-way — that's the point of the closed door: finish saying it before any outside voice interrupts. Once you have a complete draft, open the door. But opening it has its own craft. Pick the <strong>right</strong> readers — your target audience, not the person who comforts you best nor the one who only nitpicks. And make questions <strong>specific</strong>. "What do you think?" earns only "it's good," a useless courtesy; "Where did your attention start to drift?" forces out a real signal. Ask for a diagnosis, not a score.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">"Have a look at this — how is it? Any good?"</span>
+      <span class="after">"Where did your attention drift? Which sentence did you have to re-read to get? What's the one line you remember after finishing?"</span>
+      <span class="note">The first begs for reassurance and earns "it's fine"; the second asks about observable behavior the reader can actually report — and you can actually use.</span>
+    </div>
+    <div class="example">
+      <span class="before">"What do you think? Is it good?"</span>
+      <span class="after">"Where did your attention drop? Which sentence did you re-read? What's the one line you remember?"</span>
+      <span class="note">Trade the subjective score for answerable diagnostics — where they drifted, where they stalled. The body's reactions don't lie.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ When the draft is done and you're stuck: find 1–3 target readers and ask specific questions</li>
+      <li>✓ Choosing readers: someone close to the real audience &gt; the most expert &gt; the most flattering</li>
+      <li>✗ Mistake: asking around after only two paragraphs, getting pulled off course, unable to keep writing</li>
+      <li>✗ Mistake: asking only "is it good?" and collecting polite nothings — as good as not asking</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Send a recent draft to one target reader and ask only three specific questions (where you drifted / where you re-read / which line you remember). <strong>Question</strong>: Does "closed-door drafting" need a discount for technical docs, where early alignment matters? Where's the line between early review and premature feedback?</p>
+  </div>
+</section>
+
+<!-- Card 3: AI as a Reader -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>AI as a Reader: Tireless, Always On — and Mediocre</h2>
+  <div class="en-name">Diagnose, Don't Delegate</div>
+  <span class="tag">Human-AI · Diagnosis · Limits</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>AI is a reader on demand, never tired, instantly flagging what's unclear or where logic breaks — but its taste is the average. <strong>Use it to diagnose, not to draft.</strong> The moment you let it "fix it for you," your voice gets sanded into AI-speak.</p>
+    <div class="quote">
+      "Rewriting is the essence of writing well: it's where the game is won or lost."
+      <span class="source">— William Zinsser, <em>On Writing Well</em> (1976)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Zinsser says writing is won or lost in revision — and revision needs a feedback loop. AI drops the cost of that loop to nearly zero: 3 a.m., seventh draft, it's still there. Its strongest use is <strong>as a reader, not an author</strong>: have it point out which sentence confuses, which claim lacks support, where you thought you were clear but weren't. The key is the instruction — tell it to <strong>diagnose, not rewrite</strong>. Say "fix this up" and it will quietly sand off your edges and swap in safe, flat AI-speak. Remember its blind spots too: it leans toward agreement, won't truly oppose your core view, and lacks your context and taste. Use it to sweep for blind spots; keep judgment for yourself.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">(to AI) "Polish this article and make it better."</span>
+      <span class="after">"Don't rewrite. As a demanding reader, name the three spots most likely to confuse or lose me, say why for each, but keep my wording and tone."</span>
+      <span class="note">"Polish" hands over the wheel for flat AI-speak; "name three confusing spots" makes it the reader and you the author — sharp feedback, you still steering.</span>
+    </div>
+    <div class="example">
+      <span class="before">"Make this email sound more professional."</span>
+      <span class="after">"Don't rewrite. Tell me where a busy reader might misread my intent, and which sentence buries the ask."</span>
+      <span class="note">The first turns the email into generic business-speak; the second has AI stress-test it as a "busy reader" — then you revise.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ First-pass self-check when no human reader is around: clarity, logic gaps, buried points</li>
+      <li>✓ Have it role-play a specific reader (busy exec / layperson / contrarian) to stress-test</li>
+      <li>✗ Mistake: letting it "fix it for you," surrendering voice to a uniform average tone</li>
+      <li>✗ Mistake: taking its agreement as endorsement — it rarely pushes back; cover blind spots yourself</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take something you wrote, have AI "diagnose only, don't rewrite," naming three spots readers will find confusing — then revise it <strong>yourself</strong>. <strong>Question</strong>: AI feedback's biggest risk is being cheap and compliant — given too easily, too eager to agree. Could that slowly erode our courage to ask real people?</p>
+  </div>
+</section>
+
+<!-- Card 4: Receiving Criticism -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Receiving Criticism: Trust the "What's Wrong," Doubt the "How to Fix"</h2>
+  <div class="en-name">Symptom vs. Prescription</div>
+  <span class="tag">Neil Gaiman · No Defending · Symptom/Cure</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>When criticism lands, don't defend. Gaiman's rule is the golden thread: <strong>when readers say something's wrong, they're almost always right; when they say how to fix it, they're almost always wrong.</strong> Take their reaction as a "symptom"; keep diagnosis and prescription for yourself.</p>
+    <div class="quote">
+      "When people tell you something's wrong or doesn't work for them, they are almost always right. When they tell you exactly what they think is wrong and how to fix it, they are almost always wrong."
+      <span class="source">— Neil Gaiman (2012, echoing Stephen King's rule of feedback)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Splitting feedback in two is where this rule's power lies. The reader is a <strong>reliable reporter of symptoms</strong>: this part reads awkwardly, that part lost me — a real experience, not up for debate. But the reader is often a <strong>poor prescriber</strong>: their specific fix ("add an explanation," "cut this line") usually treats the surface, because they don't hold your whole picture. So your job is to take "what's wrong" at face value and treat "how to fix" as a clue, not a command. The prerequisite is not defending on the spot — defend, and you're busy guarding the old version instead of hearing the symptom. Collect first, judge later.</p>
+    <div class="vt">
+      <div class="col"><div class="head">Symptom (trust)</div><p>"I stalled in section 2," "I didn't remember the ending" — the reader's real reaction, almost always right</p></div>
+      <div class="col voice"><div class="head">Prescription (doubt)</div><p>"You should add an example," "Cut this line" — the reader's specific cure, almost always wrong; a clue only</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">(when a problem is flagged) "You probably misread it — what I actually meant was... that part was intentional."</span>
+      <span class="after">"Thank you — let me note that down. You stalled in section 2; that's important. I'll work out the fix later."</span>
+      <span class="note">The first defends on the spot, guarding the old draft and choking off further feedback; the second takes the symptom, holds off on the prescription, and leaves judgment to a calmer self.</span>
+    </div>
+    <div class="example">
+      <span class="before">"You misunderstood — that part was intentional."</span>
+      <span class="after">"Good to know you stumbled there. I'll figure out the fix — thanks for flagging it."</span>
+      <span class="note">"You misunderstood" makes them go quiet and stop telling you the truth next time; accepting the symptom while keeping the cure keeps honest feedback flowing.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Doc reviews, design reviews, a promo packet reviewed by peers — any moment you're judged</li>
+      <li>✓ On the spot, do one thing: understand and record the symptom; decide the fix later, calmly</li>
+      <li>✗ Mistake: defending and explaining live, spending energy guarding the old draft, pushing readers away</li>
+      <li>✗ Mistake: accepting every reader's "prescription" and revising it into a mess by committee</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Next time you get criticism, force your first sentence to be only "Thank you — let me note that down," and swallow the defense. Later, sort: which are symptoms (trust), which are prescriptions (doubt). <strong>Question</strong>: Does Gaiman's rule have exceptions? When is a reader's "prescription" actually right and worth adopting straight?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Deeper Questions —</div>
+
+<details>
+  <summary>If "readers are almost always wrong about how to fix it," should we doubt a professional editor's specific edits too?</summary>
+  <div class="ans">It depends who. Gaiman's rule targets ordinary readers — they report experience precisely but don't hold your whole picture, so their cures treat symptoms. A senior editor or domain expert is different: they're both reader and craftsperson, so their "prescriptions" are distilled experience with a far higher hit rate. The rule isn't against all advice; it reminds you that advice's credibility scales with the giver's expertise. Take symptoms from laypeople; weigh prescriptions seriously from experts.</div>
+</details>
+<details>
+  <summary>Real feedback is costly and can bruise feelings; AI is on demand — will everyone just end up asking AI?</summary>
+  <div class="ans">A real risk. AI feedback is cheap, instant, and never embarrassing — genuinely tempting. But it has two things real people can't replace: real stakes — your colleagues and users actually decide things after reading; AI doesn't — and surprise: real people bring angles you and AI both miss, while AI trends to the average answer. The healthy move is division of labor: use AI for the high-frequency first pass, and save human energy for the high-value, critical drafts. AI as sparring partner; people for the real match.</div>
+</details>
+<details>
+  <summary>Does "closed-door drafting" still hold on a collaboration-heavy technical team?</summary>
+  <div class="ans">The principle holds; the scale shifts. King meant the solitary literary first draft; for design docs and RFCs, closing the door too long backfires — wrong direction compounds the further you write, and early alignment saves heavy rework. The compromise: close the door until you "can express one complete idea" (however rough), then open it; don't hold out for perfection before showing anyone, nor mass-broadcast for opinions the instant a thought appears. You want "a complete draft to review," not "perfect."</div>
+</details>
+<details>
+  <summary>Do feedback cultures differ across languages? Where is "don't defend" hardest?</summary>
+  <div class="ans">Culture does shape feedback's form. English workplaces favor the "praise then suggest" sandwich and name the problem more directly; in Chinese contexts criticism is often more indirect — "it's okay," "let me look again" may hide real reservations you must probe to surface. "Don't defend" is harder where face matters — admitting the problem on the spot feels like conceding. But precisely in such cultures, the restraint of "thank you, I'll note it" is more precious: it lets others dare to tell the truth, and truth is the scarce thing.</div>
+</details>
+<details>
+  <summary>Feedback splits across text / talk / video — is asking for it the same?</summary>
+  <div class="ans">The foundation is the same (ask for diagnosis, not a score), but the handles differ. Text can be read asynchronously and closely, suiting layered written feedback like CRP; a talk is live, where the most useful feedback is "the moment you drifted, the line you couldn't catch," gathered at rehearsal, not the real event; video is about "did the first three seconds hold them, where did they want to skip," often read from data (completion rate, drop-off) over spoken praise. The form changes how "the reader's real reaction" shows up — but you're always hunting the same thing: where they fall behind.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 24 · 2026</footer>
+
+</div>
+</body>
+</html>
