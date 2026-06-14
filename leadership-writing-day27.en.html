@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Writing for Leadership &amp; Change — Day 27</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .think{margin-top:12px;padding-top:12px;border-top:1px solid #4a4a4a;color:#d8c98a;font-style:italic;font-size:0.94rem}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* visual: slides vs memo */
+.tension-vis{background:#f8f6f1;padding:24px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.tension-vis .row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:8px 0}
+.tension-vis .pole{flex:1;padding:14px 10px;border:1px solid #c8c0a8;background:#fff;font-family:Georgia,serif}
+.tension-vis .pole.what-is{color:#6a6a6a}
+.tension-vis .pole.what-could{color:#8a5a2a;font-weight:600;border-color:#8a7a4a}
+.tension-vis .arrow{font-size:1.4rem;color:#8a7a4a;font-family:Georgia,serif}
+.tension-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+/* principle formula */
+.formula{background:#1f1f1f;color:#fafafa;padding:24px 22px;margin:18px 0;border-radius:2px;font-family:Georgia,serif;text-align:center}
+.formula .eq{font-size:1.1rem;line-height:2;letter-spacing:0.5px}
+.formula .eq .plus,.formula .eq .eq-sign{color:#d8c98a;margin:0 10px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:4px 10px;border-bottom:1px dashed #d8c98a;font-style:italic}
+.formula .eq .result{display:inline-block;padding:4px 12px;background:#d8c98a;color:#1f1f1f;font-weight:700;border-radius:2px;font-style:normal}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+/* change four acts */
+.datastory-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.datastory-vis .ds-row{display:flex;gap:8px;align-items:stretch}
+.datastory-vis .ds-step{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.datastory-vis .ds-step .step-num{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.datastory-vis .ds-step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.95rem}
+.datastory-vis .ds-step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.datastory-vis .ds-step.peak .step-title{color:#d8c98a}
+.datastory-vis .ds-step.peak .step-num{color:#d8c98a}
+.datastory-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.details-wrap{margin-top:40px}
+.details-wrap h3{font-size:1.1rem;font-weight:700;color:#1f1f1f;margin-bottom:16px;font-family:Georgia,"Noto Serif SC",serif;border-bottom:1px solid #d0d0d0;padding-bottom:8px}
+details{background:#fff;border:1px solid #e0e0e0;border-radius:2px;margin-bottom:10px;padding:0}
+details summary{padding:14px 18px;cursor:pointer;font-weight:600;color:#1f1f1f;font-size:0.98rem;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary:before{content:"▸ ";color:#8a7a4a}
+details[open] summary:before{content:"▾ "}
+details .answer{padding:0 18px 16px;font-size:0.94rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .tension-vis .row{flex-direction:column}
+  .tension-vis .arrow{transform:rotate(90deg)}
+  .datastory-vis .ds-row{flex-direction:column}
+  .formula .eq{font-size:0.95rem;line-height:2.2}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 27 · 2026.06.14</div>
+  <h1>Writing &amp; Expression: Writing for Leadership &amp; Change<span class="topic">Leading by Memo · Company Narrative · Principles · Change Story</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Strategy buried in slides is forgotten; orders given in meetings leave no trace. A senior leader's real leverage is writing — a memo that has been thought through, a narrative people can retell, a set of principles others can inherit, all of which work for you when you're not in the room. This week: how to lead with words, from Bezos's six-page memo to Dalio's principles to the story that carries people through the valley of change.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Leading by Memo: Writing Instead of Ordering in Meetings</h2>
+  <div class="en-name">Writing as a Team's Operating System</div>
+  <span class="tag">Bezos · Decision Tool</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>The scarcest leadership skill isn't running meetings — it's writing. A well-structured memo forces you to turn vague intuition into a checkable argument, so that <strong>the best idea wins, not the loudest voice.</strong></p>
+    <div class="quote">
+      "We don't do PowerPoint (or any other slide-oriented) presentations at Amazon. Instead, we write narratively structured six-page memos. We silently read one at the beginning of each meeting in a kind of 'study hall.'"
+      <span class="source">— Jeff Bezos, 2017 Amazon Shareholder Letter</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Slides hide broken logic behind bullets — nobody knows whether the link between point two and point three is "because" or "but." Full sentences and paragraphs have nowhere to hide: verbs must land, causation must be explicit, gaps show on the page. So writing a memo is a <strong>device that forces thinking.</strong> For a leader it has a second value: a good memo works in your absence — asynchronous, forwardable, archivable, far more reliable than the memory of a meeting.</p>
+    <div class="tension-vis">
+      <div class="row">
+        <div class="pole what-is">Slides / Bullets<br><span style="font-size:0.82rem;color:#a0a0a0">points listed · logic lives in your mouth</span></div>
+        <div class="arrow">→</div>
+        <div class="pole what-could">Narrative Memo<br><span style="font-size:0.82rem;color:#a0a0a0">full sentences · causation can't hide</span></div>
+      </div>
+      <div class="caption">From "persuade by presence" to "convince by argument"</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">• Q3 growth slowing • Recommend more ad spend • Budget +$2M</span>
+      <span class="after">Q3 organic growth fell from 8% to 3%, mainly because Channel A's acquisition cost doubled (data in appendix). Staying with it costs us $12M GMV for the year. I recommend shifting $2M from Channel A to Channel B — B's CAC is half, but needs a 6-week ramp, so Q3 short-term numbers look worse.</span>
+    </div>
+    <div class="example">
+      <span class="before">"We value clear communication and want everyone aligned on the roadmap."</span>
+      <span class="after">Half our team can't name our top priority for this quarter. Until they can, every planning meeting re-litigates the same trade-offs. This memo proposes one sentence we all commit to — and the three things we stop doing because of it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Decision proposals, strategy reviews, cross-team alignment, any decision worth a paper trail</li>
+      <li>✗ Not for: pure status updates, incident reports, or trivia in a small high-trust team (six pages becomes bureaucracy)</li>
+      <li>Mistake: piling slide bullets into paragraphs — the form changed but the broken logic remains</li>
+      <li>Mistake: using jargon and passive voice to mask "I'm not sure" — a good memo states costs and risks plainly</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take the one thing you plan to "verbally pitch" in a meeting next week and rewrite it as a one-page memo: conclusion first, then reasons, data, costs, recommendation.</p>
+    <p class="think">Reflection: When you get stuck writing, is it really a prose problem — or have you not yet figured out what you're arguing for?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Company Narrative: A Story People Can Retell</h2>
+  <div class="en-name">Strategy People Can Retell</div>
+  <span class="tag">Horowitz · Org Narrative</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>Strategy written in a deck is forgotten; strategy turned into a story, everyone can retell. A company narrative isn't a slogan — it's a causal chain: <strong>where we came from, what changed in the world, why we must do this, and how the world will differ once we succeed.</strong></p>
+    <div class="quote">
+      "A company without a story is usually a company without a strategy. The most important thing that you communicate to your employees is not strategy, mission, or vision; it's the story."
+      <span class="source">— Ben Horowitz, The Hard Thing About Hard Things (2014)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Brains don't retain a parallel list of strategic points, but they remember a story. The first job of narrative is <strong>alignment</strong>: when thousands of people converge on the same answer to "why do we exist," coordination friction drops sharply. The second job is <strong>a filter</strong>: any project that doesn't serve the narrative should be cut. Amazon's "Earth's most customer-centric company," Tesla's "accelerate the world's transition to sustainable energy" — one sentence governs countless concrete trade-offs. But the narrative must be true: a fabricated story gets spotted instantly on the front line.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">Our mission is to be the industry-leading provider of intelligent cloud services, continuously creating value for customers.</span>
+      <span class="after">Ten years ago, every company had to build its own data center to use AI. Today we let a three-person team deploy models like a tech giant. We exist so compute is no longer a privilege of the few.</span>
+    </div>
+    <div class="example">
+      <span class="before">We strive to deliver world-class solutions that delight our customers and drive shareholder value.</span>
+      <span class="after">Software used to take a year and a whole team to build. We exist so one person with an idea can ship it in a weekend. Every feature we cut or keep answers to that.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Strategy talks, all-hands, hiring, fundraising, onboarding, the internal basis for product trade-offs</li>
+      <li>✗ Not for: execution specs or technical detail (narrative gives direction, not specifics)</li>
+      <li>Mistake: mistaking a "mission statement" for a narrative — if it still holds with a competitor's name swapped in, it isn't one</li>
+      <li>Mistake: only "how great it'll be," missing the origin and tension of "where we came from and why we must"</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Write your team's or product's narrative in four sentences: where we came from → what changed → why we must do this → how things will differ once we succeed. Hand it to someone outside the group and ask if they can retell it accurately.</p>
+    <p class="think">Reflection: Does your current mission statement still hold with a competitor's name swapped in? If so, it isn't a narrative yet — just boilerplate.</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Writing Principles: Turning a Judgment into a Reusable Rule</h2>
+  <div class="en-name">Turning Decisions into Reusable Rules</div>
+  <span class="tag">Dalio · Decision Capital</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>A leader makes judgments daily, but most scatter to the wind. Ray Dalio's method: each time you meet a class of problem, write down "how I should handle this" as a principle — <strong>a general if-then.</strong> On paper, it can be tested, inherited, and shared by the team.</p>
+    <div class="quote">
+      "Principles are fundamental truths that serve as the foundations for behavior that gets you what you want out of life. They can be applied again and again in similar situations to help you achieve your goals."
+      <span class="source">— Ray Dalio, Principles: Life and Work (2017)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Personal intuition doesn't scale; a written principle does. A good one has two parts: <strong>a trigger situation + a response</strong> ("when X, then Y"). It distills a one-off experience into a reusable rule — you don't judge from scratch each time, and the team can act on the same logic in your absence. The key is specificity: abstract values ("we value candor") can't guide action; an operable principle ("raise disagreements to someone's face, never behind their back, and always with an alternative") can.</p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">Trigger — When X</span>
+        <span class="plus">+</span>
+        <span class="term">Response — Then Y</span>
+      </div>
+      <div class="eq" style="margin-top:6px">
+        <span class="eq-sign">=</span>
+        <span class="result">Reusable Principle</span>
+      </div>
+      <div class="caption">specific · operable · sharpened by disagreement</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">We are a company that values data-driven decisions.</span>
+      <span class="after">When a decision can be tested by a small experiment, run the experiment before arguing; only when the experiment costs more than the decision's risk do we decide by judgment.</span>
+    </div>
+    <div class="example">
+      <span class="before">We value ownership.</span>
+      <span class="after">When something is broken and it's unclear whose job it is to fix it, the person who noticed it owns it — until they've either fixed it or handed it to a named owner.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Team culture docs, decision frameworks, recurring dilemmas, passing on experience to new hires</li>
+      <li>✗ Not for: one-off unique situations, or exploratory phases that need flexibility (premature rules become shackles)</li>
+      <li>Mistake: treating a value as a principle — "we value integrity" guides no concrete action</li>
+      <li>Mistake: principles that only accumulate — never revisited, so the world changes while the rules stay frozen</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Recall one judgment you made this week and write it as a principle: "When ____, then ____." Then ask: will it still hold next time? Send it to the team and see if it sparks disagreement — disagreement is exactly the chance to sharpen it.</p>
+    <p class="think">Reflection: The line you most often repeat to your reports — shouldn't it already be written down as a principle, sparing you the re-telling?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Change Narrative: Carrying People Through the Messy Middle</h2>
+  <div class="en-name">Leading Through the Messy Middle</div>
+  <span class="tag">Kotter · Duarte Illuminate</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's Words</div>
+    <p>Change fails mostly not because the plan is wrong, but because communication falls short. No one abandons a familiar present because of one deck. The job of a change narrative is to <strong>pull people, again and again, from "the safety of now" toward "the necessity of next"</strong> — and to walk with them through the messy, doubting, want-to-turn-back valley in the middle.</p>
+    <div class="quote">
+      "The real issue is that their vision is often undercommunicated — by a factor of ten (or one hundred or even one thousand)."
+      <span class="source">— John Kotter, Leading Change (1996)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>In <em>Illuminate</em>, Duarte maps the change journey as four acts: Dream (paint the vision) → Leap (encourage the jump) → Fight (stay through resistance and chaos) → Climb (celebrate small wins, persist). Most leaders deliver only the Dream and assume communication is done — but people are most likely to bail in the <strong>Fight</strong>. A real change narrative reappears at the low point: acknowledge that the hardship is real, give the next concrete small step, and make people believe "just a bit further and we're there."</p>
+    <div class="datastory-vis">
+      <div class="ds-row">
+        <div class="ds-step">
+          <span class="step-num">Act I</span>
+          <span class="step-title">Dream</span>
+          why we must change,<br>what the future looks like
+        </div>
+        <div class="ds-step">
+          <span class="step-num">Act II</span>
+          <span class="step-title">Leap</span>
+          the first<br>concrete step
+        </div>
+        <div class="ds-step peak">
+          <span class="step-num">Act III</span>
+          <span class="step-title">Fight</span>
+          doubt and chaos,<br>where people bail
+        </div>
+        <div class="ds-step">
+          <span class="step-num">Act IV</span>
+          <span class="step-title">Climb</span>
+          celebrate wins,<br>persist to the end
+        </div>
+      </div>
+      <div class="caption">Duarte's Illuminate four acts — communication must reappear at the Fight</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="before">The company has decided to go AI-first across the board. Please cooperate; we expect to finish in three months.</span>
+      <span class="after">I know many of you are thinking: our current work is already good, why change? (facing the Fight) But customer needs now shift every three months, and the old pace can't keep up. (the necessity in Dream) This month we do just one small thing — each team picks one workflow and rebuilds it with AI, then we review together. (the Leap step) I'll sync progress with you weekly. (Climb alongside)</span>
+    </div>
+    <div class="example">
+      <span class="before">Effective Monday, we're reorganizing into pods. Please update your calendars.</span>
+      <span class="after">I know reorgs feel like the ground moving under you — and the last one didn't go great. Here's why this one is different, what won't change, and the one thing I'm asking of you this week. I'll be in the room for questions every day at 4pm.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Reorgs, strategic pivots, process change, M&amp;A integration — any time you need people to change habits</li>
+      <li>✗ Not for: pure informational changes requiring no behavior shift (e.g., an office-move notice)</li>
+      <li>Mistake: saying it once and assuming everyone got it — Kotter says you undercommunicated by at least tenfold</li>
+      <li>Mistake: painting only the Dream, never staying for the Fight — the vision is lovely, but no one helps them across the valley</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a change you're driving and write its four acts: Dream / Leap / Fight / Climb, one sentence each. Focus on the Fight: how will you stay with the team through the middle of doubt?</p>
+    <p class="think">Reflection: Last time you communicated a change, did you say it once and leave — or did you really repeat it tenfold, reappearing at the low point?</p>
+  </div>
+</section>
+
+<div class="details-wrap">
+  <h3>Going Deeper</h3>
+  <details>
+    <summary>Is memo culture right for every team? When does writing a memo become bureaucracy?</summary>
+    <div class="answer">A memo's value is "forcing clear thought + an async record"; its cost is writing time. For high-stakes, cross-team, alignment-needing decisions, that time pays off; in a small high-trust team's daily work, forcing six pages only slows things down. The test is "reversibility and blast radius": hard-to-reverse, many-people decisions deserve a memo; quickly reversible ones, a single message will do. Form serves the weight of the decision, not the other way around.</div>
+  </details>
+  <details>
+    <summary>When you don't fully believe the company narrative, how do you convey it as a middle manager?</summary>
+    <div class="answer">The worst move is mechanically reciting words you don't believe — the front line sees through it and trust collapses. Better is "translate, don't transmit": find the part of the narrative you genuinely agree with, tell it in your own words close to your team's reality, and honestly flag the parts you're still working out. Leadership doesn't require pretending to be all-knowing; it requires not lying. Sincere "partial belief" is more compelling than fake "total faith."</div>
+  </details>
+  <details>
+    <summary>For the same change message, when to write a memo, when to speak on stage, when to record a video?</summary>
+    <div class="answer">Look at two dimensions: complexity and emotional weight. Complex, precision-needing, re-readable content — write a memo (logic that survives slow reading). Emotionally heavy, trust-building, "needs to see a human" content — go on stage or record video (tone, pauses, eyes carry what text can't). Change communication often needs both: pin the logic with a memo, then light the emotion with a live talk. Not either/or, but division of labor.</div>
+  </details>
+  <details>
+    <summary>Can the English leadership-memo tradition transplant straight into a Chinese context?</summary>
+    <div class="answer">The skeleton transplants; the tone needs tuning. BLUF, conclusion-first, explicit causation — these are thinking structures, language-agnostic, and Chinese benefits equally. But the near-bluntness of an English memo can feel harsh or even offensive dropped into a Chinese workplace. The reconciliation: keep the conclusion first, but leave room in wording around "costs" and "objections" — turn "this plan will fail" into "this plan has two risks I haven't thought through." Clear isn't the same as harsh; indirect isn't the same as evasive.</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily Index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 27 · 2026</footer>
+
+</div>
+</body>
+</html>
