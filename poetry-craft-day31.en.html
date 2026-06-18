@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: The Craft of Poetry — Day 31</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.cn-trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* visualization: objective correlative flow */
+.flow{background:#f8f6f1;padding:22px 14px;margin:18px 0;border-radius:2px}
+.flow .frow{display:flex;gap:8px;align-items:stretch}
+.flow .fbox{flex:1;padding:14px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.flow .fbox .ftitle{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.92rem}
+.flow .fbox.mid{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.flow .fbox.mid .ftitle{color:#d8c98a}
+.flow .farrow{display:flex;align-items:center;color:#8a7a4a;font-size:1.2rem;font-family:Georgia,serif}
+.flow .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* visualization: line-break rhythm */
+.breakvis{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px;font-family:Georgia,serif}
+.breakvis .bv-row{margin:10px 0}
+.breakvis .bv-tag{font-size:0.74rem;letter-spacing:1.5px;text-transform:uppercase;color:#8a7a4a;font-weight:700;margin-bottom:4px;display:block}
+.breakvis .bv-line{font-size:1.05rem;color:#2a2a2a;line-height:1.6;white-space:pre-line}
+.breakvis .spot{color:#a04040;font-weight:700;border-bottom:2px solid #a04040}
+.breakvis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
+summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
+details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .flow .frow{flex-direction:column}
+  .flow .farrow{transform:rotate(90deg);justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 31 · 2026.06.18</div>
+  <h1>Writing &amp; Expression: The Craft of Poetry<span class="topic">Image · Rhythm · White Space · Constraint</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Why should a senior engineer read poetry? Because poetry is the limit case of linguistic compression — the most meaning packed into the fewest words. A vision people remember, a slide headline that lands, a tagline that travels on its own: they all flex the same muscles a poet trains — image, rhythm, white space, constraint. This week we don't learn to write poems. We learn how a poet wrings a sentence dry.</p>
+</header>
+
+<!-- Card 1: Image & Compression -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Image &amp; Compression: Give Me a Thing, Not an Adjective</h2>
+  <div class="en-name">Show the Thing, Not the Feeling</div>
+  <span class="tag">Poetry · Core</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master</div>
+    <p>Don't tell me you're sad — hand me something that makes me sad on my own. Emotion can't be shouted directly; you find a set of concrete objects that <strong>equal</strong> that emotion. Eliot called it the "objective correlative."</p>
+    <div class="quote">
+      "The only way of expressing emotion in the form of art is by finding an 'objective correlative'; a set of objects, a situation, a chain of events which shall be the formula of that particular emotion."
+      <span class="source">— T. S. Eliot, "Hamlet and His Problems" (1919)</span>
+    </div>
+    <p class="cn-trans">Pound's Imagist definition is the same idea, compressed: an image is "that which presents an intellectual and emotional complex in an instant of time." One precise object beats ten adjectives.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>An abstract word <em>tells</em>; an image <em>shows</em>. The brain shrugs at "we missed the quarter," but flinches at "the rep let the coffee go cold three times and still couldn't press call." Wang Wei, the Tang master, wrote of the frontier: "Lone smoke rises straight in the vast desert; the long river, a round setting sun" — ten characters, not one emotion word, yet the whole desolation arrives. Poets know it before anyone: to make someone <em>feel</em>, first give them something to see, touch, or hear.</p>
+    <div class="flow">
+      <div class="frow">
+        <div class="fbox"><span class="ftitle">Emotion</span>the abstract thing<br>inside you</div>
+        <div class="farrow">→</div>
+        <div class="fbox mid"><span class="ftitle">Object</span>a concrete,<br>sensory image</div>
+        <div class="farrow">→</div>
+        <div class="fbox"><span class="ftitle">Emotion</span>re-blooms inside<br>the reader</div>
+      </div>
+      <div class="caption">Objective correlative: don't transmit the feeling — transmit the thing that triggers it</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Team morale is low; everyone is exhausted and has lost faith in the project.</span>
+      <span class="after">At last week's standup, no one claimed a task. The screen was lit; all ten cameras were black.</span>
+    </div>
+    <div class="example">
+      <span class="before">Our users are frustrated with the slow load times.</span>
+      <span class="after">Our users watch a spinner for nine seconds — then close the tab.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Vision statements, slide headlines, product taglines, the opening of a review, teaching a child a lesson</li>
+      <li>✓ Any sentence you want <em>remembered</em>, not merely <em>known</em></li>
+      <li>✗ Stacking adjectives ("extremely important, absolutely critical, deeply urgent" — three modifiers lose to one picture)</li>
+      <li>✗ The wrong image: concrete for its own sake, a picture unrelated to the feeling you meant to raise</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick a recent abstract, judgment-laden line ("the launch was a great success," "the customer is unhappy"). Delete every adjective; replace it with a single concrete image. <strong>Question</strong>: how far can "showing" travel inside a technical doc? Where is "just say it" the more responsible choice?</p>
+  </div>
+</section>
+
+<!-- Card 2: Rhythm & the Line -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Rhythm &amp; the Line Break: Treat the Break as Punctuation</h2>
+  <div class="en-name">The Line Break as Punctuation</div>
+  <span class="tag">Poetry · Rhythm</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master</div>
+    <p>Where a line breaks decides the reader's breath and stress. Free verse isn't the absence of meter — it moves the responsibility from external rules to your own ear.</p>
+    <div class="quote">
+      "Prose = words in their best order; poetry = the best words in their best order."
+      <span class="source">— S. T. Coleridge, Table Talk (1827)</span>
+    </div>
+    <p class="cn-trans">The poet Wen Yiduo named "three beauties" of verse — musical, pictorial, architectural. A poem's order is designed for the ear and the eye at once.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The line break is a free emphasis tool. Leave a word alone at the end or start of a line and a spotlight falls on it; the reader pauses half a beat, and that half-beat is stress. Bei Dao opens "The Answer" with a guillotine rhythm: "Baseness is the password of the base, / nobility the epitaph of the noble" — parallelism plus the break, one clean cut, no appeal. Move this muscle into the office: a long sentence crammed with three clauses leaves the reader winded; break it into long-and-short lines and the point stands up on its own.</p>
+    <div class="breakvis">
+      <div class="bv-row">
+        <span class="bv-tag">Break A</span>
+        <div class="bv-line">We deliver quickly,
+reliably, at scale.</div>
+      </div>
+      <div class="bv-row">
+        <span class="bv-tag">Break B</span>
+        <div class="bv-line">We ship.
+Fast.
+Or we <span class="spot">don't ship</span> at all.</div>
+      </div>
+      <div class="caption">Same meaning, different break — a different word gets lit. Rhythm is stress.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">We are committed to continuously delivering stable, reliable, high-quality solutions at an industry-leading standard.</span>
+      <span class="after">We do one thing: get it right. Then hand it to you, on time.</span>
+    </div>
+    <div class="example">
+      <span class="before">We are committed to delivering best-in-class solutions in a timely manner.</span>
+      <span class="after">We ship. Fast. Or we don't ship at all.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Slide headlines, speeches, slogans, openers — anything meant to be read aloud</li>
+      <li>✓ Stuck on a long paragraph? Read it aloud and break where you breathe</li>
+      <li>✗ All short sentences: chopped into a drumroll, it loses contour and turns monotonous</li>
+      <li>✗ Breaks as decoration: split at a meaningless spot and rhythm detaches from sense</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a baggy long sentence you wrote. Read it aloud and mark a slash at every natural breath. Re-set it as long-and-short lines along those pauses, and see which word got pushed to the front or end. <strong>Question</strong>: Chinese (no spaces, paced by punctuation) and English (paced by syllabic stress) carry rhythm differently — in a bilingual talk, how do you make both ears hear music?</p>
+  </div>
+</section>
+
+<!-- Card 3: The Art of Leaving Out -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>White Space: The Strongest Part Is Often the Unwritten One</h2>
+  <div class="en-name">Say It Slant</div>
+  <span class="tag">Poetry · Restraint</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master</div>
+    <p>Say it all and the flavor is gone. Leave a gap, let the reader walk in — the meaning he completes himself holds far better than the meaning you pour into him.</p>
+    <div class="quote">
+      "Not one word set down, yet all the elegance attained."
+      <span class="source">— Sikong Tu, "Reserve," The Twenty-Four Modes of Poetry (Tang)</span>
+    </div>
+    <p class="cn-trans">Dickinson's Western version of the same law: "Tell all the truth but tell it slant —." Hemingway's iceberg is the same spine: one-eighth shows above water; the weight is all below.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>White space invites participation. Chew the conclusion and spoon it in, and the reader only receives; stop at the right place and he must take the last step himself — and <strong>people believe the conclusions they reach on their own</strong>. At work, an email that stops short, a slide bearing a single number, a proposal that won't nail its judgment down — these often weigh more than the ones buried in argument. But distinguish: white space is <strong>precise omission</strong>, not vagueness. Sikong Tu's "not one word" presumes the word already lives in your mind — only then can you choose not to write it.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">This outage taught us a profound lesson; we must earnestly absorb the experience, further improve our processes, and prevent any recurrence.</span>
+      <span class="after">At 3 a.m., the on-call engineer searched every doc we had — not one page said whom to call.</span>
+    </div>
+    <div class="example">
+      <span class="before">In conclusion, we strongly believe this is a great opportunity we should pursue aggressively.</span>
+      <span class="after">The window closes in March.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Closing lines, the key judgment in a proposal, a pause in a speech, a memo for sharp readers</li>
+      <li>✓ When you want them to <em>realize it</em> rather than <em>be persuaded</em></li>
+      <li>✗ Mistaking laziness for restraint: leaving metrics, owners, and dates unclear is vagueness, not reserve</li>
+      <li>✗ Wrong venue: postmortems, compliance notes, and safety alerts must be direct — "slant" there is negligence</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a recent email whose conclusion was stated too fully. Delete the closing summary; keep one fact or image that lets the reader derive the conclusion, and end there. <strong>Question</strong>: does the Chinese tradition of reserve clash with the plain-English ideal of saying it through? For a global team, how do you bet between the elegance of white space and the duty to be clear?</p>
+  </div>
+</section>
+
+<!-- Card 4: Constraint as Creativity -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Classical vs. Modern: Constraint Is Not a Shackle, It's a Lever</h2>
+  <div class="en-name">Constraint as Creativity — Form vs. Free Verse</div>
+  <span class="tag">Poetry · Constraint</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master</div>
+    <p>The tonal patterns of regulated verse, the freedom of free verse — both roads answer one question: <strong>how does constraint force creation?</strong></p>
+    <div class="quote">
+      "Writing free verse is like playing tennis with the net down."
+      <span class="source">— Robert Frost (widely attributed; see Newell &amp; others)</span>
+    </div>
+    <p class="cn-trans">Frost isn't sneering at free verse. He's noting that once the net (the constraint) is gone, the ball is easier to hit — but so is the difficulty that forced you to hit a good one.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Constraint shrinks choices; fewer choices raise focus. The syllable count of a regulated poem, the rhyme scheme of a sonnet, the 30 seconds of an elevator pitch, one sentence per slide — all the same "creative constraint." Du Fu loaded the heaviest feeling into the strictest form: "Boundless, the falling leaves rustle down; / endless, the long river rolls on" — parallelism perfected, the vista vast. Modern verse runs the other way, stripping external rule and pulling the duty back to the ear. The shared lesson for writers: <strong>give yourself a constraint first</strong> — a word ceiling, one image to thread through, a single sentence shape — then find freedom inside it. The blank canvas is hardest to start; draw a frame and your hand moves.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">We are committed to creating long-term value for our customers through continuous technical innovation and advancing the entire industry.</span>
+      <span class="after">(Constraint: ≤6 words, one verb, one image) Give every engineer an hour's more sleep.</span>
+    </div>
+    <div class="example">
+      <span class="before">Our mission is to provide a comprehensive, scalable, end-to-end platform that empowers developers.</span>
+      <span class="after">(Constraint: 4 words, one verb) Make deploys boring again.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Distilling a tagline / vision / one-line summary; sentencing a bloated draft to a word limit</li>
+      <li>✓ When the team is stuck wanting to say everything, use a constraint to force priority</li>
+      <li>✗ Constraint as the goal: twisting meaning to fit a rhyme or parallel — tail wagging the dog</li>
+      <li>✗ The other extreme — everyone cloning one template until constraint decays into a new formulaic cliché</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take your team's long mission/vision. Impose three rules: six words or fewer, one verb, one concrete image. Write five versions; pick the one strongest read aloud. <strong>Question</strong>: constraint breeds creation — but when does it become a cage? Is the late-imperial ossification of regulated verse the same disease as today's flood of template-speak?</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Go Deeper</h2>
+  <span class="tag">Push the Edges</span>
+  <details><summary>How far can the poetic "image" travel into technical writing?</summary><div>An image's power is to evoke shared experience, but technical docs demand no ambiguity. "The system is like a leaking bucket" is vivid in a design doc, yet can't replace the actual leak rate. The rule of thumb: <strong>use the image to ignite motivation, use numbers to carry the argument</strong>. Open with a picture that makes someone want to read; return to precision in the body. Swap those positions and you get a disaster.</div></details>
+  <details><summary>Do reserve (white space) and plain English (say it through) really conflict?</summary><div>Not necessarily. Reserve governs the <em>conclusion</em>; plainness governs the <em>facts</em>. Facts — metrics, owners, dates — must always be clear; what you hand the reader is the final step of judgment or feeling. Elegant writing is often: facts unmistakable, conclusion stopped just in time. Across cultures the risk is that Western readers may read your reserve as "didn't think it through," so externally, fill the facts in fully.</div></details>
+  <details><summary>Can AI write a competent poem? Then what is the poet's irreplaceable part?</summary><div>AI mimics meter, image, even style fluently — average-grade verse it writes fast and steady. What it lacks is "this one specific life, at this one moment": real good poems are anchored in non-reproducible personal experience and stakes. The lesson for writers: the more imitable the layer (diction, structure), the faster it depreciates — push toward the one sentence only you can say.</div></details>
+  <details><summary>One image — as text, as a slide, as a 15-second video: which medium loses least?</summary><div>It depends on the image's channel. A strongly visual image ("all cameras black") loses almost nothing on a slide; an image that leans on wordplay, rhythm, or white space (line breaks, reserve) gets nailed down and loses most when forced into pictures. Before choosing a medium, ask: does this image's power come mainly from <em>seeing</em> or from <em>reading</em>? Let the medium follow the grain of the image.</div></details>
+  <details><summary>Constraint breeds creation — but when does it decay into formula?</summary><div>The line is whom the constraint serves. When it forces trade-offs and sharpens the idea, it's a lever; when satisfying the constraint becomes the goal (padding word counts, filling templates, twisting meaning for parallelism), it's formula. A healthy constraint is "hard and meaningful"; a dead one is "easy and meaningless." Ask periodically: is this rule still helping me think, or only helping me hand something in?</div></details>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 31 · 2026</footer>
+
+</div>
+</body>
+</html>
