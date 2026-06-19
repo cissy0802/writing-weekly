@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Screenwriting & Dialogue — Day 32</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.cn-trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visual: iceberg (text / subtext) */
+.iceberg{background:#eef2f5;padding:22px 18px;margin:18px 0;border-radius:2px;text-align:center;font-family:Georgia,"Noto Serif SC",serif}
+.iceberg .ice-cap{font-size:0.74rem;letter-spacing:1.5px;text-transform:uppercase;color:#5a7a9a;font-weight:700;margin-bottom:8px}
+.iceberg .ice-top{background:#fff;border:1px solid #b8c4cc;border-radius:2px;padding:12px;font-size:1rem;color:#1f1f1f;max-width:70%;margin:0 auto}
+.iceberg .ice-water{color:#5a7a9a;font-size:0.8rem;letter-spacing:2px;margin:8px 0}
+.iceberg .ice-bottom{background:#cfdae2;border:1px solid #9fb2bf;border-radius:2px;padding:16px;font-size:0.95rem;color:#2a3a4a;line-height:1.7}
+.iceberg .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px}
+
+/* Visual: the gap (expectation / result) */
+.gapvis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px;text-align:center;font-family:Georgia,"Noto Serif SC",serif}
+.gapvis .grow{display:flex;justify-content:space-between;align-items:stretch;gap:10px}
+.gapvis .gpole{flex:1;padding:14px 10px;border:1px solid #d8d0bc;background:#fff;border-radius:2px;font-size:0.9rem;color:#3a3a3a;line-height:1.55}
+.gapvis .gpole .gt{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.95rem}
+.gapvis .gpole.mid{background:#1f1f1f;border-color:#1f1f1f;color:#fafafa}
+.gapvis .gpole.mid .gt{color:#d8c98a}
+.gapvis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px}
+
+/* Visual: medium comparison */
+.compare{display:flex;gap:12px;margin:18px 0}
+.compare .col{flex:1;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px;padding:16px 14px;font-family:Georgia,"Noto Serif SC",serif}
+.compare .col h4{font-size:1rem;color:#1f1f1f;margin-bottom:8px;font-weight:700;text-align:center;border-bottom:1px solid #d0d0d0;padding-bottom:6px}
+.compare .col p{font-size:0.9rem;color:#3a3a3a;line-height:1.65;margin:6px 0}
+.compare .col p strong{color:#8a5a2a}
+.compare .cap{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:4px;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
+summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
+details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .gapvis .grow{flex-direction:column}
+  .compare{flex-direction:column}
+  .iceberg .ice-top{max-width:100%}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 32 · 2026.06.19</div>
+  <h1>Writing & Expression: Screenwriting & Dialogue<span class="topic">Subtext · Scene Objective · Conflict · Stage vs Screen</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Screenwriters compress human interaction to its most concentrated form. With no narrator to lean on, they must let characters speak — and real people, when they speak, almost never say what they actually want. Today we steal four of the screenwriter's tools: subtext, scene objective, conflict, and the medium. They write more than drama; they write meetings, negotiations, retrospectives, and every moment when someone speaks to you.</p>
+</header>
+
+<!-- Card 1: Subtext -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Subtext: What's Said Is Never What's Meant</h2>
+  <div class="en-name">The art of the eighth above the waterline</div>
+  <span class="tag">Dialogue · Iceberg</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>On the surface, a character says A; underneath, they want B — and all the power of good dialogue lives in that gap. Hemingway's "iceberg theory" says the same thing: only one-eighth should show above the water.</p>
+    <div class="quote">
+      "If a writer of prose knows enough about what he is writing about he may omit things that he knows and the reader, if the writer is writing truly enough, will have a feeling of those things as strongly as though the writer had stated them."
+      <span class="source">— Ernest Hemingway, Death in the Afternoon (1932)</span>
+    </div>
+    <p class="cn-trans">The dignity of an iceberg's movement, Hemingway adds, is due to only one-eighth of it being above water — the unstated does the work.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>On-the-nose dialogue feels fake because real people almost never name the thing that matters. "I just wanted to double-check the timeline" in a meeting often means "I don't trust your estimate." Pull "what is said" away from "what is wanted," and the listener is invited to decode — and decoding is participation. McKee's warning to every screenwriter: <strong>if a scene is about what the scene is about, you're in deep trouble</strong>. The line is only the eighth above water; what holds it up is the seven-eighths below — everything the character won't say, yet points at with every word.</p>
+    <div class="iceberg">
+      <div class="ice-cap">Spoken · Text · one-eighth</div>
+      <div class="ice-top">"What time did you get to bed last night?"</div>
+      <div class="ice-water">～～～　Waterline　～～～</div>
+      <div class="ice-bottom">Unspoken · Subtext · seven-eighths<br>"I can see you're burned out, and I've seen the bugs — I'm worried about you, but I won't call you out in front of everyone."</div>
+      <div class="caption">Hemingway's iceberg: the visible eighth rests on the seven-eighths beneath.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Manager: "Your code quality has dropped lately, and I'm concerned." (Said = meant; no room to move, instant defensiveness.)</span>
+      <span class="after">Manager: "What time did you get to bed on launch night?" (The line asks about sleep; the subtext is care plus a nudge — and now they volunteer the truth themselves.)</span>
+    </div>
+    <div class="example">
+      <span class="before">"I'm angry that you missed the deadline." (Emotion shouted outright — the scene dies.)</span>
+      <span class="after">"Oh — you're done already? That was fast." (Sarcasm carries the anger; calm surface, churning depths.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Writing dialogue scenes, quoting real conversation in a promo packet, negotiation, user stories in product work</li>
+      <li>✓ Reading others: hearing the real need beneath a colleague's line often matters more than the line itself</li>
+      <li>✗ All subtext, no text — the reader can't decode it; the eighth still has to show</li>
+      <li>✗ On-the-nose: writing the character's inner monologue straight into the line, with nothing left below the surface</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Write a two-person exchange in which one person wants to apologize but can't get the words out. The phrase "I'm sorry" is banned — let the remorse seep up from below the surface. <strong>Question</strong>: technical docs demand zero subtext (no ambiguity); human communication can't live without it — how do you switch between these opposite skills within a single day?</p>
+  </div>
+</section>
+
+<!-- Card 2: Scene Objective -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Scene Objective: Everyone Walks In Wanting Something</h2>
+  <div class="en-name">A scene without a want is small talk</div>
+  <span class="tag">Dialogue · Motive</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>For a scene to hold, the people in it must want something — even if it's only a glass of water. With no "want," dialogue becomes idle chatter and the reader drifts away.</p>
+    <div class="quote">
+      "Make every character want something, even if it is only a glass of water."
+      <span class="source">— Kurt Vonnegut, preface to Bagombo Snuff Box (1999)</span>
+    </div>
+    <p class="cn-trans">A want, however small, gives a scene its spine and its direction.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The objective gives dialogue direction. Once a character wants something, every line becomes an <strong>action</strong> — probing, pressing, conceding, deflecting. Stanislavski called it the "objective," and an actor asks before every entrance: what do I want in this scene? Meetings are the same: walk in without knowing "what I want to walk out with," and the meeting spreads into a puddle of information exchange. McKee adds a demand: a good scene must "turn" — between the open and the close, some value has to change (trust to doubt, no to yes). A scene with no turn can be cut and the reader loses nothing.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">A: How's progress? B: Fine, on track. A: Great. (Neither wants anything; flat; deletable.)</span>
+      <span class="after">(A's objective: get B to volunteer for the thankless project) A: "Pull this off and it's the brightest line on the year." B: "Sounds like a trap." A: "That's why I didn't just hand it to anyone — I thought of you first." (Every line pushes toward the goal.)</span>
+    </div>
+    <div class="example">
+      <span class="before">"How's it going?" "Fine." "Great." (No one wants anything.)</span>
+      <span class="after">(Objective: get the raise without naming it) "Three offers this quarter. I turned them down." "...Why are you telling me this?" "Because I'd rather you heard it from me."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Writing stories, setting an objective before a design review, 1:1s, negotiation, telling a child a story with stakes</li>
+      <li>✓ Auditing your own meetings: the stretch with no objective is the stretch to cut</li>
+      <li>✗ An objective too abstract ("to be appreciated") — it can't drive concrete lines; land it on an action</li>
+      <li>✗ Both sides want the same thing — no tension, no scene; let the two "wants" rub against each other</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Before your next important meeting, write one line: the specific action I want from the other side when we leave (not "reach alignment" but "approve X by Friday"). Afterward, check whether your lines all pushed toward it. <strong>Question</strong>: in real communication, "clear objective" and "looking like you have an angle" are a hair apart — what lets you walk that line?</p>
+  </div>
+</section>
+
+<!-- Card 3: Conflict & the Gap -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Conflict & the Gap: Story Is Born in the Crack Between Expectation and Result</h2>
+  <div class="en-name">No conflict, no forward motion</div>
+  <span class="tag">Dialogue · Structure</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>A character acts, expecting the world to respond one way; the world responds another — the crack opens, and they're forced to act bigger. This repeated rupture between "expectation vs. result" is the engine of narrative.</p>
+    <div class="quote">
+      "Nothing moves forward in a story except through conflict. ... Story is born in that gap between expectation and result."
+      <span class="source">— Robert McKee, Story (1997)</span>
+    </div>
+    <p class="cn-trans">The wider the gap tears open, the bigger the character's next forced action — and the stronger the tension.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>No one remembers a smooth story, and no one remembers a smooth report. What makes a reader sit up is always the crack: "we thought X, the result was Y." In a decision memo, name the real gap — the expectation that collapsed, the judgment that got overturned, the bottleneck that wasn't where you thought — and the reader is instantly pulled into "and then what?" This isn't manufacturing anxiety; it's honesty: real work is full of mismatches between expectation and result, and hiding them leaves the narrative as nothing but polished filler.</p>
+    <div class="gapvis">
+      <div class="grow">
+        <div class="gpole"><span class="gt">Expectation</span>what the character<br>thought would happen</div>
+        <div class="gpole mid"><span class="gt">The Gap</span>story is born<br>in this crack</div>
+        <div class="gpole"><span class="gt">Result</span>what the world<br>actually returned</div>
+      </div>
+      <div class="caption">The wider the crack, the bigger the forced next move — and the stronger the pull.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Retrospective: We executed to plan and hit our targets. (No gap, no memory, no one remembers.)</span>
+      <span class="after">We thought the bottleneck was compute and spent three months scaling it; only at launch did we find the real chokepoint was the headcount for data labeling — that was the lesson this project taught us. (Expectation → collapse → reversal → takeaway.)</span>
+    </div>
+    <div class="example">
+      <span class="before">"The launch went well." (Smooth, no crack.)</span>
+      <span class="after">"We expected a quiet launch. By noon the servers were on fire — in the best possible way." (Expectation and result diverge; tension appears.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Retrospectives, case studies, the problem section of a pitch, personal-growth stories, the keystone project in a promo packet</li>
+      <li>✓ Any narrative you want read straight through — give it one real crack</li>
+      <li>✗ Manufacturing conflict for its own sake — false drama; readers smell the performance</li>
+      <li>✗ All conflict, no resolution — anxiety with no landing; the crack has to close again</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a recent "everything went smoothly" report and honestly find one real gap inside it (however small). Write it in two or three sentences: we expected... the result was... so we... <strong>Question</strong>: East Asian workplaces favor "reporting good news"; Western narrative prizes "show vulnerability first, then reverse" — reporting to a global team, how much of the crack do you reveal, and how do you close it?</p>
+  </div>
+</section>
+
+<!-- Card 4: Stage vs Screen -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Stage vs Screen: The Art of Language, or the Art of the Image</h2>
+  <div class="en-name">The medium shapes the words</div>
+  <span class="tag">Dialogue · Medium</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>The same story, written for the stage or the screen, is written utterly differently. The stage is far from the audience and the frame is fixed, so dialogue carries everything; the screen can hold a close-up, where one glance is worth ten lines. The medium isn't a container — it's the hand that shapes.</p>
+    <div class="quote">
+      "Screenplays are structure. ... In a movie you can show; on a stage you must say."
+      <span class="source">— William Goldman, Adventures in the Screen Trade (1983)</span>
+    </div>
+    <p class="cn-trans">What the stage must put into words, the screen can put into an image — choose the words to fit the channel.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Stage dialogue can be dense, ornate, full of monologue, because language is its only carrier; film prizes "show, don't tell," keeping lines few and exact and handing the work to image and editing. For a leader the transfer is nearly one-to-one: the same information, written as a <strong>memo</strong> (reader sets the pace, can re-read), delivered as a <strong>live talk</strong> (your presence, rhythm, pauses), or shot as a <strong>short video</strong> (one image and one hook) — each must be rewritten along the grain of its medium, not read aloud from the memo and called a video.</p>
+    <div class="compare">
+      <div class="col">
+        <h4>Stage / Memo</h4>
+        <p>Carrier is <strong>language</strong></p>
+        <p>Reader controls pace, can re-read</p>
+        <p>Holds detail, argument, density</p>
+      </div>
+      <div class="col">
+        <h4>Screen / Talk·Video</h4>
+        <p>Carrier is <strong>image and presence</strong></p>
+        <p>You set the pace; it's fleeting</p>
+        <p>Few and exact — one image beats ten lines</p>
+      </div>
+    </div>
+    <div class="compare"><div class="cap" style="flex:1">Before choosing a medium, ask: does this content's power come from "reading," or from "watching and listening"?</div></div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">Read an information-dense memo aloud, record it as a 5-minute video. (Audience can't keep up, no image, eyes glaze over.)</span>
+      <span class="after">The video keeps one core number + one image + one hook; all detail folds into the memo linked at the end. Viewers remember one thing; the curious go read.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Stage register, dropped onto the screen) "I have loved you since the day you walked into this office, though I never dared to say it."</span>
+      <span class="after">(Screen version, let the image speak) He sees her across the room. He looks away. He'd kept her business card for three years.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Choosing a medium, recasting a memo as a talk, making a pitch video, splitting a long piece into video scripts</li>
+      <li>✓ Judging "is this worth a meeting" — if it can be read, don't say it; if it can be seen, don't write it</li>
+      <li>✗ Porting across media verbatim — reading text as video, sending slides as a document</li>
+      <li>✗ "Screen verbosity": piling on lines where an image should carry it — a film shot as a radio play</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take an existing piece of your writing and produce two versions — one for "reading" (a one-page memo) and one for "watching and listening" (a 90-second video script). Compare what you cut and what you added. <strong>Question</strong>: AI makes text → image → video conversion nearly free; does that make the judgment of "which medium to write for" more important, or less?</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Going Deeper</h2>
+  <span class="tag">Push the Edges</span>
+  <details><summary>Subtext is a way of "not saying it directly" — does that conflict with the workplace ideal of transparency and candor?</summary><div>No, because they govern different layers. Transparency governs <strong>information</strong>: facts, data, the basis for a decision — always laid bare. Subtext governs <strong>relationship and tact</strong>: how to say a sharp truth so the other person can catch it. "What time did you get to bed last night" hides no fact; it just offers a graceful step down. What to guard against is using "subtext" as a cover for avoidance — burying the fact you owe someone. That isn't craft; it's cowardice.</div></details>
+  <details><summary>"Every character wants something" — but in real meetings, many people are just there to "sync information"?</summary><div>That's precisely the sign the meeting shouldn't be held. If attendees have nothing they want to walk out with, the sync can happen asynchronously in a doc, more efficiently. Use the scene objective as a meeting filter: before the meeting, have each key participant write one line — "the result I want." Those who can't are those who needn't attend. This is the logic beneath the written cultures at Amazon and Stripe that replaced piles of meetings — delete a "scene" with no objective and no one understands less.</div></details>
+  <details><summary>"Story is born in the crack" encourages exposing the gap, yet promo packets and external reports usually need to show success — contradiction?</summary><div>The skilled move: use the crack as the <strong>hook</strong> and the resolution as the <strong>landing</strong>. "We thought the bottleneck was A, it was B, so we rebuilt the approach and ultimately delivered" — more credible than relentless good news, because it proves judgment and adaptability, not just luck. What the reader remembers isn't "you made no mistakes" but "you hit a real problem and solved it." The crack exists to make the success feel real, not to expose failure.</div></details>
+  <details><summary>The same conflict written as dialogue (text), staged as a meeting (talk), or shot as a short film (video) — which is hardest to write?</summary><div>Usually "talk," because it's live, unrepeatable, and dependent on your own presence. Text can be polished over and over; video can be rescued in the edit; only live speaking forces the subtext up through your pauses and your eyes in the moment, and sustains the conflict's tension by your rhythm alone. That's why speaking practice pays so well: it compresses the first three skills — subtext, objective, conflict — into a single channel with no undo button.</div></details>
+  <details><summary>Can AI write good dialogue? If so, what's irreplaceable about the screenwriter and the communicator?</summary><div>AI can write "passable" dialogue — natural phrasing, fluent rhythm, even the formulas of subtext. What it lacks is "these two specific people, here and now": the magic of real dialogue often anchors in an unrepeatable situation, a shared history, the stakes of the moment. The lesson for writers is consistent — the more formulaic the layer (pleasantries, transitions, information transfer), the faster it's replaced, so push your energy toward the line only you, who know this matter and these people, could write.</div></details>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily Index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 32 · 2026</footer>
+
+</div>
+</body>
+</html>
