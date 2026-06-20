@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: The Art of Translation — Day 33</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.cn-trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visual: translation spectrum (literal <-> free) */
+.spectrum{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif}
+.spectrum .bar{height:12px;background:linear-gradient(90deg,#8a5a2a,#8a7a4a,#5a7a9a);border-radius:6px;margin:6px 0 8px}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:0.9rem;color:#1f1f1f;font-weight:700}
+.spectrum .sub{display:flex;justify-content:space-between;font-size:0.82rem;color:#5a5a5a;margin-top:2px}
+.spectrum .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center}
+
+/* Visual: domestication vs foreignization */
+.compare{display:flex;gap:12px;margin:18px 0}
+.compare .col{flex:1;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px;padding:16px 14px;font-family:Georgia,"Noto Serif SC",serif}
+.compare .col h4{font-size:1rem;color:#1f1f1f;margin-bottom:8px;font-weight:700;text-align:center;border-bottom:1px solid #d0d0d0;padding-bottom:6px}
+.compare .col p{font-size:0.9rem;color:#3a3a3a;line-height:1.65;margin:6px 0}
+.compare .col p strong{color:#8a5a2a}
+.compare .cap{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:4px;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
+summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
+details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .compare{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 33 · 2026.06.20</div>
+  <h1>Writing & Expression: The Art of Translation<span class="topic">Literal vs Free · The Untranslatable · The Translator's Invisibility · CN–EN Traps</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Translation looks like mere transport of meaning; it is in fact the most exacting form of writing — you must re-create under someone else's constraints. For anyone who lives between Chinese and English, this craft is not just for translating books: writing a bilingual memo, explaining an English framework to your team, pitching a Chinese insight to a global audience — all of it is translation. Today we steal four of the translator's skills: trading off fidelity, handling the untranslatable, deciding whether to disappear, and dodging the most common CN–EN traps.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Faithful, Fluent, Refined: Literal vs Free Is a Dial</h2>
+  <div class="en-name">Xin, Da, Ya — A Dial, Not a Dogma</div>
+  <span class="tag">Translation · Trade-off</span>
+
+  <div class="section">
+    <div class="label">One-line principle + a master's words</div>
+    <p>Translation is not a choice between "literal" and "free." It is setting a ratio, for this job, among <strong>fidelity (xin), fluency (da), and refinement (ya)</strong>. Yan Fu named the difficulty over a century ago.</p>
+    <div class="quote">
+      "Translation involves three difficulties: fidelity, fluency, and elegance. To be faithful is hard enough; yet fidelity without fluency is no translation at all — so fluency must be sought too."
+      <span class="source">— Yan Fu, preface to his translation of Huxley's <em>Evolution and Ethics</em> (1898)</span>
+    </div>
+    <p class="cn-trans">In short: fidelity alone is already brutally hard; but faithful-yet-unreadable is as good as untranslated. The three pull against each other — set the ratio by purpose.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Word-for-word keeps fidelity but often loses fluency; free translation gains fluency but may shed the original's flavor. Lu Xun once argued for "faithful even if not smooth," because he wanted to import new syntax and ideas through hard translation. But for everyday expression the ratio flips by context: <strong>technical docs turn the dial toward fidelity</strong> (better stiff than ambiguous), <strong>marketing copy turns it toward refinement</strong> (rewrite freely, but land the punch). Decide which end this job needs, then choose how close to hug the literal.</p>
+    <div class="spectrum">
+      <div class="ends"><span>Literal / Faithful</span><span>Free / Refined</span></div>
+      <div class="bar"></div>
+      <div class="sub"><span>hug the words · keep structure · kill ambiguity</span><span>chase the effect · sound native · move the reader</span></div>
+      <div class="caption">Technical docs sit left, ads and literature sit right — same sentence, purpose sets the dial</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action</div>
+    <div class="example">
+      <span class="before">It's raining cats and dogs. → literal Chinese "the sky drops cats and dogs" (absurdly faithful, reader baffled)</span>
+      <span class="after">大雨倾盆 / 雨下得跟泼水似的 — the latter is both fluent and keeps the colloquial wink; a better ratio</span>
+    </div>
+    <div class="example">
+      <span class="before">胸有成竹 → "have bamboo in one's chest" (keeps the image, but no one understands)</span>
+      <span class="after">"to have it all worked out in advance" (clear; for a literary reader, add a note: "lit. bamboo already in the chest" to keep some refinement)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Technical terms (lean faithful), slogans and brand lines (lean refined), bilingual onboarding docs</li>
+      <li>✓ Self-check: first ask "does this job want zero ambiguity, or maximum impact?", then set how literal to go</li>
+      <li>✗ Blind literalism to flaunt "loyalty" — produces translationese no one can read</li>
+      <li>✗ Lazy free-rendering — losing the original's precision and personality along the way</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + question</div>
+    <p>Take an English maxim you love and write three Chinese versions: ultra-literal, ultra-free, and your chosen best ratio — with a sentence on where each fits. <strong>Question</strong>: when fidelity and fluency cannot both be had, what tells you which to sacrifice? Is it the same instinct you use when writing original prose?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Untranslatable: When There Is No Match, Pick One Facet</h2>
+  <div class="en-name">The Untranslatable — Saying Almost the Same Thing</div>
+  <span class="tag">Translation · Culture</span>
+
+  <div class="section">
+    <div class="label">One-line principle + a master's words</div>
+    <p>Some concepts have no equivalent in the other language. Admit that, and translation rises from "find the match" to "re-express at the highest level" — what Qian Zhongshu called <em>huajing</em>, the realm of transformation.</p>
+    <div class="quote">
+      "The highest standard of literary translation is 'transformation.' To turn a work from one language into another so that it betrays no trace of stiffness from the difference in habits, yet fully preserves the original flavor — that is to enter the realm of transformation."
+      <span class="source">— Qian Zhongshu, "Lin Shu's Translations" (1964)</span>
+    </div>
+    <p class="cn-trans">Compare: Umberto Eco summed translation up as "saying almost the same thing" (<em>dire quasi la stessa cosa</em>) — everything hangs on that "almost."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>"江湖" rendered as "rivers and lakes" means nothing, because depending on context it is <strong>the martial-arts world, society's grey underbelly, or a drifting life</strong> — one word carrying a whole culture. Conversely, "serendipity" and "privacy" once had no ready word in Chinese. Faced with the untranslatable, forcing a fake equivalent is the worst option; the right move is to <strong>see which facet this job needs, choose a word for it, and add a line of explanation if needed</strong>. For a leader communicating across cultures, that is exactly the self-awareness required when introducing a native framework to a global team: don't pretend a perfect equivalent exists.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action</div>
+    <div class="example">
+      <span class="before">Rendering 内卷 as "involution" (the academic source word; a lay audience is lost)</span>
+      <span class="after">Pick a facet by context: "rat race" / "zero-sum overcompetition," then add "everyone works harder for the same slice" (facet + explanation)</span>
+    </div>
+    <div class="example">
+      <span class="before">"He has a lot of privacy concerns." → literal Chinese leaves the concept floating and stiff</span>
+      <span class="after">他很在意私人信息不被随意收集和公开。(Don't chase one word; spell the concept out — that is the "transformation")</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Culture-loaded words, introducing native terms outward, explaining Chinese concepts to a global team</li>
+      <li>✓ Introducing a foreign concept in your writing: first admit it's untranslatable, then "transform" it in a sentence</li>
+      <li>✗ Worshiping "one word for one word" — culture-bound terms least tolerate a 1:1 swap</li>
+      <li>✗ Dropping the source word with no gloss (e.g. "involution," "guanxi") — building a wall for outsiders</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + question</div>
+    <p>Pick a Chinese word you feel "English lacks" (e.g. 缘分, 孝, 面子) and write 80 words of English that make a foreign colleague understand it — no coinage, only explanation and examples. <strong>Question</strong>: when a concept is "untranslatable," is the language missing a word, or do the two cultures simply not care about the same thing? What does that mean for your cross-cultural expression?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Translator's Invisibility: Read Like the Original, or Show the Foreign Grain?</h2>
+  <div class="en-name">The Translator's Invisibility — Domesticate or Foreignize</div>
+  <span class="tag">Translation · Stance</span>
+
+  <div class="section">
+    <div class="label">One-line principle + a master's words</div>
+    <p>Readers prefer a translation that "doesn't read like a translation" — fluent, transparent, as if the original author wrote it. Venuti warns: this invisibility is a choice, not a neutral default.</p>
+    <div class="quote">
+      "A translation is judged acceptable... when it reads fluently, when the absence of any linguistic or stylistic peculiarities makes it seem transparent, giving the appearance that it... is not in fact a translation, but the 'original.'"
+      <span class="source">— Lawrence Venuti, <em>The Translator's Invisibility</em> (1995)</span>
+    </div>
+    <p class="cn-trans">In other words: a translation passes as "good" largely because it reads smoothly and shows no rough edges of language or style — transparent, as if it were not a translation but the original itself.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Venuti named two roads: <strong>domestication</strong> (move toward the reader, smooth away the foreign flavor) and <strong>foreignization</strong> (move toward the original, keep the strangeness). Domestication reads easily but tends to swallow the original's personality; foreignization stays true but raises the reading cost. This is not only about translating books — when you "translate" a Western management framework to your team, do you package it to feel like native wisdom (domesticate), or keep its original context and tension (foreignize)? Both roads are legitimate; <strong>the error is defaulting to domestication unconsciously, flattening the meaning without noticing</strong>.</p>
+    <div class="compare">
+      <div class="col">
+        <h4>Domestication</h4>
+        <p>move toward the <strong>reader</strong></p>
+        <p>fluent, familiar, zero friction</p>
+        <p>cost: grinds off the original's edges</p>
+      </div>
+      <div class="col">
+        <h4>Foreignization</h4>
+        <p>move toward the <strong>original</strong></p>
+        <p>keeps strangeness and source context</p>
+        <p>cost: the reader works harder</p>
+      </div>
+    </div>
+    <div class="compare"><div class="cap" style="flex:1">Before choosing: do I honor the reader's comfort, or the original's true face?</div></div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action</div>
+    <div class="example">
+      <span class="before">如鱼得水 → "like a fish in water" (foreignizing — keeps the image, slightly odd to English ears)</span>
+      <span class="after">Domesticated: "like a duck to water" (idiomatic, frictionless, but the Chinese "fish" image is gone — choose by reader and purpose)</span>
+    </div>
+    <div class="example">
+      <span class="before">Introducing "disagree and commit" to a team by importing the English phrase raw — no one really grasps the culture behind it</span>
+      <span class="after">Domesticated: "argue it out in the room, then carry it out together" — landed in native idiom, but mind that you don't lose the "voice your dissent first" layer of the principle.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Localizing product copy, importing outside methodologies, explaining cross-cultural concepts to a team</li>
+      <li>✓ Audit your translation: am I helping the reader, or quietly rewriting the original?</li>
+      <li>✗ Unconscious over-domestication — reads smoothly, but the meaning has been swapped out</li>
+      <li>✗ Stiff foreignization for "fidelity" — if the reader can't get through it, fidelity is wasted</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + question</div>
+    <p>Take a foreign proverb and write one fully domesticated version (like a native saying) and one deliberately foreignized version (keeping the exotic image); note who each suits. <strong>Question</strong>: when you "translate" a foreign idea to your team so it sounds like native wisdom, is that skillful communication, or a quiet distortion?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>CN–EN Traps: Your Mother Tongue's Grammar Leaks In</h2>
+  <div class="en-name">CN–EN Traps — Your First Language Leaks In</div>
+  <span class="tag">Translation · Practice</span>
+
+  <div class="section">
+    <div class="label">One-line principle + a master's words</div>
+    <p>The most insidious translation disease is carrying the source language's syntax into the target: Chinese picks up "Westernized" clutter, English carries a Chinese accent. Yu Guangzhong sounded the alarm decades ago.</p>
+    <div class="quote">
+      "English was not learned well, yet Chinese was learned badly... formulaic translationese is polluting the ecology of the Chinese language."
+      <span class="source">— Yu Guangzhong, "The Normal and the Pathological in Chinese" (1987)</span>
+    </div>
+    <p class="cn-trans">In short: translators force English structures (passives, abstract nouns, long pre-modifiers) into Chinese; it looks "accurate" but corrupts the language's native economy.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Chinese favors verbs, short clauses, and few passives; English favors nouns, long sentences, and subordinate clauses. Translate without actively "re-boning" the sentence and both sides go wrong. The classic Chinese symptoms are <strong>empty helper-verbs (進行/作出/加以), overused 被 and 們, and adjectives piled into long modifiers</strong>; the classic English symptoms are <strong>missing articles, the "although...but..." pairing, and rendering a Chinese topic-comment sentence into loose English</strong>. There is only one cure: after translating, reread with the target language's native ear and delete the source language's shadow.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in action</div>
+    <div class="example">
+      <span class="before">我们对这个问题进行了深入的讨论，并作出了相应的决定。(Westernized clutter; verbs hollowed out into nouns)</span>
+      <span class="after">我们深入讨论了这个问题，并作了决定。(verbs restored to primacy — clean)</span>
+    </div>
+    <div class="example">
+      <span class="before">Although the deadline is tight, but we can make it. (Chinese 虽然...但是 pairing; English keeps only one)</span>
+      <span class="after">Although the deadline is tight, we can make it. / The deadline is tight, but we can make it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Translating English source into a Chinese report, writing email in your second language, auditing the tone of bilingual docs</li>
+      <li>✓ A "re-boning" read before the final draft: judge only whether the target language flows, ignore the source</li>
+      <li>✗ Believing "hugging the source" equals "accurate" — you've imported the disease along with it</li>
+      <li>✗ Chinese piled with 性/化/被/們/endless 的; English dropping articles and running loose</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + question</div>
+    <p>Dig up a recent bilingual email; mark every 進行/作出/加以/被……所 and every redundant 的, and fix them one by one; then read the English aloud to catch missing articles and "although...but..." Chinese tells. <strong>Question</strong>: AI translation rarely makes these grammar errors anymore — so what judgment in "re-boning" remains irreplaceably human?</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="num">Reflection</div>
+  <h2>Going Deeper</h2>
+  <span class="tag">Push the edges</span>
+  <details><summary>AI translation is already fluent — is studying the craft still worth it?</summary><div>More than ever, just shifted in focus. AI excels at fluency — smooth, grammatically clean; but the fine trade-offs of fidelity (which facet of a word to keep) and the style judgments of refinement (solemn or playful here?) still need someone who understands the context, the reader, and the original's intent. Your value is no longer "able to translate" but able to direct and calibrate: deciding which way to turn the dial this time, and reclaiming the meaning when AI translates "too domesticated." The deeper you know the craft, the better you command the tool.</div></details>
+  <details><summary>Isn't "the realm of transformation" just an excuse for over-free, self-indulgent translation?</summary><div>No — the line between them is <strong>whether the original's full intent is preserved</strong>. Transformation demands "fully preserving the original flavor," which is harder, not looser: leave no stiff trace, yet lose not a drop of meaning. Over-free translation sacrifices accuracy for smoothness and feels good about losing things. The test is simple: translate your "transformation" back to the source — would the original author nod, or say "that's not what I meant"?</div></details>
+  <details><summary>How does the skill of translation transfer to writing original prose?</summary><div>Translation is "dancing in chains" — the meaning is locked, so you can only maneuver in expression, which is the purest diction training there is. Frequent translators grow acutely sensitive to "ten ways to say the same thing," and choose words more precisely when writing originally. Deeper still: writing itself is a kind of translation — rendering a vague notion in your head (source language) into clear words (target language), facing the same fidelity trade-offs and the same "untranslatable" snags.</div></details>
+  <details><summary>For the truly bilingual, should you aim for "seamless switching," or keep a distinct persona in each language?</summary><div>The masters keep the latter. Languages are not interchangeable containers; Chinese economy and reserve and English precision and directness naturally summon different expressive personae. Forcing the two selves to be "identical" usually flattens both. A better goal: be idiomatic and forceful in each language, letting the Chinese you and the English you each have their strengths — which is exactly the counter-lesson of this whole Day 33: don't let one language colonize the other.</div></details>
+  <details><summary>For global teams, should you standardize on English, or let multiple languages coexist?</summary><div>It depends on what you optimize for. Standard English lowers collaboration friction but systematically disadvantages non-natives and loses precise expression native to other languages. The pragmatic middle is "English as the collaboration base, key concepts kept in the original + explained": write important decisions in clear English, but when you hit an untranslatable native concept, don't force it — name the source word and "transform" it open. Let English be a bridge, not a steamroller of all difference.</div></details>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 33 · 2026</footer>
+
+</div>
+</body>
+</html>
