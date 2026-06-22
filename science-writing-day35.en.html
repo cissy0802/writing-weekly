@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Science Writing — Day 35</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8;margin-bottom:8px}
+.exercise .think{color:#d8c98a;font-style:italic}
+
+/* Ladder of abstraction */
+.ladder{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.ladder .rung{padding:11px 12px;margin:6px auto;max-width:480px;font-family:Georgia,serif;font-size:0.92rem;border:1px solid #d8d0bc;background:#fff}
+.ladder .rung.top{background:#1f1f1f;color:#d8c98a;border-color:#1f1f1f}
+.ladder .rung.mid{color:#6a6a6a}
+.ladder .rung.bot{border-color:#8a7a4a;color:#3a6a3a;font-weight:600}
+.ladder .arrow{font-size:1.3rem;color:#8a7a4a;margin:2px 0}
+.ladder .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif}
+
+/* Analogy map */
+.amap{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.amap .head{display:flex;gap:10px;font-family:Georgia,serif;font-weight:700;font-size:0.86rem;color:#8a7a4a;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.amap .head div{flex:1;text-align:center}
+.amap .row{display:flex;gap:10px;align-items:stretch;margin:6px 0}
+.amap .cell{flex:1;padding:10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-size:0.9rem;color:#3a3a3a;border-radius:2px}
+.amap .map-arrow{display:flex;align-items:center;color:#8a7a4a;font-family:Georgia,serif}
+.amap .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Accuracy-readability tradeoff */
+.tradeoff{background:#f8f6f1;padding:20px 16px 14px;margin:18px 0;border-radius:2px;text-align:center}
+.tradeoff svg{max-width:100%;height:auto}
+.tradeoff .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+details{margin:12px 0;border-bottom:1px solid #d0d0d0;padding-bottom:10px}
+details summary{cursor:pointer;font-weight:700;font-size:1rem;color:#1f1f1f;font-family:Georgia,serif;padding:6px 0}
+details summary:hover{color:#8a7a4a}
+details .answer{font-size:0.95rem;color:#4a4a4a;line-height:1.8;padding:8px 0 4px 4px}
+.deep-head{font-size:1.3rem;font-weight:700;margin:48px 0 8px;text-align:center}
+
+footer{text-align:center;margin-top:40px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .amap .row{flex-direction:column}
+  .amap .map-arrow{justify-content:center;transform:rotate(90deg)}
+  .amap .head{display:none}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 35 · 2026.06.22</div>
+  <h1>Writing &amp; Expression: Science Writing<span class="topic">Make it simple · Power of analogy · Accuracy vs. readability · Never talk down</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Science writing is the craft of moving the tangled thing in your head into someone else's head—without distorting it. That is harder than writing a paper: a paper answers to experts; science writing answers to a smart, curious person who simply doesn't know yet. Sagan, Feynman, Pinker all treated it as the highest craft. This week, four tools.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Beat the Curse of Knowledge</h2>
+  <div class="en-name">Making the complex simple</div>
+  <span class="tag">Pinker · Cognitive Blind Spot</span>
+
+  <div class="section">
+    <div class="label">Principle · The Master's Words</div>
+    <p>When your writing baffles people, it's usually not because the reader is slow—it's because <strong>you've forgotten what "not knowing" feels like</strong>.</p>
+    <div class="quote">
+      "The curse of knowledge is the single best explanation I know of why good people write bad prose. It simply doesn't occur to the writer that her readers don't know what she knows."
+      <span class="source">— Steven Pinker, The Sense of Style (2014)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Once you've mastered a concept, you <strong>can no longer accurately imagine not knowing it</strong>—the brain can't run in reverse. The expert's curse isn't showing off; it's sincerely overestimating where the reader starts. Two antidotes: the Feynman technique—explain it to a complete novice, and wherever you stall is exactly where you yourself haven't thought it through; and "concrete before abstract"—give the picture first, the definition second. Feynman noted that if a theory can't be brought down to a freshman's level, "it means we really don't understand it."</p>
+    <div class="ladder">
+      <div class="rung top">Linearizability · consensus protocol · state-machine replication</div>
+      <div class="arrow">↓ pull the reader back to the ground ↓</div>
+      <div class="rung mid">Many machines must "see the same ledger"</div>
+      <div class="arrow">↓</div>
+      <div class="rung bot">Five scribes all copy from one master ledger</div>
+      <div class="caption">The ladder of abstraction—good science writing starts at the bottom rung, then climbs</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">We employ a RAFT-based consensus protocol to maintain linearizability across replicated state machines under node failure.</span>
+      <span class="after">Picture five scribes, each keeping a ledger. The system elects one "head scribe," and the other four just copy from them. Even if two are out sick, as long as the majority match, the books you check are always the same—that's RAFT.</span>
+    </div>
+    <div class="example">
+      <span class="before">We leverage a transformer architecture with self-attention to capture long-range token dependencies.</span>
+      <span class="after">The model reads a sentence the way you do: when it hits "it," it glances back to find which noun "it" points to. "Attention" is just that glance—done for every word at once.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ Tech blogs, onboarding docs, cross-team briefs, briefs for non-technical execs, public-facing explainers</li>
+      <li>✗ Peer-reviewed papers, specs for experts—here jargon is efficiency, not a barrier</li>
+      <li>Traps: piling on jargon to fake rigor; giving definitions but no picture; assuming "everyone knows this" (that IS the curse); cramming three new concepts into one sentence</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>Take the technical concept you know best, and explain it to a complete outsider (family, a friend) for 90 seconds—no jargon allowed. Wherever you stall is where you "thought you understood but hadn't."</p>
+    <p class="think">Reflection: The last explanation that made you instantly "get it"—what concrete picture did it use in place of the abstraction?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Power of Analogy</h2>
+  <div class="en-name">Lighting the unknown with the known</div>
+  <span class="tag">Hofstadter · Core of Cognition</span>
+
+  <div class="section">
+    <div class="label">Principle · The Master's Words</div>
+    <p>The fastest way to explain something new is not to define it, but to say <strong>"it's like that thing you already know well."</strong></p>
+    <div class="quote">
+      "Without concepts there can be no thought, and without analogies there can be no concepts."
+      <span class="source">— Hofstadter &amp; Sander, Surfaces and Essences (2013)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Analogy is efficient because it transmits no information—it <strong>reuses a structure already built in the reader's mind</strong>. Say "a vector database is like a library shelved by topic instead of by title," and the reader instantly summons a lifetime of library experience. Good analogies follow three rules: (1) the mapping holds where it matters—similar in mechanism, not just surface; (2) explain the stranger thing with the more familiar one (don't use quantum mechanics to explain blockchain); (3) mark the boundary—say out loud "this analogy breaks down here," or the reader will push it too far.</p>
+    <div class="amap">
+      <div class="head"><div>Source (known)</div><div></div><div>Target (unknown)</div></div>
+      <div class="row"><div class="cell">Library shelves</div><div class="map-arrow">→</div><div class="cell">Vector space</div></div>
+      <div class="row"><div class="cell">Related books sit nearby</div><div class="map-arrow">→</div><div class="cell">Similar content, nearby vectors</div></div>
+      <div class="row"><div class="cell">"Find me books like this"</div><div class="map-arrow">→</div><div class="cell">Nearest-neighbor search</div></div>
+      <div class="caption">A good analogy = a clear "source → target" mapping table</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Gradient descent iteratively updates parameters along the negative gradient of the loss function, converging toward a local optimum.</span>
+      <span class="after">Imagine standing blindfolded in a valley, trying to reach the lowest point. You feel which way slopes down steepest, take one small step, feel again, step again—training a model is descending like that. The "learning rate" is how big each step is. (Note: valleys have many small dips—you might stop in one rather than the true bottom. That's a "local optimum.")</span>
+    </div>
+    <div class="example">
+      <span class="before">A hash function maps arbitrary-length input to a fixed-length digest and is infeasible to invert.</span>
+      <span class="after">A hash is a fingerprint for data. Any file—tiny or huge—gets one short, unique print. You can check that two files share a print, but you can't rebuild the file from the fingerprint alone.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ The first minute of introducing any concept, openings of explainers, framing technical risk for execs, teaching</li>
+      <li>✗ Precise spec definitions, safety-critical procedures—an analogy's fuzziness can do harm</li>
+      <li>Traps: an analogy harder than the original; surface-alike but mechanism-different (misleading); no stated boundary, so readers over-extend it; forcing one analogy to carry every detail</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>For the hardest concept in your field, write three different analogies—one each for a child, a non-technical colleague, an investor. Then add to each one line: "it breaks down when ______."</p>
+    <p class="think">Reflection: How might an overused analogy (like "the brain is a computer") quietly limit the way people think?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Tightrope of Accuracy and Readability</h2>
+  <div class="en-name">As simple as possible, but not simpler</div>
+  <span class="tag">Trade-off · The Limit of Simplifying</span>
+
+  <div class="section">
+    <div class="label">Principle · The Master's Words</div>
+    <p>The whole difficulty of science writing: cut away the complexity with one hand, guard the truth with the other—<strong>simplifying is no license to lie</strong>.</p>
+    <div class="quote">
+      "Everything should be made as simple as possible, but not simpler."
+      <span class="source">— commonly attributed to Albert Einstein (a distilled paraphrase of his view)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Every simplification drops information; the question is whether you drop a "branch" or the "trunk." Dropping a branch is distillation; dropping the trunk is error. The most dangerous is a third kind—<strong>the "sounds right, actually wrong" simplification</strong>—more harmful than obscurity, because the reader leaves carrying false certainty. To guard accuracy: tell apart the "benign approximation" (droppable) from the "distortion that misleads a decision" (not droppable); when needed, flag the complexity you skipped with a "strictly speaking…"—keeping it readable while leaving an honest escape hatch.</p>
+    <div class="tradeoff">
+      <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" aria-label="accuracy vs readability">
+        <line x1="60" y1="180" x2="540" y2="180" stroke="#8a8a8a" stroke-width="1"/>
+        <line x1="60" y1="180" x2="60" y2="20" stroke="#8a8a8a" stroke-width="1"/>
+        <text x="60" y="200" font-family="Georgia" font-size="11" fill="#8a8a8a">readable →</text>
+        <text x="14" y="28" font-family="Georgia" font-size="11" fill="#8a8a8a">accurate</text>
+        <path d="M 80 40 Q 300 120 520 40" fill="none" stroke="#c8c0a8" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <circle cx="100" cy="58" r="5" fill="#a04040"/>
+        <text x="110" y="55" font-family="Georgia" font-size="11" fill="#a04040">Jargon (accurate, no one reads it)</text>
+        <circle cx="500" cy="58" r="5" fill="#a04040"/>
+        <text x="270" y="78" font-family="Georgia" font-size="11" fill="#a04040">Over-simplified (readable, distorted)</text>
+        <circle cx="300" cy="118" r="7" fill="#3a6a3a"/>
+        <text x="195" y="145" font-family="Georgia" font-size="12" fill="#3a6a3a" font-weight="bold">Sweet spot: simple but not distorted</text>
+      </svg>
+      <div class="caption">Both ends are cliffs—the craft is holding the point in between</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(Over-simplified, distorted) AI thinks just like a person; it understands every sentence you say.</span>
+      <span class="after">(Simple but accurate) AI doesn't "understand" language. It has learned, from oceans of text, "which word most likely follows which," and continues the chain. It's often right—but its "understanding" is not the same thing as yours.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Too technical) The LLM samples tokens autoregressively from a distribution conditioned on prior context.</span>
+      <span class="after">(Simple, still true) The model writes one word at a time, each time guessing the most likely next word given everything so far—like an extremely well-read autocomplete.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ Public explainers, risk briefs for non-technical decision-makers, educational material, technical claims in marketing</li>
+      <li>✗ Legal / compliance / safety docs—here accuracy outranks all; better obscure than distorted</li>
+      <li>Traps: turning "usually" into "always" for readability; anthropomorphizing into false intuition ("the AI wants…"); cutting the very premise the conclusion rests on; the reverse error—piling jargon to look rigorous, readability to zero</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>Take a technical explanation you've written, mark every simplification, and judge each: "branch or trunk?" Rewrite any "sounds right, actually wrong" spot into "simple and true."</p>
+    <p class="think">Reflection: When an accurate explanation is bound to lose 90% of readers, do you lower the accuracy—or narrow the audience?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Never Look Down on Your Reader</h2>
+  <div class="en-name">Respect, not condescension</div>
+  <span class="tag">E.B. White · Respect the Reader</span>
+
+  <div class="section">
+    <div class="label">Principle · The Master's Words</div>
+    <p>You make the complex simple because you <strong>respect the reader's time—not because you think they're dim</strong>. That line, the reader feels at a glance.</p>
+    <div class="quote">
+      "No one can write decently who is distrustful of the reader's intelligence, or whose attitude is patronizing."
+      <span class="source">— E.B. White, The Elements of Style</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>What the reader lacks is knowledge of <strong>your field</strong>, not <strong>intelligence</strong>—the two are worlds apart. Condescension seeps out through small details: "as everyone knows," "it's actually quite simple," "you may not get this, but…"—each one hints the reader ranks below you, and people have an exquisitely sharp nose for contempt; one whiff and the door shuts. Sagan was great not because he made the cosmos shallow, but because he always assumed someone sat across from him who was just as curious, just as smart, and simply didn't know yet. <strong>Treat the reader as a peer, not a pupil.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">As everyone knows, distributed systems are complex. You probably can't follow this, but basically the machines "fight" with each other.</span>
+      <span class="after">Where's the hard part in distributed systems? It's that many machines must agree without any God's-eye view—like a crowd voting through a wall, none of them sure the others even heard them.</span>
+    </div>
+    <div class="example">
+      <span class="before">Now, this might be a bit over your head, but the database basically just "remembers" things. Don't worry about the details.</span>
+      <span class="after">Here's the part that trips up even seasoned engineers: the database must stay correct even when the power dies mid-write. Here's how it pulls that off.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ All writing for a broader audience: explainers, tutorials, external comms, cross-functional work</li>
+      <li>✗ No exceptions—condescension is a demerit in every setting</li>
+      <li>Traps: "it's actually simple" (simple for you, an insult to the reader); "as everyone knows," "needless to say" (then why write it?); over-warning "this is hard" breeds fear; exclamation marks and cuteness standing in for real clarity</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>Pull up your latest piece of external writing and search for: "as everyone knows," "actually," "simply put," "you may not understand," "don't worry about the details." For each, ask: would it read better deleted, or recast as talking to a peer?</p>
+    <p class="think">Reflection: Treating the reader as a "peer" versus a "target user / audience"—how does the writing come out different?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details>
+  <summary>1. Where's the line between "making it simple" and "anti-intellectual clickbait simplification"?</summary>
+  <div class="answer">The line: are you simplifying the expression, or the fact itself? The former restates one truth so it lands; the latter distorts or inflates the truth for the sake of spread. A test: if the reader acts or judges based on your simplification, will your simplification make them err? If yes, you've crossed over. The difference between pandering and science writing isn't depth—it's whether you honestly kept the trunk.</div>
+</details>
+<details>
+  <summary>2. How do Chinese and English science writing differ in "tone distance"?</summary>
+  <div class="answer">Written Chinese carries an inherent layer of literary distance; words like "众所周知" (as all know) and "不妨" (one might) have a podium tone that slides toward condescension more easily. The English tradition (Sagan, Bryson) is more conversational and eye-level, often using a direct second-person "you." Writing science in Chinese, deliberately step down half a notch—more "你," more dialogue, fewer judgmental big words.</div>
+</details>
+<details>
+  <summary>3. Same concept as an article / short video / infographic—how should the simplification strategy change?</summary>
+  <div class="answer">An article can build in layers—give the analogy, then add "strictly speaking…"—and is easiest for guarding accuracy. A short video has almost no time, so it must drop branches and amplify one picture, and is most prone to distortion from chasing speed. An infographic uses spatial juxtaposition: great for "structure and contrast," weak at "process and causation." Form decides which part of accuracy you can keep—before choosing a form, ask: is this concept's "trunk" a structure, or a process?</div>
+</details>
+<details>
+  <summary>4. When AI can "explain-ify" any paper in one click, where is the human science writer irreplaceable?</summary>
+  <div class="answer">AI is good at swapping words and lowering sentence difficulty, but the core judgments of science writing remain weak: which analogy shines brightest for this particular audience, which simplification is fatal, where to stop and say "I'm not sure here." These require empathy for the reader and responsibility to the truth—a stance, not prose polish. The human's value is shifting from "can write" to "gatekeeping for the reader, deciding what may be simplified and what may not."</div>
+</details>
+<details>
+  <summary>5. Does the Feynman technique (explain it to a layman) really test understanding, or only expression?</summary>
+  <div class="answer">The two can't be cleanly separated, but the Feynman technique tests precisely their intersection: can you reorganize a concept into a shape the listener's existing structures can catch? Stalling is usually not "running out of words" but a missing link in your own head—you'd merely papered over the gap with jargon. So it tests "transferable understanding": you didn't just memorize it; you can take it apart and reassemble it elsewhere.</div>
+</details>
+
+<footer>BigCat · Writing Daily · Day 35 · 2026</footer>
+
+</div>
+</body>
+</html>
