@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Letters &amp; Diaries — Day 38</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* thinking loop */
+.formula{background:#1f1f1f;color:#fafafa;padding:22px 20px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif;text-align:center}
+.formula .eq{font-size:1.02rem;line-height:1.9;letter-spacing:0.5px}
+.formula .eq .op{color:#d8c98a;margin:0 8px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:3px 9px;border-bottom:1px dashed #d8c98a}
+.formula .eq .result{display:inline-block;padding:3px 11px;background:#d8c98a;color:#1f1f1f;font-weight:700;border-radius:2px}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .formula .eq{font-size:0.95rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 38 · 2026.06.25</div>
+  <h1>Writing &amp; Expression: Letters &amp; Diaries<span class="topic">The power of private writing · The epistolary stance · The diary as thinking · Public vs private</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Nearly all our practice goes into writing meant to be read. Yet some of the most moving prose ever written came from the places with no readers at all — a letter for one person, a diary page for yourself. Private writing carries no pressure to perform, and so it pulls out the most honest, sharpest sentences. Today: why private writing makes us honest, how writing to one person restores your voice, how a diary helps you think, and what to protect when the private goes public.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Power of Private Writing: No Reader, the Truest Sentence</h2>
+  <div class="en-name">Honesty Without an Audience</div>
+  <span class="tag">Diary · Honesty · Didion</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>When you don't have to please anyone, writing retreats from <em>performance</em> back to <em>thinking</em>. <strong>The value of private writing isn't being read — it's that it forces you to face who you really are.</strong></p>
+    <div class="quote">
+      "I think we are well advised to keep on nodding terms with the people we used to be, whether we find them attractive company or not."
+      <span class="source">— Joan Didion, "On Keeping a Notebook," Slouching Towards Bethlehem (1968)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Public writing has an invisible censor — the reader. We automatically cut the embarrassing, inflate the flattering, and steer around the real wound. Private writing switches that censor off: no one is judging, so you can finally write "I was actually jealous" or "I blew this one." Didion kept her notebook not to archive facts but to <strong>stay on nodding terms with her past selves</strong>. We forget all too soon the things we swore we'd never forget; only an honest private record preserves what you truly judged and feared at the time, ready to confront the later you. This is what private writing alone can do: it's the one kind of writing that never has to lie.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">The project went smoothly overall; the team overcame some challenges and ultimately met its goals.</span>
+      <span class="after">I nearly blew this one. By week three I could see we were headed the wrong way — but I was too afraid of losing face to call for a redo, so I gritted it out for two weeks. Next time: the moment I'm afraid of losing face is the moment to speak.</span>
+      <span class="note">The same event: written for others, you instinctively varnish it; written for yourself, you can finally set down "afraid of losing face" — and those words are the real retrospective.</span>
+    </div>
+    <div class="example">
+      <span class="before">I've grown a lot this year and learned many valuable lessons.</span>
+      <span class="after">This year I learned I avoid hard conversations until they rot. Three times. I keep promising to speak up sooner. I keep not doing it.</span>
+      <span class="note">The outward "growth summary" is résumé language; only private writing admits to the same mistake repeated.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Retrospectives, decision journals, sorting out emotions, untangling a problem — write for yourself first, decide later whether to share</li>
+      <li>✓ Keep private and public writing physically separate, to lower the fear of being seen</li>
+      <li>✗ Pitfall: worrying "what if I publish this someday" from the first line — the censor returns and honesty evaporates</li>
+      <li>✗ Pitfall: polishing private writing into pretty sentences — it should stay rough; rough is honest</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Tonight, write one "for-my-eyes-only" diary page about something you varnished for others today — this time write what you actually thought. <strong>Question</strong>: If you assumed this page might be read by someone five years from now, would you still write it this way tonight? What does that assumption change?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Epistolary Stance: Write to One Person, Not Everyone</h2>
+  <div class="en-name">Write to One Reader</div>
+  <span class="tag">Letters · Ideal Reader · Vonnegut</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>Writing for everyone is writing for no one. Imagine an essay, an email, even a speech as something <strong>addressed to one specific person</strong>, and your sentences instantly gain direction, warmth, and proportion.</p>
+    <div class="quote">
+      "Write to please just one person. If you open a window and make love to the world, so to speak, your story will get pneumonia."
+      <span class="source">— Kurt Vonnegut, "How to Write with Style" (1980)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>"The reader" is an abstraction, and abstraction breeds abstract sentences — bland, offending no one, moving no one. But the moment you picture a specific person (your mother, your sharpest colleague, yourself three years ago), you automatically adjust depth, cut the jargon, and supply the background they need. Stephen King calls that person the <strong>Ideal Reader</strong> — he writes every line wondering "will Tabby laugh here?" Fu Lei's <em>Family Letters</em> were each written to his son alone, which is why their lessons on art and character still read, decades later, as if spoken quietly to you.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Everyone, today I'd like to discuss several important principles and methodologies of time management.</span>
+      <span class="after">You said you're busy all day but by evening can't remember what filled it. I've been there. Over the years I found three things that actually work — let me tell you.</span>
+      <span class="note">"Everyone" faces a blur of a crowd; "you" faces one person — and instantly knows what to say and what to leave out.</span>
+    </div>
+    <div class="example">
+      <span class="before">This guide will help users optimize their onboarding experience.</span>
+      <span class="after">You signed up an hour ago and you're a little lost. Here's the one thing to do next.</span>
+      <span class="note">"Users" is a faceless group; "you, an hour ago" is one person — so the sentence gains an addressee and a sense of proportion.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Emails, docs, tutorials, talks, product copy — any time you're "speaking to a person"</li>
+      <li>✓ Before writing, ask "who am I speaking to?" Write that person's name at the top of the doc (delete it when done)</li>
+      <li>✗ Pitfall: mistaking "write to one person" for "only one person can understand it" — the opposite is true; make it clear to one and more will follow</li>
+      <li>✗ Pitfall: the person in your head is too vague ("professionals") — the more specific, ideally a real someone, the better</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a mass email you wrote recently and rewrite it as a letter to one specific recipient. Compare which version has more warmth. <strong>Question</strong>: Facing hundreds in a talk, how can you still "write to one person"? How should your gaze, word choice, and examples each adapt?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Diary as Thinking: Write First, Then See What You Think</h2>
+  <div class="en-name">Write to Find Out</div>
+  <span class="tag">Diary · Thinking · Marcus Aurelius</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>A diary isn't for recording what you've already worked out — it's the tool you use to work it out. <strong>Once written down, a tangled thought takes shape for the first time</strong>, and you finally see what you actually think.</p>
+    <div class="quote">
+      "How can I tell what I think till I see what I say?"
+      <span class="source">— E. M. Forster, Aspects of the Novel (1927)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>In your head a thought is fog — slippery, jumpy, self-contradictory, forever reassuring you. Put it on paper and it's pinned down, open to examination: does this hold up? Don't these two points actually contradict? Marcus Aurelius's <em>Meditations</em> was a private diary written to himself (its Greek title means "To Himself"), never meant for publication — which is exactly why he could interrogate his own cowardice and vanity, page after page. That is the thinking value of a diary: <strong>it is an interlocutor who never argues back, yet forces you to be honest.</strong></p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">A tangle of thought</span>
+        <span class="op">→</span>
+        <span class="term">Write it (pin it)</span>
+        <span class="op">→</span>
+        <span class="term">Self-interrogation</span>
+        <span class="op">→</span>
+        <span class="result">Clarity / Decision</span>
+      </div>
+      <div class="caption">Writing isn't transporting a conclusion — it's where thinking actually happens</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(in your head) Should I take this new project... the opportunity seems good, but I'm a bit scared... I'll think about it later.</span>
+      <span class="after">(in a decision journal) Taking this project — what am I actually afraid of? Failing, and being seen failing. And the cost of not taking it? Missing the only chance to learn X. Put "fear of embarrassment" next to "skipping a craft I'd learn" — and the answer is clear.</span>
+      <span class="note">"I'll think about it later" can spin for a month unresolved; written down, the conflict is laid on the table and resolved at once.</span>
+    </div>
+    <div class="example">
+      <span class="before">I feel stuck in my career but I'm not sure why.</span>
+      <span class="after">Stuck = I haven't learned anything new in 18 months. Not the company's fault — I stopped asking for hard projects. The fix isn't a new job; it's a new project.</span>
+      <span class="note">"Stuck" is a feeling; written down, it splits into diagnosable, actionable facts.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Before big decisions, when emotions jam, when a problem won't resolve — keep a decision journal or Morning Pages</li>
+      <li>✓ Write however you like: not for style, but to empty your head and lay the contradictions out</li>
+      <li>✗ Pitfall: waiting until "I've figured it out" to write — backwards; it's the writing that figures it out</li>
+      <li>✗ Pitfall: a diary that only logs "what happened" (a chronicle), not "what I thought" — only the latter teaches you anything</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick something you keep agonizing over without resolution. Write for 15 minutes without lifting your pen — only "what am I actually thinking, what am I afraid of." See if it's clearer than when you were merely agonizing. <strong>Question</strong>: Speaking your thoughts aloud to an AI, versus writing them in a for-your-eyes-only diary — which forces more honesty, and why?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Public vs Private: From Raw Page to Shared Word, a Step Between</h2>
+  <div class="en-name">From Raw Page to Shared Word</div>
+  <span class="tag">Letters · Ethics · Trade-offs</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>The moment private writing turns public, its nature changes. <strong>What should stay forever private, what's worth sharing, and what pruning must happen first</strong> — this is a trade-off every writer eventually faces.</p>
+    <div class="quote">
+      "Paper has more patience than people."
+      <span class="source">— Anne Frank, The Diary of a Young Girl (1942)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">(After hearing a broadcast urging people to keep wartime records, Anne rewrote her diary into a version meant for publication — one diary, one version for herself, one for the world.)</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The power of private writing comes from the candor of "no one watching"; the value of public writing comes from the resonance of "being read." The two are in natural tension. Before publishing <em>Liang Di Shu</em>, Lu Xun edited his correspondence with Xu Guangping; Anne Frank rewrote her diary for publication. The lesson: <strong>private writing can be the ore from which public work is mined, but a step must come between</strong> — refining, cutting, and taking responsibility for the others involved. Posting a diary raw hurts both yourself and the people in it.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(raw diary) Got shot down by my boss in front of everyone again. Furious. He knows nothing about the tech, no one on the team dares speak up, this lousy company is doomed.</span>
+      <span class="after">(refined into a shareable retrospective) A public shutdown made me realize our team lacks a mechanism for "safely voicing dissent." I want to record this experience — and how I plan to change it.</span>
+      <span class="note">The raw version is a necessary, healthy outlet for emotion; the public version drops the personal attack and keeps an insight others can learn from — protecting both yourself and the people written about.</span>
+    </div>
+    <div class="example">
+      <span class="before">(private) My co-founder is impossible and I regret everything.</span>
+      <span class="after">(public) A co-founder conflict nearly ended us. Here's what we got wrong about expectations early on — and the conversation that saved the company.</span>
+      <span class="note">The private version vents; the public version extracts a lesson useful to others, without aiming the blame at a specific person.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Turning diaries, notes, or private letters into essays, retrospectives, or memoir — first ask "who is this for, and does it harm anyone"</li>
+      <li>✓ Run it through three filters before going public: cut personal attacks, protect those involved, confirm the insight outweighs the venting</li>
+      <li>✗ Pitfall: treating private candor as identical to public honesty — the former may run wild, the latter must be accountable</li>
+      <li>✗ Pitfall: mining other people's privacy for clicks — when you write about real people, hold the line</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>From your private records, pick a passage and try refining it into something shareable: cut the emotion and the names, keep the insight. <strong>Question</strong>: When you write about real people (colleagues, family, friends), where is the line for going public? When "truth" and "responsibility to others" conflict, how do you choose?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>In the AI era, what irreplaceable value do letters and diaries still hold?</summary>
+  <div class="ans">AI can ghostwrite the outward, formatted stuff — emails, reports, copy; but it can't do "being honest with yourself." The product of private writing isn't text, it's a clearer you: it forces you to face what you fear, what you think, what you've lied to yourself about — exactly what AI can't, and shouldn't, help with. As more and more writing gets outsourced to machines, "writing for yourself" becomes one of the few kinds that remain purely human.</div>
+</details>
+<details>
+  <summary>Doesn't "write to one person" cost an essay its universality?</summary>
+  <div class="ans">Quite the opposite. Made specific to one person, the detail turns real, and the real is what's shared — readers recognize themselves in the lines you wrote to someone. "Write for everyone" is what truly loses everyone: in trying to miss no one, it moves no one. Universality isn't "facing all people"; it's "writing one person so fully that you happen to strike many."</div>
+</details>
+<details>
+  <summary>How do Chinese and English letter traditions differ?</summary>
+  <div class="ans">Chinese has a deep epistolary tradition (chidu) of forms of address, honorifics, and set conventions — weighted toward relationship and propriety. English letters (think Rilke's Letters to a Young Poet) lean toward getting to the point and foregrounding an individual voice. For elders or formal occasions, Chinese form can't be dropped — it is the proportion itself; but in private expression, both languages drift toward "as natural as speech." The difference lies in when to hold back and when to let go.</div>
+</details>
+<details>
+  <summary>Publishing a private diary (as with famous figures' journals) — respect or violation?</summary>
+  <div class="ans">A dilemma. Kafka asked Max Brod to burn his manuscripts; Brod didn't, and so we have Kafka. Susan Sontag's son agonized over whether to publish his mother's private journals. There's no fixed answer, but a baseline might be: where the deceased clearly objected, honor it; where their stance was ambiguous, weigh literary value against the effect on their image and on living relatives and friends. What literature gains shouldn't come at the price of betrayed trust.</div>
+</details>
+<details>
+  <summary>If private writing's power comes from "no one watching," should you imagine a reader at all while keeping a diary?</summary>
+  <div class="ans">The ideal is "forget the reader for now" — the instant you mind who'll see it, the censor returns and honesty is discounted. But people rarely manage to ignore a potential reader entirely. The compromise is two stages: while writing, pretend no one is there and be recklessly honest; while editing (if you decide to publish), invite the reader back and prune responsibly. Two stages, two mindsets — don't mix them, or you'll write neither truthfully nor well.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 38 · 2026</footer>
+
+</div>
+</body>
+</html>
