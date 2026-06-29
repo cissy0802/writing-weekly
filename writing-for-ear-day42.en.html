@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Writing for the Ear — Day 42</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: sentence rhythm */
+.rhythm{background:#f8f6f1;padding:24px 20px 18px;margin:18px 0;border-radius:2px}
+.rhythm .row{margin-bottom:18px}
+.rhythm .row:last-of-type{margin-bottom:0}
+.rhythm .rlabel{font-size:0.8rem;font-weight:700;letter-spacing:1px;color:#8a7a4a;text-transform:uppercase;margin-bottom:8px;font-family:Georgia,serif}
+.rhythm .bars{display:flex;flex-direction:column;gap:6px}
+.rhythm .bar{height:18px;background:#cdbf99;border-radius:2px;display:flex;align-items:center;padding-left:8px;font-size:0.72rem;color:#5a4a20;font-family:Georgia,serif;white-space:nowrap;overflow:hidden}
+.rhythm .row.good .bar{background:#1f1f1f;color:#e8dcb0}
+.rhythm .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 42 · 2026.06.29</div>
+  <h1>Writing &amp; Expression: Writing for the Ear<span class="topic">Write for the ear · The breath of a sentence · Speech vs prose · The audiobook era</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">You think readers take in your words with their eyes. In fact a voice in their head is <em>listening</em>. A sentence that's hard to say is tiring to read; a long sentence with no pause leaves them gasping. Today we inspect prose with a different organ—the ear: how to write for sound, how to give a sentence breath, how speech differs from prose, and how to write so you aren't lost in an age when more and more words are heard, not read.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Write for the Ear: Readers Hear Your Sentences</h2>
+  <div class="en-name">为耳朵写</div>
+  <span class="tag">Sound · Subvocalization</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>As a reader reads silently, a voice in their head sounds out the words. <strong>A sentence that's hard to say is tiring to read.</strong> The cheapest, most effective check after a draft: read it aloud—wherever your tongue trips is where to fix it.</p>
+    <div class="quote">
+      "The sound of the language is where it all begins and what it all comes back to."
+      <span class="source">— Ursula K. Le Guin, Steering the Craft (1998)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Cognitive science calls it <strong>subvocalization</strong>: while reading, the brain silently "pronounces" the words. So the ear instantly catches what the eye lets slide—repeated sounds, jammed transitions, a sentence too long to say in one breath. The eye skips, fills in, forgives; the ear does not—it just reports, honestly, "this is awkward." Reading aloud is the most honest editor you carry with you.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">The follow-up work on the status of the implementation of the relevant solution to said problem requires further clarification of ownership.</span>
+      <span class="after">We need to be clear on how this gets fixed and who owns it. (Say the original aloud: the chain of "of … of … of" strangles the breath. The rewrite reads in one.)</span>
+    </div>
+    <div class="example">
+      <span class="before">The implementation of the optimization of the allocation of resources requires consideration.</span>
+      <span class="after">We need to decide how to allocate resources. (Four "-tion … of" links jam the tongue; the rewrite reads in one breath.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Almost everything: emails, docs, talks, blog posts—anything read into a head</li>
+      <li>✗ Never reading a draft aloud, just staring at the screen (the eye has gone numb to the awkwardness)</li>
+      <li>✗ Mistaking "reads smoothly" for "less professional"—fluency and rigor don't conflict</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Ursula K. Le Guin</span>, Steering the Craft · <span>William Zinsser</span>, On Writing Well (on sound &amp; rhythm) · <span>Wang Xiaobo</span>, My Literary Mentors (on the music of prose)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take any paragraph you wrote today, stand up, and read it aloud all the way through. Mark—don't fix—every spot where you stumble, run out of breath, or have to reread. Count the marks. Reflection: why can the ear catch flaws the eye waved through? Does that mean "understood" and "sounds right" are two different things?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Breath of a Sentence: Vary the Length</h2>
+  <div class="en-name">句子的呼吸</div>
+  <span class="tag">Rhythm · Sentence length</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>All long sentences and the reader can't breathe; all short ones and it's a machine gun. <strong>Alternate long and short, and the prose breathes—it makes music.</strong> Put your heaviest point in your shortest sentence, so it lands on the beat.</p>
+    <div class="quote">
+      "This sentence has five words. Here are five more words. Five-word sentences are fine. But several together become monotonous. ... I vary the sentence length, and I create music."
+      <span class="source">— Gary Provost, 100 Ways to Improve Your Writing (1985)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Long sentences carry complex relations—conditions, turns, layered qualifiers; short sentences create pause and emphasis. A paragraph of all long sentences blurs into mush; all short ones reads like a checklist, not a human. Real rhythm is <strong>using a long sentence to carry the reader far, then a short one to pin them down</strong>. The short sentence is the landing, the downbeat, the thud.</p>
+  </div>
+
+  <div class="rhythm">
+    <div class="row">
+      <div class="rlabel">Monotonous: every line the same</div>
+      <div class="bars">
+        <div class="bar" style="width:70%">long sentence ……</div>
+        <div class="bar" style="width:70%">long sentence ……</div>
+        <div class="bar" style="width:70%">long sentence ……</div>
+        <div class="bar" style="width:70%">long sentence ……</div>
+      </div>
+    </div>
+    <div class="row good">
+      <div class="rlabel">Breathing: long and short alternate</div>
+      <div class="bars">
+        <div class="bar" style="width:88%">a long sentence that carries the reader far ……</div>
+        <div class="bar" style="width:30%">A short one.</div>
+        <div class="bar" style="width:46%">Shorter still.</div>
+        <div class="bar" style="width:78%">then another long one opens the scene back up …</div>
+        <div class="bar" style="width:22%">Stop.</div>
+      </div>
+    </div>
+    <div class="caption">Draw each sentence's length as a bar—equal lengths are a metronome; variation is music</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">We reviewed the whole incident and found the root cause was a cache stampede, which itself came from a flaw in the expiry policy, so we decided to rewrite the expiry logic and add warm-up to make sure it never recurs.</span>
+      <span class="after">We reviewed the whole incident. The root cause was a cache stampede—a flaw in the expiry policy. So we rewrote the expiry logic and added warm-up. It won't happen again. (Long, short, long, short—the last four words land hard.)</span>
+    </div>
+    <div class="example">
+      <span class="before">这套系统很慢，而它之所以慢，是因为那条查询没有索引，导致每个请求都扫了整张表。</span>
+      <span class="after">系统很慢。那条查询没有索引。每个请求都扫了整张表。我们修好了。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any prose meant to be read aloud or into the mind, especially endings, punchlines, points of emphasis</li>
+      <li>✗ A run-on comma chain where the reader suffocates with no landing in sight</li>
+      <li>✗ Overcorrecting to all-short sentences—punchy, yes, but stripped of the ease of carrying a thought through a turn</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Gary Provost</span>, 100 Ways to Improve Your Writing · <span>Verlyn Klinkenborg</span>, Several Short Sentences About Writing · <span>Wang Xiaobo</span> (on the rhythm of long and short)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a paragraph you wrote and note the word count beside each sentence. If the numbers cluster (say, all 20–30 words), act: break out a few short sentences so the numbers rise and fall. Read both versions. Reflection: a short sentence feels "heavy" because the pause itself speaks—so does a pause (a period, a paragraph break) count as a wordless "word"?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Speech vs Prose: The Audience Can't Rewind</h2>
+  <div class="en-name">演讲稿 vs 书面语</div>
+  <span class="tag">Speech · Spoken style</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>A reader can look back; a listener can't. A script written for the ear needs: <strong>short sentences, few subordinate clauses, plain words, one idea per sentence, and the nerve to repeat the key line.</strong> Good prose that reads fine on the page can lose a listening audience the moment it's spoken.</p>
+    <div class="quote">
+      "A speech is poetry: cadence, rhythm, imagery, sweep. A speech reminds us that words, like children, have the power to make dance the dullest beanbag of a heart."
+      <span class="source">— Peggy Noonan, On Speaking Well (1998)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">(Noonan was Ronald Reagan's chief speechwriter.)</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Over two thousand years ago, Aristotle's <em>Rhetoric</em> Book III already split the <strong>written style (lexis graphike) from the spoken/debating style</strong>, noting each needs its own craft. The difference is the medium: prose lives by the eye—you can look back, skim, recheck; a speech lives by the ear—linear, irreversible, gone if missed. Nested clauses, long qualifiers, obscure jargon are fine on the page, but in the ear they're like asking the listener to maintain a call stack—go one level too deep and it <strong>overflows</strong>. So a speech flattens the information: one idea per sentence, key words recurring, signposts left for the ear.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(prose) In light of the growth figures that, owing to channel restructuring and shifts in the external environment, failed to meet the established targets last quarter, we deem it necessary to reassess strategy.</span>
+      <span class="after">(speech) Last quarter, we missed our target. Why? The channels changed. The market changed. So today, we rethink the plan. (Broken into short sentences, a question to guide the ear—the audience keeps up.)</span>
+    </div>
+    <div class="example">
+      <span class="before">（书面）鉴于上一季度因渠道调整及外部环境变化所导致的、未能达成目标的增长数据，我们认为有必要重新评估策略。</span>
+      <span class="after">（演讲）上个季度，我们没达成目标。为什么？渠道变了，环境也变了。所以今天，我们要重新想策略。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Speeches, the opening of a presentation, video scripts, podcast narration, conference-call talking points</li>
+      <li>✗ Reading a written report verbatim—rigorous on paper, a maze of clauses in the ear</li>
+      <li>✗ Fearing "repetition" and refusing to restate the key line—prose avoids repetition, speech relies on it to be remembered</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Peggy Noonan</span>, On Speaking Well · <span>Aristotle</span>, Rhetoric, Book III · Lincoln's Gettysburg Address (272 words, every line built to be heard)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pick a piece of your written prose (a report, an email) and rewrite it to be "said standing up": break the long sentences, swap in plain words, repeat one key line twice. Read both versions aloud and feel the gap. Reflection: same meaning, two versions—what's the difference? And what "eye-only" conveniences does that gap reveal your prose was quietly leaning on?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Audiobook Era: Writing to Be Heard</h2>
+  <div class="en-name">有声书时代</div>
+  <span class="tag">Audio · Linear</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>More and more words are heard, not read: audiobooks, podcasts, voice on the commute, AI narration. Prose that lives by being heard needs to: <strong>move linearly, not lean on layout, keep names easy to say, and use numbers that can be spoken.</strong> Every visual cue—bold, bullets, "see the table above"—dies in the ear.</p>
+    <div class="quote">
+      "Sound exists only when it is going out of existence."
+      <span class="source">— Walter J. Ong, Orality and Literacy (1982)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">This is the nature of audio: spoken and already flowing away—the listener has no page number to flip back to.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A listener has no page, no table of contents, no way to flip back. Prose organizes by space (headings, indents, tables); audio has only one thread—<strong>time</strong>. So you replace visual structure with <em>spoken signposts</em>: verbal recaps ("those were the three points"), explicit numbering ("first … second …"), recurring key words. AI narration also mercilessly exposes another flaw—obscure characters, acronyms, overlong numbers: "QPS rose to 12,847" comes out as noise; far better is "throughput roughly doubled." <strong>Prose a machine can read smoothly is usually clearer prose.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">As the table below shows, all three metrics improved (see the bolded section above); p99 dropped from 847ms to 112ms.</span>
+      <span class="after">All three metrics improved—let me highlight one. Our slowest batch of requests used to take nearly a second; now it's about a tenth of that. Over seven times faster. (Drop "table below" and "bolded," and turn the number into something the ear can catch.)</span>
+    </div>
+    <div class="example">
+      <span class="before">See Fig. 3; the K8s HPA reduced p99 from 847ms to 112ms.</span>
+      <span class="after">Auto-scaling cut our worst-case wait from about eight-tenths of a second to about a tenth. Roughly seven times faster.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Anything that may be consumed by TTS, audiobooks, podcasts, or voice assistants</li>
+      <li>✗ Leaving "see the table below," "as noted above," "(see footnote)" in an audio script—the ear has nowhere to "see"</li>
+      <li>✗ Piling up acronyms and numbers precise to the last digit—pure noise when a machine reads them</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Walter J. Ong</span>, Orality and Literacy · <span>Nancy Duarte</span>, Resonate (verbal signposts and repetition) · <span>Robert McKee</span>, Story (designing a linear experience)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a paragraph you wrote and listen to it via your phone's "speak screen" feature. Note every spot: mispronounced words, acronyms and numbers that become noise, dead "see the figure above" references. Fix each into something the ear can catch. Reflection: if a passage gets confusing under AI narration, is the problem really that "the machine doesn't get it"—or did it just expose where your prose was muddy to begin with?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Doesn't "write for the ear" clash with "save the reader time"—spoken style is often longer and more repetitive?</summary><div>On the surface, yes; in fact, no. The "wordiness" of spoken style comes in two kinds. One is meaningless filler ("you know," "and so on")—cut it. The other is <strong>redundancy in service of understanding</strong>—repeating the key line, guiding questions, verbal recaps. They trade words for the ease of "no need to look back." A reader saves time by rereading; a listener, who can't reread, saves time through these signposts. So the test is still "for whom": words added so the listener won't get lost are an investment; words added so your mouth runs smoothly are fat. Prose chases value per word; audio chases a signpost at every step—both aim to spare the reader effort, just in different places.</div></details>
+
+<details><summary>Is sentence rhythm the same mechanism in Chinese and English?</summary><div>Same principle (variation makes music), different mechanism. English rhythm rides on <strong>syllables and stress</strong>—the audible heavy and light; Hemingway's short sentences hit partly through the pounding of monosyllables. Chinese is monosyllabic blocks, so its rhythm lives more in <strong>pauses (punctuation, clause breaks) and the parity of sound-groups</strong>—the steadiness of a four-character phrase, the symmetry of parallelism, the lilt of a "3-3-4" cadence. So in English you often tune word length and stress placement; in Chinese, clause length and four-character/parallel structures. Underneath it's one thing: give the sentence rise and fall, don't let it become a metronome.</div></details>
+
+<details><summary>If AI can read any text aloud, does a writer still need to fuss over "the ear"?</summary><div>More than ever. AI solved <em>voicing</em>, not <em>sounding good or being clear</em>. A machine can pronounce "QPS 12,847," but it's still noise; it can read a tangled long sentence, and the listener still gets lost. In other words, TTS made "being heard" the default fate while leaving the whole question of "worth hearing" to the prose itself. And AI narration is a mirror that exposes flaws: it won't auto-chunk, fill in, or forgive the way a human reader does—wherever you were muddy, it reads the muddiness faithfully. So in the AI era "writing for the ear" isn't obsolete; it has gone from a few speakers' craft to every writer's basic skill.</div></details>
+
+<details><summary>Repetition is a virtue in a speech and a vice in prose—why does the same move flip?</summary><div>Because the two media give the reader different "memory." A reader has "external storage"—the words sit on the page, forget one and you flip back, so repetition is redundancy. A listener has only "internal memory"—sound flows away and is gone, so repetition writes the key point into memory; it's a necessary refresh. King's eight "I have a dream"s look slightly excessive on the page but in the ear are nails, hammered one by one into history. The move isn't good or bad in itself—whether the reader can look back decides whether repetition is a burden or a gift.</div></details>
+
+<details><summary>How does this "ear" craft apply across prose, speech, and video?</summary><div><strong>Prose</strong>: the ear is mainly an editor—read aloud to find awkwardness and tune long/short rhythm, but the product still serves the eye and may keep visual structure. <strong>Speech</strong>: the ear is the only channel, so go fully spoken—break clauses, ask questions, repeat, leave pauses; after drafting you must stand up and say it once. <strong>Video/audio</strong>: add a layer of picture-and-sound coordination, keeping what the eye sees from fighting what the ear hears, and an audio script must purge every visual reference. One thread runs through all three: <strong>the more linear and unrewindable the medium, the higher the payoff of writing for the ear</strong>—prose is elective, speech is required, pure audio is do-or-die.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 42 · 2026</footer>
+
+</div>
+</body>
+</html>
