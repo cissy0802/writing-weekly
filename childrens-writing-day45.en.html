@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Writing for Children &amp; Young Adults — Day 45</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: age ladder */
+.ladder{background:#f8f6f1;padding:22px 18px 16px;margin:18px 0;border-radius:2px}
+.ladder .rung{display:flex;align-items:stretch;gap:12px;margin-bottom:8px}
+.ladder .rung:last-of-type{margin-bottom:0}
+.ladder .age{flex:0 0 110px;background:#1f1f1f;color:#e8dcb0;font-family:Georgia,serif;font-size:0.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:2px;padding:8px 4px;line-height:1.35}
+.ladder .feat{flex:1;background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:9px 14px;font-size:0.9rem;color:#3a3a3a;line-height:1.5}
+.ladder .feat b{color:#1f1f1f}
+.ladder .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization: word vs image */
+.wisplit{background:#f8f6f1;padding:22px 16px 16px;margin:18px 0;border-radius:2px}
+.wisplit .cols{display:flex;gap:16px;justify-content:center;align-items:stretch}
+.wisplit .col{flex:1;background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:14px 16px}
+.wisplit .col.pic{border-top:3px solid #8a7a4a}
+.wisplit .col.txt{border-top:3px solid #1f1f1f}
+.wisplit .htitle{font-size:0.82rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;color:#8a7a4a}
+.wisplit .col.txt .htitle{color:#1f1f1f}
+.wisplit ul{list-style:none;margin:0}
+.wisplit li{font-size:0.9rem;color:#3a3a3a;padding:3px 0;line-height:1.55}
+.wisplit .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .wisplit .cols{flex-direction:column}
+  .ladder .age{flex:0 0 92px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 45 · 2026.07.02</div>
+  <h1>Writing for Children &amp; Young Adults<span class="topic">Write Up · No Sermons · Picture-Book Text · Reverse-Engineering</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Don't assume "writing for kids" means dumbing it down and tacking on a moral. The opposite is true—it's the most demanding training ground in writing: the reader is brutally honest, and one wasted word loses them. E.B. White and C.S. Lewis forged their cleanest prose here. Today's four lessons serve your kids and yourself: explaining the complex to a layperson, persuading without lecturing, and spending both words and pictures sparingly.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Age-Level Language: Write Up, Not Down</h2>
+  <div class="en-name">Write Up, Not Down</div>
+  <span class="tag">Leveling · No Condescension</span>
+
+  <div class="section">
+    <div class="label">Principle + The Master's Words</div>
+    <p>Writing for an age isn't making language shallow or silly—it's <strong>using concretes the child can reach</strong> to carry the same weight. True leveling adjusts the difficulty of vocabulary and syntax; it <strong>never dilutes the intelligence or emotion</strong>.</p>
+    <div class="quote">
+      "Anyone who writes down to children is simply wasting his time. You have to write up, not down."
+      <span class="source">— E.B. White, The Paris Review (1969)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A child's vocabulary is limited; their curiosity and feeling are not. "Writing down" assumes they're dim—feeding them baby talk, exclamation marks, and blunt morals—and they instantly smell the condescension and drift off. "Writing up" trusts they can be pulled a little higher, using concretes from their world (a spider, a snowfall, a goodbye) to carry serious things (death, courage, loneliness). This is the same craft as "explaining the complex to a layperson": not diluting content, but swapping in concretes the reader can reach—for a five-year-old, and for a board that doesn't code.</p>
+    <div class="ladder">
+      <div class="rung"><div class="age">Picture Book<br>0–5</div><div class="feat">A few hundred words, <b>written to be read aloud</b>; leans on sound, repetition, word-image play; one line per page</div></div>
+      <div class="rung"><div class="age">Early Reader<br>6–8</div><div class="feat">Short sentences, common words, brief chapters; the <b>first leg of reading alone</b>—confidence comes first</div></div>
+      <div class="rung"><div class="age">Chapter Book<br>9–12</div><div class="feat">Plots thicken, characters gain an inner life; <b>vocabulary rises, emotion stays real</b></div></div>
+      <div class="rung"><div class="age">Young Adult<br>13+</div><div class="feat">Themes touch identity, loss, justice; <b>near-adult language—only without the sermon</b></div></div>
+      <div class="caption">Leveling sets the height of each step, not the ceiling—every band can hold the heaviest theme</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Kids, we must be brave and never back down when things get hard!</span>
+      <span class="after">Charlotte couldn't save a pig. But she tried. She stayed up all night and wove two words into her web: SOME PIG. (No cry of "be brave"—a spider acts it out for you.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Being different is okay, and you should always be yourself.</span>
+      <span class="after">The other ducklings laughed at his big gray feet. He didn't know yet that big gray feet are what swans are made of.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Telling stories to kids, writing picture books; also explaining a system to a non-technical exec, writing onboarding docs</li>
+      <li>✗ Faking warmth with cutesy talk and exclamation marks—readers (kids included) check out instantly</li>
+      <li>✗ Mistaking "simple" for "childish": sentences can be short; thoughts must not be empty</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>E.B. White</span>, Charlotte's Web · <span>C.S. Lewis</span>, "On Three Ways of Writing for Children" · <span>H.C. Andersen</span>, The Ugly Duckling · The Lexile Framework</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick a concept you understand but a child (or a layperson) doesn't—recursion, compound interest, attention mechanisms—and explain it with one concrete from a child's world, in under 100 words and zero jargon. Question: when you're forced to cut the jargon, is your grasp of the concept weakened, or pushed to become clearer?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Wisdom of Not Preaching: Story Over Sermon</h2>
+  <div class="en-name">Story Over Sermon</div>
+  <span class="tag">No Preaching · Embodied</span>
+
+  <div class="section">
+    <div class="label">Principle + The Master's Words</div>
+    <p>Children (and adults) forget "you should" but remember "once there was." <strong>Meaning must grow inside the story, not get pasted on after it.</strong> The moment you say the moral out loud, the story dies.</p>
+    <div class="quote">
+      "'Thou shalt not' is soon forgotten, but 'Once upon a time' lasts forever."
+      <span class="source">— Philip Pullman, Carnegie Medal acceptance (1996)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Preaching triggers defense—at any age, the first reaction to being lectured is resistance, not acceptance. A story slips past the guard: the reader lives the consequences alongside a character and reaches the conclusion themselves, and it holds precisely because "they thought of it." C.S. Lewis offered a test: a story that only placates small children and embarrasses adults is a bad story—because it's talking down. If the lesson is true, tuck it into the plot and the reader will taste it; if it's false, no label makes it stand. This is just as lethal for leaders: every extra "we must take this seriously" in a memo drains a drop of persuasion.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">The moral of this story: in unity there is strength.</span>
+      <span class="after">Cut it. Let a line of ants haul away a bone a hundred times their size—while the reader counts the ants, "unity" has already gone in.</span>
+    </div>
+    <div class="example">
+      <span class="before">Sarah learned that she should never give up on her dreams.</span>
+      <span class="after">Sarah looked at the half-built bridge, picked up one more stone, and set it in place.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Children's books, fables; also change narratives, company values, brand stories, leadership comms</li>
+      <li>✗ Bolting "and so we learn that…" onto the ending—the most common and most fatal line</li>
+      <li>✗ Turning a character into a mouthpiece reciting the author's grand point</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Philip Pullman</span>, His Dark Materials · <span>C.S. Lewis</span>, The Chronicles of Narnia · <span>Ye Shengtao</span>, The Scarecrow · <span>Katherine Paterson</span>, Bridge to Terabithia</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Find something you wrote with a conclusion or call to action (a memo, a retro, a letter to your child), delete the stated moral, and let a concrete scene or a single action make it stand instead. Question: if the reader can't get your point once the moral is gone, is the reader slow—or did your story never actually act the point out?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Picture-Book Text: Don't Narrate the Picture</h2>
+  <div class="en-name">Picture-Book Text — Don't Narrate the Picture</div>
+  <span class="tag">Picture Book · Word-Image Counterpoint</span>
+
+  <div class="section">
+    <div class="label">Principle + The Master's Words</div>
+    <p>In a picture book, <strong>words and pictures must not say the same thing.</strong> What the picture can show, the words leave alone; the words only carry what the picture can't—time, sound, irony, and the surprise waiting on the turn of the page. Captioning a picture is the extreme training in word economy.</p>
+    <div class="quote">
+      "A picturebook... hinges on the interdependence of pictures and words, on the simultaneous display of two facing pages, and on the drama of the turning of the page."
+      <span class="source">— Barbara Bader, American Picturebooks (1976)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A picture book is often under a thousand words; each one has to fight for its place. The rookie's biggest error is describing what the picture already shows—write "the bear was very sad," and the tears in the art already said it. The master sends words to do what art can't: mark the passage of time, mimic the rhythm of sound, plant irony that runs against the picture, and above all work "the page turn," a built-in suspense device—one page asks, the next answers; one page is calm, turn it and there's the shock. This is word-image counterpoint under the harshest word count; for the technical writer, it's the law of the single slide: the title states the conclusion the picture can't, and never restates the picture.</p>
+    <div class="wisplit">
+      <div class="cols">
+        <div class="col pic">
+          <div class="htitle">The Picture Carries</div>
+          <ul><li>· Look, space, proportion</li><li>· Expression &amp; mood</li><li>· The whole of "right now"</li></ul>
+        </div>
+        <div class="col txt">
+          <div class="htitle">The Words Carry</div>
+          <ul><li>· Time &amp; cause</li><li>· Sound &amp; rhythm</li><li>· Irony &amp; page-turn suspense</li></ul>
+        </div>
+      </div>
+      <div class="caption">Keep the two columns from overlapping—where they overlap is exactly the words you can cut</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(Image: a child before a huge wave) The little boy stood on the shore, looking at a very, very big wave, and he was scared.</span>
+      <span class="after">"The wave was taller than a house." (turn the page) "—But he didn't step back." (The art already shows sea, wave, face; the words keep only what it can't: the twist after the turn.)</span>
+    </div>
+    <div class="example">
+      <span class="before">(Image: a room full of scattered toys) The room was very messy, with toys all over the floor.</span>
+      <span class="after">Mom would be home in five minutes.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Picture books; also slide titles, captions, README screenshots, infographic labels</li>
+      <li>✗ Words that restate the picture ("as shown, the bear is crying")</li>
+      <li>✗ Ignoring the page-turn's suspense—cramming question and answer onto one page</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Barbara Bader</span>, American Picturebooks · <span>Maurice Sendak</span>, Where the Wild Things Are · <span>Uri Shulevitz</span>, Writing with Pictures · see Day 43 on word-image counterpoint</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take one image from your deck and rewrite its title as "a line the picture can't draw"—a conclusion, a time, a contrast—and cut every word that restates the visual. Question: if a slide still reads with the image covered, or with the words covered, isn't one of the two just loafing?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Reverse-Engineering the Classics: Reread Like a Writer</h2>
+  <div class="en-name">Reverse-Engineer the Classics</div>
+  <span class="tag">Teardown · Read Like a Writer</span>
+
+  <div class="section">
+    <div class="label">Principle + The Master's Words</div>
+    <p>To write well, first <strong>take a classic you love apart to its parts</strong>: why does the first line grab you? On which line does the crisis land? Trade "reading like a reader" for "reading like a writer"—don't ask "what does it say," ask "<strong>how did it pull that off</strong>."</p>
+    <div class="quote">
+      "'Where's Papa going with that ax?' said Fern to her mother as they were setting the table for breakfast."
+      <span class="source">— E.B. White, Charlotte's Web, opening line (1952)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Charlotte's Web opens on an ax—a threat of death, a child's alarm, an ordinary morning—three things in one sentence. No setup about the weather, no tour of the farm; it drops you straight into the crisis. Taking classics apart trains exactly this "reading like a writer": pick a book you've loved since childhood and ask, line by line, why it works—how the opening sets the hook, when conflict arrives, what the author deleted. On the Chinese side, Cao Wenxuan's Grass House, Lin Haiyin's My Memories of Old Beijing, and Andersen's tales are prime specimens. Take ten apart and your hand remembers the structures, reproducing them naturally when you write your own.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">On a beautiful farm there lived a kind little girl who loved animals very much. (Three lines of setup, zero tension.)</span>
+      <span class="after">"Where's Papa going with that ax?"—one line puts the morning, the child, and a life about to be taken all on the table. (After Charlotte's Web: enter on the crisis.)</span>
+    </div>
+    <div class="example">
+      <span class="before">It was a normal morning on the farm, and everyone was having breakfast.</span>
+      <span class="after">"Where's Papa going with that ax?"—White drops you into a life-or-death question before you even know a name.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any form you want to sharpen—take apart the models you admire, not just children's books</li>
+      <li>✗ Only "admiring," never dissecting: reading it a hundred times without analysis is not reading it</li>
+      <li>✗ Copying the surface after the teardown (using an ax) but missing the principle (entering on crisis)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>E.B. White</span>, Charlotte's Web · <span>Cao Wenxuan</span>, The Grass House · <span>Lin Haiyin</span>, My Memories of Old Beijing · <span>Andersen</span>, Fairy Tales</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick a children's book you love (or any book) and dissect only its first page: count how many "hooks"—suspense, crisis, oddity, emotion—the author hands you in the first 50 words. Question: did the first line of your last document drop the reader into a crisis, or was it still setting up the weather?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Why should a technical leader learn a craft built for children?</summary><div>Because child readers are the most honest stress test. Adults will politely finish your bad memo; children just leave. E.B. White's "write up, not down," ported to work, means: explaining to a non-technical exec isn't watering the content into a slop of slides, but swapping in concretes they can reach. <strong>Not preaching</strong> = good leadership narrative; <strong>word-image economy</strong> = the law of the slide; <strong>reverse-engineering the classics</strong> = reading every model like a writer. Children's writing is the extreme-version training ground for all of these—the tighter the constraint, the purer the craft.</div></details>
+
+<details><summary>How do the Chinese and English children's-book traditions differ?</summary><div>English children's literature theorized early and deep (picture-book studies, Lexile leveling), with rich craft discourse; Chinese has a powerful story-and-verse tradition (nursery rhymes, the mischievous spirit of Journey to the West, Feng Zikai's child figures), but modern original picture books started later. On the language side, the sound of Chinese characters—reduplication, onomatopoeia, tonal cadence—is made for <strong>reading aloud to a child</strong>, a signature strength; English relies on rhyme and alliteration. Writing for Chinese kids, don't lose the "sounds good read aloud" part.</div></details>
+
+<details><summary>Won't "no preaching" swing to the other extreme—conveying nothing?</summary><div>No. Not-preaching rejects "slapping on a label," not "having no stance." Great children's books have a fierce stance—Charlotte's Web is about friendship and death—but they <strong>act</strong> the stance out rather than <strong>state</strong> it. The difference: preaching is "the author steps out to tell you what to think"; value is "the story itself lets you taste something true." The first insults the reader's intelligence; the second trusts it. Same for leadership comms: take a stance, but let the facts and the story speak for you.</div></details>
+
+<details><summary>AI can already generate children's stories—is this craft still scarce?</summary><div>More scarce. AI will instantly produce "once there was a little rabbit who learned to share"—which collects every disease this piece warns against: preaching, condescension, a bland opening. It excels at the median safe story, not at E.B. White's ax: the nerve to open on death in the first line, and the precision to land it. What's scarce was never "generating text," but the taste to know what to keep, what to cut, which line should hit hard. The more AI mass-produces the mediocre, the more valuable the person who can dissect the classics and exercise judgment.</div></details>
+
+<details><summary>Prose, talk, picture book—how does "write up" land in each?</summary><div><strong>Prose</strong>: control vocabulary and sentence length, but don't water down the thought (the essence of leveled reading). <strong>Talk</strong>: for a lay audience, bridge with concrete analogy and story rather than shrinking to slogans—an audience, like a child, smells when it's being brushed off. <strong>Picture book / video</strong>: enter word-image counterpoint; the words retreat to what the picture can't say, and the "page turn / cut" builds suspense. One thread runs through all three: whatever the medium, <strong>respecting the reader's intelligence</strong> is the one non-negotiable—write to people as if they're smart, whether they're five or fifty.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 45 · 2026</footer>
+
+</div>
+</body>
+</html>
